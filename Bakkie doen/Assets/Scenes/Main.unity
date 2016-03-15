@@ -183,7 +183,7 @@ GameObject:
   - 65: {fileID: 1676449931}
   - 23: {fileID: 1676449930}
   m_Layer: 0
-  m_Name: Delete me
+  m_Name: Delete
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
