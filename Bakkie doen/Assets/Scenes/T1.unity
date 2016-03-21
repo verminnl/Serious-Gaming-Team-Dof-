@@ -128,6 +128,10 @@ Prefab:
       propertyPath: m_Name
       value: slime red (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 190824, guid: 2cf43974ef6bd1a4c937782094e1bb0c, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2cf43974ef6bd1a4c937782094e1bb0c, type: 2}
   m_IsPrefabParent: 0
@@ -210,7 +214,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10.298075
+  orthographic size: 4.0239563
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -378,6 +382,10 @@ Prefab:
     - target: {fileID: 190824, guid: 2cf43974ef6bd1a4c937782094e1bb0c, type: 2}
       propertyPath: m_Name
       value: slime red (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 190824, guid: 2cf43974ef6bd1a4c937782094e1bb0c, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2cf43974ef6bd1a4c937782094e1bb0c, type: 2}
@@ -735,6 +743,10 @@ Prefab:
       propertyPath: m_Name
       value: slime red (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 190824, guid: 2cf43974ef6bd1a4c937782094e1bb0c, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2cf43974ef6bd1a4c937782094e1bb0c, type: 2}
   m_IsPrefabParent: 0
@@ -897,6 +909,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 190824, guid: 2cf43974ef6bd1a4c937782094e1bb0c, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2cf43974ef6bd1a4c937782094e1bb0c, type: 2}
   m_IsPrefabParent: 0
@@ -942,6 +958,10 @@ Prefab:
     - target: {fileID: 190824, guid: 2cf43974ef6bd1a4c937782094e1bb0c, type: 2}
       propertyPath: m_Name
       value: slime red (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 190824, guid: 2cf43974ef6bd1a4c937782094e1bb0c, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2cf43974ef6bd1a4c937782094e1bb0c, type: 2}
