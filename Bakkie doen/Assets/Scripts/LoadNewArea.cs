@@ -21,11 +21,9 @@ public class LoadNewArea : MonoBehaviour
     
     public void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.name == "Player")
+        if (other.gameObject.name == "Player" && Input.GetKeyDown(KeyCode.K))
         {
-            if (Input.GetKeyDown(KeyCode.K)){
-                SceneManager.LoadScene(levelToLoad);
-            }
+            SceneManager.LoadScene(levelToLoad);
         }
     }
 }
