@@ -1,10 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.SceneManagement;
 
-public class LoadNewArea : MonoBehaviour {
+public class HurtPlayer : MonoBehaviour {
 
-    public string levelToLoad;
+    public int damageToGive;
 
 	// Use this for initialization
 	void Start () {
@@ -16,10 +15,11 @@ public class LoadNewArea : MonoBehaviour {
 	
 	}
 
-    void OnTriggerEnter2D(Collider2D other) {
+    void OnCollisionEnter2D(Collision2D other)
+    {
         if (other.gameObject.name == "Player")
         {
-            SceneManager.LoadScene(levelToLoad);﻿
+            other.gameObject.GetComponent<PlayerHealthManager>().HurtPlayer(damageToGive);
         }
     }
 }

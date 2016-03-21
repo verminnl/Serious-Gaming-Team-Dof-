@@ -4,12 +4,13 @@ using System.Collections;
 public class CameraController : MonoBehaviour {
 
     public GameObject followTarget;
-    private Vector3 targetPosition;
     public float moveSpeed;
+    private Vector3 targetPos;
+
     private static bool cameraExists;
 
-	void Start ()
-    {
+	// Use this for initialization
+	void Start () {
         if (!cameraExists)
         {
             cameraExists = true;
@@ -19,10 +20,11 @@ public class CameraController : MonoBehaviour {
         {
             Destroy(gameObject);
         }
-    }
+	}
 	
+	// Update is called once per frame
 	void Update () {
-        targetPosition = new Vector3(followTarget.transform.position.x, followTarget.transform.position.y, transform.position.z);
-        transform.position = Vector3.Lerp(transform.position, targetPosition, moveSpeed * Time.deltaTime);
-    }
+        targetPos = new Vector3(followTarget.transform.position.x, followTarget.transform.position.y, transform.position.z);
+        transform.position = Vector3.Lerp(transform.position, targetPos, moveSpeed * Time.deltaTime);
+	}
 }

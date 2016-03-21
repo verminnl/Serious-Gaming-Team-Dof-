@@ -1,27 +1,29 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class HurtEnemy : MonoBehaviour
-{
+public class HurtEnemy : MonoBehaviour {
 
-    // Use this for initialization
-    void Start()
-    {
+    public int damageToGive;
+    public GameObject damageBurst;
+    public Transform hitPoint;
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+	// Use this for initialization
+	void Start () {
+	
+	}
+	
+	// Update is called once per frame
+	void Update () {
         
-    }
-    
-    public void OnTriggerEnter2D(Collider2D other)
+	}
+
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Enemy")
         {
-            print(other.gameObject.name);
-            Destroy(other.gameObject);
+            //Destroy(other.gameObject);
+            other.gameObject.GetComponent<EnemyHealthManager>().HurtEnemy(damageToGive);
+            Instantiate(damageBurst, hitPoint.position, hitPoint.rotation);
         }
     }
 }
