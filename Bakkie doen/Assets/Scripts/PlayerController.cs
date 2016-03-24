@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour {
 
     public string startPoint;
 
+    public bool canMove;
+
 	// Use this for initialization
 	void Start () {
         anim = GetComponent<Animator>();
@@ -37,6 +39,11 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        if (!canMove)
+        {
+            return;
+        }
 
         playerMoving = false;
 
