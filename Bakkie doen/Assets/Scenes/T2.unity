@@ -780,7 +780,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   followTarget: {fileID: 2007852910}
-  moveSpeed: 5
+  moveSpeed: 25
 --- !u!81 &1580219749
 AudioListener:
   m_ObjectHideFlags: 0
@@ -826,7 +826,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8.760876
+  orthographic size: 20
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1045,9 +1045,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.35}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.27, y: 1.57}
 --- !u!95 &2007852914
 Animator:
   serializedVersion: 3
@@ -1078,7 +1078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7acfb1d4f07e014d91b605d693276b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 20
   lastMove: {x: 0, y: 0}
   attackTime: 0.5
   startPoint: 
@@ -1110,7 +1110,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1611274439
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: a02dc00647ac39141aa15d105cdbb899, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7377ee325d0f4634d8bea252069235e8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
