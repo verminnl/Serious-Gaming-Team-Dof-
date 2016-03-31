@@ -447,7 +447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startDirection: {x: 0, y: 0}
-  pointName: T3_First_Elevator_In
+  pointName: Yellow_Area_Up_In
 --- !u!4 &1317154631
 Transform:
   m_ObjectHideFlags: 0
