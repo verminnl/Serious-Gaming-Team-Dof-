@@ -1,12 +1,12 @@
-Hi player!
-How are you doing?
+Hi player! Press the "Enter" key to hear me out.
 Please explore the place to your own content.
 ...
 Although there isn't much to do yet.
 ...
+If you want to talk to me again, press the "T" key while standing next to me.
 
 
-Still talking to me?
-Still nothing new yet.
+Hi player!
+There is still nothing new yet.
 Hey developers!
 Start making the level already!
