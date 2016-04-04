@@ -13,6 +13,7 @@ public class DialogueClass
 
     public void ToString(string name)
     {
-        System.Console.WriteLine(npcDialogues[name]);
+        //System.Console.WriteLine();
+        //Debug.Log(npcDialogues[name][5]);
     }
 }

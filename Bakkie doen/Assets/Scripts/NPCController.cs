@@ -20,6 +20,7 @@ public class NPCController : MonoBehaviour {
         for (int i = 0; i < dialogues.npcDialogues[gameObject.name].Length; i++)
         {
             print(dialogues.npcDialogues[gameObject.name][i]);
+            dialogues.ToString(gameObject.name);
         }
 	}
 	
