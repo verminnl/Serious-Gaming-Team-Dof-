@@ -126,4 +126,12 @@ public class TextBoxManager : MonoBehaviour {
             textLines = (theText.text.Split('\n'));
         }
     }
+
+    //public void ReloadScript(DialogueClass arrayWithDialogues)
+    //{
+    //    if (arrayWithDialogues != null)
+    //    {
+    //        textLines = arrayWithDialogues.npcDialogues[gameObject.name];
+    //    }
+    //}
 }

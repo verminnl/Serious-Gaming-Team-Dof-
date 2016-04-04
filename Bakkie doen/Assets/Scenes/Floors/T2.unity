@@ -835,7 +835,7 @@ MonoBehaviour:
   endLine: 5
   theTextBox: {fileID: 0}
   requireButtonPress: 0
-  destroyWhenActivated: 1
+  destroyWhenActivated: 0
 --- !u!1 &2007852910
 GameObject:
   m_ObjectHideFlags: 0
@@ -1035,6 +1035,7 @@ GameObject:
   - 212: {fileID: 2073218307}
   - 61: {fileID: 2073218309}
   - 114: {fileID: 2073218310}
+  - 114: {fileID: 2073218311}
   m_Layer: 0
   m_Name: Red NPC
   m_TagString: Untagged
@@ -1115,6 +1116,19 @@ MonoBehaviour:
   theTextBox: {fileID: 0}
   requireButtonPress: 1
   destroyWhenActivated: 0
+--- !u!114 &2073218311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2073218306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9f48abf3f484ad4a866b9e2ab7975c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorType: green
+  dialogueFinished: 0
 --- !u!1 &2105710908
 GameObject:
   m_ObjectHideFlags: 0

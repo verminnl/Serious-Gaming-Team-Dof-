@@ -15,6 +15,7 @@ public class ActivateTextAtLine : MonoBehaviour {
 
     public bool destroyWhenActivated;
 
+
 	// Use this for initialization
 	void Start () {
         theTextBox = FindObjectOfType<TextBoxManager>();
@@ -22,6 +23,7 @@ public class ActivateTextAtLine : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        //print("Empty---------------------------------");
         if (waitForPress && Input.GetKeyDown(KeyCode.T))
         {
             theTextBox.ReloadScript(theText);
@@ -29,6 +31,16 @@ public class ActivateTextAtLine : MonoBehaviour {
             theTextBox.endAtLine = endLine;
             theTextBox.stopPlayerMovement = true;
             theTextBox.EnableTextBox();
+
+
+            //var test = new System.Collections.Generic.Dictionary<NPCCLASS, System.Collections.Generic.List<string>>();
+
+            //var listwithdialog = test[REDNPC];
+
+            //loop door die lijst heen enzo
+
+            //if(WELKE REGEL VAN DE LIST<STRING> IS NET VOORGELEZEN == HET EIND VAN DE LIST)
+            //CLOSE DIALOG LOAD NEW LEVEL
 
             if (destroyWhenActivated)
             {
@@ -63,6 +75,7 @@ public class ActivateTextAtLine : MonoBehaviour {
     {
         if (other.name == "Player")
         {
+            theTextBox.DisableTextBox();
             waitForPress = false;
         }
     }
