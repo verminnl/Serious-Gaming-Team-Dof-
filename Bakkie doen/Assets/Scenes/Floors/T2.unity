@@ -541,7 +541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9f48abf3f484ad4a866b9e2ab7975c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorType: green
+  colorType: red
   dialogue:
   - Hi player! Press the "Enter" key to hear me out.
   - Please explore the place to your own content.
