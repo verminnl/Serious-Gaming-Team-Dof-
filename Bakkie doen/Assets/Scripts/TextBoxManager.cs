@@ -8,7 +8,7 @@ public class TextBoxManager : MonoBehaviour {
 
     public Text theText;
 
-    public TextAsset textFile;
+    //public TextAsset textFile;
     public string[] textLines;
 
     public int currentLine;
@@ -29,10 +29,10 @@ public class TextBoxManager : MonoBehaviour {
     {
         player = FindObjectOfType<PlayerController>();
 
-        if (textFile != null)
-        {
-            textLines = (textFile.text.Split('\n'));
-        }
+        //if (textFile != null)
+        //{
+        //    textLines = (textFile.text.Split('\n'));
+        //}
 
         if (endAtLine == 0)
         {
@@ -118,20 +118,21 @@ public class TextBoxManager : MonoBehaviour {
         player.canMove = true;
     }
 
-    public void ReloadScript(TextAsset theText)
-    {
-        if (theText != null)
-        {
-            textLines = new string[1];
-            textLines = (theText.text.Split('\n'));
-        }
-    }
-
-    //public void ReloadScript(DialogueClass arrayWithDialogues)
+    //public void ReloadScript(TextAsset theText)
     //{
-    //    if (arrayWithDialogues != null)
+    //    if (theText != null)
     //    {
-    //        textLines = arrayWithDialogues.npcDialogues[gameObject.name];
+    //        textLines = new string[1];
+    //        textLines = (theText.text.Split('\n'));
     //    }
     //}
+
+    public void ReloadScript(string[] npcScript)
+    {
+        if (npcScript != null)
+        {
+            textLines = new string[1];
+            textLines = npcScript;
+        }
+    }
 }

@@ -8,15 +8,11 @@ public class NPCClass {
     public string type;
     public List<string> skills;
 
-    public NPCClass(string name, string type)
+    public NPCClass(string name, string type, string[] dialogue)
     {
         this.name = name;
         this.type = type;
+        DialogueClass.Instance.AddNPCDialogue(name, dialogue);
         number++;
-    }
-
-    public void getDialogue()
-    {
-
     }
 }

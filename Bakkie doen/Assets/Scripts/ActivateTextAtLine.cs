@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 
 public class ActivateTextAtLine : MonoBehaviour {
 
@@ -10,26 +12,48 @@ public class ActivateTextAtLine : MonoBehaviour {
 
     public TextBoxManager theTextBox;
 
+	private List<string> theScript = new List<string>();
+
     public bool requireButtonPress;
     private bool waitForPress;
 
     public bool destroyWhenActivated;
-
+    public NPCController npc;
+    public bool isShoutZone;
 
 	// Use this for initialization
 	void Start () {
         theTextBox = FindObjectOfType<TextBoxManager>();
-	}
+		//theScript = DialogueClass.Instance.GetDialogueForNPC (gameObject.name).ToList();
+		var h = DialogueClass.Instance.GetDialogueForNPC (gameObject.name); 
+		foreach (var item in h) {
+			theScript.Add (item);
+		}
+    }
 	
 	// Update is called once per frame
 	void Update () {
         //print("Empty---------------------------------");
         if (waitForPress && Input.GetKeyDown(KeyCode.T))
         {
-            theTextBox.ReloadScript(theText);
+            //theTextBox.ReloadScript(theText);
+            //theTextBox.currentLine = startLine;
+            //theTextBox.endAtLine = endLine;
+            //theTextBox.stopPlayerMovement = true;
+            //if (gameObject.GetComponent<NPCController>() != null)
+            //{
+            //    gameObject.GetComponent<NPCController>().dialogueFinished = true;
+            //}
+            //theTextBox.EnableTextBox();
+
+			theTextBox.ReloadScript(theScript.ToArray());
             theTextBox.currentLine = startLine;
             theTextBox.endAtLine = endLine;
             theTextBox.stopPlayerMovement = true;
+            //if (gameObject.GetComponent<NPCController>() != null)
+            //{
+            //    gameObject.GetComponent<NPCController>().dialogueFinished = true;
+            //}
             theTextBox.EnableTextBox();
 
 
@@ -59,10 +83,18 @@ public class ActivateTextAtLine : MonoBehaviour {
                 return;
             }
 
-            theTextBox.ReloadScript(theText);
-            theTextBox.currentLine = startLine;
-            theTextBox.endAtLine = endLine;
-            theTextBox.EnableTextBox();
+            if (npc != null && isShoutZone)
+            {
+                //theTextBox.ReloadScript(theScript.ToArray());
+                //theTextBox.currentLine = startLine;
+                //theTextBox.endAtLine = endLine;
+                //theTextBox.EnableTextBox();
+                theTextBox.ReloadScript(DialogueClass.Instance.GetDialogueForNPC(npc.name));
+                theTextBox.currentLine = startLine;
+                theTextBox.endAtLine = endLine;
+                theTextBox.EnableTextBox();
+            }
+
 
             if (destroyWhenActivated)
             {

@@ -19,3 +19,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Floors/T5.unity
   - enabled: 1
     path: Assets/Scenes/Minigames/Green minigame.unity
+  - enabled: 1
+    path: Assets/Scenes/Minigames/Red minigame.unity
