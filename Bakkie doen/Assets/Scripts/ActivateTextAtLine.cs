@@ -48,11 +48,12 @@ public class ActivateTextAtLine : MonoBehaviour {
             theTextBox.currentLine = startLine;
             theTextBox.endAtLine = endLine;
             theTextBox.stopPlayerMovement = true;
-            //if (gameObject.GetComponent<NPCController>() != null)
-            //{
-            //    gameObject.GetComponent<NPCController>().dialogueFinished = true;
-            //}
+            if (gameObject.GetComponent<NPCController>() != null)
+            {
+                theTextBox.currentNPC = gameObject.GetComponent<NPCController>();
+            }
             theTextBox.EnableTextBox();
+            theTextBox.isNPCDialogue = true;
 
 
             //var test = new System.Collections.Generic.Dictionary<NPCCLASS, System.Collections.Generic.List<string>>();

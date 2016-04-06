@@ -21,7 +21,10 @@ public class TextBoxManager : MonoBehaviour {
 
     private bool isTyping = false;
     private bool cancelTyping = false;
+    public bool isNPCDialogue = false;
     public float typeSpeed;
+
+    public NPCController currentNPC;
 
     // Use this for initialization
     void Start()
@@ -61,6 +64,12 @@ public class TextBoxManager : MonoBehaviour {
                 if (currentLine > endAtLine)
                 {
                     DisableTextBox();
+                    
+                    if (isNPCDialogue && currentNPC != null)
+                    {
+                        currentNPC.dialogueFinished = true;
+                    }
+
                 }
                 else
                 {
