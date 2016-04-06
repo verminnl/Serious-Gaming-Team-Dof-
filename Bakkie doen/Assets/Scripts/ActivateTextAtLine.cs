@@ -18,17 +18,28 @@ public class ActivateTextAtLine : MonoBehaviour {
     private bool waitForPress;
 
     public bool destroyWhenActivated;
-    public NPCController npc;
-    public bool isShoutZone;
+    public bool isNarratorTrigger;
 
 	// Use this for initialization
 	void Start () {
         theTextBox = FindObjectOfType<TextBoxManager>();
 		//theScript = DialogueClass.Instance.GetDialogueForNPC (gameObject.name).ToList();
-		var h = DialogueClass.Instance.GetDialogueForNPC (gameObject.name); 
-		foreach (var item in h) {
-			theScript.Add (item);
-		}
+        if (isNarratorTrigger)
+        {
+            var h = DialogueClass.Instance.GetNarratorDialogue(gameObject.name);
+            foreach (var item in h)
+            {
+                theScript.Add(item);
+            }
+        }
+        else
+        {
+            var h = DialogueClass.Instance.GetDialogueForNPC(gameObject.name);
+            foreach (var item in h)
+            {
+                theScript.Add(item);
+            }
+        }
     }
 	
 	// Update is called once per frame
@@ -83,13 +94,13 @@ public class ActivateTextAtLine : MonoBehaviour {
                 return;
             }
 
-            if (npc != null && isShoutZone)
+            if (isNarratorTrigger)
             {
                 //theTextBox.ReloadScript(theScript.ToArray());
                 //theTextBox.currentLine = startLine;
                 //theTextBox.endAtLine = endLine;
                 //theTextBox.EnableTextBox();
-                theTextBox.ReloadScript(DialogueClass.Instance.GetDialogueForNPC(npc.name));
+                theTextBox.ReloadScript(DialogueClass.Instance.GetNarratorDialogue(gameObject.name));
                 theTextBox.currentLine = startLine;
                 theTextBox.endAtLine = endLine;
                 theTextBox.EnableTextBox();

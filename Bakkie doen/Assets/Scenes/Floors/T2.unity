@@ -523,7 +523,6 @@ GameObject:
   - 61: {fileID: 1447742289}
   - 114: {fileID: 1447742288}
   - 114: {fileID: 1447742287}
-  - 114: {fileID: 1447742292}
   m_Layer: 0
   m_Name: Jack
   m_TagString: Untagged
@@ -544,12 +543,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorType: red
   dialogue:
-  - Hi player! Press the "Enter" key to hear me out.
-  - Please explore the place to your own content.
-  - '...'
-  - Although there isn't much to do yet.
-  - '...'
-  - If you want to talk to me again, press the "T" key while standing next to me.
   - Hi player!
   - There is still nothing new yet.
   - Hey developers!
@@ -567,13 +560,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theText: {fileID: 4900000, guid: 1cb8dfb26be5d534aae0e2dcc7e39e36, type: 3}
-  startLine: 6
-  endLine: 9
+  startLine: 0
+  endLine: 3
   theTextBox: {fileID: 0}
   requireButtonPress: 1
   destroyWhenActivated: 0
-  npc: {fileID: 0}
-  isShoutZone: 0
+  isNarratorTrigger: 0
 --- !u!61 &1447742289
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -630,28 +622,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
---- !u!114 &1447742292
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1447742286}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd66383448cb1d04fb5491647435537a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogues:
-  - Hi player! Press the "Enter" key to hear me out.
-  - Please explore the place to your own content.
-  - '...'
-  - Although there isn't much to do yet.
-  - '...'
-  - If you want to talk to me again, press the "T" key while standing next to me.
-  - Hi player!
-  - There is still nothing new yet.
-  - Hey developers!
-  - Start making the level already!
 --- !u!1 &1511043403
 GameObject:
   m_ObjectHideFlags: 0
@@ -927,8 +897,9 @@ GameObject:
   - 4: {fileID: 1871046716}
   - 61: {fileID: 1871046715}
   - 114: {fileID: 1871046717}
+  - 114: {fileID: 1871046718}
   m_Layer: 0
-  m_Name: NPC Shout Zone
+  m_Name: Narrator Zone 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -976,9 +947,26 @@ MonoBehaviour:
   endLine: 5
   theTextBox: {fileID: 0}
   requireButtonPress: 0
-  destroyWhenActivated: 0
-  npc: {fileID: 1447742287}
-  isShoutZone: 1
+  destroyWhenActivated: 1
+  isNarratorTrigger: 1
+--- !u!114 &1871046718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1871046714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 748cd49a0b343e34391d1c8e1a74612e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+  - Welcome player! Press the "Enter" key to hear someone out.
+  - You can explore the place to your own content with the arrow keys or WASD keys.
+  - '...'
+  - Although there isn't much to do yet.
+  - '...'
+  - If you want to talk to someone, press the "T" key while standing next to him.
 --- !u!1 &2007852910
 GameObject:
   m_ObjectHideFlags: 0
