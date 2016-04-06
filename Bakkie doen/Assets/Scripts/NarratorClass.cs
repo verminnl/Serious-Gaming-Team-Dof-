@@ -7,8 +7,15 @@ public class NarratorClass {
     
     public NarratorClass(string name, string[] dialogue)
     {
-        this.nameTrigger = name;
-        DialogueClass.Instance.AddNarratorDialogue(this.nameTrigger, dialogue);
+        if (DialogueClass.narratorDialogues.ContainsKey(name))
+        {
+            return;
+        }
+        else
+        {
+            this.nameTrigger = name;
+            DialogueClass.Instance.AddNarratorDialogue(this.nameTrigger, dialogue);
+        }
     }
 
 }

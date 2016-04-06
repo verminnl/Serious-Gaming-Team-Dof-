@@ -10,9 +10,16 @@ public class NPCClass {
 
     public NPCClass(string name, string type, string[] dialogue)
     {
-        this.name = name;
-        this.type = type;
-        DialogueClass.Instance.AddNPCDialogue(name, dialogue);
-        number++;
+        if (DialogueClass.npcDialogues.ContainsKey(name))
+        {
+            return;
+        }
+        else
+        {
+            this.name = name;
+            this.type = type;
+            DialogueClass.Instance.AddNPCDialogue(name, dialogue);
+            number++;
+        }
     }
 }
