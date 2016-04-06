@@ -5,8 +5,6 @@ using System.Linq;
 
 public class ActivateTextAtLine : MonoBehaviour {
 
-    public TextAsset theText;
-
     public int startLine;
     public int endLine;
 
@@ -44,19 +42,8 @@ public class ActivateTextAtLine : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        //print("Empty---------------------------------");
         if (waitForPress && Input.GetKeyDown(KeyCode.T))
         {
-            //theTextBox.ReloadScript(theText);
-            //theTextBox.currentLine = startLine;
-            //theTextBox.endAtLine = endLine;
-            //theTextBox.stopPlayerMovement = true;
-            //if (gameObject.GetComponent<NPCController>() != null)
-            //{
-            //    gameObject.GetComponent<NPCController>().dialogueFinished = true;
-            //}
-            //theTextBox.EnableTextBox();
-
 			theTextBox.ReloadScript(theScript.ToArray());
             theTextBox.currentLine = startLine;
             theTextBox.endAtLine = endLine;
@@ -96,10 +83,6 @@ public class ActivateTextAtLine : MonoBehaviour {
 
             if (isNarratorTrigger)
             {
-                //theTextBox.ReloadScript(theScript.ToArray());
-                //theTextBox.currentLine = startLine;
-                //theTextBox.endAtLine = endLine;
-                //theTextBox.EnableTextBox();
                 theTextBox.ReloadScript(DialogueClass.Instance.GetNarratorDialogue(gameObject.name));
                 theTextBox.currentLine = startLine;
                 theTextBox.endAtLine = endLine;
