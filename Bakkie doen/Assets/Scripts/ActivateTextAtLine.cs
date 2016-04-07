@@ -87,6 +87,7 @@ public class ActivateTextAtLine : MonoBehaviour {
                 theTextBox.ReloadScript(DialogueClass.Instance.GetNarratorDialogue(gameObject.name));
                 theTextBox.currentLine = startLine;
                 theTextBox.endAtLine = endLine;
+                theTextBox.stopPlayerMovement = true;
                 theTextBox.EnableTextBox();
             }
 
