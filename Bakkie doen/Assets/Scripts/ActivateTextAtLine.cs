@@ -42,7 +42,7 @@ public class ActivateTextAtLine : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (waitForPress && Input.GetKeyDown(KeyCode.T))
+        if (waitForPress && Input.GetKeyUp(KeyCode.Return))
         {
 			theTextBox.ReloadScript(theScript.ToArray());
             theTextBox.currentLine = startLine;
@@ -54,6 +54,7 @@ public class ActivateTextAtLine : MonoBehaviour {
             }
             theTextBox.EnableTextBox();
             theTextBox.isNPCDialogue = true;
+            waitForPress = false;
 
 
             //var test = new System.Collections.Generic.Dictionary<NPCCLASS, System.Collections.Generic.List<string>>();
