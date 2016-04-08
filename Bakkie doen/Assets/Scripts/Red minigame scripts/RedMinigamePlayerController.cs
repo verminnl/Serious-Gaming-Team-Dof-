@@ -24,12 +24,12 @@ public class RedMinigamePlayerController : MonoBehaviour {
         if (Input.GetAxisRaw("Horizontal") > 0.5f || Input.GetAxisRaw("Horizontal") < -0.5f)
         {
             //transform.Translate(new Vector3(Input.GetAxisRaw("Horizontal") * moveSpeed * Time.deltaTime, 0f, 0f));
-            myRigidBody.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * moveSpeed, myRigidBody.velocity.y);
+            myRigidBody.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * moveSpeed, moveSpeed);
         }
 
         if (Input.GetAxisRaw("Horizontal") < 0.5f && Input.GetAxisRaw("Horizontal") > -0.5f)
         {
-            myRigidBody.velocity = new Vector2(0f, myRigidBody.velocity.y);
+            myRigidBody.velocity = new Vector2(0f, moveSpeed);
         }
 	}
 }

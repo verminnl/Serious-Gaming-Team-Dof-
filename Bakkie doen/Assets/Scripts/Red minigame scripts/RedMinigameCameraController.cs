@@ -5,7 +5,6 @@ public class RedMinigameCameraController : MonoBehaviour {
 
     public GameObject followTarget;
     public float moveSpeed;
-    public bool isLevelCamera;
     private Vector3 targetPos;
 
 	// Use this for initialization
@@ -15,7 +14,7 @@ public class RedMinigameCameraController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        targetPos = new Vector3(transform.position.x, followTarget.transform.position.y, transform.position.z);
+        targetPos = new Vector3(transform.position.x, followTarget.transform.position.y + 8, transform.position.z);
         transform.position = Vector3.Lerp(transform.position, targetPos, moveSpeed * Time.deltaTime);
 	}
 }
