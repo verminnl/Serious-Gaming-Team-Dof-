@@ -153,7 +153,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 402930987}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.59, y: 0, z: 0}
+  m_LocalPosition: {x: 30, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1272375777}
@@ -392,6 +392,9 @@ MonoBehaviour:
   - {fileID: 1610347649}
   - {fileID: 518747603}
   maxXPoint: {fileID: 402930988}
+  maxXChange: 30
+  minNumberOfEnemiesToSpawn: 1
+  maxNumberOfEnemiesToSpawn: 3
 --- !u!4 &1272375777
 Transform:
   m_ObjectHideFlags: 0
@@ -399,7 +402,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1272375775}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 65.4, y: -382.76, z: 0}
+  m_LocalPosition: {x: 46.51, y: -382.76, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 402930988}

@@ -8,7 +8,7 @@ using System.Collections.Generic;
 public class ObjectPooler : MonoBehaviour {
 
     public GameObject pooledObject;
-
+    public float moveSpeed;
     public int pooledAmount;
 
     List<GameObject> pooledObjects;
