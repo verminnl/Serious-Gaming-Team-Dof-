@@ -300,6 +300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pooledObject: {fileID: 134158, guid: ac7b1e2b71b5ab94cacdadd86c76e54b, type: 2}
+  moveSpeed: 10
   pooledAmount: 2
 --- !u!1 &865354160
 GameObject:
@@ -436,6 +437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pooledObject: {fileID: 109090, guid: c90249dd963753d4898bc8819cf33e4c, type: 2}
+  moveSpeed: 5
   pooledAmount: 2
 --- !u!4 &1556689582
 Transform:
@@ -519,6 +521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pooledObject: {fileID: 146084, guid: 7e1cf8c5b75ed0149827fdb3f3dca98c, type: 2}
+  moveSpeed: 5
   pooledAmount: 2
 --- !u!1 &2143395135
 GameObject:

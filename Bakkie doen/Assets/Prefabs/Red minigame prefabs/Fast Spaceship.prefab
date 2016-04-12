@@ -11,6 +11,7 @@ GameObject:
   - 212: {fileID: 21218068}
   - 61: {fileID: 6147984}
   - 114: {fileID: 11442562}
+  - 50: {fileID: 5016480}
   m_Layer: 0
   m_Name: Fast Spaceship
   m_TagString: Untagged
@@ -30,6 +31,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!50 &5016480
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 134158}
+  m_UseAutoMass: 0
+  m_Mass: 2000
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!61 &6147984
 BoxCollider2D:
   m_ObjectHideFlags: 1
