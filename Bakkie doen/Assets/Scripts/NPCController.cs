@@ -10,11 +10,13 @@ public class NPCController : MonoBehaviour {
 
     public NPCClass npc;
     private CameraController camera;
+    private PlayerController player;
 
     void Awake()
     {
         npc = new NPCClass(gameObject.name, colorType, dialogue);
         camera = FindObjectOfType<CameraController>();
+        player = FindObjectOfType<PlayerController>();
     }
 
 	// Use this for initialization
@@ -29,18 +31,22 @@ public class NPCController : MonoBehaviour {
             switch (colorType) {
                 case "red":
                     camera.isLevelCamera = false;
+                    player.inMinigame = true;
                     SceneManager.LoadScene("Red minigame");
                     break;
                 case "blue":
                     camera.isLevelCamera = false;
+                    player.inMinigame = true;
                     SceneManager.LoadScene("Blue minigame");
                     break;
                 case "green":
                     camera.isLevelCamera = false;
+                    player.inMinigame = true;
                     SceneManager.LoadScene("Green minigame");
                     break;
                 case "yellow":
                     camera.isLevelCamera = false;
+                    player.inMinigame = true;
                     SceneManager.LoadScene("Yellow minigame");
                     break;
             }
