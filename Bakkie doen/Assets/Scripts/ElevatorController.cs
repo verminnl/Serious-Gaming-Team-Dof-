@@ -15,8 +15,6 @@ public class ElevatorController : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        print(player.canMove);
-
     }
     
     void OnTriggerStay2D(Collider2D other)

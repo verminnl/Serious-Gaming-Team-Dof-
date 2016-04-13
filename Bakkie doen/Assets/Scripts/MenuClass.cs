@@ -14,6 +14,7 @@ public class MenuClass : MonoBehaviour {
     public GameObject elevator_Canvas;
     public bool isActive;
     public PlayerController player;
+    private int selector;
 
     // Use this for initialization
     void Start () {
@@ -21,92 +22,89 @@ public class MenuClass : MonoBehaviour {
         selectedOption = optionRed;
         previousSelectedOption = optionRed;
         toggleActive(false);
+        selector = 0;
+
 
         player = FindObjectOfType<PlayerController>();
 
     }
 	
 	// Update is called once per frame
-	void Update () {    
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+	void Update () {
+        if (isActive)
         {
-            if(selectedOption == optionRed)
+            if (Input.GetKeyDown(KeyCode.UpArrow))
             {
-                selectedOption = optionYellow;
+                selector++;
+                if (selector > 3)
+                {
+                    selector = 0;
+                }
+                selectedOptionSetter(selector);
             }
-            else if(selectedOption == optionBlue)
+            if (Input.GetKeyDown(KeyCode.DownArrow))
             {
-                selectedOption = optionRed;
+                selector--;
+                if (selector < 0)
+                {
+                    selector = 3;
+                }
+                selectedOptionSetter(selector);
             }
-            else if(selectedOption == optionGreen)
-            {
-                selectedOption = optionBlue;
-            }
-            else
-            {
-                selectedOption = optionGreen;
-            }
-            print(selectedOption);
-        }
 
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            if (selectedOption == optionRed)
+            if (selectedOption != previousSelectedOption)
             {
-                selectedOption = optionBlue;
+                selectedOption.GetComponent<Text>().color = Color.blue;
+                previousSelectedOption.GetComponent<Text>().color = Color.white;
+                previousSelectedOption = selectedOption;
             }
-            else if (selectedOption == optionBlue)
-            {
-                selectedOption = optionGreen;
-            }
-            else if (selectedOption == optionGreen)
-            {
-                selectedOption = optionYellow;
-            }
-            else
-            {
-                selectedOption = optionRed;
-            }
-            print(selectedOption);
-        }
 
-        if (selectedOption != previousSelectedOption)
-        {
-            selectedOption.GetComponent<Text>().color = Color.blue;
-            previousSelectedOption.GetComponent<Text>().color = Color.white;
-            previousSelectedOption = selectedOption;
-        }
-
-        if (Input.GetKeyDown(KeyCode.Return) && isActive)
-        {
-            string destination = "";
-            switch (selectedOption.tag)
+            if (Input.GetKeyDown(KeyCode.Return))
             {
-                case "Elevator_Red":
-                    destination = "T0";
-                    break;
-                case "Elevator_Green":
-                    destination = "T2";
-                    break;
-                case "Elevator_Blue":
-                    destination = "T1";
-                    break;
-                case "Elevator_Yellow":
-                    destination = "T3";
-                    break;
+                string destination = "";
+                switch (selectedOption.tag)
+                {
+                    case "Elevator_Red":
+                        destination = "T0";
+                        break;
+                    case "Elevator_Green":
+                        destination = "T2";
+                        break;
+                    case "Elevator_Blue":
+                        destination = "T1";
+                        break;
+                    case "Elevator_Yellow":
+                        destination = "T3";
+                        break;
+                }
+                player.canMove = true;
+                isActive = false;
+                SceneManager.LoadScene(destination);
             }
-            print("FUCK YOU");
-            print("klootzak kan weer lopen");
-            player.canMove = true;
-            print("kutscherm inactief");
-            isActive = false;
-            print("kutscene laden");
-            SceneManager.LoadScene(destination);
         }
     }
 
     public void toggleActive(bool active)
     {
         elevator_Canvas.SetActive(active);
+    }
+
+    public void selectedOptionSetter(int selector)
+    {
+        switch (selector)
+        {
+            case 0:
+                selectedOption = optionRed;
+                break;
+            case 1:
+                selectedOption = optionBlue;
+                break;
+            case 2:
+                selectedOption = optionGreen;
+                break;
+            case 3:
+                selectedOption = optionYellow;
+                break;
+        }
     }
 }
