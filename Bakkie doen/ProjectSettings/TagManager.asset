@@ -7,6 +7,11 @@ TagManager:
   - Enemy
   - groen
   - grijs
+  - Elevator_Red
+  - Elevator_Green
+  - Elevator_Blue
+  - Elevator_Yellow
+  - Elevator_Canvas
   layers:
   - Default
   - TransparentFX
