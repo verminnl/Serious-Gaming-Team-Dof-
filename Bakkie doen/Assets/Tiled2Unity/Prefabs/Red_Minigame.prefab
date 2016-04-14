@@ -44,6 +44,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 430064}
   - 114: {fileID: 11432960}
+  - 114: {fileID: 11419294}
   m_Layer: 0
   m_Name: Red_Minigame
   m_TagString: Untagged
@@ -2257,6 +2258,18 @@ PolygonCollider2D:
       - {x: 416, y: -7968}
       - {x: 416, y: -7999}
       - {x: 447, y: -7999}
+--- !u!114 &11419294
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 132136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aeab51ef1ebe5642aa00d420ab2bbdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mapDestructionPoint: {fileID: 0}
 --- !u!114 &11431476
 MonoBehaviour:
   m_ObjectHideFlags: 1
