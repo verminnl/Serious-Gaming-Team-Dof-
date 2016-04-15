@@ -17,9 +17,9 @@ public class ElevatorController : MonoBehaviour {
     {
     }
     
-    void OnTriggerStay2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if(Input.GetKeyUp(KeyCode.Return) && !elevator.isActive)
+        if(!elevator.isActive)
         {
             elevator.isActive = true;
             elevator.toggleActive(true);

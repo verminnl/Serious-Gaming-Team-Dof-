@@ -45,6 +45,7 @@ public class PlayerController : MonoBehaviour {
         {
             if (!canMove)
             {
+                myRigidBody.velocity = Vector2.zero;
                 return;
             }
 
