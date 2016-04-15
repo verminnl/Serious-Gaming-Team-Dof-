@@ -5,8 +5,8 @@ public class OwnMazeGenerator : MonoBehaviour {
 
     public int mazeSquareSize;
 
-    public int[,] mazeCellDatabase;
-    bool[,] wasHere;
+    public int[,] mazeCellDatabase; // Array storin the cell values.
+    bool[,] wasHere; // Array storin wether a cell has been acces already or not
     bool[,] correctPath; // The solution to the maze
     int startX, startY; // Starting X and Y values of maze
     int endX, endY;     // Ending X and Y values of maze
@@ -106,6 +106,7 @@ public class OwnMazeGenerator : MonoBehaviour {
                     {
                         livingCellCounter++;
                     }
+                    //Haalt muren weg als er teveel andere muren omheen zijn.
                     if (livingCellCounter > 6)
                     {
                         mazeCellDatabase[i, j] = 1;
@@ -115,6 +116,7 @@ public class OwnMazeGenerator : MonoBehaviour {
         }
     }
 
+    //This method adds Gameobjects with sprites.
     void drawCellDatabase()
     {
         GameObject newSprite = new GameObject();
@@ -124,7 +126,7 @@ public class OwnMazeGenerator : MonoBehaviour {
         {
             for (int j = 0; j < mazeSquareSize; j++)
             {
-
+                //This one adds the green floors
                 if (mazeCellDatabase[i, j] == 1)
                 {
                     newSprite.GetComponent<SpriteRenderer>().sprite = GameObject.FindGameObjectWithTag("groen").GetComponent<SpriteRenderer>().sprite;
@@ -132,7 +134,7 @@ public class OwnMazeGenerator : MonoBehaviour {
                     newSprite.transform.position = new Vector3(j, i);
                     Instantiate(newSprite);
                 }
-
+                // THis one draws a grey line when a solution is possible
                 if(correctPath[i, j])
                 {
                     newSprite.GetComponent<SpriteRenderer>().sprite = GameObject.FindGameObjectWithTag("grijs").GetComponent<SpriteRenderer>().sprite;
