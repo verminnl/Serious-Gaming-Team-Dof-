@@ -62,23 +62,29 @@ public class MenuClass : MonoBehaviour {
             if (Input.GetKeyDown(KeyCode.Return))
             {
                 string destination = "";
+                string startPoint = "";
                 switch (selectedOption.tag)
                 {
                     case "Elevator_Red":
                         destination = "T0";
+                        startPoint = "Elevator_Red";
                         break;
                     case "Elevator_Green":
                         destination = "T2";
+                        startPoint = "Elevator_Green";
                         break;
                     case "Elevator_Blue":
                         destination = "T1";
+                        startPoint = "Elevator_Blue";
                         break;
                     case "Elevator_Yellow":
                         destination = "T3";
+                        startPoint = "Elevator_Yellow";
                         break;
                 }
                 player.canMove = true;
                 isActive = false;
+                player.startPoint = startPoint;
                 SceneManager.LoadScene(destination);
             }
         }
