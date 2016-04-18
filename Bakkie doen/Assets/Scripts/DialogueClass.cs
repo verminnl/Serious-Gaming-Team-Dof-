@@ -75,4 +75,16 @@ public class DialogueClass
     {
         DialogueClass.narratorDialogues.Add(key, value);
     }
+
+    /// <summary>
+    /// Returns the length of dictionary with NPC dialogues
+    /// </summary>
+    /// <returns>
+    /// Returns the length of dictionary
+    /// </returns>
+    public int GetNPCDictionaryLength()
+    {
+        //Debug.Log(npcDialogues.Count);
+        return npcDialogues.Count;
+    }
 }

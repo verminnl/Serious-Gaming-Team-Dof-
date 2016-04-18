@@ -18,15 +18,19 @@ public class NPCController : MonoBehaviour {
     private CameraController camera;
     //Player in the game
     private PlayerController player;
+    //Game controller of the game
+    private GameController theGame;
 
     //Triggered before the initialization
     void Awake()
     {
-        //Creates an NPC with the given details
-        npc = new NPCClass(gameObject.name, colorType, dialogue);
-
         camera = FindObjectOfType<CameraController>();
         player = FindObjectOfType<PlayerController>();
+        theGame = FindObjectOfType<GameController>();
+
+        //Creates an NPC with the given details
+        npc = new NPCClass(gameObject.name, colorType, dialogue);
+        theGame.AddNPCToList(npc);
     }
 
 	// Use this for initialization
