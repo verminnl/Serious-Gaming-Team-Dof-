@@ -20,6 +20,8 @@ public class GameController : MonoBehaviour {
 
     private List<NPCClass> npcList = new List<NPCClass>();
 
+    public GameObject theLoadingTransition;
+
 	// Use this for initialization
 	void Start () {
         thePlayer = FindObjectOfType<PlayerController>();
@@ -31,7 +33,13 @@ public class GameController : MonoBehaviour {
         //Counts the time that has passed
         playedTime += Time.deltaTime;
         TimePassed();
-        if (Mathf.FloorToInt(playedTime) == 20)
+
+        if (Mathf.FloorToInt(playedTime) == 18)
+        {
+            Debug.Log("-----------------------------------------------------");
+            theLoadingTransition.SetActive(true);
+        }
+        else if (Mathf.FloorToInt(playedTime) == 20)
         {
             ActivateMinigame();
             chosenMinigame = true;
