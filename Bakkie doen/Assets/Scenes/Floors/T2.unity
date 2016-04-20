@@ -695,6 +695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042f76d6fd888cf4eae09df4b3303d58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  theNPC: {fileID: 0}
   theLoadingTransition: {fileID: 683425972}
 --- !u!224 &520328283
 RectTransform:
@@ -951,6 +952,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   theLoadingImage: {fileID: 1678202825}
   imageRotateSpeed: 360
+  loadingTime: 2
+  timeToStartLoadingScreen: 18
 --- !u!1 &761990286
 GameObject:
   m_ObjectHideFlags: 0
