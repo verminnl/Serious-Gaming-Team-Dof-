@@ -23,10 +23,13 @@ public class ActivateTextAtLine : MonoBehaviour {
     public bool destroyWhenActivated;
     //Checks if it's the narrator's dialogue
     public bool isNarratorTrigger;
+    //Controller of the game
+    private GameController gc;
 
 	// Use this for initialization
 	void Start () {
         theTextBox = FindObjectOfType<TextBoxManager>();
+        gc = FindObjectOfType<GameController>();
 
         //Gets the dialogue for the current connected gameobject and adds it to theScript
         if (isNarratorTrigger)
@@ -59,6 +62,7 @@ public class ActivateTextAtLine : MonoBehaviour {
             if (gameObject.GetComponent<NPCController>() != null)
             {
                 theTextBox.currentNPC = gameObject.GetComponent<NPCController>();
+                gc.theNPC = gameObject.GetComponent<NPCController>();
             }
             theTextBox.EnableTextBox();
             theTextBox.isNPCDialogue = true;

@@ -41,30 +41,30 @@ public class NPCController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         //Loads a minigame after a dialogue with an NPC based on its color type
-        if (dialogueFinished)
-        {
-            switch (colorType) {
-                case "red":
-                    camera.isLevelCamera = false;
-                    player.inMinigame = true;
-                    SceneManager.LoadScene("Red minigame");
-                    break;
-                case "blue":
-                    camera.isLevelCamera = false;
-                    player.inMinigame = true;
-                    SceneManager.LoadScene("Blue minigame");
-                    break;
-                case "green":
-                    camera.isLevelCamera = false;
-                    player.inMinigame = true;
-                    SceneManager.LoadScene("Green minigame");
-                    break;
-                case "yellow":
-                    camera.isLevelCamera = false;
-                    player.inMinigame = true;
-                    SceneManager.LoadScene("Yellow minigame");
-                    break;
-            }
-        }
+        //if (dialogueFinished)
+        //{
+        //    switch (colorType) {
+        //        case "red":
+        //            camera.isLevelCamera = false;
+        //            player.inMinigame = true;
+        //            SceneManager.LoadScene("Red minigame");
+        //            break;
+        //        case "blue":
+        //            camera.isLevelCamera = false;
+        //            player.inMinigame = true;
+        //            SceneManager.LoadScene("Blue minigame");
+        //            break;
+        //        case "green":
+        //            camera.isLevelCamera = false;
+        //            player.inMinigame = true;
+        //            SceneManager.LoadScene("Green minigame");
+        //            break;
+        //        case "yellow":
+        //            camera.isLevelCamera = false;
+        //            player.inMinigame = true;
+        //            SceneManager.LoadScene("Yellow minigame");
+        //            break;
+        //    }
+        //}
 	}
 }

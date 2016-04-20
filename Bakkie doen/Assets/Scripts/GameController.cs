@@ -10,7 +10,11 @@ public class GameController : MonoBehaviour {
     //Time that has passed since the start of the game
     private static float playedTime;
 
-    private NPCController theNPC;
+    public NPCController theNPC;
+
+    private string minigameType;
+
+    private float npcMinigameStartCounter;
 
     private PlayerController thePlayer;
 
@@ -32,6 +36,21 @@ public class GameController : MonoBehaviour {
 	void Update () {
         //Counts the time that has passed
         playedTime += Time.deltaTime;
+
+        if (theNPC != null)
+        {
+            minigameType = theNPC.colorType;
+            if (theNPC.dialogueFinished)
+            {
+                theLoadingTransition.SetActive(true);
+                npcMinigameStartCounter += Time.deltaTime;
+                if (npcMinigameStartCounter > 2)
+                {
+                    ActivateMinigame(minigameType);
+                    chosenMinigame = true;
+                }
+            }
+        }
         TimePassed();
 
         if (Mathf.FloorToInt(playedTime) == 18)
@@ -41,19 +60,23 @@ public class GameController : MonoBehaviour {
         }
         else if (Mathf.FloorToInt(playedTime) == 20)
         {
-            ActivateMinigame();
+            ActivateMinigame(npcList[randomMinigameColor()].type);
             chosenMinigame = true;
         }
 	}
 
-    public void ActivateMinigame()
+    int randomMinigameColor()
+    {
+        int npc = Random.Range(0, DialogueClass.Instance.GetNPCDictionaryLength());
+        Debug.Log("Random number: " + npc);
+        return npc;
+    }
+
+    public void ActivateMinigame(string type)
     {
         if (!chosenMinigame)
         {
-            int npc = Random.Range(0, DialogueClass.Instance.GetNPCDictionaryLength());
-            Debug.Log("Random number: " + npc);
-
-            switch (npcList[npc].type)
+            switch (type)
             {
                 case "red":
                     theCamera.isLevelCamera = false;
