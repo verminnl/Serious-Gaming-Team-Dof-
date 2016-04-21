@@ -13,7 +13,7 @@ public class TextBoxManager : MonoBehaviour {
     public int currentLine;
     public int endAtLine;
 
-    public PlayerController player;
+    private PlayerController player;
 
     public bool isActive;
 
