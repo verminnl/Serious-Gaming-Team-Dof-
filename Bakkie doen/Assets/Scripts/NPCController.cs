@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
-using System.Collections;
 using UnityEngine.SceneManagement;
+using System.Collections;
+using System.Collections.Generic;
 
 /// <summary>
 /// Controls the NPCs in the game
@@ -12,25 +13,27 @@ public class NPCController : MonoBehaviour {
     public string[] dialogue;
     //Checks if the NPC is done with its dialogue
     public bool dialogueFinished;
+    //List with all the skills given by its player
+    public List<string> NPCSkills;
     //Current NPC
     public NPCClass npc;
     //Camera in the game
-    private CameraController camera;
+    private CameraController theCamera;
     //Player in the game
-    private PlayerController player;
+    private PlayerController thePlayer;
     //Game controller of the game
     private GameController theGame;
 
     //Triggered before the initialization
     void Awake()
     {
-        camera = FindObjectOfType<CameraController>();
-        player = FindObjectOfType<PlayerController>();
+        theCamera = FindObjectOfType<CameraController>();
+        thePlayer = FindObjectOfType<PlayerController>();
         theGame = FindObjectOfType<GameController>();
 
         //Creates an NPC with the given details
-        npc = new NPCClass(gameObject.name, colorType, dialogue);
-        theGame.AddNPCToList(npc);
+        npc = new NPCClass(gameObject.name, colorType, dialogue, NPCSkills);
+        theGame.AddNPCToList(this);
     }
 
 	// Use this for initialization

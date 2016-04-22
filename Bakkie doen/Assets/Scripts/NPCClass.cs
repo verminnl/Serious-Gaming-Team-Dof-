@@ -15,7 +15,7 @@ public class NPCClass {
     //List with all the skills that the NPC has
     public List<string> skills;
 
-    public NPCClass(string name, string type, string[] dialogue)
+    public NPCClass(string name, string type, string[] dialogue, List<string> skills)
     {
         //Adds the newly created NPC in the Dictionary in the DialogueClass with its dialogue
         //if it doesn't exist yet
@@ -27,6 +27,7 @@ public class NPCClass {
         {
             this.name = name;
             this.type = type;
+            this.skills = skills;
             DialogueClass.Instance.AddNPCDialogue(name, dialogue);
             number++;
         }

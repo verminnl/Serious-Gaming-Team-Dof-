@@ -11,6 +11,10 @@ public class LoadingTransition : MonoBehaviour {
     public float loadingTime;
     //When to start a loading screen based on time in seconds
     public float timeToStartLoadingScreen;
+    //NPC sprite box
+    public Image npcImage;
+    //Sprite of an NPC
+    public Sprite npcSprite;
 
 	// Use this for initialization
 	void Start () {
@@ -21,5 +25,10 @@ public class LoadingTransition : MonoBehaviour {
 	void Update () {
         //Rotates the image on the loading screen
         theLoadingImage.rectTransform.Rotate(new Vector3(0, imageRotateSpeed * Time.deltaTime, 0));
+        //Shows the interacted NPC/random NPC on the loading screen
+        if (npcImage != null)
+        {
+            npcImage.sprite = npcSprite;
+        }
 	}
 }

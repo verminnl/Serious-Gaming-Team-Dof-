@@ -11,6 +11,8 @@ public class GameController : MonoBehaviour {
     private static float playedTime;
     //NPC that the player is talking to
     public NPCController theNPC;
+    //Sprite of the NPC that the player is talking to
+    private Sprite npcSprite;
     //A minigame type
     private string minigameType;
     //Counts the time after finishing dialogue with an NPC
@@ -20,7 +22,11 @@ public class GameController : MonoBehaviour {
     //Current camera
     private CameraController theCamera;
     //List with all the NPCs in the game
-    private List<NPCClass> npcList = new List<NPCClass>();
+    private List<NPCController> npcList = new List<NPCController>();
+    //Index number of the NPC in the List<NPCClass> npcList
+    private int indexNumberNPC;
+    //Check if a random NPC has been chosen
+    private bool hasChosenRandomNPC = false;
     //Loading screen for the game
     public GameObject theLoadingTransition;
     //Time for the loading screen to be active
@@ -53,11 +59,13 @@ public class GameController : MonoBehaviour {
         if (theNPC != null)
         {
             minigameType = theNPC.colorType;
+            npcSprite = theNPC.GetComponent<SpriteRenderer>().sprite;
 
             //When finished talking to an NPC, start the loading screen and start a time counter
             if (theNPC.dialogueFinished)
             {
                 theLoadingTransition.SetActive(true);
+                theLoadingTransition.GetComponent<LoadingTransition>().npcSprite = npcSprite;
                 npcMinigameStartCounter += Time.deltaTime;
 
                 //When the time counter is higher than the loadingScreenTime, start the minigame based on minigameType
@@ -75,11 +83,19 @@ public class GameController : MonoBehaviour {
         if (Mathf.FloorToInt(playedTime) == startLoading)
         {
             Debug.Log("-----------------------------------------------------");
+            if (!hasChosenRandomNPC)
+            {
+                indexNumberNPC = randomMinigameColor();
+                hasChosenRandomNPC = true;
+            }
+            theNPC = npcList[indexNumberNPC];
+            npcSprite = theNPC.GetComponent<SpriteRenderer>().sprite;
             theLoadingTransition.SetActive(true);
+            theLoadingTransition.GetComponent<LoadingTransition>().npcSprite = npcSprite;
         }
         else if (Mathf.FloorToInt(playedTime) == startLoading + loadingScreenTime)
         {
-            ActivateMinigame(npcList[randomMinigameColor()].type);
+            ActivateMinigame(npcList[indexNumberNPC].colorType);
         }
 	}
 
@@ -129,7 +145,7 @@ public class GameController : MonoBehaviour {
     /// Adds the NPCs in the game to npcList
     /// </summary>
     /// <param name="theNPC">NPC that should be added to the list</param>
-    public void AddNPCToList(NPCClass theNPC)
+    public void AddNPCToList(NPCController theNPC)
     {
         npcList.Add(theNPC);
     }
