@@ -660,6 +660,14 @@ Prefab:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 141982, guid: 11cda25e8f3cee04297d9262191299bd, type: 2}
+      propertyPath: m_Name
+      value: Dialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 175962, guid: 11cda25e8f3cee04297d9262191299bd, type: 2}
+      propertyPath: m_Name
+      value: Dialogue instruction
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 11cda25e8f3cee04297d9262191299bd, type: 2}
   m_IsPrefabParent: 0
