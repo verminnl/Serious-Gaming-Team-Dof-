@@ -105,6 +105,8 @@ public class GameController : MonoBehaviour {
             theNPC = npcList[indexNumberNPC];
             npcSprite = theNPC.GetComponent<SpriteRenderer>().sprite;
             theLoadingTransition.SetActive(true);
+
+            //Sends the information of the NPC to the loading screen
             theLoadingTransition.GetComponent<LoadingTransition>().npcSprite = npcSprite;
             theLoadingTransition.GetComponent<LoadingTransition>().npcName = theNPC.name;
             theLoadingTransition.GetComponent<LoadingTransition>().npcSkills = theNPC.NPCSkills;
