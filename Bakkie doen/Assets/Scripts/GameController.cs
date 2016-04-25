@@ -33,6 +33,8 @@ public class GameController : MonoBehaviour {
     private float loadingScreenTime;
     //Time for the loading screen to appear
     private float startLoading;
+    //Checks if a the gamecontroller already exists
+    private bool gcExists;
 
     //Sets the loadingScreenTime and the startLoading variables to the values that has been given in the Inspector
     //at the LoadingTransition script
@@ -46,12 +48,22 @@ public class GameController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        thePlayer = FindObjectOfType<PlayerController>();
-        theCamera = FindObjectOfType<CameraController>();
+        if (!gcExists)
+        {
+            gcExists = true;
+            DontDestroyOnLoad(transform.gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
 	}
 	
 	// Update is called once per frame
 	void Update () {
+        thePlayer = FindObjectOfType<PlayerController>();
+        theCamera = FindObjectOfType<CameraController>();
+
         //Counts the time that has passed
         playedTime += Time.deltaTime;
 
@@ -115,7 +127,7 @@ public class GameController : MonoBehaviour {
     }
 
     /// <summary>
-    /// Activates a minigame based on the type
+    /// Activates a minigame based on the type in the main level
     /// </summary>
     /// <param name="type">Type of the minigame</param>
     public void ActivateMinigame(string type)
