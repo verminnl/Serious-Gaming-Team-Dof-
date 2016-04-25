@@ -1,10 +1,10 @@
 <?php
 	include '../database_connection.php';
 	
-	$PlayerID = $_GET["pid"];
+	$SkillID = $_GET["sid"];
 	
-	//http://localhost/Database/read/player_login.php?pid=5
-	$query = "SELECT `PlayerID`,`Username`,`Password` From `player` WHERE `PlayerID` = '$PlayerID'";
+	//http://localhost/Database/read/skill.php?sid=5
+	$query = "SELECT * FROM `skill` WHERE `Skill_ID` = '$SkillID'";
 	$result = mysqli_query($conn,$query);
 	if(mysqli_num_rows($result) > 0){
 		while($row = mysqli_fetch_assoc($result)){

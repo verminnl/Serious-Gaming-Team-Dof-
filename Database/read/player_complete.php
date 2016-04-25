@@ -2,7 +2,6 @@
 	include '../database_connection.php';
 	
 	$PlayerID = $_GET["pid"];
-	echo $_SERVER["PATH"];
 	//http://localhost/Database/read/player_complete.php?pid=5
 	$query = "SELECT * From `player` WHERE `PlayerID` = '$PlayerID'";
 	$result = mysqli_query($conn,$query);
