@@ -66,6 +66,8 @@ public class GameController : MonoBehaviour {
             {
                 theLoadingTransition.SetActive(true);
                 theLoadingTransition.GetComponent<LoadingTransition>().npcSprite = npcSprite;
+                theLoadingTransition.GetComponent<LoadingTransition>().npcName = theNPC.name;
+                theLoadingTransition.GetComponent<LoadingTransition>().npcSkills = theNPC.NPCSkills;
                 npcMinigameStartCounter += Time.deltaTime;
 
                 //When the time counter is higher than the loadingScreenTime, start the minigame based on minigameType
@@ -92,6 +94,8 @@ public class GameController : MonoBehaviour {
             npcSprite = theNPC.GetComponent<SpriteRenderer>().sprite;
             theLoadingTransition.SetActive(true);
             theLoadingTransition.GetComponent<LoadingTransition>().npcSprite = npcSprite;
+            theLoadingTransition.GetComponent<LoadingTransition>().npcName = theNPC.name;
+            theLoadingTransition.GetComponent<LoadingTransition>().npcSkills = theNPC.NPCSkills;
         }
         else if (Mathf.FloorToInt(playedTime) == startLoading + loadingScreenTime)
         {
