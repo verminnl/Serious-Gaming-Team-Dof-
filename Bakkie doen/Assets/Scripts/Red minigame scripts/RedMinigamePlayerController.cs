@@ -11,10 +11,19 @@ public class RedMinigamePlayerController : MonoBehaviour {
     private Rigidbody2D myRigidBody;
     //Decides if the player can move or not
     public bool canMove;
+    //Decides if the player should flash or not
+    private bool flashActive;
+    //How long the player will flash
+    public float flashLenght;
+    //Counts how long the player has been flashing
+    private float flashCounter;
+    //Sprite Renderer of the player
+    private SpriteRenderer spriteRenderer;
 
 	// Use this for initialization
 	void Start () {
         myRigidBody = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
 	}
 	
 	// Update is called once per frame
@@ -37,5 +46,43 @@ public class RedMinigamePlayerController : MonoBehaviour {
         {
             myRigidBody.velocity = new Vector2(0f, moveSpeed);
         }
+
+        ActivateFlash();
 	}
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Enemy")
+        {
+            flashActive = true;
+            flashCounter = flashLenght;
+            Debug.Log(flashActive);
+        }
+    }
+
+    void ActivateFlash()
+    {
+        if (flashActive)
+        {
+            if (flashCounter > flashLenght * .66f)
+            {
+                spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, 0f);
+            }
+            else if (flashCounter > flashLenght * .33f)
+            {
+                spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, 1f);
+            }
+            else if (flashCounter > 0)
+            {
+                spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, 0f);
+            }
+            else
+            {
+                spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, 1f);
+                flashActive = false;
+            }
+
+            flashCounter -= Time.deltaTime;
+        }
+    }
 }

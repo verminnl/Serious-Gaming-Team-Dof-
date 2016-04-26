@@ -10,11 +10,11 @@ GameObject:
   - 4: {fileID: 465266}
   - 212: {fileID: 21201532}
   - 61: {fileID: 6154850}
-  - 114: {fileID: 11465032}
   - 50: {fileID: 5016468}
+  - 114: {fileID: 11465032}
   m_Layer: 0
   m_Name: meteorite
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

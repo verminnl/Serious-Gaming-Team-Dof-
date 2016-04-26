@@ -10,11 +10,11 @@ GameObject:
   - 4: {fileID: 484956}
   - 212: {fileID: 21218068}
   - 61: {fileID: 6147984}
-  - 114: {fileID: 11442562}
   - 50: {fileID: 5016480}
+  - 114: {fileID: 11442562}
   m_Layer: 0
   m_Name: Fast Spaceship
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

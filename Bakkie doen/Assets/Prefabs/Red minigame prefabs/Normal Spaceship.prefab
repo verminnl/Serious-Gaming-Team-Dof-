@@ -10,11 +10,11 @@ GameObject:
   - 4: {fileID: 408838}
   - 212: {fileID: 21286604}
   - 61: {fileID: 6129742}
-  - 114: {fileID: 11414542}
   - 50: {fileID: 5094982}
+  - 114: {fileID: 11414542}
   m_Layer: 0
   m_Name: Normal Spaceship
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

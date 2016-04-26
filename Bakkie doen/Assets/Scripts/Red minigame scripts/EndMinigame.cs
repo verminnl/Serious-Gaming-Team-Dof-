@@ -17,7 +17,7 @@ public class EndMinigame : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Debug.Log("x position: " + transform.position.y + " <------------------------------------------");
+        
 	}
 
     /// <summary>

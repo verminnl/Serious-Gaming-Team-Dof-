@@ -91,7 +91,6 @@ public class EnemySpawner : MonoBehaviour {
                 newEnemy.SetActive(true);
                 newEnemy.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, -theObjectPools[enemySelector].moveSpeed);
             }
-            
         }
 	}
 }
