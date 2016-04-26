@@ -48,15 +48,15 @@ public class GameController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        if (!gcExists)
-        {
-            gcExists = true;
-            DontDestroyOnLoad(transform.gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        //if (!gcExists)
+        //{
+        //    gcExists = true;
+        //    DontDestroyOnLoad(transform.gameObject);
+        //}
+        //else
+        //{
+        //    Destroy(gameObject);
+        //}
 	}
 	
 	// Update is called once per frame

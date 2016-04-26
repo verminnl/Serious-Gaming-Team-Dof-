@@ -35,19 +35,19 @@ public class MenuClass : MonoBehaviour {
         {
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
-                selector++;
-                if (selector > 3)
+                selector--;
+                if (selector < 0)
                 {
-                    selector = 0;
+                    selector = 3;
                 }
                 selectedOptionSetter(selector);
             }
             if (Input.GetKeyDown(KeyCode.DownArrow))
             {
-                selector--;
-                if (selector < 0)
+                selector++;
+                if (selector > 3)
                 {
-                    selector = 3;
+                    selector = 0;
                 }
                 selectedOptionSetter(selector);
             }
