@@ -22,7 +22,7 @@ public class GameController : MonoBehaviour {
     //Current camera
     private CameraController theCamera;
     //List with all the NPCs in the game
-    private List<NPCController> npcList = new List<NPCController>();
+    private static List<NPCController> npcList = new List<NPCController>();
     //Index number of the NPC in the List<NPCClass> npcList
     private int indexNumberNPC;
     //Check if a random NPC has been chosen
@@ -48,15 +48,7 @@ public class GameController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        //if (!gcExists)
-        //{
-        //    gcExists = true;
-        //    DontDestroyOnLoad(transform.gameObject);
-        //}
-        //else
-        //{
-        //    Destroy(gameObject);
-        //}
+        
 	}
 	
 	// Update is called once per frame
@@ -91,25 +83,24 @@ public class GameController : MonoBehaviour {
         }
 
         TimePassed();
+        Debug.Log(npcList.Count);
 
         //Start loading screen if player hasn't talked to an NPC for {startLoading} seconds and
         //activate minigame after {loadingScreenTime} seconds
         if (Mathf.FloorToInt(playedTime) == startLoading)
         {
-            Debug.Log("-----------------------------------------------------");
             if (!hasChosenRandomNPC)
             {
                 indexNumberNPC = randomMinigameColor();
                 hasChosenRandomNPC = true;
             }
-            theNPC = npcList[indexNumberNPC];
-            npcSprite = theNPC.GetComponent<SpriteRenderer>().sprite;
+
             theLoadingTransition.SetActive(true);
 
             //Sends the information of the NPC to the loading screen
-            theLoadingTransition.GetComponent<LoadingTransition>().npcSprite = npcSprite;
-            theLoadingTransition.GetComponent<LoadingTransition>().npcName = theNPC.name;
-            theLoadingTransition.GetComponent<LoadingTransition>().npcSkills = theNPC.NPCSkills;
+            theLoadingTransition.GetComponent<LoadingTransition>().npcSprite = npcList[indexNumberNPC].sprite;
+            theLoadingTransition.GetComponent<LoadingTransition>().npcName = npcList[indexNumberNPC].name;
+            theLoadingTransition.GetComponent<LoadingTransition>().npcSkills = npcList[indexNumberNPC].NPCSkills;
         }
         else if (Mathf.FloorToInt(playedTime) == startLoading + loadingScreenTime)
         {
@@ -165,6 +156,7 @@ public class GameController : MonoBehaviour {
     /// <param name="theNPC">NPC that should be added to the list</param>
     public void AddNPCToList(NPCController theNPC)
     {
+        // ***************** Still need a check if the npc is already exist in the list or not before adding him
         npcList.Add(theNPC);
     }
 

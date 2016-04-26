@@ -17,6 +17,10 @@ public class NPCController : MonoBehaviour {
     public List<string> NPCSkills;
     //Current NPC
     public NPCClass npc;
+    //Name of current NPC
+    public string name;
+    //Sprite of current NPC
+    public Sprite sprite;
     //Camera in the game
     private CameraController theCamera;
     //Player in the game
@@ -30,9 +34,11 @@ public class NPCController : MonoBehaviour {
         theCamera = FindObjectOfType<CameraController>();
         thePlayer = FindObjectOfType<PlayerController>();
         theGame = FindObjectOfType<GameController>();
+        name = gameObject.name;
+        sprite = gameObject.GetComponent<SpriteRenderer>().sprite;
 
         //Creates an NPC with the given details
-        npc = new NPCClass(gameObject.name, colorType, dialogue, NPCSkills);
+        npc = new NPCClass(name, colorType, dialogue, NPCSkills);
         theGame.AddNPCToList(this);
     }
 
@@ -43,31 +49,6 @@ public class NPCController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        //Loads a minigame after a dialogue with an NPC based on its color type
-        //if (dialogueFinished)
-        //{
-        //    switch (colorType) {
-        //        case "red":
-        //            camera.isLevelCamera = false;
-        //            player.inMinigame = true;
-        //            SceneManager.LoadScene("Red minigame");
-        //            break;
-        //        case "blue":
-        //            camera.isLevelCamera = false;
-        //            player.inMinigame = true;
-        //            SceneManager.LoadScene("Blue minigame");
-        //            break;
-        //        case "green":
-        //            camera.isLevelCamera = false;
-        //            player.inMinigame = true;
-        //            SceneManager.LoadScene("Green minigame");
-        //            break;
-        //        case "yellow":
-        //            camera.isLevelCamera = false;
-        //            player.inMinigame = true;
-        //            SceneManager.LoadScene("Yellow minigame");
-        //            break;
-        //    }
-        //}
+        
 	}
 }
