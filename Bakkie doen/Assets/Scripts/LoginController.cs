@@ -37,6 +37,7 @@ public class LoginController : MonoBehaviour {
 
                 //Get the playerdata
                 PlayerData playerData = BackEndCommunicator.Instance.GetPlayerData(playerLogin.PlayerID);
+                print(playerData.FirstName);
                 
                 //TODO: Set Player data so it can be used in different scenes. (Global variable?)
                 SceneManager.LoadScene("T2");

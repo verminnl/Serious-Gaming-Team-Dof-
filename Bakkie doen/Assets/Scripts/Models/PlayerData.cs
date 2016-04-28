@@ -8,5 +8,11 @@ public class PlayerData
 {
     public int PlayerID;
     public string FirstName;
-    
+    public string LastName;
+    public string Job;
+    public string SpawnPoint;
+    public string Character;
+    public string Element;
+    public string Domain;
+    public int[][] FoundPlayers;
 }

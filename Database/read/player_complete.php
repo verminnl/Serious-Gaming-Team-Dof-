@@ -3,13 +3,11 @@
 	
 	$PlayerID = $_GET["pid"];
 	//http://localhost/Database/read/player_complete.php?pid=5
-	$query = "SELECT `PlayerID`,`FirstName`,`LastName`,`Job`,`SpawnPoint`,`Character`,`Element`,`FoundPlayers`,`Domain` From `player` WHERE `PlayerID` = '$PlayerID'";
+	$query = "SELECT `PlayerID`,`FirstName`,`LastName`,`Job`,`SpawnPoint`,`Character`,`Element`,`Domain` From `player` WHERE `PlayerID` = '$PlayerID'";
 	$result = mysqli_query($conn,$query);
 	if(mysqli_num_rows($result) > 0){
 		while($row = mysqli_fetch_assoc($result)){
-			foreach($row as $key => $value){
-				echo $key . ":" .$value . "|";
-			}
+			echo json_encode($row, JSON_NUMERIC_CHECK);
 		}
 	}
 ?>

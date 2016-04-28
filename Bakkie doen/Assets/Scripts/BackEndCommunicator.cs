@@ -49,9 +49,7 @@ public class BackEndCommunicator {
 
         //Get the result of the web request
         string requestResultString = webRequest.text;
-
-        var test2 = new PlayerLogin() { PlayerID = 1 };
-        var test = JsonUtility.ToJson(test2);
+        
         // Decode from json
         PlayerLogin decodedPlayerLoginObject = JsonUtility.FromJson<PlayerLogin>(requestResultString);
         
@@ -66,8 +64,6 @@ public class BackEndCommunicator {
         string parameters = string.Format("pid={0}", playerID);
         string URLToUse = basicURL + parameters;
 
-        PlayerData playerData = null;
-
         //Connect to the server
         var webRequest = new WWW(URLToUse);
         while (!webRequest.isDone) //Wait until the request is done
@@ -79,7 +75,7 @@ public class BackEndCommunicator {
         string requestResultString = webRequest.text;
 
         //Convert the result from the request (JSON) to a PlayerData model object.
-        playerData = JsonUtility.FromJson<PlayerData>(requestResultString);
+        PlayerData playerData = JsonUtility.FromJson<PlayerData>(requestResultString);
 
         //TODO: Check if all the elements of the parsing went right. if not, treat the process as a failed one (set PlayerData == null)
         return playerData;
