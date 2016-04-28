@@ -9,6 +9,7 @@ public class LoginController : MonoBehaviour {
     public string[] items;
 
     public InputField InputField;
+    public GameController gameController;
 
     void Start()
     {
@@ -37,9 +38,8 @@ public class LoginController : MonoBehaviour {
 
                 //Get the playerdata
                 PlayerData playerData = BackEndCommunicator.Instance.GetPlayerData(playerLogin.PlayerID);
-                print(playerData.FirstName);
-                
-                //TODO: Set Player data so it can be used in different scenes. (Global variable?)
+
+                //TODO: Add loadinscreen
                 SceneManager.LoadScene("T2");
             }
         }

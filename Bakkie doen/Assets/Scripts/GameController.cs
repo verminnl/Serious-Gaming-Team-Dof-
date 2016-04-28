@@ -9,6 +9,8 @@ using System.Collections.Generic;
 public class GameController : MonoBehaviour {
     //Time that has passed since the start of the game
     private static float playedTime;
+    //Player Data Model
+    private static PlayerData playerData;
     //NPC that the player is talking to
     public NPCController theNPC;
     //Sprite of the NPC that the player is talking to
