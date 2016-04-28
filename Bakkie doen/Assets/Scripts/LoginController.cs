@@ -26,19 +26,18 @@ public class LoginController : MonoBehaviour {
 
 
             //Send a request to the back-end (login) and retrieve the playerID. IT RETURNS 0 IF LOGIN FAILED
-            PlayerLogin playerLogin = BackEndCommunicator.Instance.Login("dodo", "dodo");
-            if(playerLogin == null)
+            GameController.playerLogin = BackEndCommunicator.Instance.Login("dodo", "dodo");
+            if(GameController.playerLogin == null)
             {
                 print("you fucked up");
             }
-            else if(playerLogin.PlayerID > 0)
+            else if(GameController.playerLogin.PlayerID > 0)
             {
                 print("You logged in!");
                 InputField.enabled = false;
 
                 //Get the playerdata
-                PlayerData playerData = BackEndCommunicator.Instance.GetPlayerData(playerLogin.PlayerID);
-
+                GameController.playerData = BackEndCommunicator.Instance.GetPlayerData(GameController.playerLogin.PlayerID);
                 //TODO: Add loadinscreen
                 SceneManager.LoadScene("T2");
             }

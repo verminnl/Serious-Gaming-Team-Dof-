@@ -10,7 +10,9 @@ public class GameController : MonoBehaviour {
     //Time that has passed since the start of the game
     private static float playedTime;
     //Player Data Model
-    private static PlayerData playerData;
+    public static PlayerData playerData;
+    //Player Login Model
+    public static PlayerLogin playerLogin;
     //NPC that the player is talking to
     public NPCController theNPC;
     //Sprite of the NPC that the player is talking to
@@ -85,7 +87,7 @@ public class GameController : MonoBehaviour {
         }
 
         TimePassed();
-        Debug.Log(npcList.Count);
+        //Debug.Log(npcList.Count);
 
         //Start loading screen if player hasn't talked to an NPC for {startLoading} seconds and
         //activate minigame after {loadingScreenTime} seconds
@@ -167,6 +169,6 @@ public class GameController : MonoBehaviour {
     /// </summary>
     public void TimePassed()
     {
-        Debug.Log("Amount of time played: " + playedTime);
+        //Debug.Log("Amount of time played: " + playedTime);
     }
 }
