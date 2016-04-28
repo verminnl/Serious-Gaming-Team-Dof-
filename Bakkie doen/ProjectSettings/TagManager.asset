@@ -12,6 +12,7 @@ TagManager:
   - Elevator_Blue
   - Elevator_Yellow
   - Elevator_Canvas
+  - Login_Input_Field
   layers:
   - Default
   - TransparentFX

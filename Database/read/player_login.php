@@ -1,16 +1,15 @@
 <?php
 	include '../database_connection.php';
 	
-	$PlayerID = $_GET["pid"];
+	$Username = $_GET["us"];
+	$Password = $_GET["pw"];
 	
-	//http://localhost/Database/read/player_login.php?pid=5
-	$query = "SELECT `PlayerID`,`Username`,`Password` From `player` WHERE `PlayerID` = '$PlayerID'";
+	//http://localhost/Database/read/player_login.php?us=dodo&pw=dodo
+	$query = "SELECT `PlayerID` From `player` WHERE `Username` = '$Username' AND `Password` = '$Password'";
 	$result = mysqli_query($conn,$query);
-	if(mysqli_num_rows($result) > 0){
+	if(mysqli_num_rows($result) == 1){
 		while($row = mysqli_fetch_assoc($result)){
-			foreach($row as $key => $value){
-				echo $key . ":" .$value . "|";
-			}
+			echo json_encode($row, JSON_NUMERIC_CHECK);
 		}
 	}
 ?>
