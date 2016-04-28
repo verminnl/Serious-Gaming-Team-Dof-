@@ -37,9 +37,7 @@ public class BackEndCommunicator {
         string basicURL = GetURL("read", "player_login");
         string parameters = string.Format("us={0}&pw={1}", name,password);
         string URLToUse = basicURL + parameters;
-
-        int result = 0;
-
+        
         //Connect to the server
         var webRequest = new WWW(URLToUse);
         while (!webRequest.isDone) //Wait until the request is done
@@ -77,6 +75,29 @@ public class BackEndCommunicator {
         //Convert the result from the request (JSON) to a PlayerData model object.
         PlayerData playerData = JsonUtility.FromJson<PlayerData>(requestResultString);
 
+        //Set up the URL
+        basicURL = GetURL("read", "player_foundplayers");
+        URLToUse = basicURL + parameters;
+
+        //Connect to the server
+        webRequest = new WWW(URLToUse);
+        while (!webRequest.isDone) //Wait until the request is done
+        {
+
+        }
+
+        //Get the result of the web request
+        requestResultString = webRequest.text;
+        //TODO: Split result string, filter string for double info, into int[][]
+
+        //Convert the result from the request (JSON) to a PlayerData model object.
+        string[] splitRequestResult = requestResultString.Replace(")(", ",").Replace("(", "").Replace(")", "").Split(',');
+        //int[] intRequestResult = int.TryParse(intRequestResult, playerData.FoundPlayers);
+        //playerData.FoundPlayers = int.TryParse(requestResultString.Replace(")(", ",").Replace("(", "").Replace(")", "").Split(','), playerData.FoundPlayers);
+        //playerData.FoundPlayers = JsonUtility.FromJson<int[]>(requestResultString);
+        //ebug.Log(playerData.FoundPlayers);
+        //playerData.FoundPlayers = JsonUtility.FromJson<int[][]>(requestResultString);
+        //Debug.Log(playerData.FoundPlayers);
         //TODO: Check if all the elements of the parsing went right. if not, treat the process as a failed one (set PlayerData == null)
         return playerData;
     }

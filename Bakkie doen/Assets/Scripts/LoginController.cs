@@ -26,6 +26,7 @@ public class LoginController : MonoBehaviour {
 
 
             //Send a request to the back-end (login) and retrieve the playerID. IT RETURNS 0 IF LOGIN FAILED
+            //2 letters, 7 cijfers, 3 cijfers
             GameController.playerLogin = BackEndCommunicator.Instance.Login("dodo", "dodo");
             if(GameController.playerLogin == null)
             {

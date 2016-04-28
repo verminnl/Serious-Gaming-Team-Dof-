@@ -25,7 +25,6 @@ public class PlayerController : MonoBehaviour {
         myRigidBody = GetComponent<Rigidbody2D>();
         gameController = GameObject.FindObjectOfType<GameController>();
         
-        print(GameController.playerData.FirstName);
         if (!playerExists && !inMinigame)
         {
             playerExists = true;

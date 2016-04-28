@@ -14,5 +14,5 @@ public class PlayerData
     public string Character;
     public string Element;
     public string Domain;
-    public int[][] FoundPlayers;
+    public int[] FoundPlayers;
 }
