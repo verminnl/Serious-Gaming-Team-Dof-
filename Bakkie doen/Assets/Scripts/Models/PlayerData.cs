@@ -15,4 +15,5 @@ public class PlayerData
     public string Element;
     public string Domain;
     public int[] FoundPlayers;
+    public string[] Skills;
 }
