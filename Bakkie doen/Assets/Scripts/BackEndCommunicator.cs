@@ -55,7 +55,7 @@ public class BackEndCommunicator {
         
     }
 
-    public PlayerData GetPlayerData(int playerID)
+    public AvatarData GetPlayerData(int playerID)
     {
         // Player Data step 1 webrequest
         //Set up the URL
@@ -99,7 +99,7 @@ public class BackEndCommunicator {
         // Player Data step 3, strings to datamodel
         // Player Data
         //Convert the result from the request (JSON) to a PlayerData model object.
-        PlayerData playerData = JsonUtility.FromJson<PlayerData>(requestResultStringPlayerData);
+        AvatarData playerData = JsonUtility.FromJson<AvatarData>(requestResultStringPlayerData);
         
         // PlayerFound Players
         //Convert the string into something useable for c#

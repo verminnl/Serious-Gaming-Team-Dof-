@@ -10,9 +10,11 @@ public class GameController : MonoBehaviour {
     //Time that has passed since the start of the game
     private static float playedTime;
     //Player Data Model
-    public static PlayerData playerData;
+    public static AvatarData playerData;
     //Player Login Model
     public static PlayerLogin playerLogin;
+    //NPC dictionairy
+    public static Dictionary<int, AvatarData> npcDataDictionairy;
     //NPC that the player is talking to
     public NPCController theNPC;
     //Sprite of the NPC that the player is talking to

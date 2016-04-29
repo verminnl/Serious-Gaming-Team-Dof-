@@ -4,7 +4,7 @@ using System.Collections;
 /// <summary>
 /// The data of the player returned by the webserver
 /// </summary>
-public class PlayerData
+public class AvatarData
 {
     public int PlayerID;
     public string FirstName;
