@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using System.Collections.Generic;
 
 /// <summary>
 /// Singleton (add more comments later)
@@ -123,6 +123,43 @@ public class BackEndCommunicator {
 
         // Return the playerDataModel
         return playerData;
+    }
+
+    public List<AvatarData> GetNPCData(int playerID)
+    {
+        List<AvatarData> NPCData = new List<AvatarData>();
+
+        //Set up the URL
+        string basicURL = GetURL("read", "npc_ids");
+        string parameters = string.Format("pid={0}", playerID);
+        string URLToUse = basicURL + parameters;
+
+        var webRequestAllNPCIDs = new WWW(URLToUse);
+
+        
+        // Wait for the requests to be done
+        while (!webRequestAllNPCIDs.isDone) //Wait until the request is done
+        {
+
+        }
+        string webRequestAllNPCIDsText = webRequestAllNPCIDs.text;
+        //Convert the string into something useable for c#
+        string[] splitRequestResult = webRequestAllNPCIDsText.Replace(")(", ",").Replace("(", "").Replace(")", "").Split(',');
+
+        //change the string array to an int array
+        int[] intRequestResult = new int[splitRequestResult.Length];
+        for (int i = 0; i < splitRequestResult.Length; i++)
+        {
+            int.TryParse(splitRequestResult[i], out intRequestResult[i]);
+        }
+
+        foreach (int id in intRequestResult)
+        {
+            NPCData.Add(BackEndCommunicator.Instance.GetPlayerData(id));
+        }
+        Debug.Log("hoaofasdf");
+
+        return NPCData;
     }
 
     private string GetURL(string action, string pageName)

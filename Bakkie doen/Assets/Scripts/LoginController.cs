@@ -39,6 +39,9 @@ public class LoginController : MonoBehaviour {
 
                 //Get the playerdata
                 GameController.playerData = BackEndCommunicator.Instance.GetPlayerData(GameController.playerLogin.PlayerID);
+                //Get the NPCData
+
+                GameController.npcData = BackEndCommunicator.Instance.GetNPCData(GameController.playerLogin.PlayerID);
                 //TODO: Add loadinscreen
                 SceneManager.LoadScene("T2");
             }

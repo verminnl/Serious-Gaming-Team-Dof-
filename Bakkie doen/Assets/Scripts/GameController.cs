@@ -14,7 +14,7 @@ public class GameController : MonoBehaviour {
     //Player Login Model
     public static PlayerLogin playerLogin;
     //NPC dictionairy
-    public static Dictionary<int, AvatarData> npcDataDictionairy;
+    public static List<AvatarData> npcData;
     //NPC that the player is talking to
     public NPCController theNPC;
     //Sprite of the NPC that the player is talking to
