@@ -218,7 +218,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
 --- !u!1001 &386771974
 Prefab:
   m_ObjectHideFlags: 0
@@ -359,7 +359,7 @@ RectTransform:
   m_LocalScale: {x: 1.025, y: 1.0587503, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 66.73, y: -79.01}
@@ -453,7 +453,7 @@ Prefab:
   m_IsPrefabParent: 0
 --- !u!1 &419080995 stripped
 GameObject:
-  m_PrefabParentObject: {fileID: 137418, guid: d07957c60b60da64e9b37c9ba766a191, type: 2}
+  m_PrefabParentObject: {fileID: 133740, guid: d07957c60b60da64e9b37c9ba766a191, type: 2}
   m_PrefabInternal: {fileID: 419080994}
 --- !u!1001 &486911532
 Prefab:
@@ -552,7 +552,7 @@ Transform:
   m_Children:
   - {fileID: 1369123485}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 9
 --- !u!1001 &548303213
 Prefab:
   m_ObjectHideFlags: 0
@@ -670,6 +670,7 @@ MonoBehaviour:
   - Leadership
   - Speaking
   name: 
+  roomNumber: C3.15
   sprite: {fileID: 0}
 --- !u!114 &622802166
 MonoBehaviour:
@@ -1196,7 +1197,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!1 &985301538
 GameObject:
   m_ObjectHideFlags: 0
@@ -1237,7 +1238,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!1001 &1097437807
 Prefab:
   m_ObjectHideFlags: 0
@@ -1329,6 +1330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 20
+  gameController: {fileID: 0}
   lastMove: {x: 0, y: 0}
   startPoint: 
   canMove: 0
@@ -1427,7 +1429,7 @@ Transform:
   m_Children:
   - {fileID: 165249999}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
 --- !u!1 &1207089238
 GameObject:
   m_ObjectHideFlags: 0
@@ -1481,6 +1483,7 @@ MonoBehaviour:
   - Creating wireframes
   - Cooking
   name: 
+  roomNumber: X2.12
   sprite: {fileID: 0}
 --- !u!114 &1207089241
 MonoBehaviour:
@@ -1656,7 +1659,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!1 &1369123481
 GameObject:
   m_ObjectHideFlags: 0
@@ -2149,6 +2152,7 @@ MonoBehaviour:
   - Sailing
   - Soldering
   name: 
+  roomNumber: X3.23
   sprite: {fileID: 0}
 --- !u!114 &2138510189
 MonoBehaviour:
