@@ -75,6 +75,7 @@ public class GameController : MonoBehaviour {
                 theLoadingTransition.SetActive(true);
                 theLoadingTransition.GetComponent<LoadingTransition>().npcSprite = npcSprite;
                 theLoadingTransition.GetComponent<LoadingTransition>().npcName = theNPC.name;
+                theLoadingTransition.GetComponent<LoadingTransition>().npcRoom = theNPC.roomNumber;
                 theLoadingTransition.GetComponent<LoadingTransition>().npcSkills = theNPC.NPCSkills;
                 npcMinigameStartCounter += Time.deltaTime;
 
@@ -104,6 +105,7 @@ public class GameController : MonoBehaviour {
             //Sends the information of the NPC to the loading screen
             theLoadingTransition.GetComponent<LoadingTransition>().npcSprite = npcList[indexNumberNPC].sprite;
             theLoadingTransition.GetComponent<LoadingTransition>().npcName = npcList[indexNumberNPC].name;
+            theLoadingTransition.GetComponent<LoadingTransition>().npcRoom = npcList[indexNumberNPC].roomNumber;
             theLoadingTransition.GetComponent<LoadingTransition>().npcSkills = npcList[indexNumberNPC].NPCSkills;
         }
         else if (Mathf.FloorToInt(playedTime) == startLoading + loadingScreenTime)

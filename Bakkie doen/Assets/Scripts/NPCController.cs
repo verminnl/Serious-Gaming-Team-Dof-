@@ -19,6 +19,8 @@ public class NPCController : MonoBehaviour {
     public NPCClass npc;
     //Name of current NPC
     public string name;
+    //Room of the NPC
+    public string roomNumber;
     //Sprite of current NPC
     public Sprite sprite;
     //Camera in the game

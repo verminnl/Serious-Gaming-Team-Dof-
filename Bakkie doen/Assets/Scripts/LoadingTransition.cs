@@ -20,6 +20,10 @@ public class LoadingTransition : MonoBehaviour {
     public Text npcNameBox;
     //Name of an NPC
     public string npcName;
+    //Room number box
+    public Text npcRoomBox;
+    //Room of an NPC
+    public string npcRoom;
     //NPC skills box
     public Text npcSkillsBox;
     //Array with skills of an NPC
@@ -45,6 +49,11 @@ public class LoadingTransition : MonoBehaviour {
         if (npcNameBox != null)
         {
             npcNameBox.text = npcName;
+        }
+        //Shows the room of the interacted NPC/random NPC on the loading screen
+        if (npcRoomBox != null)
+        {
+            npcRoomBox.text = "Room: " + npcRoom;
         }
         //Shows the skills of the interacted NPC/random NPC on the loading screen
         if (npcSkills != null && !skillsPrinted)
