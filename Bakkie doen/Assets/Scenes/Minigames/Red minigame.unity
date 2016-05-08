@@ -753,7 +753,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thePlayer: {fileID: 2143395138}
-  gameTime: 20
+  gameTime: 10
 --- !u!1 &2143395135
 GameObject:
   m_ObjectHideFlags: 0

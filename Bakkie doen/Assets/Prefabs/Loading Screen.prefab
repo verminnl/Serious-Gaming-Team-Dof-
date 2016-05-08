@@ -344,7 +344,7 @@ MonoBehaviour:
   theLoadingImage: {fileID: 11404578}
   imageRotateSpeed: 360
   loadingTime: 5
-  timeToStartLoadingScreen: 15
+  timeToStartLoadingScreen: 25
   npcImageBox: {fileID: 11491786}
   npcSprite: {fileID: 0}
   npcNameBox: {fileID: 11403020}

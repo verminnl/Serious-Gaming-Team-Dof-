@@ -52,8 +52,8 @@ public class ActivateTextAtLine : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        //When player is in the trigger and presses on the "Enter" key, activate the dialogue and stops player movement
-        if (waitForPress && Input.GetKeyUp(KeyCode.Return))
+        //When player is in the trigger and presses on the Spacebar, activate the dialogue and stops player movement
+        if (waitForPress && Input.GetKeyUp(KeyCode.Space))
         {
 			theTextBox.ReloadScript(theScript.ToArray());
             theTextBox.currentLine = startLine;
