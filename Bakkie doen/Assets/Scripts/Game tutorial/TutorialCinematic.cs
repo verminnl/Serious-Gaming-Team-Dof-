@@ -58,18 +58,18 @@ public class TutorialCinematic : MonoBehaviour {
                         if (currentWaypoint.GetComponent<WaypointDialogue>().dialogueStarted == false)
                         {
                             tbManager.ReloadScript(currentWaypoint.GetComponent<WaypointDialogue>().lines);
-                            tbManager.endAtLine = 1;
+                            tbManager.endAtLine = currentWaypoint.GetComponent<WaypointDialogue>().lines.Length - 1;
                             tbManager.EnableTextBox();
                             currentWaypoint.GetComponent<WaypointDialogue>().dialogueStarted = true;
                             if (tbManager.currentLine > currentWaypoint.GetComponent<WaypointDialogue>().lines.Length - 1)
                             {
-                                tbManager.currentLine = 0;
                                 tbManager.DisableTextBox();
                             }
                         }
                         if (tbManager.isActive == false)
                         {
-                                Debug.Log(tbManager.currentLine);
+                            tbManager.currentLine = 0;
+                            Debug.Log(tbManager.currentLine);
                             currentWaypoint = GetNextWaypoint();
                         }
                     }
