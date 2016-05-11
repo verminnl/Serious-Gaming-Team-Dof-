@@ -2,6 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 
+/// <summary>
+/// Manages the cinematic in the tutorial
+/// </summary>
 public class TutorialCinematic : MonoBehaviour {
     //List with all the waypoints in the game
     private List<GameObject> waypoints = new List<GameObject>();
@@ -27,6 +30,8 @@ public class TutorialCinematic : MonoBehaviour {
     public float distanceDetection;
     //Textbox manager in the tutorial
     public TextBoxManager tbManager;
+    //The end screen for the tutorial
+    public GameObject endScreen;
 
 	// Use this for initialization
 	void Start () {
@@ -135,6 +140,8 @@ public class TutorialCinematic : MonoBehaviour {
             else
             {
                 done = true;
+                endScreen.SetActive(true);
+                endScreen.GetComponent<TutorialEnd>().name = thePlayer.GetComponent<PlayerController>().playerName;
             }
         }
         

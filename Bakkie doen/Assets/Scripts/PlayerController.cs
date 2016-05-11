@@ -3,6 +3,8 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 
+    public string playerName;
+
     public float moveSpeed;
     public GameController gameController;
 
