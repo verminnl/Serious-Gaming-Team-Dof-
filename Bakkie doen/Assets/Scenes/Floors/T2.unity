@@ -1902,7 +1902,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-  - Welcome player!
+  - 'Welcome #playername!'
   - You can explore the place to your own content with the arrow keys or WASD keys.
   - '...'
   - Although there isn't much to do yet.
@@ -2082,8 +2082,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7acfb1d4f07e014d91b605d693276b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerName: Nick
   moveSpeed: 20
-  gameController: {fileID: 0}
   lastMove: {x: 0, y: 0}
   startPoint: 
   canMove: 0

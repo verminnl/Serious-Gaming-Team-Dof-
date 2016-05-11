@@ -1025,7 +1025,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lines:
-  - Welcome new player!
+  - 'Welcome #playername!'
   - Thank you for playing
   - Bakkie doen. This game
   - is created for players to

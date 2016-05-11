@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour {
     public string playerName;
 
     public float moveSpeed;
-    public GameController gameController;
+    //public GameController gameController;
 
     private Animator anim;
     private Rigidbody2D myRigidBody;
@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour {
 	void Start () {
         anim = GetComponent<Animator>();
         myRigidBody = GetComponent<Rigidbody2D>();
-        gameController = GameObject.FindObjectOfType<GameController>();
+        //gameController = GameObject.FindObjectOfType<GameController>();
         
         if (!playerExists && !inMinigame)
         {

@@ -152,6 +152,20 @@ public class TextBoxManager : MonoBehaviour {
         {
             textLines = new string[1];
             textLines = npcScript;
+
+            //Replaces the #playername in the textlines to the name of the current player
+            for (int i = 0; i < textLines.Length - 1; i++)
+            {
+                if (textLines[i].Contains("#playername"))
+                {
+                    Debug.Log("There is #playername");
+                    textLines[i] = textLines[i].Replace("#playername", player.playerName);
+                }
+                else
+                {
+                    Debug.Log("No #playername");
+                }
+            }
         }
     }
 }
