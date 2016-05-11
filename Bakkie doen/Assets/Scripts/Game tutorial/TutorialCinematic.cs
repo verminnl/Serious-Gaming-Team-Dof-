@@ -11,6 +11,14 @@ public class TutorialCinematic : MonoBehaviour {
     private GameObject currentWaypoint;
     //Player in the tutorial
     public GameObject thePlayer;
+    //Animation of the player
+    private Animator playerAnim;
+    //Change in the x-position of the player
+    private float playerXChange;
+    //Change in the y-position of the player
+    private float playerYChange;
+    //Gets the last movement of the player
+    public Vector2 lastMove;
     //Check if the tutorial is done
     private bool done;
     //Speed of the tutorial
@@ -24,6 +32,8 @@ public class TutorialCinematic : MonoBehaviour {
 	void Start () {
         currentIndexWaypoint = 0;
 
+        playerAnim = thePlayer.GetComponent<Animator>();
+        
         //Gets the waypoints for the tutorial and makes sure that it doesn't have a sprite attached to it
         for (int i = 0; i < transform.childCount; i++)
         {
@@ -53,6 +63,8 @@ public class TutorialCinematic : MonoBehaviour {
             {
                 if (Vector3.Distance(thePlayer.transform.position, currentWaypoint.transform.position) < distanceDetection)
                 {
+                    //Activates a dialogue, if there are dialogues added to the waypoint
+                    //Else, gets the next waypoint for the player to navigate to
                     if (currentWaypoint.GetComponent<WaypointDialogue>() != null)
                     {
                         if (currentWaypoint.GetComponent<WaypointDialogue>().dialogueStarted == false)
@@ -69,7 +81,6 @@ public class TutorialCinematic : MonoBehaviour {
                         if (tbManager.isActive == false)
                         {
                             tbManager.currentLine = 0;
-                            Debug.Log(tbManager.currentLine);
                             currentWaypoint = GetNextWaypoint();
                         }
                     }
@@ -80,6 +91,44 @@ public class TutorialCinematic : MonoBehaviour {
                 }
                 else
                 {
+                    //Sets the walking animation for the player when he/she is moving around the tutorial
+                    playerAnim.SetBool("PlayerMoving", false);
+
+                    //Moving right
+                    if (waypoints[currentIndexWaypoint].transform.position.x - thePlayer.transform.position.x > 0.5f)
+                    {
+                        playerAnim.SetBool("PlayerMoving", true);
+                        playerXChange = 1f;
+                        lastMove = new Vector2(playerXChange, 0f);
+                    }
+                    //Moving left
+                    if (waypoints[currentIndexWaypoint].transform.position.x - thePlayer.transform.position.x < -0.5f)
+                    {
+                        playerAnim.SetBool("PlayerMoving", true);
+                        playerXChange = -1f;
+                        lastMove = new Vector2(playerXChange, 0f);
+                    }
+                    //Moving up
+                    if (waypoints[currentIndexWaypoint].transform.position.y - thePlayer.transform.position.y > 0.5f)
+                    {
+                        playerAnim.SetBool("PlayerMoving", true);
+                        playerYChange = 1f;
+                        lastMove = new Vector2(0f, playerYChange);
+                    }
+                    //Moving down
+                    if (waypoints[currentIndexWaypoint].transform.position.y - thePlayer.transform.position.y < -0.5f)
+                    {
+                        playerAnim.SetBool("PlayerMoving", true);
+                        playerYChange = -1f;
+                        lastMove = new Vector2(0f, playerYChange);
+                    }
+
+                    playerAnim.SetFloat("MoveX", playerXChange);
+                    playerAnim.SetFloat("MoveY", playerYChange);
+                    playerAnim.SetFloat("LastMoveX", lastMove.x);
+                    playerAnim.SetFloat("LastMoveY", lastMove.y);
+
+                    //Moves the player to the next waypoint
                     thePlayer.transform.position = Vector3.MoveTowards(thePlayer.transform.position, waypoints[currentIndexWaypoint].transform.position, Time.deltaTime * tutorialSpeed);
                 }
             }
