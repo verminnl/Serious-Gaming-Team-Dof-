@@ -41,7 +41,10 @@ public class NPCController : MonoBehaviour {
 
         //Creates an NPC with the given details
         npc = new NPCClass(name, colorType, dialogue, NPCSkills);
-        theGame.AddNPCToList(this);
+        if (theGame != null)
+        {
+            theGame.AddNPCToList(this);
+        }
     }
 
 	// Use this for initialization
