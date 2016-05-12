@@ -17,4 +17,5 @@ public class AvatarData
     public int[] FoundPlayers;
     public string[] Skills;
     public string SessionID;
+    public bool tutorial;
 }

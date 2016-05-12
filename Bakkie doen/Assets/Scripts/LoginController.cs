@@ -53,10 +53,18 @@ public class LoginController : MonoBehaviour {
                 GameController.playerData.SessionID = BackEndCommunicator.Instance.CreateSession(GameController.playerLogin.PlayerID);
                 //Get the playerdata
                 GameController.playerData = BackEndCommunicator.Instance.GetPlayerData(GameController.playerLogin.PlayerID, GameController.playerData.SessionID);
+                //Get tutorial
+                GameController.playerData.tutorial = BackEndCommunicator.Instance.CheckTutorial(GameController.playerLogin.PlayerID, GameController.playerData.SessionID);
                 //Get the NPCData
                 GameController.npcData = BackEndCommunicator.Instance.GetNPCData(GameController.playerLogin.PlayerID, GameController.playerData.SessionID);
                 //TODO: Add loadinscreen
-                SceneManager.LoadScene("T2");
+                if (GameController.playerData.tutorial)
+                {
+                    SceneManager.LoadScene("Tutorial scene");
+                }
+                else {
+                    SceneManager.LoadScene("T2");
+                }
             }
         }
 	}

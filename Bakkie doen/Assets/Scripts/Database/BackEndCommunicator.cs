@@ -86,7 +86,7 @@ public class BackEndCommunicator {
         {
 
         }
-
+        
         // Player Data step 2, web requests to strings
         // Player Data
         string requestResultStringPlayerData = webRequestPlayerData.text;
@@ -159,6 +159,28 @@ public class BackEndCommunicator {
         Debug.Log("hoaofasdf");
 
         return NPCData;
+    }
+
+    public bool CheckTutorial(int playerID, string sessionID)
+    {
+        //Set up the URL
+        string basicURL = GetURL("read", "tutorial");
+        string parameters = string.Format("pid={0}", playerID);
+        string URLToUse = basicURL + parameters + "&sesid=" + sessionID; ;
+
+        var webRequestTutorial = new WWW(URLToUse);
+
+        // Wait for the requests to be done
+        while (!webRequestTutorial.isDone) //Wait until the request is done
+        {
+
+        }
+        string webRequestTutorialText = webRequestTutorial.text;
+        if (webRequestTutorialText == "true")
+        {
+            return true;
+        }
+        return false;
     }
 
     public string CreateSession(int playerID)
