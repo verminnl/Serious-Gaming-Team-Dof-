@@ -1,5 +1,11 @@
 <?php
 	include '../database_connection.php';
+	include '../check_session.php';
+	
+	if(!checkSession()){
+		die("haha nope");
+	}
+	
 	$Firstname = $_GET["fn"];
 	$Lastname = $_GET["ln"];
 	$Job = $_GET["jo"];
@@ -12,7 +18,7 @@
 	print_r($_GET);
 	
 	$query = "INSERT INTO `player` (`PlayerID`, `FirstName`, `LastName`, `Job`,`SpawnPoint`, ";
-	$query = $query . "`Character`, `Username`, `Password`, `Element`, `FoundPlayers`, `Domain`) ";
+	$query = $query . "`Character`, `Username`, `Password`, `Element`, `FoundPlayers`, `Room`) ";
 	$query = $query . "VALUES (NULL, '$Firstname', '$Lastname', '$Job', NULL,";
 	$query = $query . "'$Character', '$Username', '$Password', '$Element', NULL, NULL)";
 	echo $query;

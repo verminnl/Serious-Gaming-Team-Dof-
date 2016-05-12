@@ -1,5 +1,11 @@
 <?php
 	include '../database_connection.php';
+	include '../check_session.php';
+	
+	if(!checkSession()){
+		die("haha nope");
+	}
+	
 	$ID = NULL;
 	$PlayerID = $_GET["pid"];
 	$SkillID = $_GET["sid"];

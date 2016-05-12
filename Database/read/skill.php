@@ -1,5 +1,10 @@
 <?php
 	include '../database_connection.php';
+	include '../check_session.php';
+	
+	if(!checkSession()){
+		die("haha nope");
+	}
 	
 	$SkillID = $_GET["sid"];
 	

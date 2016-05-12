@@ -13,7 +13,8 @@ public class AvatarData
     public string SpawnPoint;
     public string Character;
     public string Element;
-    public string Domain;
+    public string Room;
     public int[] FoundPlayers;
     public string[] Skills;
+    public string SessionID;
 }

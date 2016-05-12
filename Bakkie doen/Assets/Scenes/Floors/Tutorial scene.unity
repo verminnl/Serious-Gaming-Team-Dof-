@@ -651,7 +651,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerName: Nick
   moveSpeed: 20
-  gameController: {fileID: 0}
   lastMove: {x: 0, y: 0}
   startPoint: 
   canMove: 0

@@ -36,12 +36,13 @@ public class LoginController : MonoBehaviour {
             {
                 print("You logged in!");
                 InputField.enabled = false;
-
+                GameController.playerData = new AvatarData();
+                //Create Session
+                GameController.playerData.SessionID = BackEndCommunicator.Instance.CreateSession(GameController.playerLogin.PlayerID);
                 //Get the playerdata
-                GameController.playerData = BackEndCommunicator.Instance.GetPlayerData(GameController.playerLogin.PlayerID);
+                GameController.playerData = BackEndCommunicator.Instance.GetPlayerData(GameController.playerLogin.PlayerID, GameController.playerData.SessionID);
                 //Get the NPCData
-
-                GameController.npcData = BackEndCommunicator.Instance.GetNPCData(GameController.playerLogin.PlayerID);
+                GameController.npcData = BackEndCommunicator.Instance.GetNPCData(GameController.playerLogin.PlayerID, GameController.playerData.SessionID);
                 //TODO: Add loadinscreen
                 SceneManager.LoadScene("T2");
             }
