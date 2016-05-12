@@ -251,6 +251,88 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2cf43974ef6bd1a4c937782094e1bb0c, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &139390460
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 22494668, guid: 30b71586256bc6046a3ba466a9d2786f, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22494668, guid: 30b71586256bc6046a3ba466a9d2786f, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22494668, guid: 30b71586256bc6046a3ba466a9d2786f, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22494668, guid: 30b71586256bc6046a3ba466a9d2786f, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22494668, guid: 30b71586256bc6046a3ba466a9d2786f, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22494668, guid: 30b71586256bc6046a3ba466a9d2786f, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22494668, guid: 30b71586256bc6046a3ba466a9d2786f, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22494668, guid: 30b71586256bc6046a3ba466a9d2786f, type: 2}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 22494668, guid: 30b71586256bc6046a3ba466a9d2786f, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 428.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 22494668, guid: 30b71586256bc6046a3ba466a9d2786f, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 242
+      objectReference: {fileID: 0}
+    - target: {fileID: 22494668, guid: 30b71586256bc6046a3ba466a9d2786f, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 22494668, guid: 30b71586256bc6046a3ba466a9d2786f, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 22494668, guid: 30b71586256bc6046a3ba466a9d2786f, type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 22494668, guid: 30b71586256bc6046a3ba466a9d2786f, type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 22494668, guid: 30b71586256bc6046a3ba466a9d2786f, type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 22494668, guid: 30b71586256bc6046a3ba466a9d2786f, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 22494668, guid: 30b71586256bc6046a3ba466a9d2786f, type: 2}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 22494668, guid: 30b71586256bc6046a3ba466a9d2786f, type: 2}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 30b71586256bc6046a3ba466a9d2786f, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &284425523
 GameObject:
   m_ObjectHideFlags: 0
@@ -1237,7 +1319,7 @@ Transform:
   m_Children:
   - {fileID: 298610809}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
 --- !u!1001 &921809578
 Prefab:
   m_ObjectHideFlags: 0
@@ -1474,8 +1556,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7acfb1d4f07e014d91b605d693276b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerName: 
   moveSpeed: 20
-  gameController: {fileID: 0}
   lastMove: {x: 0, y: 0}
   startPoint: 
   canMove: 0

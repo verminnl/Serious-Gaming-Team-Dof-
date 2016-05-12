@@ -15,12 +15,6 @@ public class GameController : MonoBehaviour {
     public static PlayerLogin playerLogin;
     //NPC dictionairy
     public static List<AvatarData> npcData;
-    //NPC that the player is talking to
-    public NPCController theNPC;
-    //Sprite of the NPC that the player is talking to
-    private Sprite npcSprite;
-    //A minigame type
-    private string minigameType;
     //Counts the time after finishing dialogue with an NPC
     private float npcMinigameStartCounter;
     //Current player
@@ -46,10 +40,13 @@ public class GameController : MonoBehaviour {
     //at the LoadingTransition script
     void Awake()
     {
-        theLoadingTransition.SetActive(true);
-        loadingScreenTime = FindObjectOfType<LoadingTransition>().loadingTime;
-        startLoading = FindObjectOfType<LoadingTransition>().timeToStartLoadingScreen;
-        theLoadingTransition.SetActive(false);
+        if (theLoadingTransition != null)
+        {
+            theLoadingTransition.SetActive(true);
+            loadingScreenTime = FindObjectOfType<LoadingTransition>().loadingTime;
+            startLoading = FindObjectOfType<LoadingTransition>().timeToStartLoadingScreen;
+            theLoadingTransition.SetActive(false);
+        }
     }
 
 	// Use this for initialization
@@ -66,31 +63,27 @@ public class GameController : MonoBehaviour {
         playedTime += Time.deltaTime;
 
         //When the player is talking to an NPC, set minigameType to the colorType of the NPC
-        if (theNPC != null)
+        if (PlayerActionDataTracking.theNPC != null)
         {
-            minigameType = theNPC.colorType;
-            npcSprite = theNPC.GetComponent<SpriteRenderer>().sprite;
-
             //When finished talking to an NPC, start the loading screen and start a time counter
-            if (theNPC.dialogueFinished)
+            if (PlayerActionDataTracking.theNPC.dialogueFinished)
             {
                 theLoadingTransition.SetActive(true);
-                theLoadingTransition.GetComponent<LoadingTransition>().npcSprite = npcSprite;
-                theLoadingTransition.GetComponent<LoadingTransition>().npcName = theNPC.name;
-                theLoadingTransition.GetComponent<LoadingTransition>().npcRoom = theNPC.roomNumber;
-                theLoadingTransition.GetComponent<LoadingTransition>().npcSkills = theNPC.NPCSkills;
+                theLoadingTransition.GetComponent<LoadingTransition>().npcSprite = PlayerActionDataTracking.theNPC.GetComponent<SpriteRenderer>().sprite;
+                theLoadingTransition.GetComponent<LoadingTransition>().npcName = PlayerActionDataTracking.theNPC.GetComponent<NPCController>().name;
+                theLoadingTransition.GetComponent<LoadingTransition>().npcRoom = PlayerActionDataTracking.theNPC.GetComponent<NPCController>().roomNumber;
+                theLoadingTransition.GetComponent<LoadingTransition>().npcSkills = PlayerActionDataTracking.theNPC.GetComponent<NPCController>().NPCSkills;
                 npcMinigameStartCounter += Time.deltaTime;
 
                 //When the time counter is higher than the loadingScreenTime, start the minigame based on minigameType
                 if (npcMinigameStartCounter > loadingScreenTime)
                 {
-                    ActivateMinigame(minigameType);
+                    ActivateMinigame(PlayerActionDataTracking.theNPC.GetComponent<NPCController>().colorType);
                 }
             }
         }
 
         TimePassed();
-        //Debug.Log(npcList.Count);
 
         //Start loading screen if player hasn't talked to an NPC for {startLoading} seconds and
         //activate minigame after {loadingScreenTime} seconds
@@ -102,17 +95,18 @@ public class GameController : MonoBehaviour {
                 hasChosenRandomNPC = true;
             }
 
+            PlayerActionDataTracking.theNPC = npcList[indexNumberNPC];
             theLoadingTransition.SetActive(true);
 
             //Sends the information of the NPC to the loading screen
-            theLoadingTransition.GetComponent<LoadingTransition>().npcSprite = npcList[indexNumberNPC].sprite;
-            theLoadingTransition.GetComponent<LoadingTransition>().npcName = npcList[indexNumberNPC].name;
-            theLoadingTransition.GetComponent<LoadingTransition>().npcRoom = npcList[indexNumberNPC].roomNumber;
-            theLoadingTransition.GetComponent<LoadingTransition>().npcSkills = npcList[indexNumberNPC].NPCSkills;
+            theLoadingTransition.GetComponent<LoadingTransition>().npcSprite = PlayerActionDataTracking.theNPC.sprite;
+            theLoadingTransition.GetComponent<LoadingTransition>().npcName = PlayerActionDataTracking.theNPC.name;
+            theLoadingTransition.GetComponent<LoadingTransition>().npcRoom = PlayerActionDataTracking.theNPC.roomNumber;
+            theLoadingTransition.GetComponent<LoadingTransition>().npcSkills = PlayerActionDataTracking.theNPC.NPCSkills;
         }
         else if (Mathf.FloorToInt(playedTime) == startLoading + loadingScreenTime)
         {
-            ActivateMinigame(npcList[indexNumberNPC].colorType);
+            ActivateMinigame(PlayerActionDataTracking.theNPC.colorType);
         }
 	}
 

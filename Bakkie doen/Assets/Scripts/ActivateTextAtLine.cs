@@ -62,7 +62,7 @@ public class ActivateTextAtLine : MonoBehaviour {
             if (gameObject.GetComponent<NPCController>() != null)
             {
                 theTextBox.currentNPC = gameObject.GetComponent<NPCController>();
-                gc.theNPC = gameObject.GetComponent<NPCController>();
+                PlayerActionDataTracking.theNPC = gameObject.GetComponent<NPCController>();
             }
             theTextBox.EnableTextBox();
             theTextBox.isNPCDialogue = true;

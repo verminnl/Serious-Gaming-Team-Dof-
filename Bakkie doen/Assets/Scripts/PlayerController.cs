@@ -25,7 +25,6 @@ public class PlayerController : MonoBehaviour {
 	void Start () {
         anim = GetComponent<Animator>();
         myRigidBody = GetComponent<Rigidbody2D>();
-        //gameController = GameObject.FindObjectOfType<GameController>();
         
         if (!playerExists && !inMinigame)
         {
