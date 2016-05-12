@@ -3,28 +3,21 @@ using UnityEngine.UI;
 using System.Collections;
 
 /// <summary>
-/// Manages the data on the scene that appears after a minigame
+/// Manages the data on the scene that appears at the end of the game
 /// </summary>
-public class EndMinigameScene : MonoBehaviour {
-    //Card box of the NPC
-    public Image npcCardBox;
-    //Name box of the NPC
-    public Text npcNameBox;
-    //Sprite of the NPC
-    public Image npcSprite;
+public class EndGameScene : MonoBehaviour {
+    //Text box of screen
+    public Text textBox;
     //Time length that the screen should be active
     public float screenDuration;
     //Time that the screen is active
     private float timeActive;
     //Check if the screen is active
     private bool isActive;
-    //Scene that appears after the minigame, the one that appears before this screen
-    public GameObject endGameScene;
 
 	// Use this for initialization
 	void Start () {
-        npcNameBox.text = DataTracking.theNPC.name;
-        npcSprite.sprite = DataTracking.theNPC.sprite;
+        textBox.text = textBox.text + DataTracking.thePlayer.playerName;
 	}
 	
 	// Update is called once per frame
@@ -34,7 +27,7 @@ public class EndMinigameScene : MonoBehaviour {
             timeActive = timeActive + Time.deltaTime;
             if (timeActive > screenDuration)
             {
-                endGameScene.GetComponent<EndGameScene>().ActivateScreen();
+                Application.Quit();
             }
         }
 	}

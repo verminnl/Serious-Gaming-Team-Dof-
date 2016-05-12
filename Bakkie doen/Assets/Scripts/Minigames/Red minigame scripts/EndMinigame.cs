@@ -33,8 +33,7 @@ public class EndMinigame : MonoBehaviour {
     {
         if (other.name == "Player")
         {
-            minigameEndScreen.SetActive(true);
-            //Application.Quit();
+            minigameEndScreen.GetComponent<EndMinigameScene>().ActivateScreen();
         }
     }
 }

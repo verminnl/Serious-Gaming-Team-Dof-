@@ -65,6 +65,8 @@ public class GameController : MonoBehaviour {
         //When the player is talking to an NPC, set minigameType to the colorType of the NPC
         if (DataTracking.theNPC != null)
         {
+            DataTracking.thePlayer = thePlayer;
+
             //When finished talking to an NPC, start the loading screen and start a time counter
             if (DataTracking.theNPC.dialogueFinished)
             {
@@ -95,6 +97,7 @@ public class GameController : MonoBehaviour {
                 hasChosenRandomNPC = true;
             }
 
+            DataTracking.thePlayer = thePlayer;
             DataTracking.theNPC = npcList[indexNumberNPC];
             theLoadingTransition.SetActive(true);
 
