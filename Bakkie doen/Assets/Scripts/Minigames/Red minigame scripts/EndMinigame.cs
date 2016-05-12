@@ -9,6 +9,10 @@ public class EndMinigame : MonoBehaviour {
     public RedMinigamePlayerController thePlayer;
     //Time that the minigame will take in seconds
     public int gameTime;
+    //Screen that appears when the minigame ends
+    public GameObject minigameEndScreen;
+    //Screen that appears before the game ends
+    public GameObject gameEndScreen;
 
 	// Use this for initialization
 	void Start () {
@@ -29,7 +33,8 @@ public class EndMinigame : MonoBehaviour {
     {
         if (other.name == "Player")
         {
-            Application.Quit();
+            minigameEndScreen.SetActive(true);
+            //Application.Quit();
         }
     }
 }
