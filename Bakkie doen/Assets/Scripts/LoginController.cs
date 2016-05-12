@@ -10,6 +10,7 @@ public class LoginController : MonoBehaviour {
 
     public InputField InputField;
     public GameController gameController;
+    public GameObject loginFailed;
 
     void Start()
     {
@@ -23,18 +24,29 @@ public class LoginController : MonoBehaviour {
 
             //Get the input of the player
             string input = InputField.text;
-
+            if(input.Length != 12)
+            {
+                InputField.text = "";
+                loginFailed.SetActive(true);
+                return;
+            }
 
             //Send a request to the back-end (login) and retrieve the playerID. IT RETURNS 0 IF LOGIN FAILED
             //2 letters, 7 cijfers, 3 cijfers
-            GameController.playerLogin = BackEndCommunicator.Instance.Login("dodo", "dodo");
+            string user;
+            user = input.Substring(0, 9);
+            string password;
+            password = input.Substring(9, 3);
+            print(user + "    " + password);
+
+            GameController.playerLogin = BackEndCommunicator.Instance.Login(user, password);
             if(GameController.playerLogin == null)
             {
-                print("you fucked up");
+                InputField.text = "";
+                loginFailed.SetActive(true);
             }
             else if(GameController.playerLogin.PlayerID > 0)
             {
-                print("You logged in!");
                 InputField.enabled = false;
                 GameController.playerData = new AvatarData();
                 //Create Session
