@@ -566,7 +566,6 @@ GameObject:
   - 114: {fileID: 1394397889}
   - 114: {fileID: 1394397888}
   - 114: {fileID: 1394397891}
-  - 114: {fileID: 1394397892}
   m_Layer: 5
   m_Name: InputField
   m_TagString: Untagged
@@ -703,17 +702,6 @@ MonoBehaviour:
   items: []
   InputField: {fileID: 1394397888}
   gameController: {fileID: 1090453892}
---- !u!114 &1394397892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1394397886}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4108d76d489bc47418f5ce8d033b55c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1628964423
 Prefab:
   m_ObjectHideFlags: 0
