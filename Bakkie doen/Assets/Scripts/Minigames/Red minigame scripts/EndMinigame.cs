@@ -16,6 +16,7 @@ public class EndMinigame : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        //Sets the position of the gameobject based on the player speed and the time that the minigame should last
         transform.position = new Vector3(transform.position.x, thePlayer.transform.position.y + thePlayer.moveSpeed * gameTime, transform.position.z);
 	}
 	
@@ -25,8 +26,7 @@ public class EndMinigame : MonoBehaviour {
 	}
 
     /// <summary>
-    /// *TO BE CHANGED*
-    /// When the player collides with this gameobject, closes the game
+    /// When the player collides with this gameobject, closes the game, destroys the current player
     /// </summary>
     /// <param name="other">The gameobject that collides with this one</param>
     void OnTriggerEnter2D(Collider2D other)
@@ -34,6 +34,7 @@ public class EndMinigame : MonoBehaviour {
         if (other.name == "Player")
         {
             minigameEndScreen.GetComponent<EndMinigameScene>().ActivateScreen();
+            Destroy(thePlayer.gameObject);
         }
     }
 }
