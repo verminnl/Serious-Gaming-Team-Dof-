@@ -19,6 +19,8 @@ public class RedMinigamePlayerController : MonoBehaviour {
     private float flashCounter;
     //Sprite Renderer of the player
     private SpriteRenderer spriteRenderer;
+    //Type of bullet
+    public ObjectPooler bulletType;
 
 	// Use this for initialization
 	void Start () {
@@ -47,9 +49,31 @@ public class RedMinigamePlayerController : MonoBehaviour {
             myRigidBody.velocity = new Vector2(0f, moveSpeed);
         }
 
-        ActivateFlash();
+        if (Input.GetKeyUp(KeyCode.J))
+        {
+            //Gets the map that will be generated
+            GameObject newBullet = bulletType.GetPooledObject();
+
+            //Sets the position of the map to be equal to the generationpoint
+            newBullet.transform.position = transform.position;
+            newBullet.transform.rotation = transform.rotation;
+
+            //Sets the state of the map to active
+            newBullet.SetActive(true);
+            newBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, bulletType.moveSpeed);
+        }
+
+        //Makes the player flash if {flashActive} is true
+        if (flashActive)
+        {
+            ActivateFlash();
+        }
 	}
 
+    /// <summary>
+    /// Activates when this gameobject touches another object with a triggerbox
+    /// </summary>
+    /// <param name="other">The object that this gameobject touches</param>
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Enemy")
@@ -60,29 +84,29 @@ public class RedMinigamePlayerController : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Makes the player sprite flash for {flashLength} seconds
+    /// </summary>
     void ActivateFlash()
     {
-        if (flashActive)
+        if (flashCounter > flashLenght * .66f)
         {
-            if (flashCounter > flashLenght * .66f)
-            {
-                spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, 0f);
-            }
-            else if (flashCounter > flashLenght * .33f)
-            {
-                spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, 1f);
-            }
-            else if (flashCounter > 0)
-            {
-                spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, 0f);
-            }
-            else
-            {
-                spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, 1f);
-                flashActive = false;
-            }
-
-            flashCounter -= Time.deltaTime;
+            spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, 0f);
         }
+        else if (flashCounter > flashLenght * .33f)
+        {
+            spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, 1f);
+        }
+        else if (flashCounter > 0)
+        {
+            spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, 0f);
+        }
+        else
+        {
+            spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, 1f);
+            flashActive = false;
+        }
+
+        flashCounter -= Time.deltaTime;
     }
 }

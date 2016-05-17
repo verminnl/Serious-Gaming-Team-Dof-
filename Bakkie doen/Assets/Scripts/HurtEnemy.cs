@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class HurtEnemy : MonoBehaviour {
+public class DamageEnemy : MonoBehaviour {
 
     public int damageToGive;
     public GameObject damageBurst;
