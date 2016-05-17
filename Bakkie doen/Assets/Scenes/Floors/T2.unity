@@ -630,6 +630,10 @@ Prefab:
       propertyPath: m_Name
       value: Dialogue instruction
       objectReference: {fileID: 0}
+    - target: {fileID: 11462892, guid: 11cda25e8f3cee04297d9262191299bd, type: 2}
+      propertyPath: m_Text
+      value: Elektrotechniek
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 11cda25e8f3cee04297d9262191299bd, type: 2}
   m_IsPrefabParent: 0
