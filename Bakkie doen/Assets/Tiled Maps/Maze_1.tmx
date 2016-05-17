@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="left-down" width="1" height="1" tilewidth="162" tileheight="162" nextobjectid="1">
+ <tileset firstgid="1" name="1" tilewidth="162" tileheight="162" spacing="1" tilecount="1" columns="1">
+  <image source="../Art/Blue minigame/1.png" width="162" height="162"/>
+  <tile id="0">
+   <objectgroup draworder="index">
+    <object id="0" x="32.25" y="82">
+     <polyline points="-9.75,0 -11,13.25 1.25,8.5 -7,-0.5"/>
+    </object>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <layer name="Tile Layer 1" width="1" height="1">
+  <data encoding="csv">
+1
+</data>
+ </layer>
+</map>
