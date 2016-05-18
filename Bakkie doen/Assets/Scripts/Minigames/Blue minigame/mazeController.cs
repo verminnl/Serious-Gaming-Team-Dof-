@@ -14,7 +14,6 @@ public class mazeController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         InitialiseMaze();
-
 	}
 	
 	// Update is called once per frame
