@@ -18,7 +18,7 @@ public class EndMinigameScene : MonoBehaviour {
     private float timeActive;
     //Check if the screen is active
     private bool isActive;
-    //Scene that appears after the minigame, the one that appears before this screen
+    //Scene that appears after the minigame, the one that appears after this screen
     public GameObject endGameScene;
 
 	// Use this for initialization

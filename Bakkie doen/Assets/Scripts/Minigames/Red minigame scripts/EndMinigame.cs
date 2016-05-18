@@ -13,6 +13,8 @@ public class EndMinigame : MonoBehaviour {
     public GameObject minigameEndScreen;
     //Screen that appears before the game ends
     public GameObject gameEndScreen;
+    //Screen that appears when the player is dead
+    public GameObject gameOverScreen;
 
 	// Use this for initialization
 	void Start () {
@@ -22,7 +24,14 @@ public class EndMinigame : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
+        if (!RedMinigamePlayerController.isAlive)
+        {
+            gameOverScreen.GetComponent<GameOver>().ActivateScreen();
+            if (thePlayer != null)
+            {
+                Destroy(thePlayer.gameObject);
+            }
+        }
 	}
 
     /// <summary>

@@ -25,6 +25,8 @@ public class RedMinigamePlayerController : MonoBehaviour {
     private HealthManager health;
     //Checks if the player is alive
     public static bool isAlive;
+    //Screen that appears when the player is dead
+    public GameObject gameOverScreen;
 
 	// Use this for initialization
 	void Start () {
@@ -76,10 +78,6 @@ public class RedMinigamePlayerController : MonoBehaviour {
         }
 
         Debug.Log(isAlive);
-        if (!isAlive)
-        {
-            Destroy(this.gameObject);
-        }
 	}
 
     /// <summary>
