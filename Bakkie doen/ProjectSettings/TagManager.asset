@@ -13,6 +13,13 @@ TagManager:
   - Elevator_Yellow
   - Elevator_Canvas
   - Login_Input_Field
+  - maze_1
+  - maze_2
+  - maze_3
+  - maze_4
+  - maze_5
+  - maze_finish
+  - maze_start
   layers:
   - Default
   - TransparentFX
