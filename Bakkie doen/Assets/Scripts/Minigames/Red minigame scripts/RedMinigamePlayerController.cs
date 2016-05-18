@@ -21,11 +21,17 @@ public class RedMinigamePlayerController : MonoBehaviour {
     private SpriteRenderer spriteRenderer;
     //Type of bullet
     public ObjectPooler bulletType;
+    //Health of the player
+    private HealthManager health;
+    //Checks if the player is alive
+    public static bool isAlive;
 
 	// Use this for initialization
 	void Start () {
         myRigidBody = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        health = FindObjectOfType<HealthManager>();
+        isAlive = true;
 	}
 	
 	// Update is called once per frame
@@ -68,6 +74,12 @@ public class RedMinigamePlayerController : MonoBehaviour {
         {
             ActivateFlash();
         }
+
+        Debug.Log(isAlive);
+        if (!isAlive)
+        {
+            Destroy(this.gameObject);
+        }
 	}
 
     /// <summary>
@@ -80,7 +92,8 @@ public class RedMinigamePlayerController : MonoBehaviour {
         {
             flashActive = true;
             flashCounter = flashLenght;
-            Debug.Log(flashActive);
+            Destroy(other.gameObject.GetComponent<Collider2D>());
+            health.TakeDamage();
         }
     }
 
