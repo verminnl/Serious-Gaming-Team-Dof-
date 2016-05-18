@@ -7,8 +7,6 @@ using System.Collections;
 public class BlueMinigameEndMinigame : MonoBehaviour {
     //The player of the minigame
     public BlueMinigamePlayerController thePlayer;
-    //Time that the minigame will take in seconds
-    public int gameTime;
     //Screen that appears when the minigame ends
     public GameObject minigameEndScreen;
     //Screen that appears before the game ends
