@@ -130,6 +130,7 @@ public class GameController : MonoBehaviour {
     /// <param name="type">Type of the minigame</param>
     public void ActivateMinigame(string type)
     {
+        type = "blue";
         switch (type)
         {
             case "red":

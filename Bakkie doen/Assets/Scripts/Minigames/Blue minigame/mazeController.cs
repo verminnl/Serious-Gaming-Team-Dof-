@@ -1,8 +1,6 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class mazeController : MonoBehaviour {
-
     public GameObject start;
     public GameObject finish;
     public GameObject maze1;
@@ -22,19 +20,29 @@ public class mazeController : MonoBehaviour {
 	
 	}
 
+    /// <summary>
+    /// This function generates the random decisions for the maze.
+    /// Which maze? Which start and finish position of that maze?
+    /// This concludes in 24 variations in the mazes.
+    /// </summary>
     void InitialiseMaze()
     {
+        //Decide a random maze, 5 options available
         int randomMaze = Random.Range(1, 6);
-        print("maze_" + randomMaze);
+        //Get the gameobject
         GameObject maze = GameObject.FindGameObjectWithTag("maze_" + randomMaze);
 
-        int randomStart = 1;
-        int randomFinish = 1;
-        int reverseFinishAndStart = Random.Range(0, 2);
+        //Initalise variables for use later in deciding which maze will be used
+        int randomStart;
+        int randomFinish;
+        //Activate the selected maze
         activateMaze(randomMaze);
         switch (randomMaze)
         {
+            // Maze selected = 1
+            // This commentary will repeat within this switch case for every case
             case 1:
+                // Decide which start position will be used
                 randomStart = Random.Range(1, 3);
                 switch (randomStart)
                 {
@@ -45,6 +53,7 @@ public class mazeController : MonoBehaviour {
                         start.transform.position = new Vector3(17.4f, -8f);
                         break;
                 }
+                // Decide which finish position will be used
                 randomFinish = Random.Range(1, 4);
                 switch (randomFinish)
                 {
@@ -151,9 +160,15 @@ public class mazeController : MonoBehaviour {
                 }
                 break;
         }
+        // Make sure the player is at the start point
         GameObject.FindObjectOfType<BlueMinigamePlayerController>().transform.position = start.transform.position;
     }
-
+    
+    
+    /// <summary>
+    /// This function activates the random selected maze. It uses a switch case to select 1 out of 5 options.
+    /// </summary>
+    /// <param name="maze"></param>
     void activateMaze(int maze)
     {
         switch (maze)

@@ -2,9 +2,7 @@
 using System.Collections;
 
 public class BlueMinigamePlayerController : MonoBehaviour {
-
-    public string playerName;
-
+    
     public float moveSpeed;
     //public GameController gameController;
 
@@ -13,9 +11,7 @@ public class BlueMinigamePlayerController : MonoBehaviour {
 
     private bool playerMoving;
     public Vector2 lastMove;
-
-    private static bool playerExists;
-
+    
     public string startPoint;
 
     public bool canMove;
@@ -58,16 +54,11 @@ public class BlueMinigamePlayerController : MonoBehaviour {
                 myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, 0f);
             }
 
-            anim.SetFloat("MoveX", Input.GetAxisRaw("Horizontal"));
+            /*anim.SetFloat("MoveX", Input.GetAxisRaw("Horizontal"));
             anim.SetFloat("MoveY", Input.GetAxisRaw("Vertical"));
             anim.SetBool("PlayerMoving", playerMoving);
             anim.SetFloat("LastMoveX", lastMove.x);
-            anim.SetFloat("LastMoveY", lastMove.y);
+            anim.SetFloat("LastMoveY", lastMove.y);*/
         }
-        else
-        {
-            Destroy(gameObject);
-        }
-
 	}
 }

@@ -4,7 +4,6 @@ using System.Collections;
 public class BluePlayerStartPoint : MonoBehaviour {
 
     private BlueMinigamePlayerController thePlayer;
-    private BlueMinigameCameraController theCamera;
 
     public Vector2 startDirection;
 
@@ -18,9 +17,6 @@ public class BluePlayerStartPoint : MonoBehaviour {
         {
             thePlayer.transform.position = transform.position;
             thePlayer.lastMove = startDirection;
-
-            theCamera = FindObjectOfType<BlueMinigameCameraController>();
-            theCamera.transform.position = new Vector3(transform.position.x, transform.position.y, theCamera.transform.position.z);
         }
 	}
 	
