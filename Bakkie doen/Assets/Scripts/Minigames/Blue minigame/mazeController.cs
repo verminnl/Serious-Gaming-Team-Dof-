@@ -151,7 +151,7 @@ public class mazeController : MonoBehaviour {
                 }
                 break;
         }
-        GameObject.FindObjectOfType<PlayerController>().transform.position = start.transform.position;
+        GameObject.FindObjectOfType<BlueMinigamePlayerController>().transform.position = start.transform.position;
     }
 
     void activateMaze(int maze)

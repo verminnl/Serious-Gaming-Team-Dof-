@@ -100,8 +100,8 @@ GameObject:
   - 212: {fileID: 86812813}
   - 50: {fileID: 86812812}
   - 61: {fileID: 86812811}
-  - 114: {fileID: 86812810}
   - 95: {fileID: 86812815}
+  - 114: {fileID: 86812810}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -117,7 +117,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 86812809}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7acfb1d4f07e014d91b605d693276b0, type: 3}
+  m_Script: {fileID: 11500000, guid: e1301abe79d99ad4d8dd39749d8608cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerName: 
@@ -125,7 +125,7 @@ MonoBehaviour:
   lastMove: {x: 0, y: 0}
   startPoint: maze_start
   canMove: 1
-  inMinigame: 0
+  inMinigame: 1
 --- !u!61 &86812811
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -240,7 +240,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 194294277}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6266e2cce480ed247851da0b2b392f25, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e376a15608c4a545be8f909b4442253, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   startDirection: {x: 0, y: 0}
@@ -829,12 +829,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1453461846}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9120dc5a1b2a194eb3ca4cbb6c7ad8b, type: 3}
+  m_Script: {fileID: 11500000, guid: ba967d13e4a5caf4d9ca768b1980ebab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   followTarget: {fileID: 86812809}
   moveSpeed: 5
-  isLevelCamera: 1
 --- !u!1 &1474245620
 GameObject:
   m_ObjectHideFlags: 0
