@@ -14,6 +14,7 @@ public class mazeController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         InitialiseMaze();
+
 	}
 	
 	// Update is called once per frame
@@ -30,13 +31,7 @@ public class mazeController : MonoBehaviour {
         int randomStart = 1;
         int randomFinish = 1;
         int reverseFinishAndStart = Random.Range(0, 2);
-        if (reverseFinishAndStart == 1)
-        {
-            GameObject temp = start;
-            start = finish;
-            finish = temp;
-        }
-        deactivateMazes(randomMaze);
+        activateMaze(randomMaze);
         switch (randomMaze)
         {
             case 1:
@@ -156,9 +151,10 @@ public class mazeController : MonoBehaviour {
                 }
                 break;
         }
+        GameObject.FindObjectOfType<PlayerController>().transform.position = start.transform.position;
     }
 
-    void deactivateMazes(int maze)
+    void activateMaze(int maze)
     {
         switch (maze)
         {
