@@ -15,8 +15,6 @@ body {
 }
 
 canvas {
-  height: 100%;
-  position: absolute;
 }
 
 html{
