@@ -12,10 +12,16 @@ body {
 
 * {
   margin: 0;
+  margin-left: 50%;
   padding: 0;
 }
 
 canvas {
   height: 100%;
   position: absolute;
+}
+
+html{
+  height: auto;
+  width: auto;
 }
