@@ -19,8 +19,8 @@ public class BackEndCommunicator {
         }
     }
 
-    public string Protocol = "http://";
-    public string URL = "dodo.cah.onl";
+    public string Protocol = "https://";
+    public string URL = "dodo.cah.onl/Database/";
     private BackEndCommunicator()
     {
         //Set specific stuff here if needed
