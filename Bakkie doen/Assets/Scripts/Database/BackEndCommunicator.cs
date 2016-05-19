@@ -20,7 +20,7 @@ public class BackEndCommunicator {
     }
 
     public string Protocol = "http://";
-    public string URL = "localhost/Database/";
+    public string URL = "verminnl.github.io/Serious-Gaming-Team-Dofe/Database";
     private BackEndCommunicator()
     {
         //Set specific stuff here if needed
