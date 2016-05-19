@@ -4,18 +4,20 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | Bakkie doen</title>
-    <link rel="stylesheet" type="text/css" href="TemplateData/custom.css">
+    <style>
+    /* a style sheet needs to be present for cursor hiding and custom cursors to work. */
+    </style>
   </head>
   <body>
-    <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+    <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="600px" width="960px"></canvas>
     <script type='text/javascript'>
   var Module = {
     TOTAL_MEMORY: 268435456,
     errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
     compatibilitycheck: null,
-    dataUrl: "Development/WebGL Build.data",
-    codeUrl: "Development/WebGL Build.js",
-    memUrl: "Development/WebGL Build.mem",
+    dataUrl: "Release/Dofe Builds.data",
+    codeUrl: "Release/Dofe Builds.js",
+    memUrl: "Release/Dofe Builds.mem",
   };
 </script>
 <script src="Release/UnityLoader.js"></script>
