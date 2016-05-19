@@ -359,7 +359,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 284425523}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.6, y: -14.7, z: 0}
+  m_LocalPosition: {x: -35.01, y: -7.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1603536426}
@@ -1210,7 +1210,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 429624, guid: 767f081f46b8191408cdbaf1c1f9079c, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11457600, guid: 767f081f46b8191408cdbaf1c1f9079c, type: 2}
       propertyPath: levelToLoad
@@ -1453,7 +1453,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 429624, guid: 767f081f46b8191408cdbaf1c1f9079c, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 135964, guid: 767f081f46b8191408cdbaf1c1f9079c, type: 2}
       propertyPath: m_Name
@@ -1651,7 +1651,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1005088184}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 48.29, y: -15.59, z: 0}
+  m_LocalPosition: {x: 55.93, y: -16.77, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 738286449}
@@ -1792,9 +1792,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af3fda382c20d6d4caf2fcd277d6b214, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToGive: 10
-  damageBurst: {fileID: 105780, guid: dc31063ecc8bc2d47a57773b6da949c7, type: 2}
-  hitPoint: {fileID: 1570848887}
 --- !u!61 &1221089638
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2448,7 +2445,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 459348, guid: c9ce2c2b08e8c0a4999aba1d0cb7769f, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 193648, guid: c9ce2c2b08e8c0a4999aba1d0cb7769f, type: 2}
       propertyPath: m_IsActive
