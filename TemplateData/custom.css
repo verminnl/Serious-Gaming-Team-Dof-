@@ -21,6 +21,7 @@ body{
   width: 100vh;
   text-align: center;
   background-color: black;
+  overflow: hidden;
 }
 
 canvas{
