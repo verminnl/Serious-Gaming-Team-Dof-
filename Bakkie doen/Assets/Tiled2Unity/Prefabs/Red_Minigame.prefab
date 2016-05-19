@@ -51,15 +51,15 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &160992
+--- !u!1 &154104
 GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 456808}
-  - 68: {fileID: 6829460}
+  - 4: {fileID: 455972}
+  - 68: {fileID: 6843162}
   m_Layer: 0
   m_Name: PolylineObject
   m_TagString: Untagged
@@ -133,16 +133,16 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 456808}
+  - {fileID: 455972}
   - {fileID: 474954}
   m_Father: {fileID: 430064}
   m_RootOrder: 1
---- !u!4 &456808
+--- !u!4 &455972
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 160992}
+  m_GameObject: {fileID: 154104}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 416.022, y: -0.0222222, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -207,12 +207,12 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 129822}
   m_Mesh: {fileID: 4300000, guid: c2ff79a2025142145b816c3ccefd807c, type: 3}
---- !u!68 &6829460
+--- !u!68 &6843162
 EdgeCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 160992}
+  m_GameObject: {fileID: 154104}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
