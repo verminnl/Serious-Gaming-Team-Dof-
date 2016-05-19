@@ -6,7 +6,6 @@ body {
   -ms-transform: scale(-1, 1);
   transform: scale(-1, 1);
   height: 100vh;
-  min-height:1200px;
 }
 
 * {
@@ -18,9 +17,3 @@ canvas {
   height: 100%;
   position: absolute;
 }
-
-html{
-  min-height: 500px;
-}
-
-
