@@ -18,5 +18,8 @@ canvas {
   position: absolute;
 }
 
+html{
+  min-height: 500px;
+}
 
 
