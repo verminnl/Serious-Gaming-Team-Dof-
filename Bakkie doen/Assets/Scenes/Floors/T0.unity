@@ -881,9 +881,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af3fda382c20d6d4caf2fcd277d6b214, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToGive: 10
-  damageBurst: {fileID: 105780, guid: dc31063ecc8bc2d47a57773b6da949c7, type: 2}
-  hitPoint: {fileID: 797965528}
 --- !u!61 &800550528
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1262,8 +1259,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6266e2cce480ed247851da0b2b392f25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startDirection: {x: 0, y: 0}
-  pointName: T1_Fourth_Elevator_In
+  startDirection: {x: 0, y: 1}
+  pointName: Yellow_Area_Up_In
 --- !u!4 &966709439
 Transform:
   m_ObjectHideFlags: 0
