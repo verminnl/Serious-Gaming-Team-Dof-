@@ -5,7 +5,7 @@ body {
   -o-transform: scale(-1, 1);
   -ms-transform: scale(-1, 1);
   transform: scale(-1, 1);
-  height: vh100;
+  height: 100vh;
   min-height:1200px;
 }
 
