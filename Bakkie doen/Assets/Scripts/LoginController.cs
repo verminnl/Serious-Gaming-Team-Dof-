@@ -23,7 +23,7 @@ public class LoginController : MonoBehaviour {
 
             //Get the input of the player
             string input = InputField.text;
-            if(input.Length != 12)
+            if(input.Length != 10)
             {
                 InputField.text = "";
                 loginFailed.SetActive(true);
@@ -31,11 +31,13 @@ public class LoginController : MonoBehaviour {
             }
 
             //Send a request to the back-end (login) and retrieve the playerID. IT RETURNS 0 IF LOGIN FAILED
-            //2 letters, 7 cijfers, 3 cijfers
+            //7 cijfers, 3 cijfers
             string user;
-            user = input.Substring(0, 9);
+            user = input.Substring(0, 7);
+            Debug.Log(user);
             string password;
-            password = input.Substring(9, 3);
+            password = input.Substring(7, 3);
+            Debug.Log(password);
             print(user + "    " + password);
 
             DataTracking.playerLogin = BackEndCommunicator.Instance.Login(user, password);
