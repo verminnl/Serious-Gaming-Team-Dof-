@@ -19,7 +19,7 @@ public class TutorialEnd : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        theText.text = theText.text + namePlayer + "!";
+        theText.text = theText.text + DataTracking.playerData.FirstName + "!";
         timer = 0;
 	}
 	

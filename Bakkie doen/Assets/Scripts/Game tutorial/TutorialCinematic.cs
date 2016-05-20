@@ -72,8 +72,6 @@ public class TutorialCinematic : MonoBehaviour {
                     //Else, gets the next waypoint for the player to navigate to
                     if (currentWaypoint.GetComponent<WaypointDialogue>() != null)
                     {
-                        //currentWaypoint.GetComponent<WaypointDialogue>().repName = thePlayer.GetComponent<PlayerController>().playerName;
-
                         if (currentWaypoint.GetComponent<WaypointDialogue>().dialogueStarted == false)
                         {
                             tbManager.ReloadScript(currentWaypoint.GetComponent<WaypointDialogue>().lines);
@@ -142,6 +140,7 @@ public class TutorialCinematic : MonoBehaviour {
             else
             {
                 done = true;
+                Destroy(thePlayer);
                 endScreen.SetActive(true);
                 endScreen.GetComponent<TutorialEnd>().name = DataTracking.playerData.FirstName;
             }
