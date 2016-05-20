@@ -143,7 +143,7 @@ public class TutorialCinematic : MonoBehaviour {
             {
                 done = true;
                 endScreen.SetActive(true);
-                endScreen.GetComponent<TutorialEnd>().name = thePlayer.GetComponent<PlayerController>().playerName;
+                endScreen.GetComponent<TutorialEnd>().name = DataTracking.playerData.FirstName;
             }
         }
         

@@ -6,7 +6,6 @@ public class PlayerController : MonoBehaviour {
     public string playerName;
 
     public float moveSpeed;
-    //public GameController gameController;
 
     private Animator anim;
     private Rigidbody2D myRigidBody;

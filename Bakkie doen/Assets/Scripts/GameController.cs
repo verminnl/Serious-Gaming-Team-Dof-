@@ -8,13 +8,7 @@ using System.Collections.Generic;
 /// </summary>
 public class GameController : MonoBehaviour {
     //Time that has passed since the start of the game
-    private static float playedTime;
-    //Player Data Model
-    public static AvatarData playerData;
-    //Player Login Model
-    public static PlayerLogin playerLogin;
-    //NPC dictionairy
-    public static List<AvatarData> npcData;
+    public static float playedTime;
     //Counts the time after finishing dialogue with an NPC
     private float npcMinigameStartCounter;
     //Current player
@@ -65,8 +59,6 @@ public class GameController : MonoBehaviour {
         //When the player is talking to an NPC, set minigameType to the colorType of the NPC
         if (DataTracking.theNPC != null)
         {
-            DataTracking.thePlayer = thePlayer;
-
             //When finished talking to an NPC, start the loading screen and start a time counter
             if (DataTracking.theNPC.dialogueFinished)
             {
@@ -96,8 +88,7 @@ public class GameController : MonoBehaviour {
                 indexNumberNPC = randomMinigameColor();
                 hasChosenRandomNPC = true;
             }
-
-            DataTracking.thePlayer = thePlayer;
+            
             DataTracking.theNPC = npcList[indexNumberNPC];
             theLoadingTransition.SetActive(true);
 
@@ -130,7 +121,10 @@ public class GameController : MonoBehaviour {
     /// <param name="type">Type of the minigame</param>
     public void ActivateMinigame(string type)
     {
-        type = "blue";
+        if(type == "green")
+        {
+            type = "blue";
+        }
         switch (type)
         {
             case "red":
