@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Keeps track of certain data for the game
@@ -32,5 +33,17 @@ public class DataTracking : MonoBehaviour {
         {
             Destroy(gameObject);
         }
+    }
+
+    public static void resetGame()
+    {
+        //Flush static variables of datatracking to prevent mix-up with previous readings.
+        DataTracking.playerData = null;
+        DataTracking.playerLogin = null;
+        DataTracking.npcData = null;
+        DataTracking.theNPC = null;
+        GameController.playedTime = 0;
+        //Back to loginscreen
+        SceneManager.LoadScene("Login");
     }
 }

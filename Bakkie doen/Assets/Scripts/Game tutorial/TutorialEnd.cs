@@ -31,8 +31,7 @@ public class TutorialEnd : MonoBehaviour {
 
         if (timer > activeTime)
         {
-            Debug.Log("Time has passed!");
-            Application.Quit();
+            DataTracking.resetGame();
         }
 	}
 }

@@ -28,14 +28,7 @@ public class EndGameScene : MonoBehaviour {
             timeActive = timeActive + Time.deltaTime;
             if (timeActive > screenDuration)
             {
-                //Flush static variables of datatracking to prevent mix-up with previous readings.
-                DataTracking.playerData = null;
-                DataTracking.playerLogin = null;
-                DataTracking.npcData = null;
-                //DataTracking.theNPC = null;
-                GameController.playedTime = 0;
-                //Back to loginscreen
-                SceneManager.LoadScene("Login");
+                DataTracking.resetGame();
             }
         }
 	}
