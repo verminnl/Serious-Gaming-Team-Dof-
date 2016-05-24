@@ -23,8 +23,10 @@ public class EnemySpawner : MonoBehaviour {
     public Transform maxXPoint;
     //Highest x-coordinate for spawning enemies
     private float maxX;
-    //Maximum distance in the x-axis between each enemy
-    public float maxXChange;
+    //Minimum X-value for the spawn point
+    public GameObject spawnPointMinX;
+    //Maximum X-value for the spawn point
+    public GameObject spawnPointMaxX;
     //Distance between the enemies that will be spawned in the x-coordinate
     private float xChange;
     //Minimum number of enemies to spawn at once
@@ -50,7 +52,7 @@ public class EnemySpawner : MonoBehaviour {
         if (transform.position.y < generationPoint.position.y)
         {
             //Decides the distance between each enemy in the y-coordinate
-            distanceBetween = (Random.Range(distanceBetweenMin, distanceBetweenMax) / totalNumberEnemiesToSpawn);
+            distanceBetween = (Random.Range(distanceBetweenMin, distanceBetweenMax));
 
             //Spawns a number of enemies based on the totalNumberEnemiesToSpawn
             for (int i = 0; i < totalNumberEnemiesToSpawn; i++)
@@ -58,7 +60,7 @@ public class EnemySpawner : MonoBehaviour {
                 //Chooses an enemy to spawn
                 enemySelector = Random.Range(0, theObjectPools.Length);
                 //Decides how much distance there should be between the enemies in the x-coordinate
-                xChange = transform.position.x + Random.Range(maxXChange, -maxXChange);
+                xChange = Random.Range(spawnPointMinX.transform.position.x, spawnPointMaxX.transform.position.x);
 
                 //Makes sure that the enemies don't spawn outside of the given area
                 if (xChange > maxX)

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--Tiled2Unity generated xml data-->
 <!--Do not modify by hand-->
-<!--Last exported: 29-4-2016 10:51:55-->
+<!--Last exported: 24-5-2016 13:26:26-->
 <Tiled2Unity version="1.0.4.2">
   <AssignMaterial mesh="mesh_0001" material="star_sprite" />
   <Prefab name="Red_Minigame" numTilesWide="51" numTilesHigh="250" tileWidth="32" tileHeight="32" exportScale="1" mapWidthInPixels="1632" mapHeightInPixels="8000" scale="0.05">
@@ -9,12 +9,12 @@
       <GameObject name="star_sprite" copy="mesh_0001" sortingLayerName="" sortingOrder="0" opacity="1" />
     </GameObject>
     <GameObject name="Collision" x="0" y="0">
-      <GameObject name="PolylineObject" x="416.022" y="-0.0222222" rotation="0">
+      <GameObject name="PolylineObject" x="96.022" y="-0.0222222" rotation="0">
         <EdgeCollider2D>
           <Points>0,0 0.021256,-7999.93 31.9667,-7999.94 31.9778,-0.0402778 -0.0144097,0.0144097 0.00121528,-0.00121528 0.00902778,0.00659722</Points>
         </EdgeCollider2D>
       </GameObject>
-      <GameObject name="PolylineObject" x="1184.04" y="0" rotation="0">
+      <GameObject name="PolylineObject" x="1504.04" y="0" rotation="0">
         <EdgeCollider2D>
           <Points>0,0 0.0815217,-7999.75 31.8315,-7999.75 32,0 0,-0.0434783</Points>
         </EdgeCollider2D>
