@@ -189,6 +189,33 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3920ac8d037203948bb7be82a19847e0, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &335391868
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 335391869}
+  m_Layer: 0
+  m_Name: Min X-Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &335391869
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 335391868}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 51.98, y: -382.76, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
 --- !u!1 &338698986
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,11 +314,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 402930987}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 30, y: 0, z: 0}
+  m_LocalPosition: {x: 112.28, y: -382.76, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1272375777}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
 --- !u!1 &430519724
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,7 +369,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0.019607844}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0.019607844}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -353,7 +380,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10.3
+  orthographic size: 17.5
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -395,9 +422,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   followTarget: {fileID: 2143395135}
-  moveSpeed: 5
+  moveSpeed: 15
   cameraXOffset: 0
-  cameraYOffset: 8
+  cameraYOffset: 15
 --- !u!1 &469059236
 GameObject:
   m_ObjectHideFlags: 0
@@ -616,7 +643,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22494668, guid: 30b71586256bc6046a3ba466a9d2786f, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 22494668, guid: 30b71586256bc6046a3ba466a9d2786f, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -1051,11 +1078,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 824783924}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25.800003, y: 0.510376, z: 0}
+  m_LocalPosition: {x: -10.5, y: 0.510376, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1272375777}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!1 &865354160
 GameObject:
   m_ObjectHideFlags: 0
@@ -1433,16 +1460,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   generationPoint: {fileID: 865354161}
   distanceBetween: 20
-  distanceBetweenMin: 10
-  distanceBetweenMax: 40
+  distanceBetweenMin: 4
+  distanceBetweenMax: 7
   theObjectPools:
   - {fileID: 1556689581}
   - {fileID: 1610347649}
   - {fileID: 518747603}
   maxXPoint: {fileID: 402930988}
-  maxXChange: 30
-  minNumberOfEnemiesToSpawn: 1
-  maxNumberOfEnemiesToSpawn: 3
+  spawnPointMinX: {fileID: 335391868}
+  spawnPointMaxX: {fileID: 402930987}
+  minNumberOfEnemiesToSpawn: 10
+  maxNumberOfEnemiesToSpawn: 10
 --- !u!4 &1272375777
 Transform:
   m_ObjectHideFlags: 0
@@ -1450,10 +1478,9 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1272375775}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 67.26, y: -382.76, z: 0}
+  m_LocalPosition: {x: 51.98, y: -382.76, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 402930988}
   - {fileID: 824783926}
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -2184,7 +2211,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 13.45, y: 1.81}
+  m_Size: {x: 34.829998, y: 1.81}
 --- !u!212 &1957258780
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2211,7 +2238,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1611274439
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 007e4752b4d2c034195ea4630bd5cf72, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b733979966f01554a8ace590097ce1c5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2384,7 +2411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3e1633e6e4b46149abffc2821e26e0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveSpeed: 20
   canMove: 1
   flashLenght: 0.5
   bulletType: {fileID: 1461443196}

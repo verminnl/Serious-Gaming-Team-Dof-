@@ -76,8 +76,6 @@ public class RedMinigamePlayerController : MonoBehaviour {
         {
             ActivateFlash();
         }
-
-        Debug.Log(isAlive);
 	}
 
     /// <summary>
