@@ -10,8 +10,6 @@ public class EndMinigame : MonoBehaviour {
     //Time that the minigame will take in seconds
     public int gameTime;
     //Screen that appears when the minigame ends
-    public GameObject minigameEndScreen;
-    //Screen that appears before the game ends
     public GameObject gameEndScreen;
     //Screen that appears when the player is dead
     public GameObject gameOverScreen;
@@ -42,7 +40,7 @@ public class EndMinigame : MonoBehaviour {
     {
         if (other.name == "Player")
         {
-            minigameEndScreen.GetComponent<EndMinigameScene>().ActivateScreen();
+            gameEndScreen.GetComponent<EndGameScene>().ActivateScreen();
             Destroy(thePlayer.gameObject);
         }
     }
