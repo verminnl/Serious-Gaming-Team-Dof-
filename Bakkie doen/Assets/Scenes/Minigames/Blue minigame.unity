@@ -187,7 +187,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1301abe79d99ad4d8dd39749d8608cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerName: 
   moveSpeed: 10
   lastMove: {x: 0, y: 0}
   startPoint: maze_start
@@ -892,7 +891,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thePlayer: {fileID: 86812810}
-  gameTime: 10
   minigameEndScreen: {fileID: 897147806}
   gameEndScreen: {fileID: 1109067917}
 --- !u!4 &821057504 stripped
@@ -1473,6 +1471,7 @@ GameObject:
   - 92: {fileID: 1453461849}
   - 124: {fileID: 1453461848}
   - 81: {fileID: 1453461847}
+  - 114: {fileID: 1453461852}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1521,7 +1520,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 12
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1547,6 +1546,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &1453461852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1453461846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69eedd526403cea40b7c82139f03cec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  followTarget: {fileID: 86812809}
+  moveSpeed: 10
+  cameraXOffset: 0
+  cameraYOffset: 0
 --- !u!1 &1474245620
 GameObject:
   m_ObjectHideFlags: 0

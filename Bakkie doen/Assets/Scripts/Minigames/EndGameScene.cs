@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Manages the data on the scene that appears at the end of the game
@@ -17,7 +18,7 @@ public class EndGameScene : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        textBox.text = textBox.text + DataTracking.thePlayer.playerName;
+        textBox.text = textBox.text + DataTracking.playerData.FirstName;
 	}
 	
 	// Update is called once per frame
@@ -27,7 +28,7 @@ public class EndGameScene : MonoBehaviour {
             timeActive = timeActive + Time.deltaTime;
             if (timeActive > screenDuration)
             {
-                Application.Quit();
+                DataTracking.resetGame();
             }
         }
 	}

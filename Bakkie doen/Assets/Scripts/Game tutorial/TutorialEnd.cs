@@ -11,7 +11,7 @@ public class TutorialEnd : MonoBehaviour {
     //Textbox for the end screen
     public Text theText;
     //Name of the player
-    public string name;
+    public string namePlayer;
     //Time that the screen will be active
     public float activeTime;
     //Time that the screen is active
@@ -19,7 +19,7 @@ public class TutorialEnd : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        theText.text = theText.text + name + "!";
+        theText.text = theText.text + DataTracking.playerData.FirstName + "!";
         timer = 0;
 	}
 	
@@ -31,8 +31,7 @@ public class TutorialEnd : MonoBehaviour {
 
         if (timer > activeTime)
         {
-            Debug.Log("Time has passed!");
-            Application.Quit();
+            DataTracking.resetGame();
         }
 	}
 }

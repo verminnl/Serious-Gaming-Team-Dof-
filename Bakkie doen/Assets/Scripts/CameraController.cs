@@ -8,10 +8,11 @@ public class CameraController : MonoBehaviour {
     public bool isLevelCamera;
     private Vector3 targetPos;
 
-    private static bool cameraExists;
+    private bool cameraExists;
 
 	// Use this for initialization
 	void Start () {
+        followTarget = FindObjectOfType<PlayerController>().gameObject;
         if (!cameraExists && isLevelCamera)
         {
             cameraExists = true;

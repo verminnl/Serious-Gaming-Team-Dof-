@@ -18,7 +18,7 @@ public class NPCController : MonoBehaviour {
     //Current NPC
     public NPCClass npc;
     //Name of current NPC
-    public string name;
+    public string nameNPC;
     //Room of the NPC
     public string roomNumber;
     //Sprite of current NPC
@@ -36,11 +36,11 @@ public class NPCController : MonoBehaviour {
         theCamera = FindObjectOfType<CameraController>();
         thePlayer = FindObjectOfType<PlayerController>();
         theGame = FindObjectOfType<GameController>();
-        name = gameObject.name;
+        nameNPC = gameObject.name;
         sprite = gameObject.GetComponent<SpriteRenderer>().sprite;
 
         //Creates an NPC with the given details
-        npc = new NPCClass(name, colorType, dialogue, NPCSkills);
+        npc = new NPCClass(nameNPC, colorType, dialogue, NPCSkills);
         if (theGame != null)
         {
             theGame.AddNPCToList(this);

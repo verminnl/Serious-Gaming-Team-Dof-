@@ -1,7 +1,7 @@
 <?php
-	$servername = "https://www.db4free.net";
-	$username = "bakkie_doen";
-	$password = "bakkie";
+	$servername = "localhost";
+	$username = "root";
+	$password = "";
 	$dbName = "bakkie_doen";
 	
 	//Make Connection

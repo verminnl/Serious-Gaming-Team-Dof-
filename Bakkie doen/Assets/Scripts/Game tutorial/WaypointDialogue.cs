@@ -9,13 +9,12 @@ public class WaypointDialogue : MonoBehaviour {
     public string[] lines;
     //Checks if the dialogue has been started
     public bool dialogueStarted = false;
-    //Player
-    private PlayerController thePlayer;
 
 	// Use this for initialization
-	void Start () {
-        thePlayer = FindObjectOfType<PlayerController>();
-	}
+	void Start()
+    {
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -24,7 +23,14 @@ public class WaypointDialogue : MonoBehaviour {
             if (lines[i].Contains("#playername"))
             {
                 Debug.Log("There is #playername");
-                lines[i] = lines[i].Replace("#playername", thePlayer.playerName);
+                if(DataTracking.playerData != null)
+                {
+                    lines[i] = lines[i].Replace("#playername", DataTracking.playerData.FirstName);
+                }
+                else
+                {
+                    lines[i] = lines[i].Replace("#playername", "Guest");
+                }
             }
             else
             {
