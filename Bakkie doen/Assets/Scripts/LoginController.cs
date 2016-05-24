@@ -27,6 +27,8 @@ public class LoginController : MonoBehaviour {
             {
                 InputField.text = "";
                 loginFailed.SetActive(true);
+                
+                EventSystem.current.SetSelectedGameObject(InputField.gameObject, null);
                 return;
             }
 
