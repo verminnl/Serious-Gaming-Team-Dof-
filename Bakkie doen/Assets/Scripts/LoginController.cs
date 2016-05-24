@@ -15,33 +15,37 @@ public class LoginController : MonoBehaviour {
     {
         EventSystem.current.SetSelectedGameObject(InputField.gameObject, null);
     }
-    	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update() {
         if (Input.GetKeyDown(KeyCode.Return))
         {
-
             //Get the input of the player
             string input = InputField.text;
-            if(input.Length != 10)
+            string user;
+            string password;
+            if (input.Length == 10)
+            {
+                user = input.Substring(0, 7);
+                password = input.Substring(7, 3);
+            }
+            else if(input.Length == 11)
+            {
+                user = input.Substring(0, 8);
+                password = input.Substring(8, 3);
+            }
+            else
             {
                 InputField.text = "";
-                loginFailed.SetActive(true);
-                
+                loginFailed.SetActive(true);   
                 EventSystem.current.SetSelectedGameObject(InputField.gameObject, null);
                 return;
             }
 
             //Send a request to the back-end (login) and retrieve the playerID. IT RETURNS 0 IF LOGIN FAILED
             //7 cijfers, 3 cijfers
-            string user;
-            user = input.Substring(0, 7);
-            Debug.Log(user);
-            string password;
-            password = input.Substring(7, 3);
-            Debug.Log(password);
-            print(user + "    " + password);
-
+            // of 8 cijfers, 3 cijfers
+            
             DataTracking.playerLogin = BackEndCommunicator.Instance.Login(user, password);
             if(DataTracking.playerLogin == null)
             {
