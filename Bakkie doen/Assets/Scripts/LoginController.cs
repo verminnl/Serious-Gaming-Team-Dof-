@@ -1,7 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
 using UnityEngine.UI;
-using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
@@ -10,6 +8,7 @@ public class LoginController : MonoBehaviour {
 
     public InputField InputField;
     public GameObject loginFailed;
+    public string[] dialogue;
 
     void Start()
     {
@@ -22,6 +21,7 @@ public class LoginController : MonoBehaviour {
         {
             //Get the input of the player
             string input = InputField.text;
+            input = "82801888123";
             string user;
             string password;
             if (input.Length == 10)
@@ -60,11 +60,17 @@ public class LoginController : MonoBehaviour {
                 DataTracking.playerData.SessionID = BackEndCommunicator.Instance.CreateSession(DataTracking.playerLogin.PlayerID);
                 //Get the playerdata
                 DataTracking.playerData = BackEndCommunicator.Instance.GetPlayerData(DataTracking.playerLogin.PlayerID, DataTracking.playerData.SessionID);
+                DataTracking.playerData.CharacterSprite = SetCharacterSprite(DataTracking.playerData.Character);
                 //Get tutorial
                 DataTracking.playerData.tutorial = BackEndCommunicator.Instance.CheckTutorial(DataTracking.playerLogin.PlayerID, DataTracking.playerData.SessionID);
                 //Get the NPCData
                 DataTracking.npcData = BackEndCommunicator.Instance.GetNPCData(DataTracking.playerLogin.PlayerID, DataTracking.playerData.SessionID);
-                //TODO: Add loadinscreen
+                foreach (AvatarData npc in DataTracking.npcData)
+                {
+                    npc.CharacterSprite = SetCharacterSprite(npc.Character);
+                    npc.Dialogue = NPCSetDialogue(npc);
+                }
+
                 if (DataTracking.playerData.tutorial)
                 {
                     SceneManager.LoadScene("Tutorial scene");
@@ -81,5 +87,41 @@ public class LoginController : MonoBehaviour {
         string value = data.Substring(data.IndexOf(index) + index.Length);
         if (value.Contains("|")) value = value.Remove(value.IndexOf("|"));
         return value;
+    }
+
+    public Sprite SetCharacterSprite(string character)
+    {
+        Sprite sprite = new Sprite();
+        if (Resources.Load<Sprite>("Characters/" + character))
+        {
+            sprite = Resources.Load<Sprite>("Characters/" + character);
+        }
+        return sprite;
+    }
+
+    public string[] NPCSetDialogue(AvatarData randomNPC)
+    {
+        string skills = "";
+        dialogue = new string[3];
+        dialogue[0] = "Hallo " + DataTracking.playerData.FirstName + ", ik ben " + randomNPC.FirstName + ".";
+        dialogue[1] = "Mijn kamer nummer is " + randomNPC.Room + ".";
+
+        for (int i = 0; i != randomNPC.Skills.Length; i++)
+        {
+            if (i == randomNPC.Skills.Length - 1)
+            {
+                skills += "en " + randomNPC.Skills[i] + ".";
+            }
+            if (i == 0)
+            {
+                skills += randomNPC.Skills[i];
+            }
+            else
+            {
+                skills += ", " + randomNPC.Skills[i];
+            }
+        }
+        dialogue[2] = "Ik kan " + skills;
+        return dialogue;
     }
 }

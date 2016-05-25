@@ -1,0 +1,375 @@
+fileFormatVersion: 2
+guid: def9060ad0c2542a4b273484a010b4bc
+timeCreated: 1464098940
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: walking-cycle2-girl-alt_0
+    21300002: walking-cycle2-girl-alt_1
+    21300004: walking-cycle2-girl-alt_2
+    21300006: walking-cycle2-girl-alt_3
+    21300008: walking-cycle2-girl-alt_4
+    21300010: walking-cycle2-girl-alt_5
+    21300012: walking-cycle2-girl-alt_6
+    21300014: walking-cycle2-girl-alt_7
+    21300016: walking-cycle2-girl-alt_8
+    21300018: walking-cycle2-girl-alt_9
+    21300020: walking-cycle2-girl-alt_10
+    21300022: walking-cycle2-girl-alt_11
+    21300024: walking-cycle2-girl-alt_12
+    21300026: walking-cycle2-girl-alt_13
+    21300028: walking-cycle2-girl-alt_14
+    21300030: walking-cycle2-girl-alt_15
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 256
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 32
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: walking-cycle2-girl-alt_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7, y: 30}
+        - {x: -18, y: 25}
+        - {x: -18, y: -20}
+        - {x: -12, y: -24}
+        - {x: 14, y: -24}
+        - {x: 18, y: -19}
+        - {x: 18, y: 23}
+        - {x: 13, y: 30}
+    - name: walking-cycle2-girl-alt_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 30}
+        - {x: -18, y: 28}
+        - {x: -20, y: 27}
+        - {x: -20, y: -15}
+        - {x: -17, y: -26}
+        - {x: 10, y: -26}
+        - {x: 18, y: -21}
+        - {x: 18, y: 23}
+        - {x: 13, y: 30}
+    - name: walking-cycle2-girl-alt_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7, y: 30}
+        - {x: -18, y: 25}
+        - {x: -18, y: -20}
+        - {x: -12, y: -24}
+        - {x: 14, y: -24}
+        - {x: 18, y: -19}
+        - {x: 18, y: 23}
+        - {x: 13, y: 30}
+    - name: walking-cycle2-girl-alt_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6, y: 30}
+        - {x: -9, y: 30}
+        - {x: -18, y: 22}
+        - {x: -18, y: -14}
+        - {x: -4, y: -26}
+        - {x: 10, y: -26}
+        - {x: 13, y: -24}
+        - {x: 20, y: -12}
+        - {x: 20, y: 21}
+        - {x: 18, y: 28}
+    - name: walking-cycle2-girl-alt_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 28}
+        - {x: -14, y: 25}
+        - {x: -14, y: -21}
+        - {x: 5, y: -21}
+        - {x: 14, y: -4}
+        - {x: 14, y: 27}
+        - {x: 9, y: 28}
+    - name: walking-cycle2-girl-alt_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 28}
+        - {x: -14, y: 21}
+        - {x: -14, y: -21}
+        - {x: 14, y: -21}
+        - {x: 14, y: 27}
+        - {x: 12, y: 28}
+    - name: walking-cycle2-girl-alt_6
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 28}
+        - {x: -14, y: 25}
+        - {x: -14, y: -21}
+        - {x: 5, y: -21}
+        - {x: 14, y: -4}
+        - {x: 14, y: 27}
+        - {x: 9, y: 28}
+    - name: walking-cycle2-girl-alt_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 28}
+        - {x: -14, y: 23}
+        - {x: -14, y: -18}
+        - {x: -13, y: -21}
+        - {x: 13, y: -21}
+        - {x: 14, y: -18}
+        - {x: 14, y: 24}
+        - {x: 4, y: 28}
+    - name: walking-cycle2-girl-alt_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 28}
+        - {x: -14, y: 18}
+        - {x: -14, y: 7}
+        - {x: -11, y: -17}
+        - {x: -5, y: -21}
+        - {x: 9, y: -21}
+        - {x: 14, y: -4}
+        - {x: 14, y: 24}
+        - {x: 4, y: 28}
+    - name: walking-cycle2-girl-alt_9
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 28}
+        - {x: -14, y: 25}
+        - {x: -14, y: -6}
+        - {x: -10, y: -21}
+        - {x: 14, y: -21}
+        - {x: 14, y: 24}
+        - {x: 6, y: 28}
+    - name: walking-cycle2-girl-alt_10
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 28}
+        - {x: -14, y: 18}
+        - {x: -14, y: 7}
+        - {x: -11, y: -17}
+        - {x: -5, y: -21}
+        - {x: 9, y: -21}
+        - {x: 14, y: -4}
+        - {x: 14, y: 24}
+        - {x: 4, y: 28}
+    - name: walking-cycle2-girl-alt_11
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 28}
+        - {x: -14, y: 19}
+        - {x: -14, y: -21}
+        - {x: 11, y: -21}
+        - {x: 14, y: -17}
+        - {x: 14, y: 25}
+        - {x: 6, y: 28}
+    - name: walking-cycle2-girl-alt_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18, y: 30}
+        - {x: -18, y: -20}
+        - {x: -13, y: -24}
+        - {x: 14, y: -24}
+        - {x: 18, y: -20}
+        - {x: 18, y: 23}
+        - {x: 10, y: 30}
+    - name: walking-cycle2-girl-alt_13
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 30}
+        - {x: -19, y: 21}
+        - {x: -20, y: 14}
+        - {x: -20, y: -13}
+        - {x: -12, y: -26}
+        - {x: 2, y: -26}
+        - {x: 18, y: -18}
+        - {x: 18, y: 28}
+        - {x: 12, y: 30}
+    - name: walking-cycle2-girl-alt_14
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18, y: 30}
+        - {x: -18, y: -20}
+        - {x: -13, y: -24}
+        - {x: 14, y: -24}
+        - {x: 18, y: -20}
+        - {x: 18, y: 23}
+        - {x: 10, y: 30}
+    - name: walking-cycle2-girl-alt_15
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 30}
+        - {x: -18, y: 23}
+        - {x: -18, y: -15}
+        - {x: -8, y: -26}
+        - {x: 10, y: -26}
+        - {x: 20, y: -19}
+        - {x: 20, y: 27}
+        - {x: 12, y: 30}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,7 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
-using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Manages the data on the scene that appears at the end of the game

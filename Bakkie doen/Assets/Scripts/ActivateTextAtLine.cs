@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Activates a certain line from a dialogue
@@ -21,8 +20,6 @@ public class ActivateTextAtLine : MonoBehaviour {
     private bool waitForPress;
     //Checks if the trigger should be destroted when activated
     public bool destroyWhenActivated;
-    //Checks if it's the narrator's dialogue
-    public bool isNarratorTrigger;
     //Controller of the game
     private GameController gc;
 
@@ -30,23 +27,12 @@ public class ActivateTextAtLine : MonoBehaviour {
 	void Start () {
         theTextBox = FindObjectOfType<TextBoxManager>();
         gc = FindObjectOfType<GameController>();
-
         //Gets the dialogue for the current connected gameobject and adds it to theScript
-        if (isNarratorTrigger)
+        var h = DialogueClass.Instance.GetDialogueForNPC(GetComponent<NPC>().avatar.PlayerID.ToString() + "" + SceneManager.GetActiveScene().name);
+        foreach (var item in h)
         {
-            var h = DialogueClass.Instance.GetNarratorDialogue(gameObject.name);
-            foreach (var item in h)
-            {
-                theScript.Add(item);
-            }
-        }
-        else
-        {
-            var h = DialogueClass.Instance.GetDialogueForNPC(gameObject.name);
-            foreach (var item in h)
-            {
-                theScript.Add(item);
-            }
+            theScript.Add(item);
+            print(item);
         }
     }
 	
@@ -61,8 +47,8 @@ public class ActivateTextAtLine : MonoBehaviour {
             theTextBox.stopPlayerMovement = true;
             if (gameObject.GetComponent<NPCController>() != null)
             {
-                theTextBox.currentNPC = gameObject.GetComponent<NPCController>();
-                DataTracking.theNPC = gameObject.GetComponent<NPCController>();
+                theTextBox.currentNPC = gameObject.GetComponent<NPC>();
+                DataTracking.currentNPC = gameObject.GetComponent<NPC>();
             }
             theTextBox.EnableTextBox();
             theTextBox.isNPCDialogue = true;
@@ -88,17 +74,6 @@ public class ActivateTextAtLine : MonoBehaviour {
                 waitForPress = true;
                 return;
             }
-
-            if (isNarratorTrigger)
-            {
-                theTextBox.ReloadScript(DialogueClass.Instance.GetNarratorDialogue(gameObject.name));
-                theTextBox.currentLine = startLine;
-                theTextBox.endAtLine = endLine;
-                theTextBox.stopPlayerMovement = true;
-                theTextBox.EnableTextBox();
-            }
-
-
             if (destroyWhenActivated)
             {
                 Destroy(gameObject);
