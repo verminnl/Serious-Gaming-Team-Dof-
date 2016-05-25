@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
@@ -9,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class DataTracking : MonoBehaviour {
     //public static PlayerController thePlayer;
     //NPC information for activating a minigame
-    public static NPCController theNPC;
+    public static NPC currentNPC;
     //Check if the gameobject already exists in the scene
     private static bool dataTrackingExists;
 
@@ -19,6 +18,8 @@ public class DataTracking : MonoBehaviour {
     public static PlayerLogin playerLogin;
     //NPC dictionairy
     public static List<AvatarData> npcData;
+    //random avatardata for when player doesnt find a character
+    public static AvatarData randomNPC;
 
     // Use this for initialization
     void Start()
@@ -41,7 +42,6 @@ public class DataTracking : MonoBehaviour {
         DataTracking.playerData = null;
         DataTracking.playerLogin = null;
         DataTracking.npcData = null;
-        DataTracking.theNPC = null;
         GameController.playedTime = 0;
         //Back to loginscreen
         SceneManager.LoadScene("Login");

@@ -20,6 +20,9 @@ TagManager:
   - maze_5
   - maze_finish
   - maze_start
+  - dialogue_box
+  - dialogue_text
+  - dialogue_instruction
   layers:
   - Default
   - TransparentFX

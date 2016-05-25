@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 /// <summary>
 /// Dialogue database Singleton
@@ -11,7 +9,6 @@ public class DialogueClass
 	/// THIS PROPERTY CAN ONLY BE CALLED FROM THE DIALOGUECLASS CLASS
 	/// </summary>
     public static Dictionary<string, string[]> npcDialogues = new Dictionary<string, string[]>();
-    public static Dictionary<string, string[]> narratorDialogues = new Dictionary<string, string[]>();
 	private static DialogueClass instance = null;
 	public static DialogueClass Instance {
 		get {
@@ -47,33 +44,6 @@ public class DialogueClass
     public void AddNPCDialogue(string key, string[] value)
     {
 		DialogueClass.npcDialogues.Add(key, value);
-    }
-
-    /// <summary>
-    /// Returns the dialogue for the given narrator
-    /// </summary>
-    /// <param name="narratorName">Name of the narrator</param>
-    /// <returns>
-    /// Returns the dialogue for the narrator if it exists in the Dictionary
-    /// If it doesn't exist, sends out an error
-    /// </returns>
-    public string[] GetNarratorDialogue(string narratorName)
-    {
-        if (DialogueClass.narratorDialogues.ContainsKey(narratorName))
-        {
-            return narratorDialogues[narratorName];
-        }
-        throw new KeyNotFoundException("Couldn't find narrator dialogues for " + narratorName);
-    }
-
-    /// <summary>
-    /// Adds dialogue(s) for a narrator to the Dictionary
-    /// </summary>
-    /// <param name="key">Name of the narrator</param>
-    /// <param name="value">Dialogues for the narrator</param>
-    public void AddNarratorDialogue(string key, string[] value)
-    {
-        DialogueClass.narratorDialogues.Add(key, value);
     }
 
     /// <summary>

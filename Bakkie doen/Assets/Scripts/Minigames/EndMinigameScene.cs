@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 
 /// <summary>
 /// Manages the data on the scene that appears after a minigame
@@ -23,9 +22,17 @@ public class EndMinigameScene : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        npcNameBox.text = DataTracking.theNPC.name;
-        npcSprite.sprite = DataTracking.theNPC.sprite;
-	}
+        if(DataTracking.currentNPC != null)
+        {
+            npcNameBox.text = DataTracking.currentNPC.avatar.FirstName + " " + DataTracking.currentNPC.avatar.LastName;
+            npcSprite.sprite = DataTracking.currentNPC.avatar.CharacterSprite;
+        }
+        else
+        {
+            npcNameBox.text = DataTracking.currentNPC.avatar.FullName;
+            npcSprite.sprite = DataTracking.currentNPC.avatar.CharacterSprite;
+        }
+    }
 	
 	// Update is called once per frame
 	void Update () {

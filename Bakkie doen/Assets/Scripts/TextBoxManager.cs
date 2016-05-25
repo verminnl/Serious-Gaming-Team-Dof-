@@ -31,7 +31,7 @@ public class TextBoxManager : MonoBehaviour {
     //Type speed
     public float typeSpeed;
     //NPC that the player is talking to
-    public NPCController currentNPC;
+    public NPC currentNPC;
 
     // Use this for initialization
     void Start()

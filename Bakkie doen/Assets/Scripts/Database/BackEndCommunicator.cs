@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 
 /// <summary>
@@ -156,7 +155,6 @@ public class BackEndCommunicator {
         {
             NPCData.Add(BackEndCommunicator.Instance.GetPlayerData(id, sessionID));
         }
-        Debug.Log("hoaofasdf");
 
         return NPCData;
     }
