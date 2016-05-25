@@ -1,14 +1,14 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &106874
+--- !u!1 &113826
 GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 486746}
-  - 68: {fileID: 6839688}
+  - 4: {fileID: 421620}
+  - 68: {fileID: 6880414}
   m_Layer: 0
   m_Name: PolylineObject
   m_TagString: Untagged
@@ -109,6 +109,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 494996}
   m_RootOrder: 0
+--- !u!4 &421620
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 113826}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 96.022, y: -0.0222222, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 438148}
+  m_RootOrder: 0
 --- !u!4 &430064
 Transform:
   m_ObjectHideFlags: 1
@@ -145,22 +157,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 486746}
+  - {fileID: 421620}
   - {fileID: 436700}
   m_Father: {fileID: 430064}
   m_RootOrder: 1
---- !u!4 &486746
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 106874}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 96.022, y: -0.0222222, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 438148}
-  m_RootOrder: 0
 --- !u!4 &494996
 Transform:
   m_ObjectHideFlags: 1
@@ -207,26 +207,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 129822}
   m_Mesh: {fileID: 4300000, guid: c2ff79a2025142145b816c3ccefd807c, type: 3}
---- !u!68 &6839688
-EdgeCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 106874}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  m_Points:
-  - {x: 0, y: 0}
-  - {x: 0.021256, y: -7999.93}
-  - {x: 31.9667, y: -7999.94}
-  - {x: 31.9778, y: -0.0402778}
-  - {x: -0.0144097, y: 0.0144097}
-  - {x: 0.00121528, y: -0.00121528}
-  - {x: 0.00902778, y: 0.00659722}
 --- !u!68 &6854488
 EdgeCollider2D:
   m_ObjectHideFlags: 1
@@ -245,6 +225,26 @@ EdgeCollider2D:
   - {x: 31.8315, y: -7999.75}
   - {x: 32, y: 0}
   - {x: 0, y: -0.0434783}
+--- !u!68 &6880414
+EdgeCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 113826}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: 0, y: 0}
+  - {x: 0.021256, y: -7999.93}
+  - {x: 31.9667, y: -7999.94}
+  - {x: 31.9778, y: -0.0402778}
+  - {x: -0.0144097, y: 0.0144097}
+  - {x: 0.00121528, y: -0.00121528}
+  - {x: 0.00902778, y: 0.00659722}
 --- !u!114 &11432960
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 /// <summary>
 /// Ends the minigame when the player touches the gameobject that has this script attached to it
