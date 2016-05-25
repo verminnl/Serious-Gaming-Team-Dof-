@@ -155,7 +155,6 @@ public class BackEndCommunicator {
         {
             NPCData.Add(BackEndCommunicator.Instance.GetPlayerData(id, sessionID));
         }
-        Debug.Log("hoaofasdf");
 
         return NPCData;
     }

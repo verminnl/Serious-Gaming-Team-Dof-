@@ -272,7 +272,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueFinished: 0
-  dialogue: []
   textBox: {fileID: 508422799}
   player: {fileID: 0}
   textBoxActive: 0
@@ -701,7 +700,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueFinished: 0
-  dialogue: []
   textBox: {fileID: 508422799}
   player: {fileID: 0}
   textBoxActive: 0
@@ -1179,7 +1177,6 @@ MonoBehaviour:
   - {fileID: 1388268554}
   - {fileID: 1096540671}
   - {fileID: 1597105051}
-  dialogue: []
 --- !u!4 &693372731
 Transform:
   m_ObjectHideFlags: 0
@@ -1388,7 +1385,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueFinished: 0
-  dialogue: []
   textBox: {fileID: 508422799}
   player: {fileID: 0}
   textBoxActive: 0
@@ -1509,7 +1505,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueFinished: 0
-  dialogue: []
   textBox: {fileID: 508422799}
   player: {fileID: 0}
   textBoxActive: 0
@@ -1528,33 +1523,6 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 3, y: 3}
---- !u!1 &1043598155
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1043598156}
-  m_Layer: 0
-  m_Name: HitPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1043598156
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1043598155}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.007, y: 0.488, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1511043404}
-  m_RootOrder: 0
 --- !u!1 &1096540671
 GameObject:
   m_ObjectHideFlags: 0
@@ -1627,7 +1595,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueFinished: 0
-  dialogue: []
   textBox: {fileID: 508422799}
   player: {fileID: 0}
   textBoxActive: 0
@@ -1646,34 +1613,6 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 3, y: 3}
---- !u!1 &1119528013
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 143698, guid: a1d68100392b5ef498417b38b0f88330, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1119528014}
-  m_Layer: 0
-  m_Name: Weapon
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1119528014
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 421484, guid: a1d68100392b5ef498417b38b0f88330, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1119528013}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.02, y: 0.008, z: -1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1511043404}
-  m_Father: {fileID: 2007852917}
-  m_RootOrder: 0
 --- !u!1 &1147415160
 GameObject:
   m_ObjectHideFlags: 0
@@ -1988,7 +1927,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueFinished: 0
-  dialogue: []
   textBox: {fileID: 508422799}
   player: {fileID: 0}
   textBoxActive: 0
@@ -2079,7 +2017,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueFinished: 0
-  dialogue: []
   textBox: {fileID: 508422799}
   player: {fileID: 0}
   textBoxActive: 0
@@ -2291,95 +2228,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1496712881}
---- !u!1 &1511043403
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 158698, guid: a1d68100392b5ef498417b38b0f88330, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1511043404}
-  - 212: {fileID: 1511043407}
-  - 61: {fileID: 1511043406}
-  - 114: {fileID: 1511043405}
-  m_Layer: 0
-  m_Name: axe_1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1511043404
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 454596, guid: a1d68100392b5ef498417b38b0f88330, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1511043403}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.35000038, y: -0.29000092, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1043598156}
-  m_Father: {fileID: 1119528014}
-  m_RootOrder: 0
---- !u!114 &1511043405
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11461106, guid: a1d68100392b5ef498417b38b0f88330,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1511043403}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af3fda382c20d6d4caf2fcd277d6b214, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!61 &1511043406
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6150230, guid: a1d68100392b5ef498417b38b0f88330,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1511043403}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_Offset: {x: -0.06574613, y: 0.22024976}
-  serializedVersion: 2
-  m_Size: {x: 0.79, y: 1.14}
---- !u!212 &1511043407
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 21249892, guid: a1d68100392b5ef498417b38b0f88330,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1511043403}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_ReflectionProbeUsage: 0
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1611274439
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300018, guid: b9a8cb565259d5445a5338bc433674cf, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
 --- !u!1 &1580219747
 GameObject:
   m_ObjectHideFlags: 0
@@ -2558,7 +2406,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueFinished: 0
-  dialogue: []
   textBox: {fileID: 508422799}
   player: {fileID: 0}
   textBoxActive: 0
@@ -2931,8 +2778,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 48.29, y: -15.59, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1119528014}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
 --- !u!1 &2047954104

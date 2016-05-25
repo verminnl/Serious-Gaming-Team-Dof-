@@ -22,8 +22,8 @@ public class EndGameScene : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        npcNameBox.text = DataTracking.theNPC.name;
-        npcSprite.sprite = DataTracking.theNPC.sprite;
+        npcNameBox.text = DataTracking.currentNPC.avatar.FullName;
+        npcSprite.sprite = DataTracking.currentNPC.avatar.CharacterSprite;
         textBox.text = textBox.text + DataTracking.playerData.FirstName;
 	}
 	
