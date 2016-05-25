@@ -6,8 +6,6 @@
 public class BlueMinigameEndMinigame : MonoBehaviour {
     //The player of the minigame
     public BlueMinigamePlayerController thePlayer;
-    //Screen that appears when the minigame ends
-    public GameObject minigameEndScreen;
     //Screen that appears before the game ends
     public GameObject gameEndScreen;
 
@@ -29,7 +27,7 @@ public class BlueMinigameEndMinigame : MonoBehaviour {
     {
         if (other.name == "Player")
         {
-            minigameEndScreen.GetComponent<EndMinigameScene>().ActivateScreen();
+            gameEndScreen.GetComponent<EndGameScene>().ActivateScreen();
             Destroy(thePlayer.gameObject);
         }
     }

@@ -5,7 +5,13 @@ using UnityEngine.UI;
 /// Manages the data on the scene that appears at the end of the game
 /// </summary>
 public class EndGameScene : MonoBehaviour {
-    //Text box of screen
+    //Card box of the NPC
+    public Image npcCardBox;
+    //Name box of the NPC
+    public Text npcNameBox;
+    //Sprite of the NPC
+    public Image npcSprite;
+    //Farewell text box of screen
     public Text textBox;
     //Time length that the screen should be active
     public float screenDuration;
@@ -16,6 +22,8 @@ public class EndGameScene : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        npcNameBox.text = DataTracking.theNPC.name;
+        npcSprite.sprite = DataTracking.theNPC.sprite;
         textBox.text = textBox.text + DataTracking.playerData.FirstName;
 	}
 	
@@ -32,7 +40,7 @@ public class EndGameScene : MonoBehaviour {
 	}
 
     /// <summary>
-    /// Activates the end screen after minigame
+    /// Activates this screen
     /// </summary>
     public void ActivateScreen()
     {
