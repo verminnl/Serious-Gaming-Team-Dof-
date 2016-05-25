@@ -39,14 +39,13 @@ public class GameController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        
-	}
+        thePlayer = FindObjectOfType<PlayerController>();
+        theCamera = FindObjectOfType<CameraController>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
-        thePlayer = FindObjectOfType<PlayerController>();
-        theCamera = FindObjectOfType<CameraController>();
-
+      
         //Counts the time that has passed
         playedTime += Time.deltaTime;
 
@@ -59,7 +58,7 @@ public class GameController : MonoBehaviour {
                 AvatarData currentNPCAvatar = DataTracking.currentNPC.GetComponent<NPC>().avatar;
                 theLoadingTransition.SetActive(true);
                 theLoadingTransition.GetComponent<LoadingTransition>().npcSprite = DataTracking.currentNPC.GetComponent<SpriteRenderer>().sprite;
-                theLoadingTransition.GetComponent<LoadingTransition>().npcName = currentNPCAvatar.FirstName + currentNPCAvatar.LastName;
+                theLoadingTransition.GetComponent<LoadingTransition>().npcName = currentNPCAvatar.FullName;
                 theLoadingTransition.GetComponent<LoadingTransition>().npcRoom = currentNPCAvatar.Room;
                 npcMinigameStartCounter += Time.deltaTime;
 

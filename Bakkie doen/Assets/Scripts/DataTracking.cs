@@ -5,13 +5,10 @@ using UnityEngine.SceneManagement;
 /// <summary>
 /// Keeps track of certain data for the game
 /// </summary>
-public class DataTracking : MonoBehaviour {
+public static class DataTracking  {
     //public static PlayerController thePlayer;
     //NPC information for activating a minigame
     public static NPC currentNPC;
-    //Check if the gameobject already exists in the scene
-    private static bool dataTrackingExists;
-
     //Player Data Model
     public static AvatarData playerData;
     //Player Login Model
@@ -20,21 +17,6 @@ public class DataTracking : MonoBehaviour {
     public static List<AvatarData> npcData;
     //random avatardata for when player doesnt find a character
     public static AvatarData randomNPC;
-
-    // Use this for initialization
-    void Start()
-    {
-        //Don't destroy gameobject when changing scene
-        if (!dataTrackingExists)
-        {
-            dataTrackingExists = true;
-            DontDestroyOnLoad(transform.gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
 
     public static void resetGame()
     {

@@ -99,7 +99,10 @@ public class BackEndCommunicator {
         // Player Data
         //Convert the result from the request (JSON) to a PlayerData model object.
         AvatarData playerData = JsonUtility.FromJson<AvatarData>(requestResultStringPlayerData);
-        
+
+        //Reset the sessionID
+        playerData.SessionID = sessionID;
+
         // PlayerFound Players
         //Convert the string into something useable for c#
         string[] splitRequestResult = requestResultStringFoundPlayers.Replace(")(", ",").Replace("(", "").Replace(")", "").Split(',');

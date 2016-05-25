@@ -15,8 +15,7 @@ public class EndMinigameScene : MonoBehaviour {
     public float screenDuration;
     //Time that the screen is active
     private float timeActive;
-    //Check if the screen is active
-    private bool isActive;
+
     //Scene that appears after the minigame, the one that appears after this screen
     public GameObject endGameScene;
 
@@ -36,7 +35,7 @@ public class EndMinigameScene : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (isActive)
+        if (gameObject.activeSelf)
         {
             timeActive = timeActive + Time.deltaTime;
             if (timeActive > screenDuration)
@@ -52,6 +51,5 @@ public class EndMinigameScene : MonoBehaviour {
     public void ActivateScreen()
     {
         gameObject.SetActive(true);
-        isActive = true;
     }
 }

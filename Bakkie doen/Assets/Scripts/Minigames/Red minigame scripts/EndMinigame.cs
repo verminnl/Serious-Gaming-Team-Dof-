@@ -26,7 +26,7 @@ public class EndMinigame : MonoBehaviour {
             gameOverScreen.GetComponent<GameOver>().ActivateScreen();
             if (thePlayer != null)
             {
-                Destroy(thePlayer.gameObject);
+                //Destroy(thePlayer.gameObject);
             }
         }
 	}

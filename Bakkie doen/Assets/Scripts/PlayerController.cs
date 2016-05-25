@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour {
         if (!playerExists && !inMinigame)
         {
             playerExists = true;
-            DontDestroyOnLoad(transform.gameObject);
+            //DontDestroyOnLoad(transform.gameObject); set a player in every scene.
         }
         else
         {

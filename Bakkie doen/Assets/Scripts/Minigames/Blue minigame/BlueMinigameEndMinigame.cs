@@ -28,7 +28,7 @@ public class BlueMinigameEndMinigame : MonoBehaviour {
         if (other.name == "Player")
         {
             gameEndScreen.GetComponent<EndGameScene>().ActivateScreen();
-            Destroy(thePlayer.gameObject);
+            //Destroy(thePlayer.gameObject);
         }
     }
 }
