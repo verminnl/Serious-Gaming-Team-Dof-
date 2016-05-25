@@ -70,7 +70,6 @@ public class LoginController : MonoBehaviour {
                     npc.CharacterSprite = SetCharacterSprite(npc.Character);
                     npc.Dialogue = NPCSetDialogue(npc);
                 }
-
                 if (DataTracking.playerData.tutorial)
                 {
                     SceneManager.LoadScene("Tutorial scene");

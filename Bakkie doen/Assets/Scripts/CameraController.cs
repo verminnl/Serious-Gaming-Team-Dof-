@@ -15,7 +15,6 @@ public class CameraController : MonoBehaviour {
         if (!cameraExists && isLevelCamera)
         {
             cameraExists = true;
-            DontDestroyOnLoad(transform.gameObject);
         }
         else
         {
@@ -25,11 +24,11 @@ public class CameraController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        targetPos = new Vector3(followTarget.transform.position.x, followTarget.transform.position.y, transform.position.z);
-        transform.position = Vector3.Lerp(transform.position, targetPos, moveSpeed * Time.deltaTime);
-
-        //print(isLevelCamera);
-
+        if(followTarget != null)
+        {
+            targetPos = new Vector3(followTarget.transform.position.x, followTarget.transform.position.y, transform.position.z);
+            transform.position = Vector3.Lerp(transform.position, targetPos, moveSpeed * Time.deltaTime);
+        }
         if (!isLevelCamera)
         {
             Destroy(gameObject);

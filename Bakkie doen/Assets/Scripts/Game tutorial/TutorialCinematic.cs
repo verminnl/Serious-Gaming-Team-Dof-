@@ -12,7 +12,7 @@ public class TutorialCinematic : MonoBehaviour {
     //Current waypoint
     private GameObject currentWaypoint;
     //Player in the tutorial
-    public GameObject thePlayer;
+    private PlayerController thePlayer;
     //Animation of the player
     private Animator playerAnim;
     //Change in the x-position of the player
@@ -36,7 +36,8 @@ public class TutorialCinematic : MonoBehaviour {
 	void Start () {
         currentIndexWaypoint = 0;
 
-        playerAnim = thePlayer.GetComponent<Animator>();
+        thePlayer = FindObjectOfType<PlayerController>();
+        playerAnim = thePlayer.gameObject.GetComponent<Animator>();
         
         //Gets the waypoints for the tutorial and makes sure that it doesn't have a sprite attached to it
         for (int i = 0; i < transform.childCount; i++)
@@ -49,7 +50,7 @@ public class TutorialCinematic : MonoBehaviour {
         }
 
         //Sets the position of the player to the first waypoint
-        thePlayer.transform.position = waypoints[currentIndexWaypoint].transform.position;
+        thePlayer.gameObject.transform.position = waypoints[currentIndexWaypoint].transform.position;
         //Gets the second waypoint
         currentWaypoint = GetNextWaypoint();
 	}
@@ -59,13 +60,13 @@ public class TutorialCinematic : MonoBehaviour {
         if (!done)
         {
             //Makes sure that the player cannot move during the whole tutorial
-            thePlayer.GetComponent<PlayerController>().canMove = false;
+            thePlayer.canMove = false;
 
             //Moves the player to the next waypoint if there are still waypoints in the game
             //Ends the tutorial if there aren't anymore waypoints
             if (currentWaypoint != null)
             {
-                if (Vector3.Distance(thePlayer.transform.position, currentWaypoint.transform.position) < distanceDetection)
+                if (Vector3.Distance(thePlayer.gameObject.transform.position, currentWaypoint.transform.position) < distanceDetection)
                 {
                     //Activates a dialogue, if there are dialogues added to the waypoint
                     //Else, gets the next waypoint for the player to navigate to
@@ -99,28 +100,28 @@ public class TutorialCinematic : MonoBehaviour {
                     playerAnim.SetBool("PlayerMoving", false);
 
                     //Moving right
-                    if (waypoints[currentIndexWaypoint].transform.position.x - thePlayer.transform.position.x > 0.5f)
+                    if (waypoints[currentIndexWaypoint].transform.position.x - thePlayer.gameObject.transform.position.x > 0.5f)
                     {
                         playerAnim.SetBool("PlayerMoving", true);
                         playerXChange = 1f;
                         lastMove = new Vector2(playerXChange, 0f);
                     }
                     //Moving left
-                    if (waypoints[currentIndexWaypoint].transform.position.x - thePlayer.transform.position.x < -0.5f)
+                    if (waypoints[currentIndexWaypoint].transform.position.x - thePlayer.gameObject.transform.position.x < -0.5f)
                     {
                         playerAnim.SetBool("PlayerMoving", true);
                         playerXChange = -1f;
                         lastMove = new Vector2(playerXChange, 0f);
                     }
                     //Moving up
-                    if (waypoints[currentIndexWaypoint].transform.position.y - thePlayer.transform.position.y > 0.5f)
+                    if (waypoints[currentIndexWaypoint].transform.position.y - thePlayer.gameObject.transform.position.y > 0.5f)
                     {
                         playerAnim.SetBool("PlayerMoving", true);
                         playerYChange = 1f;
                         lastMove = new Vector2(0f, playerYChange);
                     }
                     //Moving down
-                    if (waypoints[currentIndexWaypoint].transform.position.y - thePlayer.transform.position.y < -0.5f)
+                    if (waypoints[currentIndexWaypoint].transform.position.y - thePlayer.gameObject.transform.position.y < -0.5f)
                     {
                         playerAnim.SetBool("PlayerMoving", true);
                         playerYChange = -1f;
@@ -133,13 +134,12 @@ public class TutorialCinematic : MonoBehaviour {
                     playerAnim.SetFloat("LastMoveY", lastMove.y);
 
                     //Moves the player to the next waypoint
-                    thePlayer.transform.position = Vector3.MoveTowards(thePlayer.transform.position, waypoints[currentIndexWaypoint].transform.position, Time.deltaTime * tutorialSpeed);
+                    thePlayer.gameObject.transform.position = Vector3.MoveTowards(thePlayer.gameObject.transform.position, waypoints[currentIndexWaypoint].transform.position, Time.deltaTime * tutorialSpeed);
                 }
             }
             else
             {
                 done = true;
-                Destroy(thePlayer);
                 endScreen.SetActive(true);
                 endScreen.GetComponent<TutorialEnd>().name = DataTracking.playerData.FirstName;
             }
