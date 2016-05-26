@@ -13,6 +13,8 @@ public class EndGameScene : MonoBehaviour {
     public Image npcSprite;
     //Farewell text box of screen
     public Text textBox;
+    //Card image
+    public GameObject card;
     //Time length that the screen should be active
     public float screenDuration;
     //Time that the screen is active
@@ -22,9 +24,16 @@ public class EndGameScene : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
         npcNameBox.text = DataTracking.currentNPC.avatar.FullName;
         npcSprite.sprite = DataTracking.currentNPC.avatar.CharacterSprite;
         textBox.text = textBox.text + DataTracking.playerData.FirstName;
+        if(DataTracking.currentNPC.avatar.Element == "blue")
+        {
+            card.GetComponent<Image>().sprite = Resources.Load<Sprite>("cardW basis");
+        }
+        
+
 	}
 	
 	// Update is called once per frame

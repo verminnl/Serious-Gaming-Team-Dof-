@@ -26,7 +26,7 @@ public class GameOver : MonoBehaviour {
             if (timeActive > screenDuration)
             {
                 Debug.Log("Ended");
-                Application.Quit();
+                DataTracking.resetGame();
             }
         }
     }

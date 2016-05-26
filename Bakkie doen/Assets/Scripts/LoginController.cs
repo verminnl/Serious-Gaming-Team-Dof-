@@ -73,7 +73,6 @@ public class LoginController : MonoBehaviour {
                     npc.Dialogue = NPCSetDialogue(npc);
                 }
                 DataTracking.randomNPC = DataTracking.npcData[Random.Range(0, DataTracking.npcData.Count)];
-                print(DataTracking.randomNPC.FirstName);
                 SceneManager.LoadScene(DataTracking.playerData.tutorial ? "Tutorial scene" : "T2");
             }
         }
