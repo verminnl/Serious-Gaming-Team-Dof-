@@ -17,6 +17,8 @@ public static class DataTracking  {
     public static List<AvatarData> npcData;
     //random avatardata for when player doesnt find a character
     public static AvatarData randomNPC;
+    //Floor change
+    public static string previousFloor;
 
     public static void resetGame()
     {

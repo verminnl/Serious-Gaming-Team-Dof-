@@ -28,12 +28,12 @@ public class ActivateTextAtLine : MonoBehaviour {
         theTextBox = FindObjectOfType<TextBoxManager>();
         gc = FindObjectOfType<GameController>();
         //Gets the dialogue for the current connected gameobject and adds it to theScript
-        var h = DialogueClass.Instance.GetDialogueForNPC(GetComponent<NPC>().avatar.PlayerID.ToString() + "" + SceneManager.GetActiveScene().name);
+        /*var h = DialogueClass.Instance.GetDialogueForNPC(GetComponent<NPC>().avatar.PlayerID.ToString() + "" + SceneManager.GetActiveScene().name);
         foreach (var item in h)
         {
             theScript.Add(item);
             print(item);
-        }
+        }*/
     }
 	
 	// Update is called once per frame

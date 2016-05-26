@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 
@@ -23,17 +24,8 @@ public class PlayerController : MonoBehaviour {
 	void Start () {
         anim = GetComponent<Animator>();
         myRigidBody = GetComponent<Rigidbody2D>();
-        
-        if (!playerExists && !inMinigame)
-        {
-            playerExists = true;
-            //DontDestroyOnLoad(transform.gameObject); set a player in every scene.
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-	}
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -84,6 +76,29 @@ public class PlayerController : MonoBehaviour {
         {
             Destroy(gameObject);
         }
-
 	}
+
+    public void setPlayerStartPoint()
+    {
+        string currentScene = SceneManager.GetActiveScene().name;
+        if(currentScene != DataTracking.previousFloor)
+        {
+            switch (DataTracking.previousFloor)
+            {
+                case "T0":
+                    if (currentScene == "T1")
+                    {
+                        this.startPoint = "T1_Down";
+                    }
+                    break;
+                case "T1":
+                    break;
+                case "T2":
+                    break;
+                case "T3":
+                    break;
+            }
+        }
+       
+    }
 }
