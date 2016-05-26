@@ -51,6 +51,8 @@ public class LoginController : MonoBehaviour {
             {
                 InputField.text = "";
                 loginFailed.SetActive(true);
+                EventSystem.current.SetSelectedGameObject(InputField.gameObject, null);
+                return;
             }
             else if(DataTracking.playerLogin.PlayerID > 0)
             {
@@ -70,6 +72,8 @@ public class LoginController : MonoBehaviour {
                     npc.CharacterSprite = SetCharacterSprite(npc.Character);
                     npc.Dialogue = NPCSetDialogue(npc);
                 }
+                DataTracking.randomNPC = DataTracking.npcData[Random.Range(0, DataTracking.npcData.Count)];
+                print(DataTracking.randomNPC.FirstName);
                 SceneManager.LoadScene(DataTracking.playerData.tutorial ? "Tutorial scene" : "T2");
             }
         }

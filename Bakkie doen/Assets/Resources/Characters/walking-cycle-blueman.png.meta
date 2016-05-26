@@ -1,13 +1,29 @@
 fileFormatVersion: 2
 guid: cf69b5121b4014ee4a909d2e6385a4a8
-timeCreated: 1464250408
+timeCreated: 1464254676
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: walking-cycle-blueman_0
+    21300002: walking-cycle-blueman_1
+    21300004: walking-cycle-blueman_2
+    21300006: walking-cycle-blueman_3
+    21300008: walking-cycle-blueman_4
+    21300010: walking-cycle-blueman_5
+    21300012: walking-cycle-blueman_6
+    21300014: walking-cycle-blueman_7
+    21300016: walking-cycle-blueman_8
+    21300018: walking-cycle-blueman_9
+    21300020: walking-cycle-blueman_10
+    21300022: walking-cycle-blueman_11
+    21300024: walking-cycle-blueman_12
+    21300026: walking-cycle-blueman_13
+    21300028: walking-cycle-blueman_14
+    21300030: walking-cycle-blueman_15
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -26,11 +42,11 @@ TextureImporter:
   cubemapConvolutionSteps: 7
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
-  textureFormat: -1
-  maxTextureSize: 2048
+  textureFormat: -3
+  maxTextureSize: 256
   textureSettings:
-    filterMode: -1
-    aniso: -1
+    filterMode: 0
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -38,7 +54,7 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,9 +65,351 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: walking-cycle-blueman_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4, y: -32}
+        - {x: 3, y: -29}
+        - {x: -5, y: -29}
+        - {x: -6, y: -32}
+      - - {x: -17, y: -23}
+        - {x: -17, y: -24}
+        - {x: 14, y: -24}
+        - {x: 18, y: -23}
+        - {x: 18, y: 32}
+        - {x: -16, y: 32}
+        - {x: -18, y: 30}
+        - {x: -18, y: -20}
+    - name: walking-cycle-blueman_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4, y: -32}
+        - {x: 3, y: -29}
+        - {x: -5, y: -29}
+        - {x: -6, y: -32}
+      - - {x: -20, y: -16}
+        - {x: -17, y: -26}
+        - {x: 16, y: -26}
+        - {x: 18, y: -25}
+        - {x: 18, y: 32}
+        - {x: -13, y: 32}
+        - {x: -20, y: 28}
+    - name: walking-cycle-blueman_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4, y: -32}
+        - {x: 3, y: -29}
+        - {x: -5, y: -29}
+        - {x: -6, y: -32}
+      - - {x: -17, y: -23}
+        - {x: -17, y: -24}
+        - {x: 14, y: -24}
+        - {x: 18, y: -23}
+        - {x: 18, y: 32}
+        - {x: -16, y: 32}
+        - {x: -18, y: 30}
+        - {x: -18, y: -20}
+    - name: walking-cycle-blueman_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4, y: -32}
+        - {x: 3, y: -29}
+        - {x: -5, y: -29}
+        - {x: -6, y: -32}
+      - - {x: -6, y: 32}
+        - {x: -18, y: 22}
+        - {x: -18, y: -14}
+        - {x: -16, y: -19}
+        - {x: 0, y: -26}
+        - {x: 13, y: -26}
+        - {x: 20, y: -21}
+        - {x: 20, y: 22}
+        - {x: 16, y: 32}
+    - name: walking-cycle-blueman_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6, y: -32}
+        - {x: 5, y: -29}
+        - {x: -3, y: -29}
+        - {x: -4, y: -32}
+      - - {x: 8, y: 32}
+        - {x: -13, y: 32}
+        - {x: -18, y: 28}
+        - {x: -18, y: 3}
+        - {x: -9, y: -21}
+        - {x: 7, y: -21}
+        - {x: 16, y: 3}
+        - {x: 16, y: 27}
+        - {x: 10, y: 31}
+    - name: walking-cycle-blueman_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6, y: -32}
+        - {x: 5, y: -29}
+        - {x: -3, y: -29}
+        - {x: -4, y: -32}
+      - - {x: -10, y: 32}
+        - {x: -18, y: 25}
+        - {x: -18, y: -15}
+        - {x: -17, y: -20}
+        - {x: -16, y: -21}
+        - {x: 16, y: -21}
+        - {x: 16, y: 23}
+        - {x: 7, y: 32}
+    - name: walking-cycle-blueman_6
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6, y: -32}
+        - {x: 5, y: -29}
+        - {x: -3, y: -29}
+        - {x: -4, y: -32}
+      - - {x: 8, y: 32}
+        - {x: -13, y: 32}
+        - {x: -18, y: 28}
+        - {x: -18, y: 3}
+        - {x: -9, y: -21}
+        - {x: 7, y: -21}
+        - {x: 16, y: 3}
+        - {x: 16, y: 27}
+        - {x: 10, y: 31}
+    - name: walking-cycle-blueman_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6, y: -32}
+        - {x: 5, y: -29}
+        - {x: -3, y: -29}
+        - {x: -4, y: -32}
+      - - {x: -9, y: 32}
+        - {x: -18, y: 22}
+        - {x: -18, y: -18}
+        - {x: -11, y: -21}
+        - {x: 11, y: -21}
+        - {x: 16, y: 1}
+        - {x: 16, y: 25}
+        - {x: 8, y: 32}
+    - name: walking-cycle-blueman_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10, y: 32}
+        - {x: -12, y: 32}
+        - {x: -16, y: 29}
+        - {x: -16, y: -3}
+        - {x: -8, y: -21}
+        - {x: 9, y: -21}
+        - {x: 18, y: 6}
+        - {x: 18, y: 25}
+        - {x: 12, y: 31}
+    - name: walking-cycle-blueman_9
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10, y: 32}
+        - {x: -9, y: 32}
+        - {x: -16, y: 25}
+        - {x: -16, y: 6}
+        - {x: -9, y: -21}
+        - {x: 15, y: -21}
+        - {x: 18, y: -8}
+        - {x: 18, y: 26}
+        - {x: 12, y: 31}
+    - name: walking-cycle-blueman_10
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10, y: 32}
+        - {x: -12, y: 32}
+        - {x: -16, y: 29}
+        - {x: -16, y: -3}
+        - {x: -8, y: -21}
+        - {x: 9, y: -21}
+        - {x: 18, y: 6}
+        - {x: 18, y: 25}
+        - {x: 12, y: 31}
+    - name: walking-cycle-blueman_11
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11, y: 32}
+        - {x: -14, y: 32}
+        - {x: -16, y: 26}
+        - {x: -16, y: -19}
+        - {x: -15, y: -21}
+        - {x: 12, y: -21}
+        - {x: 16, y: -20}
+        - {x: 18, y: -5}
+        - {x: 18, y: 25}
+    - name: walking-cycle-blueman_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: -23}
+        - {x: -17, y: -24}
+        - {x: 14, y: -24}
+        - {x: 18, y: -23}
+        - {x: 18, y: 32}
+        - {x: -16, y: 32}
+        - {x: -18, y: 30}
+        - {x: -18, y: -20}
+    - name: walking-cycle-blueman_13
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: -16}
+        - {x: -17, y: -26}
+        - {x: 16, y: -26}
+        - {x: 18, y: -25}
+        - {x: 18, y: 32}
+        - {x: -13, y: 32}
+        - {x: -20, y: 28}
+    - name: walking-cycle-blueman_14
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: -23}
+        - {x: -17, y: -24}
+        - {x: 14, y: -24}
+        - {x: 18, y: -23}
+        - {x: 18, y: 32}
+        - {x: -16, y: 32}
+        - {x: -18, y: 30}
+        - {x: -18, y: -20}
+    - name: walking-cycle-blueman_15
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6, y: 32}
+        - {x: -18, y: 22}
+        - {x: -18, y: -14}
+        - {x: -16, y: -19}
+        - {x: 0, y: -26}
+        - {x: 13, y: -26}
+        - {x: 20, y: -21}
+        - {x: 20, y: 22}
+        - {x: 16, y: 32}
     outline: []
-  spritePackingTag: 
+  spritePackingTag: 32
   userData: 
   assetBundleName: 
   assetBundleVariant: 

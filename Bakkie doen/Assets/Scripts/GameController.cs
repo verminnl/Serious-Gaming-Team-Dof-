@@ -74,21 +74,22 @@ public class GameController : MonoBehaviour {
         //activate minigame after {loadingScreenTime} seconds
         if (Mathf.FloorToInt(playedTime) == startLoading)
         {
-            DataTracking.currentNPC.avatar = DataTracking.npcData[Random.Range(0, DataTracking.npcData.Count)];
+            //DataTracking.currentNPC.avatar = DataTracking.npcData[Random.Range(0, DataTracking.npcData.Count)];
+            randomNPC = DataTracking.randomNPC;
             theLoadingTransition.SetActive(true);
 
             //Sends the information of the NPC to the loading screen
             theLoadingTransition.GetComponent<LoadingTransition>().npcSprite = NPCSetSprite();
-            theLoadingTransition.GetComponent<LoadingTransition>().npcName = DataTracking.currentNPC.avatar.FullName;
-            theLoadingTransition.GetComponent<LoadingTransition>().npcRoom = DataTracking.currentNPC.avatar.Room;
-            foreach (string item in DataTracking.currentNPC.avatar.Skills)
+            theLoadingTransition.GetComponent<LoadingTransition>().npcName = randomNPC.FullName;
+            theLoadingTransition.GetComponent<LoadingTransition>().npcRoom = randomNPC.Room;
+            foreach (string item in randomNPC.Skills)
             {
                 theLoadingTransition.GetComponent<LoadingTransition>().npcSkills.Add(item);
             }
         }
         else if (Mathf.FloorToInt(playedTime) == startLoading + loadingScreenTime)
         {
-            ActivateMinigame(DataTracking.currentNPC.avatar.Element);
+            ActivateMinigame(randomNPC.Element);
         }
 	}
 
