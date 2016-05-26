@@ -5,221 +5,109 @@ using System.Collections.Generic;
 /// Singleton (add more comments later)
 /// </summary>
 public class BackEndCommunicator {
+    public string Protocol = "https://";
+    public string URL = "dodo.cah.onl/Database/";
 
     private static BackEndCommunicator instance;
-
     public static BackEndCommunicator Instance {
         get {
             if (instance == null) {
                 instance = new BackEndCommunicator();
             }
-
             return instance;
         }
     }
 
-    public string Protocol = "https://";
-    public string URL = "dodo.cah.onl/Database/";
-    private BackEndCommunicator()
-    {
-        //Set specific stuff here if needed
-    }
+    private BackEndCommunicator() { }
 
     /// <summary>
     /// Connects to the back-end and tries to login the player
     /// </summary>
     /// <param name="loginInformation">The string of the combined username and password</param>
     /// <returns>The information of the player. If login didnt succeed, it returns NULL</returns>
-    public PlayerLogin Login(string name, string password)
+    public int Login(string name, string password)
     {
-        //Set up the URL
-        string basicURL = GetURL("read", "player_login");
-        string parameters = string.Format("us={0}&pw={1}", name,password);
-        string URLToUse = basicURL + parameters + "&sesid=Uy5ytsn2rMSMX8fD";
-        
-        //Connect to the server
-        var webRequest = new WWW(URLToUse);
-        while (!webRequest.isDone) //Wait until the request is done
-        {
-
-        }
-
-        //Get the result of the web request
-        string requestResultString = webRequest.text;
-        
-        // Decode from json
-        PlayerLogin decodedPlayerLoginObject = JsonUtility.FromJson<PlayerLogin>(requestResultString);
-                
-        return decodedPlayerLoginObject;
+        int playerID = 0;
+        string resultString = GetData("read", "player_login", string.Format("us={0}&pw={1}&sesid={2}", name, password, "Uy5ytsn2rMSMX8fD"));
+        int.TryParse(resultString, out playerID);
+        return playerID;
     }
 
     public AvatarData GetPlayerData(int playerID, string sessionID)
     {
-        // Player Data step 1 webrequest
-        //Set up the URL
-        string basicURL = GetURL("read", "player_complete");
-        string parameters = string.Format("pid={0}", playerID);
-        string URLToUse = basicURL + parameters + "&sesid=" + sessionID;
+        string resultString = GetData("read", "player_complete", string.Format("pid={0}&sesid={1}", playerID, sessionID));
+        Debug.Log(resultString);
+        AvatarData playerData = JsonUtility.FromJson<AvatarData>(resultString);
 
-        //Connect to the server
-        var webRequestPlayerData = new WWW(URLToUse);
-        // Player Data step 1 webrequest end
-
-        // Player Data step 2 Found players webrequest
-        basicURL = GetURL("read", "player_foundplayers");
-        URLToUse = basicURL + parameters + "&sesid=" + sessionID; ;
-        
-        var webRequestPlayerFoundPlayers = new WWW(URLToUse);
-        // Player Data step 2 Found players webrequest end
-
-        // Player Data step 3 Skills webrequest
-        basicURL = GetURL("read", "player_skills");
-        URLToUse = basicURL + parameters + "&sesid=" + sessionID; ;
-        
-        var webRequestPlayerSkills = new WWW(URLToUse);
-        // Player Data step 3 Skills webrequest end
-
-        // Wait for the requests to be done
-        while (!webRequestPlayerData.isDone || !webRequestPlayerFoundPlayers.isDone || !webRequestPlayerSkills.isDone) //Wait until the request is done
-        {
-
-        }
-        
-        // Player Data step 2, web requests to strings
-        // Player Data
-        string requestResultStringPlayerData = webRequestPlayerData.text;
-        // Player FoundPlayers
-        string requestResultStringFoundPlayers = webRequestPlayerFoundPlayers.text;
-        // Player Skills
-        string requestResultStringPlayerSkills = webRequestPlayerSkills.text;
-        // Player Data step 2, web requests to strings end
-
-        // Player Data step 3, strings to datamodel
-        // Player Data
-        //Convert the result from the request (JSON) to a PlayerData model object.
-        AvatarData playerData = JsonUtility.FromJson<AvatarData>(requestResultStringPlayerData);
-
-        //Reset the sessionID
         playerData.SessionID = sessionID;
 
-        // PlayerFound Players
-        //Convert the string into something useable for c#
-        string[] splitRequestResult = requestResultStringFoundPlayers.Replace(")(", ",").Replace("(", "").Replace(")", "").Split(',');
-        
-        //change the string array to an int array
-        int[] intRequestResult = new int[splitRequestResult.Length];
-        for (int i = 0; i < splitRequestResult.Length; i++)
-        {
-            int.TryParse(splitRequestResult[i], out intRequestResult[i]);
-        }
-        //Set the players FoundPlayers;
-        playerData.FoundPlayers = intRequestResult;
-        
-        // Skills
-        //Convert the string into something useable for c#
-        splitRequestResult = requestResultStringPlayerSkills.Replace(")(", ",").Replace("(", "").Replace(")", "").Split(',');
-        
-        //Set the players FoundPlayers;
-        playerData.Skills = splitRequestResult;
+        resultString = GetData("read", "player_foundplayers", string.Format("pid={0}&sesid={1}", playerID, sessionID));
 
-        // Return the playerDataModel
+        playerData.FoundPlayers = stringToIntArray(GetData("read", "player_foundplayers", string.Format("pid={0}&sesid={1}", playerID, sessionID)));
+        
+        resultString = GetData("read", "player_skills", string.Format("pid={0}&sesid={1}", playerID, sessionID));
+        playerData.Skills = resultString.Replace(")(", ",").Replace("(", "").Replace(")", "").Split(',');
+        
         return playerData;
+    }
+
+    public AvatarData GetEachNPCData(int playerID, string sessionID)
+    {
+        string resultString = GetData("read", "player_complete", string.Format("pid={0}&sesid={1}", playerID, sessionID));
+        AvatarData npcData = JsonUtility.FromJson<AvatarData>(resultString);
+        
+        resultString = GetData("read", "player_skills", string.Format("pid={0}&sesid={1}", playerID, sessionID));
+        npcData.Skills = resultString.Replace(")(", ",").Replace("(", "").Replace(")", "").Split(',');
+
+        return npcData;
     }
 
     public List<AvatarData> GetNPCData(int playerID, string sessionID)
     {
         List<AvatarData> NPCData = new List<AvatarData>();
+        int[] resultArray = stringToIntArray(GetData("read", "npc_ids", string.Format("pid={0}&sesid={1}", playerID, sessionID)));
 
-        //Set up the URL
-        string basicURL = GetURL("read", "npc_ids");
-        string parameters = string.Format("pid={0}", playerID);
-        string URLToUse = basicURL + parameters + "&sesid=" + sessionID; ;
-
-        var webRequestAllNPCIDs = new WWW(URLToUse);
-
-        // Wait for the requests to be done
-        while (!webRequestAllNPCIDs.isDone) //Wait until the request is done
+        foreach (int id in resultArray)
         {
-
+            NPCData.Add(Instance.GetEachNPCData(id, sessionID));
         }
-        string webRequestAllNPCIDsText = webRequestAllNPCIDs.text;
-        //Convert the string into something useable for c#
-        string[] splitRequestResult = webRequestAllNPCIDsText.Replace(")(", ",").Replace("(", "").Replace(")", "").Split(',');
-
-        //change the string array to an int array
-        int[] intRequestResult = new int[splitRequestResult.Length];
-        for (int i = 0; i < splitRequestResult.Length; i++)
-        {
-            int.TryParse(splitRequestResult[i], out intRequestResult[i]);
-        }
-
-        foreach (int id in intRequestResult)
-        {
-            NPCData.Add(BackEndCommunicator.Instance.GetPlayerData(id, sessionID));
-        }
-
         return NPCData;
     }
 
     public bool CheckTutorial(int playerID, string sessionID)
     {
-        //Set up the URL
-        string basicURL = GetURL("read", "tutorial");
-        string parameters = string.Format("pid={0}", playerID);
-        string URLToUse = basicURL + parameters + "&sesid=" + sessionID; ;
-
-        var webRequestTutorial = new WWW(URLToUse);
-
-        // Wait for the requests to be done
-        while (!webRequestTutorial.isDone) //Wait until the request is done
-        {
-
-        }
-        string webRequestTutorialText = webRequestTutorial.text;
-        if (webRequestTutorialText == "true")
-        {
-            return true;
-        }
-        return false;
+        string resultString = GetData("read", "tutorial", string.Format("pid={0}&sesid={1}", playerID, sessionID));
+        return resultString == "true" ? true : false;
     }
 
     public string CreateSession(int playerID)
     {
-        // Set up the URL
-        string basicURL = GetURL("create", "session");
-        string parameters = string.Format("pid={0}", playerID);
-        string URLToUse = basicURL + parameters + "&sesid=Uy5ytsn2rMSMX8fD";
-
-        var webRequestCreateSession = new WWW(URLToUse);
-
-        // Wait for the requests to be done
-        while (!webRequestCreateSession.isDone) //Wait until the request is done
-        {
-
-        }
-        string webRequestCreateSessionText = webRequestCreateSession.text;
-
-        return webRequestCreateSessionText;
+         return GetData("create", "session", string.Format("pid={0}&sesid={1}", playerID, "Uy5ytsn2rMSMX8fD"));
     }
 
     public void SaveFoundPlayer(int playerID, int foundPLayerID, string sessionID)
     {
-        //Set up the URL
-        string basicURL = GetURL("create", "found_player");
-        string parameters = string.Format("pid={0}&fid={1}", playerID, foundPLayerID);
-        string URLToUse = basicURL + parameters + "&sesid=" + sessionID;
-        Debug.Log(URLToUse);
+        GetData("create", "found_player", string.Format("pid={0}&fid={1}&sesid={2}", playerID, foundPLayerID, sessionID));
+    }
 
-        //Connect to the server
-        var webRequest = new WWW(URLToUse);
-        while (!webRequest.isDone) //Wait until the request is done
+    private string GetData(string action, string pageName, string parameters)
+    {
+        WWW webRequest = new WWW(Protocol + URL + action + "/" + pageName + ".php?" + parameters);
+        while (!webRequest.isDone)
         {
 
         }
+        return webRequest.text;
     }
 
-    private string GetURL(string action, string pageName)
+    private int[] stringToIntArray(string arr)
     {
-        return Protocol + URL + action + "/" + pageName + ".php?";
+        string[] splitRequestResult = arr.Replace(")(", ",").Replace("(", "").Replace(")", "").Split(',');
+        int[] intRequestResult = new int[splitRequestResult.Length];
+        for (int i = 0; i < splitRequestResult.Length; i++)
+        {
+            int.TryParse(splitRequestResult[i], out intRequestResult[i]);
+        }
+        return intRequestResult;
     }
 }
