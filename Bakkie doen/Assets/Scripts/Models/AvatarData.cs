@@ -8,7 +8,7 @@ public class AvatarData
     public int PlayerID;
     public string FirstName;
     public string LastName;
-    public string FullName;
+    public string FullName { get { return FirstName + "  " + LastName; } }
     public string Job;
     public string SpawnPoint;
     public string Character;

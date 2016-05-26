@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: f90aab7b2a663461fb3081e2da6b6a6e
-timeCreated: 1464175772
+guid: 848b69169d7e3477d82883d7cc2d71dd
+timeCreated: 1464254696
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -23,7 +23,7 @@ TextureImporter:
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -45,7 +45,7 @@ TextureImporter:
   textureFormat: -3
   maxTextureSize: 256
   textureSettings:
-    filterMode: -1
+    filterMode: 0
     aniso: 16
     mipBias: -1
     wrapMode: 1
@@ -60,7 +60,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
@@ -156,13 +156,17 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -11, y: 28}
-        - {x: -14, y: 25}
-        - {x: -14, y: -21}
+      - - {x: 9, y: 32}
+        - {x: -6, y: 32}
+        - {x: -12, y: 30}
+        - {x: -16, y: 24}
+        - {x: -16, y: 14}
+        - {x: -11, y: -19}
+        - {x: -4, y: -21}
         - {x: 5, y: -21}
-        - {x: 14, y: -4}
-        - {x: 14, y: 27}
-        - {x: 9, y: 28}
+        - {x: 9, y: -16}
+        - {x: 14, y: 12}
+        - {x: 14, y: 26}
     - name: walking-cycle2-bluegirl-alt_5
       rect:
         serializedVersion: 2
@@ -174,12 +178,15 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -12, y: 28}
-        - {x: -14, y: 21}
-        - {x: -14, y: -21}
-        - {x: 14, y: -21}
-        - {x: 14, y: 27}
-        - {x: 12, y: 28}
+      - - {x: -6, y: 32}
+        - {x: -12, y: 30}
+        - {x: -16, y: 24}
+        - {x: -16, y: -8}
+        - {x: -11, y: -21}
+        - {x: 11, y: -21}
+        - {x: 14, y: -18}
+        - {x: 14, y: 25}
+        - {x: 8, y: 32}
     - name: walking-cycle2-bluegirl-alt_6
       rect:
         serializedVersion: 2
@@ -191,13 +198,17 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -11, y: 28}
-        - {x: -14, y: 25}
-        - {x: -14, y: -21}
+      - - {x: 9, y: 32}
+        - {x: -6, y: 32}
+        - {x: -12, y: 30}
+        - {x: -16, y: 24}
+        - {x: -16, y: 14}
+        - {x: -11, y: -19}
+        - {x: -4, y: -21}
         - {x: 5, y: -21}
-        - {x: 14, y: -4}
-        - {x: 14, y: 27}
-        - {x: 9, y: 28}
+        - {x: 9, y: -16}
+        - {x: 14, y: 12}
+        - {x: 14, y: 26}
     - name: walking-cycle2-bluegirl-alt_7
       rect:
         serializedVersion: 2
@@ -209,14 +220,14 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -10, y: 28}
-        - {x: -14, y: 23}
-        - {x: -14, y: -18}
+      - - {x: -15, y: 32}
+        - {x: -16, y: 29}
+        - {x: -16, y: -10}
         - {x: -13, y: -21}
-        - {x: 13, y: -21}
-        - {x: 14, y: -18}
-        - {x: 14, y: 24}
-        - {x: 4, y: 28}
+        - {x: 7, y: -21}
+        - {x: 14, y: -20}
+        - {x: 14, y: 26}
+        - {x: 9, y: 32}
     - name: walking-cycle2-bluegirl-alt_8
       rect:
         serializedVersion: 2
@@ -228,15 +239,16 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -9, y: 28}
-        - {x: -14, y: 18}
-        - {x: -14, y: 7}
-        - {x: -11, y: -17}
-        - {x: -5, y: -21}
-        - {x: 9, y: -21}
-        - {x: 14, y: -4}
-        - {x: 14, y: 24}
-        - {x: 4, y: 28}
+      - - {x: 11, y: 32}
+        - {x: -4, y: 32}
+        - {x: -14, y: 29}
+        - {x: -14, y: -8}
+        - {x: -12, y: -18}
+        - {x: -2, y: -21}
+        - {x: 7, y: -21}
+        - {x: 12, y: -10}
+        - {x: 16, y: 11}
+        - {x: 16, y: 26}
     - name: walking-cycle2-bluegirl-alt_9
       rect:
         serializedVersion: 2
@@ -248,13 +260,17 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -12, y: 28}
-        - {x: -14, y: 25}
-        - {x: -14, y: -6}
-        - {x: -10, y: -21}
-        - {x: 14, y: -21}
-        - {x: 14, y: 24}
-        - {x: 6, y: 28}
+      - - {x: 16, y: 27}
+        - {x: 12, y: 32}
+        - {x: -5, y: 32}
+        - {x: -14, y: 28}
+        - {x: -14, y: -5}
+        - {x: -13, y: -8}
+        - {x: -9, y: -21}
+        - {x: 9, y: -21}
+        - {x: 13, y: -16}
+        - {x: 15, y: -8}
+        - {x: 16, y: -2}
     - name: walking-cycle2-bluegirl-alt_10
       rect:
         serializedVersion: 2
@@ -266,15 +282,16 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -9, y: 28}
-        - {x: -14, y: 18}
-        - {x: -14, y: 7}
-        - {x: -11, y: -17}
-        - {x: -5, y: -21}
-        - {x: 9, y: -21}
-        - {x: 14, y: -4}
-        - {x: 14, y: 24}
-        - {x: 4, y: 28}
+      - - {x: 11, y: 32}
+        - {x: -4, y: 32}
+        - {x: -14, y: 29}
+        - {x: -14, y: -8}
+        - {x: -12, y: -18}
+        - {x: -2, y: -21}
+        - {x: 7, y: -21}
+        - {x: 12, y: -10}
+        - {x: 16, y: 11}
+        - {x: 16, y: 26}
     - name: walking-cycle2-bluegirl-alt_11
       rect:
         serializedVersion: 2
@@ -286,13 +303,13 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -9, y: 28}
-        - {x: -14, y: 19}
-        - {x: -14, y: -21}
-        - {x: 11, y: -21}
-        - {x: 14, y: -17}
-        - {x: 14, y: 25}
-        - {x: 6, y: 28}
+      - - {x: -11, y: 32}
+        - {x: -14, y: 28}
+        - {x: -14, y: -16}
+        - {x: -13, y: -21}
+        - {x: 16, y: -21}
+        - {x: 16, y: 30}
+        - {x: 10, y: 32}
     - name: walking-cycle2-bluegirl-alt_12
       rect:
         serializedVersion: 2
@@ -369,7 +386,7 @@ TextureImporter:
         - {x: 20, y: 27}
         - {x: 12, y: 30}
     outline: []
-  spritePackingTag: 
+  spritePackingTag: 32
   userData: 
   assetBundleName: 
   assetBundleVariant: 

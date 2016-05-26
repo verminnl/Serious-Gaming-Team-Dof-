@@ -24,7 +24,6 @@ public class PlayerController : MonoBehaviour {
 	void Start () {
         anim = GetComponent<Animator>();
         myRigidBody = GetComponent<Rigidbody2D>();
-
     }
 	
 	// Update is called once per frame
@@ -72,33 +71,5 @@ public class PlayerController : MonoBehaviour {
             anim.SetFloat("LastMoveX", lastMove.x);
             anim.SetFloat("LastMoveY", lastMove.y);
         }
-        else
-        {
-            Destroy(gameObject);
-        }
 	}
-
-    public void setPlayerStartPoint()
-    {
-        string currentScene = SceneManager.GetActiveScene().name;
-        if(currentScene != DataTracking.previousFloor)
-        {
-            switch (DataTracking.previousFloor)
-            {
-                case "T0":
-                    if (currentScene == "T1")
-                    {
-                        this.startPoint = "T1_Down";
-                    }
-                    break;
-                case "T1":
-                    break;
-                case "T2":
-                    break;
-                case "T3":
-                    break;
-            }
-        }
-       
-    }
 }

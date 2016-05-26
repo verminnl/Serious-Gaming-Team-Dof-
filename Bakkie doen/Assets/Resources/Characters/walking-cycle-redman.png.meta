@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 09f5f7899ebb146759e1a33b823f6581
-timeCreated: 1464175768
+guid: 8907843f1fbd54e3282972701e7b7934
+timeCreated: 1464254691
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -23,7 +23,7 @@ TextureImporter:
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -45,7 +45,7 @@ TextureImporter:
   textureFormat: -3
   maxTextureSize: 256
   textureSettings:
-    filterMode: -1
+    filterMode: 0
     aniso: 16
     mipBias: -1
     wrapMode: 1
@@ -60,7 +60,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
@@ -77,6 +77,10 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
+      - - {x: 4, y: -32}
+        - {x: 3, y: -29}
+        - {x: -5, y: -29}
+        - {x: -6, y: -32}
       - - {x: -17, y: -23}
         - {x: -17, y: -24}
         - {x: 14, y: -24}
@@ -96,6 +100,10 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
+      - - {x: 4, y: -32}
+        - {x: 3, y: -29}
+        - {x: -5, y: -29}
+        - {x: -6, y: -32}
       - - {x: -20, y: -16}
         - {x: -17, y: -26}
         - {x: 16, y: -26}
@@ -114,6 +122,10 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
+      - - {x: 4, y: -32}
+        - {x: 3, y: -29}
+        - {x: -5, y: -29}
+        - {x: -6, y: -32}
       - - {x: -17, y: -23}
         - {x: -17, y: -24}
         - {x: 14, y: -24}
@@ -133,6 +145,10 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
+      - - {x: 4, y: -32}
+        - {x: 3, y: -29}
+        - {x: -5, y: -29}
+        - {x: -6, y: -32}
       - - {x: -6, y: 32}
         - {x: -18, y: 22}
         - {x: -18, y: -14}
@@ -153,16 +169,19 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 7, y: 32}
-        - {x: -9, y: 32}
-        - {x: -14, y: 22}
-        - {x: -14, y: -4}
-        - {x: -11, y: -19}
-        - {x: -6, y: -21}
-        - {x: 6, y: -21}
-        - {x: 14, y: 1}
-        - {x: 14, y: 20}
-        - {x: 11, y: 27}
+      - - {x: 6, y: -32}
+        - {x: 5, y: -29}
+        - {x: -3, y: -29}
+        - {x: -4, y: -32}
+      - - {x: 8, y: 32}
+        - {x: -13, y: 32}
+        - {x: -18, y: 28}
+        - {x: -18, y: 3}
+        - {x: -9, y: -21}
+        - {x: 7, y: -21}
+        - {x: 16, y: 3}
+        - {x: 16, y: 27}
+        - {x: 10, y: 31}
     - name: walking-cycle-redman_5
       rect:
         serializedVersion: 2
@@ -174,17 +193,18 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 11, y: 27}
+      - - {x: 6, y: -32}
+        - {x: 5, y: -29}
+        - {x: -3, y: -29}
+        - {x: -4, y: -32}
+      - - {x: -10, y: 32}
+        - {x: -18, y: 25}
+        - {x: -18, y: -15}
+        - {x: -17, y: -20}
+        - {x: -16, y: -21}
+        - {x: 16, y: -21}
+        - {x: 16, y: 23}
         - {x: 7, y: 32}
-        - {x: -8, y: 32}
-        - {x: -12, y: 27}
-        - {x: -14, y: 20}
-        - {x: -14, y: -15}
-        - {x: -12, y: -21}
-        - {x: 11, y: -21}
-        - {x: 13, y: -18}
-        - {x: 14, y: -7}
-        - {x: 14, y: 19}
     - name: walking-cycle-redman_6
       rect:
         serializedVersion: 2
@@ -196,16 +216,19 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 7, y: 32}
-        - {x: -9, y: 32}
-        - {x: -14, y: 22}
-        - {x: -14, y: -4}
-        - {x: -11, y: -19}
-        - {x: -6, y: -21}
-        - {x: 6, y: -21}
-        - {x: 14, y: 1}
-        - {x: 14, y: 20}
-        - {x: 11, y: 27}
+      - - {x: 6, y: -32}
+        - {x: 5, y: -29}
+        - {x: -3, y: -29}
+        - {x: -4, y: -32}
+      - - {x: 8, y: 32}
+        - {x: -13, y: 32}
+        - {x: -18, y: 28}
+        - {x: -18, y: 3}
+        - {x: -9, y: -21}
+        - {x: 7, y: -21}
+        - {x: 16, y: 3}
+        - {x: 16, y: 27}
+        - {x: 10, y: 31}
     - name: walking-cycle-redman_7
       rect:
         serializedVersion: 2
@@ -217,13 +240,17 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -12, y: 32}
-        - {x: -14, y: 27}
-        - {x: -14, y: -16}
+      - - {x: 6, y: -32}
+        - {x: 5, y: -29}
+        - {x: -3, y: -29}
+        - {x: -4, y: -32}
+      - - {x: -9, y: 32}
+        - {x: -18, y: 22}
+        - {x: -18, y: -18}
         - {x: -11, y: -21}
-        - {x: 12, y: -21}
-        - {x: 14, y: -15}
-        - {x: 14, y: 27}
+        - {x: 11, y: -21}
+        - {x: 16, y: 1}
+        - {x: 16, y: 25}
         - {x: 8, y: 32}
     - name: walking-cycle-redman_8
       rect:
@@ -236,15 +263,15 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -8, y: 32}
-        - {x: -14, y: 21}
-        - {x: -14, y: 4}
-        - {x: -9, y: -16}
-        - {x: -2, y: -21}
+      - - {x: 10, y: 32}
+        - {x: -12, y: 32}
+        - {x: -16, y: 29}
+        - {x: -16, y: -3}
+        - {x: -8, y: -21}
         - {x: 9, y: -21}
-        - {x: 14, y: -7}
-        - {x: 14, y: 23}
-        - {x: 8, y: 32}
+        - {x: 18, y: 6}
+        - {x: 18, y: 25}
+        - {x: 12, y: 31}
     - name: walking-cycle-redman_9
       rect:
         serializedVersion: 2
@@ -256,14 +283,15 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -11, y: 32}
-        - {x: -14, y: 26}
-        - {x: -14, y: -2}
-        - {x: -10, y: -21}
-        - {x: 10, y: -21}
-        - {x: 14, y: -15}
-        - {x: 14, y: 31}
-        - {x: 10, y: 32}
+      - - {x: 10, y: 32}
+        - {x: -9, y: 32}
+        - {x: -16, y: 25}
+        - {x: -16, y: 6}
+        - {x: -9, y: -21}
+        - {x: 15, y: -21}
+        - {x: 18, y: -8}
+        - {x: 18, y: 26}
+        - {x: 12, y: 31}
     - name: walking-cycle-redman_10
       rect:
         serializedVersion: 2
@@ -275,15 +303,15 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -8, y: 32}
-        - {x: -14, y: 21}
-        - {x: -14, y: 4}
-        - {x: -9, y: -16}
-        - {x: -2, y: -21}
+      - - {x: 10, y: 32}
+        - {x: -12, y: 32}
+        - {x: -16, y: 29}
+        - {x: -16, y: -3}
+        - {x: -8, y: -21}
         - {x: 9, y: -21}
-        - {x: 14, y: -7}
-        - {x: 14, y: 23}
-        - {x: 8, y: 32}
+        - {x: 18, y: 6}
+        - {x: 18, y: 25}
+        - {x: 12, y: 31}
     - name: walking-cycle-redman_11
       rect:
         serializedVersion: 2
@@ -295,14 +323,15 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -9, y: 32}
-        - {x: -14, y: 24}
-        - {x: -14, y: -8}
-        - {x: -11, y: -21}
-        - {x: 11, y: -21}
-        - {x: 14, y: -18}
-        - {x: 14, y: 20}
-        - {x: 8, y: 32}
+      - - {x: 11, y: 32}
+        - {x: -14, y: 32}
+        - {x: -16, y: 26}
+        - {x: -16, y: -19}
+        - {x: -15, y: -21}
+        - {x: 12, y: -21}
+        - {x: 16, y: -20}
+        - {x: 18, y: -5}
+        - {x: 18, y: 25}
     - name: walking-cycle-redman_12
       rect:
         serializedVersion: 2
@@ -380,7 +409,7 @@ TextureImporter:
         - {x: 20, y: 22}
         - {x: 16, y: 32}
     outline: []
-  spritePackingTag: 
+  spritePackingTag: 32
   userData: 
   assetBundleName: 
   assetBundleVariant: 

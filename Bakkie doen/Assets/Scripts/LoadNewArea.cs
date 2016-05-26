@@ -25,8 +25,8 @@ public class LoadNewArea : MonoBehaviour
     {
         if (other.gameObject.name == "Player")
         {
+            DataTracking.previousFloor = SceneManager.GetActiveScene().name;
             SceneManager.LoadScene(levelToLoad);
-            thePlayer.startPoint = exitPoint;
         }
     }
 }
