@@ -74,8 +74,12 @@ public class GameController : MonoBehaviour {
         //activate minigame after {loadingScreenTime} seconds
         if (Mathf.FloorToInt(playedTime) == startLoading)
         {
-            //DataTracking.currentNPC.avatar = DataTracking.npcData[Random.Range(0, DataTracking.npcData.Count)];
-            randomNPC = DataTracking.randomNPC;
+            if(DataTracking.randomNPC == null)
+            {
+                DataTracking.randomNPC = DataTracking.npcData[Random.Range(0, DataTracking.npcData.Count)];
+            }
+            DataTracking.currentNPC.avatar = DataTracking.randomNPC;
+            randomNPC = DataTracking.currentNPC.avatar;
             theLoadingTransition.SetActive(true);
 
             //Sends the information of the NPC to the loading screen
@@ -89,6 +93,10 @@ public class GameController : MonoBehaviour {
         }
         else if (Mathf.FloorToInt(playedTime) == startLoading + loadingScreenTime)
         {
+            if(randomNPC == null)
+            {
+                print("null");
+            }
             ActivateMinigame(randomNPC.Element);
         }
 	}

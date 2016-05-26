@@ -704,6 +704,7 @@ MonoBehaviour:
   npcNameBox: {fileID: 694847467}
   npcSprite: {fileID: 758625677}
   textBox: {fileID: 673662357}
+  card: {fileID: 1670098076}
   screenDuration: 5
 --- !u!1 &673662355
 GameObject:

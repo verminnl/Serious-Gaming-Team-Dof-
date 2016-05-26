@@ -23,9 +23,12 @@ public static class DataTracking  {
     public static void resetGame()
     {
         //Flush static variables of datatracking to prevent mix-up with previous readings.
-        DataTracking.playerData = null;
-        DataTracking.playerLogin = null;
-        DataTracking.npcData = null;
+        currentNPC = null;
+        playerData = null;
+        playerLogin = null;
+        npcData = null;
+        randomNPC = null;
+        previousFloor = null;
         GameController.playedTime = 0;
         //Back to loginscreen
         SceneManager.LoadScene("Login");

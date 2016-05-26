@@ -25,6 +25,10 @@ public class HealthManager : MonoBehaviour {
 
     public void TakeDamage()
     {
+        if(totalHealth == 0)
+        {
+            return;
+        }
         health[totalHealth - 1].sprite = emptyHealth;
         totalHealth--;
     }
