@@ -2864,6 +2864,7 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+<<<<<<< HEAD
 --- !u!1 &665150704
 GameObject:
   m_ObjectHideFlags: 0
@@ -2895,6 +2896,10 @@ Transform:
   m_RootOrder: 14
 --- !u!61 &665150706
 BoxCollider2D:
+=======
+--- !u!1 &798603387
+GameObject:
+>>>>>>> 025bf12a79d9b781e9fe16771fa706f73d0831d8
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -3112,6 +3117,7 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+<<<<<<< HEAD
 --- !u!1 &798603387
 GameObject:
   m_ObjectHideFlags: 0
@@ -3259,6 +3265,8 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+=======
+>>>>>>> 025bf12a79d9b781e9fe16771fa706f73d0831d8
 --- !u!1 &814071230
 GameObject:
   m_ObjectHideFlags: 0
