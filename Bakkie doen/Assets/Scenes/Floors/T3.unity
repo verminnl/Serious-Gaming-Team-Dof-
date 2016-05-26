@@ -828,7 +828,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 8
 --- !u!1 &357425901
 GameObject:
   m_ObjectHideFlags: 0
@@ -1069,7 +1069,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startDirection: {x: 1, y: 0}
-  pointName: Green_Area_Up_In
+  pointName: T3_Down
 --- !u!4 &479365795
 Transform:
   m_ObjectHideFlags: 0
@@ -2426,7 +2426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startDirection: {x: -1, y: 0}
-  pointName: Red_Area_Down_In
+  pointName: T3_Up
 --- !u!4 &1149370161
 Transform:
   m_ObjectHideFlags: 0
@@ -2492,7 +2492,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11457600, guid: 767f081f46b8191408cdbaf1c1f9079c, type: 2}
       propertyPath: exitPoint
-      value: Yellow_Area_Down_In
+      value: T2_Up
       objectReference: {fileID: 0}
     - target: {fileID: 429624, guid: 767f081f46b8191408cdbaf1c1f9079c, type: 2}
       propertyPath: m_LocalScale.y
@@ -2947,7 +2947,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11457600, guid: 767f081f46b8191408cdbaf1c1f9079c, type: 2}
       propertyPath: exitPoint
-      value: Yellow_Area_Up_In
+      value: T0_Down
       objectReference: {fileID: 0}
     - target: {fileID: 429624, guid: 767f081f46b8191408cdbaf1c1f9079c, type: 2}
       propertyPath: m_LocalScale.y
