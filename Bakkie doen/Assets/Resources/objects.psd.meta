@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 1995dbc3a4e514a568859cc94bbd26c3
-timeCreated: 1464177931
+timeCreated: 1464248131
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -78,6 +78,7 @@ TextureImporter:
     21300142: objects_67
     21300144: objects_68
     21300146: objects_69
+    21300148: objects_70
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -989,6 +990,17 @@ TextureImporter:
         y: 4
         width: 16
         height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: objects_70
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 4
+        width: 30
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
