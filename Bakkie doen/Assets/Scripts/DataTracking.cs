@@ -11,8 +11,6 @@ public static class DataTracking  {
     public static NPC currentNPC;
     //Player Data Model
     public static AvatarData playerData;
-    //Player Login Model
-    public static PlayerLogin playerLogin;
     //NPC dictionairy
     public static List<AvatarData> npcData;
     //random avatardata for when player doesnt find a character
@@ -25,7 +23,6 @@ public static class DataTracking  {
         //Flush static variables of datatracking to prevent mix-up with previous readings.
         currentNPC = null;
         playerData = null;
-        playerLogin = null;
         npcData = null;
         randomNPC = null;
         previousFloor = null;

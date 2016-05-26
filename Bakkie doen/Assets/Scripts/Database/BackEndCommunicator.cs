@@ -36,7 +36,6 @@ public class BackEndCommunicator {
     public AvatarData GetPlayerData(int playerID, string sessionID)
     {
         string resultString = GetData("read", "player_complete", string.Format("pid={0}&sesid={1}", playerID, sessionID));
-        Debug.Log(resultString);
         AvatarData playerData = JsonUtility.FromJson<AvatarData>(resultString);
 
         playerData.SessionID = sessionID;

@@ -10,8 +10,6 @@ public class MapGenerator : MonoBehaviour {
     //If the distance should be the height of a tiled map, it can be found in the prefabs folder
     //of Tiled2Unity at the Component "Tiled Map" -> "Map Height in Pixels"
     public float distanceBetween;
-    //Index of the map in the object pooling system
-    private int indexOfMap;
     //Keeps the generated maps in an array of ObjectPooler
     public ObjectPooler theObjectPool;
 
