@@ -5,8 +5,8 @@ using System.Collections.Generic;
 /// Singleton (add more comments later)
 /// </summary>
 public class BackEndCommunicator {
-    public string Protocol = "https://";
-    public string URL = "dodo.cah.onl/Database/";
+    private string Protocol = "https://";
+    private string URL = "dodo.cah.onl/Database/";
 
     private static BackEndCommunicator instance;
     public static BackEndCommunicator Instance {
@@ -51,7 +51,7 @@ public class BackEndCommunicator {
         return playerData;
     }
 
-    public AvatarData GetEachNPCData(int playerID, string sessionID)
+    private AvatarData GetEachNPCData(int playerID, string sessionID)
     {
         string resultString = GetData("read", "player_complete", string.Format("pid={0}&sesid={1}", playerID, sessionID));
         AvatarData npcData = JsonUtility.FromJson<AvatarData>(resultString);
