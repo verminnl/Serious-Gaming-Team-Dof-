@@ -47,7 +47,7 @@ public class NPCController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        print("NPC name: " + npc.name + ", NPC type: " + npc.type + ", Number of NPCs: " + NPCClass.number);
+        //print("NPC name: " + npc.name + ", NPC type: " + npc.type + ", Number of NPCs: " + NPCClass.number);
 	}
 	
 	// Update is called once per frame
