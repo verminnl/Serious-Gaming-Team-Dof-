@@ -11,8 +11,8 @@
 			$query = "SELECT * FROM `session` WHERE `ServerSessionID` = '$sessionID'";
 			while(!isset($conn)){
 				$servername = "localhost";
-				$username = "root";
-				$password = "";
+				$username = "dodo";
+				$password = "bakkiedoen";
 				$dbName = "bakkie_doen";
 				$conn = new mysqli($servername, $username, $password, $dbName);
 			}

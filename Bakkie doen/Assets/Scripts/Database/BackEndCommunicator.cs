@@ -51,7 +51,6 @@ public class BackEndCommunicator {
         PlayerLogin decodedPlayerLoginObject = JsonUtility.FromJson<PlayerLogin>(requestResultString);
                 
         return decodedPlayerLoginObject;
-        
     }
 
     public AvatarData GetPlayerData(int playerID, string sessionID)
@@ -201,6 +200,22 @@ public class BackEndCommunicator {
         string webRequestCreateSessionText = webRequestCreateSession.text;
 
         return webRequestCreateSessionText;
+    }
+
+    public void SaveFoundPlayer(int playerID, int foundPLayerID, string sessionID)
+    {
+        //Set up the URL
+        string basicURL = GetURL("create", "found_player");
+        string parameters = string.Format("pid={0}&fid={1}", playerID, foundPLayerID);
+        string URLToUse = basicURL + parameters + "&sesid=" + sessionID;
+        Debug.Log(URLToUse);
+
+        //Connect to the server
+        var webRequest = new WWW(URLToUse);
+        while (!webRequest.isDone) //Wait until the request is done
+        {
+
+        }
     }
 
     private string GetURL(string action, string pageName)
