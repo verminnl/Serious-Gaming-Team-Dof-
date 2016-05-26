@@ -10,17 +10,7 @@ public class UIController : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        //areaBoxText.text = SceneManager.GetActiveScene().name;
 
-        //if (!areaBoxExists)
-        //{
-        //    areaBoxExists = true;
-        //    DontDestroyOnLoad(transform.gameObject);
-        //}
-        //else
-        //{
-        //    Destroy(gameObject);
-        //}
     }
 
     // Update is called once per frame
