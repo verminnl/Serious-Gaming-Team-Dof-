@@ -685,9 +685,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -0.037410736, y: -0.11152458}
+  m_Offset: {x: -0.040073395, y: -0.069496155}
   serializedVersion: 2
-  m_Size: {x: 1.195177, y: 1.0930481}
+  m_Size: {x: 1.1898575, y: 1.1893158}
 --- !u!95 &347859760
 Animator:
   serializedVersion: 3
@@ -2795,7 +2795,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31637d1688f72384f934745425ee4e04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thePlayer: {fileID: 347859756}
   lastMove: {x: 0, y: 0}
   tutorialSpeed: 5
   distanceDetection: 0.05
