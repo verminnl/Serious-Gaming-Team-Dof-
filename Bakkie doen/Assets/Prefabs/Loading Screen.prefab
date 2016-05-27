@@ -230,7 +230,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Skills:
+  m_Text: 'Talenten:
 
 '
 --- !u!114 &11423718
@@ -308,7 +308,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Room: '
+  m_Text: 'Kamer: '
 --- !u!114 &11449094
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -385,7 +385,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Loading....
+  m_Text: Laden....
 --- !u!114 &11491786
 MonoBehaviour:
   m_ObjectHideFlags: 1

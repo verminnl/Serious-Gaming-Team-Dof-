@@ -654,12 +654,13 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Thank you for playing
+  m_Text: 'Dankjewel
 
-    Bakkie doen!
+    voor het
 
+    meedoen
 
-    Hope to see you again
+    en tot snel
 
 
 '
@@ -990,7 +991,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Congratulation for unlocking the following card!
+  m_Text: Gefeliciteerd, je hebt een kaart gewonnen met talenten van je collega!
 --- !u!222 &717662133
 CanvasRenderer:
   m_ObjectHideFlags: 0

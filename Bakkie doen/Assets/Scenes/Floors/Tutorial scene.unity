@@ -612,15 +612,15 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 164596200}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1000}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 686960488}
   m_RootOrder: 1
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.28084576, y: 0.11353966}
+  m_AnchorMax: {x: 0.717, y: 0.8875396}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 300, y: 300}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &178586839
 GameObject:
@@ -2410,17 +2410,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lines:
-  - 'Welcome #playername!'
-  - Thank you for playing
-  - Bakkie doen. This game
-  - is created for players to
-  - know about their co-workers.
-  - To move around in the
-  - world, you can use the
-  - arrow keys.
-  - To speak with other
-  - people, press the Spacebar.
-  - Have fun searching for others!
+  - 'Welkom #playername! Leuk dat je een bakkie komt doen en tegelijkertijd een spel
+    speelt.'
+  - "Doel van het spel is je collega\u2019s en hun talenten te leren kennen."
+  - Wie weet kan een van hen jou helpen met een vraag die je hebt.
+  - Om te ontdekken wie zich allemaal in deze wereld bevinden, dagen we je
+  - uit om een spel te spelen. Je kunt de wereld verkennen door
+  - gebruik te maken van de joystick. Wil je met een collega praten?
+  - Gebruik dan de Spatiebalk.
+  - Veel plezier!
   dialogueStarted: 0
 --- !u!1 &516783760
 GameObject:
@@ -2942,7 +2940,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &686960484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5372,19 +5370,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lines:
-  - Hey look! There is another
-  - person. By talking to
-  - another person, you'll
-  - be able to get his/her
-  - 'information. After the '
-  - conversation, a minigame
-  - starts, based on the type
-  - of the person. After the
-  - 'minigame, you get a '
-  - card with their information
-  - on it. This way, you can
-  - learn about your co-workers
-  - in a fun way!
+  - Welke collega is dat?
+  - Praat met deze collega en leer hem of haar kennen.
+  - Na het gesprek start er een minigame.
+  - "Na de minigame krijg je een kaart met de gegevens van de betreffende collega\u2019s."
+  - Weet je gelijk welk talent hij of zij heeft!
   dialogueStarted: 0
 --- !u!212 &1385905405
 SpriteRenderer:
@@ -7340,6 +7330,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11461236, guid: 11cda25e8f3cee04297d9262191299bd, type: 2}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 11cda25e8f3cee04297d9262191299bd, type: 2}
   m_IsPrefabParent: 0
@@ -7466,7 +7460,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 30
     m_FontStyle: 1
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 1
@@ -7475,19 +7469,13 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Thank you for playing
+  m_Text: 'Leuk dat je hebt
 
-    the tutorial of
+    meegespeeld
 
-    Bakkie doen!
+    en
 
-
-    See you next time for the actual
-
-    game
-
-
-'
+    geniet van je koffie!'
 --- !u!222 &1848524233
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7508,7 +7496,7 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 102}
+  m_AnchoredPosition: {x: 0, y: 100}
   m_SizeDelta: {x: 500, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1870824078
