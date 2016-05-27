@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using System.Net;
 
 public class LoginController : MonoBehaviour {
     public string[] items;
@@ -13,8 +14,12 @@ public class LoginController : MonoBehaviour {
     void Start()
     {
         EventSystem.current.SetSelectedGameObject(InputField.gameObject, null);
+        if (!HasConnection())
+        {
+            print(" Geen internet");
+        }
     }
-
+    
     // Update is called once per frame
     void Update() {
         if (Input.GetKeyDown(KeyCode.Return))
@@ -45,28 +50,27 @@ public class LoginController : MonoBehaviour {
             //Send a request to the back-end (login) and retrieve the playerID. IT RETURNS 0 IF LOGIN FAILED
             //7 cijfers, 3 cijfers
             // of 8 cijfers, 3 cijfers
-            
-            DataTracking.playerLogin = BackEndCommunicator.Instance.Login(user, password);
-            if(DataTracking.playerLogin == null)
+            int playerID = BackEndCommunicator.Instance.Login(user, password);
+            if(playerID == 0)
             {
                 InputField.text = "";
                 loginFailed.SetActive(true);
                 EventSystem.current.SetSelectedGameObject(InputField.gameObject, null);
                 return;
             }
-            else if(DataTracking.playerLogin.PlayerID > 0)
+            else if(playerID > 0)
             {
                 InputField.enabled = false;
                 DataTracking.playerData = new AvatarData();
                 //Create Session
-                DataTracking.playerData.SessionID = BackEndCommunicator.Instance.CreateSession(DataTracking.playerLogin.PlayerID);
+                DataTracking.playerData.SessionID = BackEndCommunicator.Instance.CreateSession(playerID);
                 //Get the playerdata
-                DataTracking.playerData = BackEndCommunicator.Instance.GetPlayerData(DataTracking.playerLogin.PlayerID, DataTracking.playerData.SessionID);
+                DataTracking.playerData = BackEndCommunicator.Instance.GetPlayerData(playerID, DataTracking.playerData.SessionID);
                 DataTracking.playerData.CharacterSprite = SetCharacterSprite(DataTracking.playerData.Character);
                 //Get tutorial
-                DataTracking.playerData.tutorial = BackEndCommunicator.Instance.CheckTutorial(DataTracking.playerLogin.PlayerID, DataTracking.playerData.SessionID);
+                DataTracking.playerData.tutorial = BackEndCommunicator.Instance.CheckTutorial(playerID, DataTracking.playerData.SessionID);
                 //Get the NPCData
-                DataTracking.npcData = BackEndCommunicator.Instance.GetNPCData(DataTracking.playerLogin.PlayerID, DataTracking.playerData.SessionID);
+                DataTracking.npcData = BackEndCommunicator.Instance.GetNPCData(playerID, DataTracking.playerData.SessionID);
                 foreach (AvatarData npc in DataTracking.npcData)
                 {
                     npc.CharacterSprite = SetCharacterSprite(npc.Character);
@@ -119,5 +123,21 @@ public class LoginController : MonoBehaviour {
         }
         dialogue[2] = "Ik kan " + skills;
         return dialogue;
+    }
+
+    public static bool HasConnection()
+    {
+        try
+        {
+            using (var client = new WebClient())
+            using (var stream = new WebClient().OpenRead("http://www.google.com"))
+            {
+                return true;
+            }
+        }
+        catch
+        {
+            return false;
+        }
     }
 }
