@@ -78,6 +78,7 @@ public class GameController : MonoBehaviour {
             {
                 DataTracking.randomNPC = DataTracking.npcData[Random.Range(0, DataTracking.npcData.Count)];
             }
+            DataTracking.currentNPC = gameObject.AddComponent<NPC>();
             DataTracking.currentNPC.avatar = DataTracking.randomNPC;
             randomNPC = DataTracking.currentNPC.avatar;
             theLoadingTransition.SetActive(true);
