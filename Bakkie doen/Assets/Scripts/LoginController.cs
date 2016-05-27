@@ -68,7 +68,7 @@ public class LoginController : MonoBehaviour {
                 DataTracking.playerData = BackEndCommunicator.Instance.GetPlayerData(playerID, DataTracking.playerData.SessionID);
                 DataTracking.playerData.CharacterSprite = SetCharacterSprite(DataTracking.playerData.Character);
                 //Get tutorial
-                DataTracking.playerData.tutorial = BackEndCommunicator.Instance.CheckTutorial(playerID, DataTracking.playerData.SessionID);
+                bool tutorial = (DataTracking.playerData.SpawnPoint == null ? true : false);
                 //Get the NPCData
                 DataTracking.npcData = BackEndCommunicator.Instance.GetNPCData(playerID, DataTracking.playerData.SessionID);
                 foreach (AvatarData npc in DataTracking.npcData)
@@ -77,7 +77,7 @@ public class LoginController : MonoBehaviour {
                     npc.Dialogue = NPCSetDialogue(npc);
                 }
                 DataTracking.randomNPC = DataTracking.npcData[Random.Range(0, DataTracking.npcData.Count)];
-                if(DataTracking.playerData.SpawnPoint != null)
+                if(!tutorial)
                 {
                     switch (DataTracking.playerData.SpawnPoint.Substring(0, 2))
                     {
@@ -97,7 +97,7 @@ public class LoginController : MonoBehaviour {
                 }
                 else
                 {
-                    SceneManager.LoadScene(DataTracking.playerData.tutorial ? "Tutorial scene" : "T2");
+                    SceneManager.LoadScene(tutorial ? "Tutorial scene" : "T2");
                 }
             }
         }
