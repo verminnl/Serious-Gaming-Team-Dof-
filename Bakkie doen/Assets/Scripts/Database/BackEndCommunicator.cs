@@ -73,6 +73,12 @@ public class BackEndCommunicator {
         return NPCData;
     }
 
+    public bool CheckTutorial(int playerID, string sessionID)
+    {
+        string resultString = GetData("read", "tutorial", string.Format("pid={0}&sesid={1}", playerID, sessionID));
+        return resultString == "true" ? true : false;
+    }
+
     public string CreateSession(int playerID)
     {
          return GetData("create", "session", string.Format("pid={0}&sesid={1}", playerID, "Uy5ytsn2rMSMX8fD"));
