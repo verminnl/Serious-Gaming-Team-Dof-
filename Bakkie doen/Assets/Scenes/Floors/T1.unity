@@ -159,10 +159,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueFinished: 0
-  textBox: {fileID: 0}
+  textBox: {fileID: 921809580}
   player: {fileID: 0}
   textBoxActive: 0
-  textBoxText: {fileID: 0}
+  textBoxText: {fileID: 921809579}
 --- !u!4 &1099285
 Transform:
   m_ObjectHideFlags: 0
@@ -330,10 +330,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueFinished: 0
-  textBox: {fileID: 0}
+  textBox: {fileID: 921809580}
   player: {fileID: 0}
   textBoxActive: 0
-  textBoxText: {fileID: 0}
+  textBoxText: {fileID: 921809579}
 --- !u!4 &25566312
 Transform:
   m_ObjectHideFlags: 0
@@ -739,10 +739,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueFinished: 0
-  textBox: {fileID: 0}
+  textBox: {fileID: 921809580}
   player: {fileID: 0}
   textBoxActive: 0
-  textBoxText: {fileID: 0}
+  textBoxText: {fileID: 921809579}
 --- !u!4 &85416614
 Transform:
   m_ObjectHideFlags: 0
@@ -1071,10 +1071,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueFinished: 0
-  textBox: {fileID: 0}
+  textBox: {fileID: 921809580}
   player: {fileID: 0}
   textBoxActive: 0
-  textBoxText: {fileID: 0}
+  textBoxText: {fileID: 921809579}
 --- !u!4 &159048419
 Transform:
   m_ObjectHideFlags: 0
@@ -1394,10 +1394,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueFinished: 0
-  textBox: {fileID: 0}
+  textBox: {fileID: 921809580}
   player: {fileID: 0}
   textBoxActive: 0
-  textBoxText: {fileID: 0}
+  textBoxText: {fileID: 921809579}
 --- !u!4 &199815587
 Transform:
   m_ObjectHideFlags: 0
@@ -3243,10 +3243,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueFinished: 0
-  textBox: {fileID: 0}
+  textBox: {fileID: 921809580}
   player: {fileID: 0}
   textBoxActive: 0
-  textBoxText: {fileID: 0}
+  textBoxText: {fileID: 921809579}
 --- !u!4 &445060370
 Transform:
   m_ObjectHideFlags: 0
@@ -4032,10 +4032,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueFinished: 0
-  textBox: {fileID: 0}
+  textBox: {fileID: 921809580}
   player: {fileID: 0}
   textBoxActive: 0
-  textBoxText: {fileID: 0}
+  textBoxText: {fileID: 921809579}
 --- !u!4 &633397722
 Transform:
   m_ObjectHideFlags: 0
@@ -5246,10 +5246,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueFinished: 0
-  textBox: {fileID: 0}
+  textBox: {fileID: 921809580}
   player: {fileID: 0}
   textBoxActive: 0
-  textBoxText: {fileID: 0}
+  textBoxText: {fileID: 921809579}
 --- !u!4 &882206734
 Transform:
   m_ObjectHideFlags: 0
@@ -5505,10 +5505,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueFinished: 0
-  textBox: {fileID: 0}
+  textBox: {fileID: 921809580}
   player: {fileID: 0}
   textBoxActive: 0
-  textBoxText: {fileID: 0}
+  textBoxText: {fileID: 921809579}
 --- !u!4 &960925586
 Transform:
   m_ObjectHideFlags: 0
@@ -6393,10 +6393,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueFinished: 0
-  textBox: {fileID: 0}
+  textBox: {fileID: 921809580}
   player: {fileID: 0}
   textBoxActive: 0
-  textBoxText: {fileID: 0}
+  textBoxText: {fileID: 921809579}
 --- !u!4 &1096570827
 Transform:
   m_ObjectHideFlags: 0
@@ -7004,10 +7004,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueFinished: 0
-  textBox: {fileID: 0}
+  textBox: {fileID: 921809580}
   player: {fileID: 0}
   textBoxActive: 0
-  textBoxText: {fileID: 0}
+  textBoxText: {fileID: 921809579}
 --- !u!4 &1294889414
 Transform:
   m_ObjectHideFlags: 0
@@ -7521,10 +7521,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueFinished: 0
-  textBox: {fileID: 0}
+  textBox: {fileID: 921809580}
   player: {fileID: 0}
   textBoxActive: 0
-  textBoxText: {fileID: 0}
+  textBoxText: {fileID: 921809579}
 --- !u!4 &1382319449
 Transform:
   m_ObjectHideFlags: 0
@@ -7787,10 +7787,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueFinished: 0
-  textBox: {fileID: 0}
+  textBox: {fileID: 921809580}
   player: {fileID: 0}
   textBoxActive: 0
-  textBoxText: {fileID: 0}
+  textBoxText: {fileID: 921809579}
 --- !u!4 &1399165204
 Transform:
   m_ObjectHideFlags: 0
@@ -9696,10 +9696,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueFinished: 0
-  textBox: {fileID: 0}
+  textBox: {fileID: 921809580}
   player: {fileID: 0}
   textBoxActive: 0
-  textBoxText: {fileID: 0}
+  textBoxText: {fileID: 921809579}
 --- !u!4 &1879576738
 Transform:
   m_ObjectHideFlags: 0
@@ -10080,10 +10080,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueFinished: 0
-  textBox: {fileID: 0}
+  textBox: {fileID: 921809580}
   player: {fileID: 0}
   textBoxActive: 0
-  textBoxText: {fileID: 0}
+  textBoxText: {fileID: 921809579}
 --- !u!4 &1927045897
 Transform:
   m_ObjectHideFlags: 0
@@ -10375,10 +10375,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueFinished: 0
-  textBox: {fileID: 0}
+  textBox: {fileID: 921809580}
   player: {fileID: 0}
   textBoxActive: 0
-  textBoxText: {fileID: 0}
+  textBoxText: {fileID: 921809579}
 --- !u!4 &1962541829
 Transform:
   m_ObjectHideFlags: 0
@@ -11212,10 +11212,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueFinished: 0
-  textBox: {fileID: 0}
+  textBox: {fileID: 921809580}
   player: {fileID: 0}
   textBoxActive: 0
-  textBoxText: {fileID: 0}
+  textBoxText: {fileID: 921809579}
 --- !u!4 &2135068243
 Transform:
   m_ObjectHideFlags: 0
