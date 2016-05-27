@@ -93,11 +93,7 @@ public class GameController : MonoBehaviour {
         }
         else if (Mathf.FloorToInt(playedTime) == startLoading + loadingScreenTime)
         {
-            if(randomNPC == null)
-            {
-                print("null");
-            }
-            ActivateMinigame(randomNPC.Element);
+            ActivateMinigame(DataTracking.currentNPC.avatar.Element);
         }
 	}
 
