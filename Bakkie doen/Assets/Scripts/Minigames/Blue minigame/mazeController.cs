@@ -3,6 +3,7 @@
 public class mazeController : MonoBehaviour {
     public GameObject start;
     public GameObject finish;
+    public GameObject maze;
     public GameObject maze1;
     public GameObject maze2;
     public GameObject maze3;
@@ -30,7 +31,7 @@ public class mazeController : MonoBehaviour {
         //Decide a random maze, 5 options available
         int randomMaze = Random.Range(1, 6);
         //Get the gameobject
-        GameObject maze = GameObject.FindGameObjectWithTag("maze_" + randomMaze);
+        maze = GameObject.FindGameObjectWithTag("maze_" + randomMaze);
 
         //Initalise variables for use later in deciding which maze will be used
         int randomStart;
@@ -126,7 +127,7 @@ public class mazeController : MonoBehaviour {
                         start.transform.position = new Vector3(22.31f, -3.3f);
                         break;
                 }
-                randomFinish = Random.Range(1, 4);
+                randomFinish = Random.Range(1, 3);
                 switch (randomFinish)
                 {
                     case 1:
