@@ -77,7 +77,28 @@ public class LoginController : MonoBehaviour {
                     npc.Dialogue = NPCSetDialogue(npc);
                 }
                 DataTracking.randomNPC = DataTracking.npcData[Random.Range(0, DataTracking.npcData.Count)];
-                SceneManager.LoadScene(DataTracking.playerData.tutorial ? "Tutorial scene" : "T2");
+                if(DataTracking.playerData.SpawnPoint != null)
+                {
+                    switch (DataTracking.playerData.SpawnPoint.Substring(0, 2))
+                    {
+                        case "T0":
+                            SceneManager.LoadScene("T0");
+                            break;
+                        case "T1":
+                            SceneManager.LoadScene("T1");
+                            break;
+                        case "T2":
+                            SceneManager.LoadScene("T2");
+                            break;
+                        case "T3":
+                            SceneManager.LoadScene("T3");
+                            break;
+                    }
+                }
+                else
+                {
+                    SceneManager.LoadScene(DataTracking.playerData.tutorial ? "Tutorial scene" : "T2");
+                }
             }
         }
 	}

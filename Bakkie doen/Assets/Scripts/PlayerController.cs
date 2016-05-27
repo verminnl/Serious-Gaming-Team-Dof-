@@ -23,6 +23,14 @@ public class PlayerController : MonoBehaviour {
 	void Start () {
         anim = GetComponent<Animator>();
         myRigidBody = GetComponent<Rigidbody2D>();
+        if(DataTracking.playerData.SpawnPoint != null)
+        {
+            string[] spawnSplit = DataTracking.playerData.SpawnPoint.Split('_');
+            float posX, posY;
+            float.TryParse(spawnSplit[1], out posX);
+            float.TryParse(spawnSplit[2], out posY);
+            transform.position = new Vector3(posX, posY, transform.position.z);
+        }
     }
 	
 	// Update is called once per frame
