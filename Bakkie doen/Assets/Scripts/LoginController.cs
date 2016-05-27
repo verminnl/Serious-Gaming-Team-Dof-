@@ -124,14 +124,13 @@ public class LoginController : MonoBehaviour {
     {
         string skills = "";
         dialogue = new string[3];
-        dialogue[0] = "Hallo " + DataTracking.playerData.FirstName + ", ik ben " + randomNPC.FirstName + ".";
-        dialogue[1] = "Mijn kamer nummer is " + randomNPC.Room + ".";
+        dialogue[0] = "Hoi " + DataTracking.playerData.FirstName + ", ik ben " + randomNPC.FirstName + ".";
 
         for (int i = 0; i != randomNPC.Skills.Length; i++)
         {
             if (i == randomNPC.Skills.Length - 1)
             {
-                skills += "en " + randomNPC.Skills[i] + ".";
+                skills += " en " + randomNPC.Skills[i] + ".";
             }
             if (i == 0)
             {
@@ -142,7 +141,8 @@ public class LoginController : MonoBehaviour {
                 skills += ", " + randomNPC.Skills[i];
             }
         }
-        dialogue[2] = "Ik kan " + skills;
+        dialogue[1] = "Ik ben erg goed in " + skills;
+        dialogue[2] = "Je vindt me in kamer " + randomNPC.Room + ".";
         return dialogue;
     }
 
