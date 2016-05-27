@@ -89,9 +89,15 @@ public class BackEndCommunicator {
         GetData("create", "found_player", string.Format("pid={0}&fid={1}&sesid={2}", playerID, foundPLayerID, sessionID));
     }
 
+    public void SaveSpawnLocation(int playerID, string spawn, string sessionID)
+    {
+        GetData("create", "spawn", string.Format("pid={0}&spawn={1}&sesid={2}", playerID, spawn, sessionID));
+    }
+
     private string GetData(string action, string pageName, string parameters)
     {
         WWW webRequest = new WWW(Protocol + URL + action + "/" + pageName + ".php?" + parameters);
+        Debug.Log(webRequest.url);
         while (!webRequest.isDone)
         {
 

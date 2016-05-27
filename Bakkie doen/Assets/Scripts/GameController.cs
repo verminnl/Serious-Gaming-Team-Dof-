@@ -124,14 +124,10 @@ public class GameController : MonoBehaviour {
     /// <param name="type">Type of the minigame</param>
     public void ActivateMinigame(string type)
     {
-        if(type == "red")
-        {
-            type = "Red minigame";
-        }
-        else if(type == "blue")
-        {
-            type = "Blue minigame";
-        }
+        string spawn = SceneManager.GetActiveScene().name + "_" + thePlayer.transform.position.x + "_" + thePlayer.transform.position.y;
+        Debug.Log(spawn);
+        BackEndCommunicator.Instance.SaveSpawnLocation(DataTracking.playerData.PlayerID, spawn, DataTracking.playerData.SessionID);
+        type = (type == "red" ? "Red minigame" : "Blue minigame");
         theCamera.isLevelCamera = false;
         thePlayer.inMinigame = true;
         SceneManager.LoadScene(type);
