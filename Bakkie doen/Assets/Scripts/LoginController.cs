@@ -129,7 +129,18 @@ public class LoginController : MonoBehaviour {
     {
         dialogue = new string[3];
         dialogue[0] = "Hoi " + DataTracking.playerData.FirstName + ", ik ben " + randomNPC.FirstName + ".";
-        dialogue[1] = "IK ben erg goed in " + randomNPC.Skill1 + ", " + randomNPC.Skill2 + " en " + randomNPC.Skill3 + ".";
+        if (randomNPC.Skill2 == "" && randomNPC.Skill3 == "")
+        {
+            dialogue[1] = "Ik ben erg goed in " + randomNPC.Skill1 + ".";
+        }
+        else if (randomNPC.Skill3 == "")
+        {
+            dialogue[1] = "Ik ben erg goed in " + randomNPC.Skill1 + " en " + randomNPC.Skill2 + ".";
+        }
+        else
+        {
+            dialogue[1] = "Ik ben erg goed in " + randomNPC.Skill1 + ", " + randomNPC.Skill2 + " en " + randomNPC.Skill3 + ".";
+        }
         dialogue[2] = "Je vindt me in kamer " + randomNPC.Room + ".";
         return dialogue;
     }

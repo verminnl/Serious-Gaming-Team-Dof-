@@ -35,12 +35,11 @@ public class BackEndCommunicator {
 
     public AvatarData GetPlayerData(int playerID, string sessionID)
     {
-        string resultString = GetData("read", "player_complete", string.Format("pid={0}&sesid={1}", playerID, sessionID));
-        AvatarData playerData = JsonUtility.FromJson<AvatarData>(resultString);
+        AvatarData playerData = JsonUtility.FromJson<AvatarData>(GetData("read", "player_complete", string.Format("pid={0}&sesid={1}", playerID, sessionID)));
 
         playerData.SessionID = sessionID;
 
-        resultString = GetData("read", "player_foundplayers", string.Format("pid={0}&sesid={1}", playerID, sessionID));
+        string resultString = GetData("read", "player_foundplayers", string.Format("pid={0}&sesid={1}", playerID, sessionID));
 
         playerData.FoundPlayers = stringToIntArray(GetData("read", "player_foundplayers", string.Format("pid={0}&sesid={1}", playerID, sessionID)));
         return playerData;
@@ -48,9 +47,7 @@ public class BackEndCommunicator {
 
     private AvatarData GetEachNPCData(int playerID, string sessionID)
     {
-        string resultString = GetData("read", "player_complete", string.Format("pid={0}&sesid={1}", playerID, sessionID));
-        AvatarData npcData = JsonUtility.FromJson<AvatarData>(resultString);
-        return npcData;
+        return JsonUtility.FromJson<AvatarData>(GetData("read", "player_complete", string.Format("pid={0}&sesid={1}", playerID, sessionID)));
     }
 
     public List<AvatarData> GetNPCData(int playerID, string sessionID)
