@@ -69,7 +69,8 @@ public class TutorialCinematic : MonoBehaviour {
                 if (Vector3.Distance(thePlayer.gameObject.transform.position, currentWaypoint.transform.position) < distanceDetection)
                 {
                     //Activates a dialogue, if there are dialogues added to the waypoint
-                    //Else, gets the next waypoint for the player to navigate to
+                    //Else, gets the next waypoint for the player to navigate to,
+                    //after checking if there is a screen that should be activated
                     if (currentWaypoint.GetComponent<WaypointDialogue>() != null)
                     {
                         if (currentWaypoint.GetComponent<WaypointDialogue>().dialogueStarted == false)
@@ -86,6 +87,12 @@ public class TutorialCinematic : MonoBehaviour {
                         if (tbManager.isActive == false)
                         {
                             tbManager.currentLine = 0;
+                            //Sets a screen to active if there is a screen that should be activated
+                            //after the dialogue on the current waypoint
+                            if (currentWaypoint.GetComponent<WaypointDialogue>().screen != null)
+                            {
+                                currentWaypoint.GetComponent<WaypointDialogue>().screen.SetActive(true);
+                            }
                             currentWaypoint = GetNextWaypoint();
                         }
                     }

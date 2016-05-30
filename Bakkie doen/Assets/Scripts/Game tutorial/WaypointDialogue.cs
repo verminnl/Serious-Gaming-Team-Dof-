@@ -8,6 +8,8 @@ public class WaypointDialogue : MonoBehaviour {
     public string[] lines;
     //Checks if the dialogue has been started
     public bool dialogueStarted = false;
+    //Screen that will be activated after dialogue
+    public GameObject screen;
 
 	// Use this for initialization
 	void Start()
@@ -28,12 +30,8 @@ public class WaypointDialogue : MonoBehaviour {
                 }
                 else
                 {
-                    lines[i] = lines[i].Replace("#playername", "Guest");
+                    lines[i] = lines[i].Replace("#playername", "Gast");
                 }
-            }
-            else
-            {
-                Debug.Log("No #playername");
             }
         }
 	}
