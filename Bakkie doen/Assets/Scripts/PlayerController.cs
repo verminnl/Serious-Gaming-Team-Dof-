@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour {
 	void Start () {
         anim = GetComponent<Animator>();
         myRigidBody = GetComponent<Rigidbody2D>();
-        if(DataTracking.playerData.SpawnPoint != null)
+        if(DataTracking.playerData.SpawnPoint != "")
         {
             string[] spawnSplit = DataTracking.playerData.SpawnPoint.Split('_');
             float posX, posY;

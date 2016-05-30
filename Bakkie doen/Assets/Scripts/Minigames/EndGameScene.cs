@@ -43,7 +43,7 @@ public class EndGameScene : MonoBehaviour {
             timeActive = timeActive + Time.deltaTime;
             if (timeActive > screenDuration)
             {
-                BackEndCommunicator.Instance.SaveFoundPlayer(DataTracking.playerData.PlayerID, DataTracking.currentNPC.avatar.PlayerID, DataTracking.playerData.SessionID);
+                BackEndCommunicator.Instance.EndGameSave(DataTracking.playerData.PlayerID, DataTracking.currentNPC.avatar.PlayerID, DataTracking.playerData.SessionID, DataTracking.playerData.SpawnPoint, DataTracking.playerData.Tutorial);
                 DataTracking.resetGame();
             }
         }

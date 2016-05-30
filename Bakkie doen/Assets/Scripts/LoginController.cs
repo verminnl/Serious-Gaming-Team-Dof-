@@ -67,8 +67,6 @@ public class LoginController : MonoBehaviour {
                 //Get the playerdata
                 DataTracking.playerData = BackEndCommunicator.Instance.GetPlayerData(playerID, DataTracking.playerData.SessionID);
                 DataTracking.playerData.CharacterSprite = SetCharacterSprite(DataTracking.playerData.Character);
-                //Get tutorial
-                DataTracking.playerData.tutorial = BackEndCommunicator.Instance.CheckTutorial(playerID, DataTracking.playerData.SessionID);
                 //Get the NPCData
                 DataTracking.npcData = BackEndCommunicator.Instance.GetNPCData(playerID, DataTracking.playerData.SessionID);
                 foreach (AvatarData npc in DataTracking.npcData)
@@ -77,27 +75,34 @@ public class LoginController : MonoBehaviour {
                     npc.Dialogue = NPCSetDialogue(npc);
                 }
                 DataTracking.randomNPC = DataTracking.npcData[Random.Range(0, DataTracking.npcData.Count)];
-                if (!DataTracking.playerData.tutorial)
+                if (!DataTracking.playerData.Tutorial)
                 {
-                    switch (DataTracking.playerData.SpawnPoint.Substring(0, 2))
+                    if(DataTracking.playerData.SpawnPoint == "")
                     {
-                        case "T0":
-                            SceneManager.LoadScene("T0");
-                            break;
-                        case "T1":
-                            SceneManager.LoadScene("T1");
-                            break;
-                        case "T2":
-                            SceneManager.LoadScene("T2");
-                            break;
-                        case "T3":
-                            SceneManager.LoadScene("T3");
-                            break;
+                        SceneManager.LoadScene("T2");
+                    }
+                    else
+                    {
+                        switch (DataTracking.playerData.SpawnPoint.Substring(0, 2))
+                        {
+                            case "T0":
+                                SceneManager.LoadScene("T0");
+                                break;
+                            case "T1":
+                                SceneManager.LoadScene("T1");
+                                break;
+                            case "T2":
+                                SceneManager.LoadScene("T2");
+                                break;
+                            case "T3":
+                                SceneManager.LoadScene("T3");
+                                break;
+                        }
                     }
                 }
                 else
                 {
-                    SceneManager.LoadScene(DataTracking.playerData.tutorial ? "Tutorial scene" : "T2");
+                    SceneManager.LoadScene("Tutorial scene");
                 }
             }
         }
@@ -122,26 +127,9 @@ public class LoginController : MonoBehaviour {
 
     public string[] NPCSetDialogue(AvatarData randomNPC)
     {
-        string skills = "";
         dialogue = new string[3];
         dialogue[0] = "Hoi " + DataTracking.playerData.FirstName + ", ik ben " + randomNPC.FirstName + ".";
-
-        for (int i = 0; i != randomNPC.Skills.Length; i++)
-        {
-            if (i == randomNPC.Skills.Length - 1)
-            {
-                skills += " en " + randomNPC.Skills[i] + ".";
-            }
-            if (i == 0)
-            {
-                skills += randomNPC.Skills[i];
-            }
-            else
-            {
-                skills += ", " + randomNPC.Skills[i];
-            }
-        }
-        dialogue[1] = "Ik ben erg goed in " + skills;
+        dialogue[1] = "IK ben erg goed in " + randomNPC.Skill1 + ", " + randomNPC.Skill2 + " en " + randomNPC.Skill3 + ".";
         dialogue[2] = "Je vindt me in kamer " + randomNPC.Room + ".";
         return dialogue;
     }

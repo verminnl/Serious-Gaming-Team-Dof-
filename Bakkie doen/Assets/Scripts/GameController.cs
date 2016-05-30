@@ -63,10 +63,9 @@ public class GameController : MonoBehaviour {
                 npcMinigameStartCounter += Time.deltaTime;
                 if(theLoadingTransition.GetComponent<LoadingTransition>().npcSkills.Count == 0)
                 {
-                    foreach (string item in currentNPCAvatar.Skills)
-                    {
-                        theLoadingTransition.GetComponent<LoadingTransition>().npcSkills.Add(item);
-                    }
+                    theLoadingTransition.GetComponent<LoadingTransition>().npcSkills.Add(currentNPCAvatar.Skill1);
+                    theLoadingTransition.GetComponent<LoadingTransition>().npcSkills.Add(currentNPCAvatar.Skill2);
+                    theLoadingTransition.GetComponent<LoadingTransition>().npcSkills.Add(currentNPCAvatar.Skill3);
                 }
 
                 //When the time counter is higher than the loadingScreenTime, start the minigame based on minigameType
@@ -96,10 +95,9 @@ public class GameController : MonoBehaviour {
             theLoadingTransition.GetComponent<LoadingTransition>().npcRoom = randomNPC.Room;
             if (theLoadingTransition.GetComponent<LoadingTransition>().npcSkills.Count == 0)
             {
-                foreach (string item in randomNPC.Skills)
-                {
-                    theLoadingTransition.GetComponent<LoadingTransition>().npcSkills.Add(item);
-                }
+                theLoadingTransition.GetComponent<LoadingTransition>().npcSkills.Add(randomNPC.Skill1);
+                theLoadingTransition.GetComponent<LoadingTransition>().npcSkills.Add(randomNPC.Skill2);
+                theLoadingTransition.GetComponent<LoadingTransition>().npcSkills.Add(randomNPC.Skill3);
             }
         }
         else if (Mathf.FloorToInt(playedTime) == startLoading + loadingScreenTime)
@@ -136,7 +134,7 @@ public class GameController : MonoBehaviour {
     {
         string spawn = SceneManager.GetActiveScene().name + "_" + thePlayer.transform.position.x + "_" + thePlayer.transform.position.y;
         Debug.Log(spawn);
-        BackEndCommunicator.Instance.SaveSpawnLocation(DataTracking.playerData.PlayerID, spawn, DataTracking.playerData.SessionID);
+        DataTracking.playerData.SpawnPoint = spawn;
         type = (type == "red" ? "Red minigame" : "Blue minigame");
         theCamera.isLevelCamera = false;
         thePlayer.inMinigame = true;

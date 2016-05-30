@@ -16,8 +16,10 @@ public class AvatarData
     public string Element;
     public string Room;
     public int[] FoundPlayers;
-    public string[] Skills;
     public string SessionID;
-    public bool tutorial;
+    public bool Tutorial;
     public string[] Dialogue;
+    public string Skill1;
+    public string Skill2;
+    public string Skill3;
 }

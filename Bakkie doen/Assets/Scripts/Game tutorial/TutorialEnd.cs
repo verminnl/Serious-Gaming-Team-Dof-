@@ -30,6 +30,7 @@ public class TutorialEnd : MonoBehaviour {
 
         if (timer > activeTime)
         {
+            BackEndCommunicator.Instance.EndGameSave(DataTracking.playerData.PlayerID, 0, DataTracking.playerData.SessionID, "", false);
             DataTracking.resetGame();
         }
 	}

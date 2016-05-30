@@ -43,10 +43,6 @@ public class BackEndCommunicator {
         resultString = GetData("read", "player_foundplayers", string.Format("pid={0}&sesid={1}", playerID, sessionID));
 
         playerData.FoundPlayers = stringToIntArray(GetData("read", "player_foundplayers", string.Format("pid={0}&sesid={1}", playerID, sessionID)));
-        
-        resultString = GetData("read", "player_skills", string.Format("pid={0}&sesid={1}", playerID, sessionID));
-        playerData.Skills = resultString.Replace(")(", ",").Replace("(", "").Replace(")", "").Split(',');
-        
         return playerData;
     }
 
@@ -54,10 +50,6 @@ public class BackEndCommunicator {
     {
         string resultString = GetData("read", "player_complete", string.Format("pid={0}&sesid={1}", playerID, sessionID));
         AvatarData npcData = JsonUtility.FromJson<AvatarData>(resultString);
-        
-        resultString = GetData("read", "player_skills", string.Format("pid={0}&sesid={1}", playerID, sessionID));
-        npcData.Skills = resultString.Replace(")(", ",").Replace("(", "").Replace(")", "").Split(',');
-
         return npcData;
     }
 
@@ -73,25 +65,19 @@ public class BackEndCommunicator {
         return NPCData;
     }
 
-    public bool CheckTutorial(int playerID, string sessionID)
-    {
-        string resultString = GetData("read", "tutorial", string.Format("pid={0}&sesid={1}", playerID, sessionID));
-        return resultString == "true" ? true : false;
-    }
-
     public string CreateSession(int playerID)
     {
          return GetData("create", "session", string.Format("pid={0}&sesid={1}", playerID, "Uy5ytsn2rMSMX8fD"));
     }
 
-    public void SaveFoundPlayer(int playerID, int foundPLayerID, string sessionID)
+    public void EndGameSave(int playerID, int foundPlayerID, string sessionID, string spawn, bool tutorial)
     {
-        GetData("create", "found_player", string.Format("pid={0}&fid={1}&sesid={2}", playerID, foundPLayerID, sessionID));
-    }
-
-    public void SaveSpawnLocation(int playerID, string spawn, string sessionID)
-    {
-        GetData("create", "spawn", string.Format("pid={0}&spawn={1}&sesid={2}", playerID, spawn, sessionID));
+        if(foundPlayerID != 0)
+        {
+            GetData("create", "found_player", string.Format("pid={0}&fid={1}&sesid={2}", playerID, foundPlayerID, sessionID));
+        }
+        GetData("create", "spawn", string.Format("pid={0}&spawn={1}&tut={2}&sesid={3}", playerID, spawn, tutorial, sessionID));
+        Debug.Log(DataTracking.usedMB);
     }
 
     private string GetData(string action, string pageName, string parameters)
@@ -102,6 +88,7 @@ public class BackEndCommunicator {
         {
 
         }
+        DataTracking.usedMB += webRequest.bytesDownloaded;
         return webRequest.text;
     }
 
