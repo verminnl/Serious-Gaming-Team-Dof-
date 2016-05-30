@@ -36,12 +36,9 @@ public class BackEndCommunicator {
     public AvatarData GetPlayerData(int playerID, string sessionID)
     {
         AvatarData playerData = JsonUtility.FromJson<AvatarData>(GetData("read", "player_complete", string.Format("pid={0}&sesid={1}", playerID, sessionID)));
-
         playerData.SessionID = sessionID;
+        playerData.FoundPlayers = JsonUtility.FromJson<IntArray>(GetData("read", "player_foundplayers", string.Format("pid={0}&sesid={1}", playerID, sessionID)));
 
-        string resultString = GetData("read", "player_foundplayers", string.Format("pid={0}&sesid={1}", playerID, sessionID));
-
-        playerData.FoundPlayers = stringToIntArray(GetData("read", "player_foundplayers", string.Format("pid={0}&sesid={1}", playerID, sessionID)));
         return playerData;
     }
 
@@ -53,9 +50,8 @@ public class BackEndCommunicator {
     public List<AvatarData> GetNPCData(int playerID, string sessionID)
     {
         List<AvatarData> NPCData = new List<AvatarData>();
-        int[] resultArray = stringToIntArray(GetData("read", "npc_ids", string.Format("pid={0}&sesid={1}", playerID, sessionID)));
-
-        foreach (int id in resultArray)
+        IntArray npcIDs = JsonUtility.FromJson<IntArray>(GetData("read", "npc_ids", string.Format("pid={0}&sesid={1}", playerID, sessionID)));
+        foreach (int id in npcIDs.intList)
         {
             NPCData.Add(Instance.GetEachNPCData(id, sessionID));
         }
@@ -80,7 +76,6 @@ public class BackEndCommunicator {
     private string GetData(string action, string pageName, string parameters)
     {
         WWW webRequest = new WWW(Protocol + URL + action + "/" + pageName + ".php?" + parameters);
-        Debug.Log(webRequest.url);
         while (!webRequest.isDone)
         {
 

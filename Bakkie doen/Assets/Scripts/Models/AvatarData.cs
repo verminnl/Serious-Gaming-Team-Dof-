@@ -15,7 +15,7 @@ public class AvatarData
     public Sprite CharacterSprite;
     public string Element;
     public string Room;
-    public int[] FoundPlayers;
+    public IntArray FoundPlayers;
     public string SessionID;
     public bool Tutorial;
     public string[] Dialogue;
