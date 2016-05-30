@@ -11,6 +11,10 @@ public class LoadingTransition : MonoBehaviour {
     public float loadingTime;
     //When to start a loading screen based on time in seconds
     public float timeToStartLoadingScreen;
+    //Check if the player has found an NPC
+    private bool playerHasFoundNPC;
+    //Text for the encounter with NPC
+    public Text encounterNPC;
     //NPC sprite box
     public Image npcImageBox;
     //Sprite of an NPC
@@ -28,7 +32,9 @@ public class LoadingTransition : MonoBehaviour {
     //Array with skills of an NPC
     public List<string> npcSkills;
     //Checks if the skills of the NPC has been printed on the loading screen
-    private bool skillsPrinted = false;
+    //private bool skillsPrinted = false;
+    //Checks if the loading screen has been printed
+    private bool loadingScreenPrinted = false;
 
 	// Use this for initialization
 	void Start () {
@@ -39,29 +45,51 @@ public class LoadingTransition : MonoBehaviour {
 	void Update () {
         //Rotates the image on the loading screen
         theLoadingImage.rectTransform.Rotate(new Vector3(0, imageRotateSpeed * Time.deltaTime, 0));
-        //Shows the interacted NPC/random NPC on the loading screen
-        if (npcImageBox != null)
+        //Makes sure that the items on the loading screen will only be printed once
+        if (loadingScreenPrinted)
         {
-            npcImageBox.sprite = npcSprite;
+            return;
         }
-        //Shows the name of the interacted NPC/random NPC on the loading screen
-        if (npcNameBox != null)
+        else
         {
-            npcNameBox.text = npcName;
-        }
-        //Shows the room of the interacted NPC/random NPC on the loading screen
-        if (npcRoomBox != null)
-        {
-            npcRoomBox.text = "Room: " + npcRoom;
-        }
-        //Shows the skills of the interacted NPC/random NPC on the loading screen
-        if (npcSkills != null && !skillsPrinted)
-        {
-            for (int i = 0; i < npcSkills.Count; i++)
+            //Shows if the player has found the NPC or if it was a random encounter NPC
+            if (playerHasFoundNPC)
             {
-                npcSkillsBox.text = npcSkillsBox.text + npcSkills[i] + "\n";
+                encounterNPC.text = "Je hebt de volgende persoon gevonden!";
             }
-            skillsPrinted = true;
+            else
+            {
+                encounterNPC.text = "De volgende persoon heeft jouw gevonden!";
+            }
+            //Shows the interacted NPC/random NPC on the loading screen
+            if (npcImageBox != null)
+            {
+                npcImageBox.sprite = npcSprite;
+            }
+            //Shows the name of the interacted NPC/random NPC on the loading screen
+            if (npcNameBox != null)
+            {
+                npcNameBox.text = npcName;
+            }
+            //Shows the room of the interacted NPC/random NPC on the loading screen
+            if (npcRoomBox != null)
+            {
+                npcRoomBox.text = npcRoomBox.text + npcRoom;
+            }
+            //Shows the skills of the interacted NPC/random NPC on the loading screen
+            if (npcSkills != null)
+            {
+                for (int i = 0; i < npcSkills.Count; i++)
+                {
+                    npcSkillsBox.text = npcSkillsBox.text + npcSkills[i] + "\n";
+                }
+            }
+            loadingScreenPrinted = true;
         }
 	}
+
+    public void HasThePlayerFoundNPC(bool foundNPC)
+    {
+        playerHasFoundNPC = foundNPC;
+    }
 }
