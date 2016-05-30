@@ -6,8 +6,6 @@ using UnityEngine.SceneManagement;
 /// Keeps track of certain data for the game
 /// </summary>
 public static class DataTracking  {
-    //public static PlayerController thePlayer;
-    public static float usedMB;
     //NPC information for activating a minigame
     public static NPC currentNPC;
     //Player Data Model
