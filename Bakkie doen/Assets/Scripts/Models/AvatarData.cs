@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 /// <summary>
-/// The data of the player returned by the webserver
+/// The data of the player and NPC's returned by the webserver
 /// </summary>
 public class AvatarData
 {
