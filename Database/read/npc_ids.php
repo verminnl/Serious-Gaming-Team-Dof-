@@ -2,18 +2,21 @@
 	include '../database_connection.php';
 	include '../check_session.php';
 	
-	if(!checkSession()){
-		die("haha nope");
-	}
+	//if(!checkSession()){
+		//die("haha nope");
+	//}
 	
 	$PlayerID = $_GET["pid"];
 	//http://localhost/Database/read/player_complete.php?pid=5
-	$query = "SELECT `PlayerID` From `player` WHERE `PlayerID` != '$PlayerID'";
+	$query = "SELECT `PlayerID`,`FirstName`,`LastName`,`Job`,`SpawnPoint`,`Character`,`Element`,`Room`, `Skill1`, `Skill2`, `Skill3`, `Tutorial` From `player` WHERE `PlayerID` != '$PlayerID'";
 	$result = mysqli_query($conn,$query);
 	
-	while($row = mysqli_fetch_assoc($result)){
-		$rows[] += $row['PlayerID'];
+	if(mysqli_num_rows($result) > 0){
+		//$rows = array();
+		for($i = 0; $i < mysqli_num_rows($result); $i++){
+			$row = mysqli_fetch_array($result);
+			echo json_encode($row);
+			echo "|";
+		}	
 	}
-	$data['intList'] = $rows;
-	echo json_encode($data);
 ?>

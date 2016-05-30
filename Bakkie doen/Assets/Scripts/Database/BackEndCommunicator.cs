@@ -50,10 +50,14 @@ public class BackEndCommunicator {
     public List<AvatarData> GetNPCData(int playerID, string sessionID)
     {
         List<AvatarData> NPCData = new List<AvatarData>();
-        IntArray npcIDs = JsonUtility.FromJson<IntArray>(GetData("read", "npc_ids", string.Format("pid={0}&sesid={1}", playerID, sessionID)));
-        foreach (int id in npcIDs.intList)
+        string[] NPCs = GetData("read", "npc_ids", string.Format("pid={0}&sesid={1}", playerID, sessionID)).Split('|');
+        //IntArray npcIDs = JsonUtility.FromJson<IntArray>(GetData("read", "npc_ids", string.Format("pid={0}&sesid={1}", playerID, sessionID)));
+        foreach (string id in NPCs)
         {
-            NPCData.Add(Instance.GetEachNPCData(id, sessionID));
+            if(id != "")
+            {
+                NPCData.Add(JsonUtility.FromJson<AvatarData>(id));
+            }
         }
         return NPCData;
     }
@@ -82,16 +86,5 @@ public class BackEndCommunicator {
         }
         DataTracking.usedMB += webRequest.bytesDownloaded;
         return webRequest.text;
-    }
-
-    private int[] stringToIntArray(string arr)
-    {
-        string[] splitRequestResult = arr.Replace(")(", ",").Replace("(", "").Replace(")", "").Split(',');
-        int[] intRequestResult = new int[splitRequestResult.Length];
-        for (int i = 0; i < splitRequestResult.Length; i++)
-        {
-            int.TryParse(splitRequestResult[i], out intRequestResult[i]);
-        }
-        return intRequestResult;
     }
 }
