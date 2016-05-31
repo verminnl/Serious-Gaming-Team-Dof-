@@ -663,7 +663,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Gefeliciteerd voor het vrij spelen van de volgende kaart!
+  m_Text: Gefeliciteerd, je hebt een kaart gewonnen met talenten van je collega!
 --- !u!222 &567538250
 CanvasRenderer:
   m_ObjectHideFlags: 0
