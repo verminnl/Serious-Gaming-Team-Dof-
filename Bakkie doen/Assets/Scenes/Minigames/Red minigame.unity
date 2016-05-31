@@ -139,6 +139,79 @@ Transform:
   m_Children: []
   m_Father: {fileID: 430519729}
   m_RootOrder: 2
+--- !u!1 &182376098
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 182376099}
+  - 222: {fileID: 182376101}
+  - 114: {fileID: 182376100}
+  m_Layer: 5
+  m_Name: Exit text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &182376099
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 182376098}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1000}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1371613964}
+  m_RootOrder: 3
+  m_AnchorMin: {x: 0.24888933, y: 0.06147389}
+  m_AnchorMax: {x: 0.7534665, y: 0.119}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &182376100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 182376098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Klik op de Spatiebalk om het scherm af te sluiten
+--- !u!222 &182376101
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 182376098}
 --- !u!1001 &314330561
 Prefab:
   m_ObjectHideFlags: 0
@@ -700,12 +773,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7471b71fc76b37e498bd7ba9d8ae9a55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcCardBox: {fileID: 1790399819}
   npcNameBox: {fileID: 694847467}
   npcSprite: {fileID: 758625677}
   textBox: {fileID: 673662357}
   card: {fileID: 1670098076}
-  screenDuration: 5
 --- !u!1 &673662355
 GameObject:
   m_ObjectHideFlags: 0
@@ -1089,6 +1160,79 @@ Transform:
   m_Children: []
   m_Father: {fileID: 430519729}
   m_RootOrder: 1
+--- !u!1 &1030480256
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1030480257}
+  - 222: {fileID: 1030480259}
+  - 114: {fileID: 1030480258}
+  m_Layer: 5
+  m_Name: Exit text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1030480257
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1030480256}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1098001578}
+  m_RootOrder: 3
+  m_AnchorMin: {x: 0.4894665, y: 0.06147389}
+  m_AnchorMax: {x: 0.9855336, y: 0.11934238}
+  m_AnchoredPosition: {x: -0.000030517578, y: 0}
+  m_SizeDelta: {x: 0.000061035156, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1030480258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1030480256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Klik op de Spatiebalk om het scherm af te sluiten
+--- !u!222 &1030480259
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1030480256}
 --- !u!1 &1098001577
 GameObject:
   m_ObjectHideFlags: 0
@@ -1119,6 +1263,7 @@ RectTransform:
   - {fileID: 567538248}
   - {fileID: 1790399818}
   - {fileID: 673662356}
+  - {fileID: 1030480257}
   - {fileID: 1670098077}
   m_Father: {fileID: 588224682}
   m_RootOrder: 0
@@ -1403,6 +1548,7 @@ RectTransform:
   - {fileID: 1583293717}
   - {fileID: 2006174703}
   - {fileID: 338698987}
+  - {fileID: 182376099}
   m_Father: {fileID: 474147843}
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
@@ -1476,7 +1622,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 968cecc291861034a8f838d58a6b9cb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screenDuration: 2
 --- !u!1 &1461443194
 GameObject:
   m_ObjectHideFlags: 0
@@ -1774,7 +1919,7 @@ RectTransform:
   - {fileID: 694847466}
   - {fileID: 758625676}
   m_Father: {fileID: 1098001578}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_AnchorMin: {x: 0.030288579, y: 0}
   m_AnchorMax: {x: 0.42953357, y: 0.8}
   m_AnchoredPosition: {x: 0, y: 0}
