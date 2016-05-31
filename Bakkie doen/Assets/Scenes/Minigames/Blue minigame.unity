@@ -634,11 +634,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Dankjewel
+  m_Text: 'Dankjewel voor
 
-    voor het
-
-    meedoen
+    het meedoen
 
     en tot snel
 
@@ -826,12 +824,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7471b71fc76b37e498bd7ba9d8ae9a55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcCardBox: {fileID: 203571938}
   npcNameBox: {fileID: 250172425}
   npcSprite: {fileID: 607145570}
   textBox: {fileID: 550786677}
   card: {fileID: 239583893}
-  screenDuration: 5
 --- !u!114 &673517929
 MonoBehaviour:
   m_ObjectHideFlags: 0

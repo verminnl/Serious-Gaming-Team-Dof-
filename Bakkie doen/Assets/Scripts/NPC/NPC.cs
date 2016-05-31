@@ -10,6 +10,8 @@ public class NPC : MonoBehaviour {
     public Text textBoxText;
 
     private int lineCounter;
+
+    private bool playerInTriggerBox;
    
     // Use this for initialization
     void Start () {
@@ -18,6 +20,10 @@ public class NPC : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (playerInTriggerBox && Input.GetKeyUp(KeyCode.Space))
+        {
+            ActivateDialogue();
+        }
         if (textBoxActive)
         {
             if(lineCounter == 0)
@@ -36,14 +42,41 @@ public class NPC : MonoBehaviour {
         }
     }
 
-    void OnTriggerStay2D(Collider2D other)
+    //void OnTriggerStay2D(Collider2D other)
+    //{
+    //    Debug.Log("In trigger!!!");
+    //    if (Input.GetKeyUp(KeyCode.Space) && !textBoxActive)
+    //    {
+    //        textBox.SetActive(true);
+    //        textBoxActive = true;
+    //        player.canMove = false;
+    //        DataTracking.currentNPC = this;
+    //    }
+    //}
+
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (Input.GetKeyUp(KeyCode.Space) && !textBoxActive)
+        Debug.Log("In trigger!!!");
+        if (other.name == "Player")
         {
-            textBox.SetActive(true);
-            textBoxActive = true;
-            player.canMove = false;
-            DataTracking.currentNPC = this;
+            playerInTriggerBox = true;
         }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        Debug.Log("Not in trigger anymore!!!");
+        if (other.name == "Player")
+        {
+            playerInTriggerBox = false;
+        }
+    }
+
+    void ActivateDialogue()
+    {
+        textBox.SetActive(true);
+        textBoxActive = true;
+        player.canMove = false;
+        DataTracking.currentNPC = this;
     }
 }

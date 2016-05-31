@@ -282,10 +282,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'You died
+  m_Text: 'Je hebt verloren
 
 
-    Try again next time'
+    Probeer de volgende keer beter'
 --- !u!222 &338698989
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -590,7 +590,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Congratulation for unlocking the following card!
+  m_Text: Gefeliciteerd voor het vrij spelen van de volgende kaart!
 --- !u!222 &567538250
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -772,12 +772,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Thank you for playing
+  m_Text: 'Dankjewel voor
 
-    Bakkie doen!
+    het meedoen
 
-
-    Hope to see you again
+    en tot snel
 
 
 '
