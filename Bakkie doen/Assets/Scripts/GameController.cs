@@ -5,7 +5,8 @@ using System.Collections.Generic;
 /// <summary>
 /// Keeps the game in check
 /// </summary>
-public class GameController : MonoBehaviour {
+public class GameController : MonoBehaviour
+{
     //Time that has passed since the start of the game
     public static float playedTime;
     //Counts the time after finishing dialogue with an NPC
@@ -20,8 +21,6 @@ public class GameController : MonoBehaviour {
     private float loadingScreenTime;
     //Time for the loading screen to appear
     private float startLoading;
-    //
-    AvatarData randomNPC;
     public List<NPCController> npcList;
 
     //Sets the loadingScreenTime and the startLoading variables to the values that has been given in the Inspector
@@ -37,76 +36,66 @@ public class GameController : MonoBehaviour {
         }
     }
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         thePlayer = FindObjectOfType<PlayerController>();
         theCamera = FindObjectOfType<CameraController>();
     }
-	
-	// Update is called once per frame
-	void Update () {
-      
-        //Counts the time that has passed
-        playedTime += Time.deltaTime;
 
-        //When the player is talking to an NPC, set minigameType to the colorType of the NPC
+    // Update is called once per frame
+    void Update()
+    {
         if (DataTracking.currentNPC != null)
         {
             //When finished talking to an NPC, start the loading screen and start a time counter
             if (DataTracking.currentNPC.dialogueFinished)
             {
-                AvatarData currentNPCAvatar = DataTracking.currentNPC.GetComponent<NPC>().avatar;
-                theLoadingTransition.SetActive(true);
-                theLoadingTransition.GetComponent<LoadingTransition>().HasThePlayerFoundNPC(true);
-                theLoadingTransition.GetComponent<LoadingTransition>().npcSprite = DataTracking.currentNPC.GetComponent<SpriteRenderer>().sprite;
-                theLoadingTransition.GetComponent<LoadingTransition>().npcName = currentNPCAvatar.FullName;
-                theLoadingTransition.GetComponent<LoadingTransition>().npcRoom = currentNPCAvatar.Room;
                 npcMinigameStartCounter += Time.deltaTime;
-                if(theLoadingTransition.GetComponent<LoadingTransition>().npcSkills.Count == 0)
+                if (theLoadingTransition.GetComponent<LoadingTransition>().npcSkills.Count == 0)
                 {
-                    theLoadingTransition.GetComponent<LoadingTransition>().npcSkills.Add(currentNPCAvatar.Skill1);
-                    theLoadingTransition.GetComponent<LoadingTransition>().npcSkills.Add(currentNPCAvatar.Skill2);
-                    theLoadingTransition.GetComponent<LoadingTransition>().npcSkills.Add(currentNPCAvatar.Skill3);
+                    theLoadingTransition.SetActive(true);
+                    theLoadingTransition.GetComponent<LoadingTransition>().HasThePlayerFoundNPC(true);
+                    theLoadingTransition.GetComponent<LoadingTransition>().npcSprite = DataTracking.currentNPC.GetComponent<SpriteRenderer>().sprite;
+                    theLoadingTransition.GetComponent<LoadingTransition>().npcName = DataTracking.currentNPC.GetComponent<NPC>().avatar.FullName;
+                    theLoadingTransition.GetComponent<LoadingTransition>().npcRoom = DataTracking.currentNPC.GetComponent<NPC>().avatar.Room;
+                    theLoadingTransition.GetComponent<LoadingTransition>().npcSkills.Add(DataTracking.currentNPC.GetComponent<NPC>().avatar.Skill1);
+                    theLoadingTransition.GetComponent<LoadingTransition>().npcSkills.Add(DataTracking.currentNPC.GetComponent<NPC>().avatar.Skill2);
+                    theLoadingTransition.GetComponent<LoadingTransition>().npcSkills.Add(DataTracking.currentNPC.GetComponent<NPC>().avatar.Skill3);
                 }
 
                 //When the time counter is higher than the loadingScreenTime, start the minigame based on minigameType
                 if (npcMinigameStartCounter > loadingScreenTime)
                 {
-                    ActivateMinigame(currentNPCAvatar.Element);
+                    ActivateMinigame(DataTracking.currentNPC.GetComponent<NPC>().avatar.Element);
                 }
             }
         }
-
-        //Start loading screen if player hasn't talked to an NPC for {startLoading} seconds and
-        //activate minigame after {loadingScreenTime} seconds
-        else if (Mathf.FloorToInt(playedTime) == startLoading)
+        else
         {
-            if(DataTracking.randomNPC == null)
+            playedTime += Time.deltaTime;
+            if(playedTime > startLoading + loadingScreenTime)
             {
-                DataTracking.randomNPC = DataTracking.npcData[Random.Range(0, DataTracking.npcData.Count)];
+                ActivateMinigame(DataTracking.randomNPC.Element);
             }
-            DataTracking.currentNPC = gameObject.AddComponent<NPC>();
-            DataTracking.currentNPC.avatar = DataTracking.randomNPC;
-            randomNPC = DataTracking.currentNPC.avatar;
-            theLoadingTransition.SetActive(true);
-
-            //Sends the information of the NPC to the loading screen
-            theLoadingTransition.GetComponent<LoadingTransition>().HasThePlayerFoundNPC(false);
-            theLoadingTransition.GetComponent<LoadingTransition>().npcSprite = NPCSetSprite();
-            theLoadingTransition.GetComponent<LoadingTransition>().npcName = randomNPC.FullName;
-            theLoadingTransition.GetComponent<LoadingTransition>().npcRoom = randomNPC.Room;
-            if (theLoadingTransition.GetComponent<LoadingTransition>().npcSkills.Count == 0)
+            else if(playedTime > startLoading)
             {
-                theLoadingTransition.GetComponent<LoadingTransition>().npcSkills.Add(randomNPC.Skill1);
-                theLoadingTransition.GetComponent<LoadingTransition>().npcSkills.Add(randomNPC.Skill2);
-                theLoadingTransition.GetComponent<LoadingTransition>().npcSkills.Add(randomNPC.Skill3);
+                if (theLoadingTransition.GetComponent<LoadingTransition>().npcSkills.Count == 0)
+                {
+                    theLoadingTransition.SetActive(true);
+
+                    //Sends the information of the NPC to the loading screen
+                    theLoadingTransition.GetComponent<LoadingTransition>().HasThePlayerFoundNPC(false);
+                    theLoadingTransition.GetComponent<LoadingTransition>().npcSprite = NPCSetSprite(DataTracking.randomNPC.Character);
+                    theLoadingTransition.GetComponent<LoadingTransition>().npcName = DataTracking.randomNPC.FullName;
+                    theLoadingTransition.GetComponent<LoadingTransition>().npcRoom = DataTracking.randomNPC.Room;
+                    theLoadingTransition.GetComponent<LoadingTransition>().npcSkills.Add(DataTracking.randomNPC.Skill1);
+                    theLoadingTransition.GetComponent<LoadingTransition>().npcSkills.Add(DataTracking.randomNPC.Skill2);
+                    theLoadingTransition.GetComponent<LoadingTransition>().npcSkills.Add(DataTracking.randomNPC.Skill3);
+                }
             }
         }
-        else if (Mathf.FloorToInt(playedTime) == startLoading + loadingScreenTime)
-        {
-            ActivateMinigame(DataTracking.currentNPC.avatar.Element);
-        }
-	}
+    }
 
     /// <summary>
     /// Adds the NPCs in the game to npcList
@@ -132,12 +121,12 @@ public class GameController : MonoBehaviour {
         SceneManager.LoadScene(type);
     }
 
-    public Sprite NPCSetSprite()
+    public Sprite NPCSetSprite(string character)
     {
         Sprite sprite = new Sprite();
-        if (Resources.Load<Sprite>("Characters/" + randomNPC.Character))
+        if (Resources.Load<Sprite>("Characters/" + character))
         {
-            sprite = Resources.Load<Sprite>("Characters/" + randomNPC.Character);
+            sprite = Resources.Load<Sprite>("Characters/" + character);
         }
         return sprite;
     }

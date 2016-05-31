@@ -17,13 +17,17 @@ public class EndGameScene : MonoBehaviour {
     public GameObject card;
     //Check if the screen is active
     private bool isActive;
+    //Local avatardata to set endgame screen
+    private AvatarData foundPlayer;
 
 	// Use this for initialization
 	void Start () {
-        npcNameBox.text = DataTracking.currentNPC.avatar.FullName;
-        npcSprite.sprite = DataTracking.currentNPC.avatar.CharacterSprite;
+        foundPlayer = DataTracking.currentNPC == null ? DataTracking.randomNPC : DataTracking.currentNPC.avatar;
+
+        npcNameBox.text = foundPlayer.FullName;
+        npcSprite.sprite = foundPlayer.CharacterSprite;
         textBox.text = textBox.text + DataTracking.playerData.FirstName;
-        if(DataTracking.currentNPC.avatar.Element == "blue")
+        if(foundPlayer.Element == "blue")
         {
             card.GetComponent<Image>().sprite = Resources.Load<Sprite>("cardW basis");
         }
@@ -33,7 +37,7 @@ public class EndGameScene : MonoBehaviour {
 	void Update () {
         if (isActive)
         {
-            BackEndCommunicator.Instance.EndGameSave(DataTracking.playerData.PlayerID, DataTracking.currentNPC.avatar.PlayerID, DataTracking.playerData.SessionID, DataTracking.playerData.SpawnPoint, DataTracking.playerData.Tutorial);
+            BackEndCommunicator.Instance.EndGameSave(DataTracking.playerData.PlayerID, foundPlayer.PlayerID, DataTracking.playerData.SessionID, DataTracking.playerData.SpawnPoint, DataTracking.playerData.Tutorial);
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 DataTracking.resetGame();
