@@ -157,9 +157,8 @@ GameObject:
   - 4: {fileID: 86812814}
   - 212: {fileID: 86812813}
   - 50: {fileID: 86812812}
-  - 61: {fileID: 86812811}
-  - 95: {fileID: 86812815}
   - 114: {fileID: 86812810}
+  - 58: {fileID: 86812811}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -179,11 +178,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
-  lastMove: {x: 0, y: 0}
   startPoint: maze_start
-  canMove: 1
---- !u!61 &86812811
-BoxCollider2D:
+--- !u!58 &86812811
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -193,9 +190,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -0.02, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.68, y: 0.43}
+  m_Radius: 0.457
 --- !u!50 &86812812
 Rigidbody2D:
   serializedVersion: 2
@@ -255,23 +252,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
---- !u!95 &86812815
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 86812809}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &194294277
 GameObject:
   m_ObjectHideFlags: 0

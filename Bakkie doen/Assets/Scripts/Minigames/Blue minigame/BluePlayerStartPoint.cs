@@ -15,7 +15,6 @@ public class BluePlayerStartPoint : MonoBehaviour {
         if (thePlayer.startPoint == pointName)
         {
             thePlayer.transform.position = transform.position;
-            thePlayer.lastMove = startDirection;
         }
 	}
 	
