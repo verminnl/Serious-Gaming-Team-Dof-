@@ -79,7 +79,7 @@ public class GameController : MonoBehaviour {
 
         //Start loading screen if player hasn't talked to an NPC for {startLoading} seconds and
         //activate minigame after {loadingScreenTime} seconds
-        if (Mathf.FloorToInt(playedTime) == startLoading)
+        else if (Mathf.FloorToInt(playedTime) == startLoading)
         {
             if(DataTracking.randomNPC == null)
             {
@@ -109,16 +109,6 @@ public class GameController : MonoBehaviour {
 	}
 
     /// <summary>
-    /// Gets a random NPC index from npcList
-    /// </summary>
-    /// <returns>An index of a random NPC</returns>
-    int randomMinigameColor()
-    {
-        int npc = Random.Range(0, DataTracking.npcData.Count);
-        return npc;
-    }
-
-    /// <summary>
     /// Adds the NPCs in the game to npcList
     /// </summary>
     /// <param name="theNPC">NPC that should be added to the list</param>
@@ -135,7 +125,6 @@ public class GameController : MonoBehaviour {
     public void ActivateMinigame(string type)
     {
         string spawn = SceneManager.GetActiveScene().name + "_" + thePlayer.transform.position.x + "_" + thePlayer.transform.position.y;
-        Debug.Log(spawn);
         DataTracking.playerData.SpawnPoint = spawn;
         type = (type == "red" ? "Red minigame" : "Blue minigame");
         theCamera.isLevelCamera = false;
