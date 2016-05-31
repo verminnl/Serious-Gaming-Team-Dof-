@@ -4896,7 +4896,7 @@ GameObject:
   - 4: {fileID: 985301540}
   - 114: {fileID: 985301539}
   m_Layer: 0
-  m_Name: StartPoint (4)
+  m_Name: Elevator Startpoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4913,7 +4913,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6266e2cce480ed247851da0b2b392f25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startDirection: {x: 0, y: 0}
+  startDirection: {x: 0, y: 1}
   pointName: Elevator_Red
 --- !u!4 &985301540
 Transform:
@@ -4922,7 +4922,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 985301538}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 66.29, y: -71.38, z: 0}
+  m_LocalPosition: {x: 66.29, y: -73.36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
