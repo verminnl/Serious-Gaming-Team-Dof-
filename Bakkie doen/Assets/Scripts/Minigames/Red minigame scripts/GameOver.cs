@@ -4,10 +4,6 @@
 /// Manages the game over scene
 /// </summary>
 public class GameOver : MonoBehaviour {
-    //Time length that the screen should be active
-    public float screenDuration;
-    //Time that the screen is active
-    private float timeActive;
     //Check if the screen is active
     private bool isActive;
 
@@ -22,10 +18,8 @@ public class GameOver : MonoBehaviour {
     {
         if (isActive)
         {
-            timeActive = timeActive + Time.deltaTime;
-            if (timeActive > screenDuration)
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                Debug.Log("Ended");
                 DataTracking.resetGame();
             }
         }
