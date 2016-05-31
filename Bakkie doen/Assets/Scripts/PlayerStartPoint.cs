@@ -48,6 +48,12 @@ public class PlayerStartPoint : MonoBehaviour {
                 case "T3":
                     thePlayer.startPoint = (currentScene == "T0" ? "T0_Down" : "T2_Up");
                     break;
+                case "Elevator_Red":
+                case "Elevator_Blue":
+                case "Elevator_Yellow":
+                case "Elevator_Green":
+                    thePlayer.startPoint = DataTracking.previousFloor;
+                    break;
             }
         }
     }

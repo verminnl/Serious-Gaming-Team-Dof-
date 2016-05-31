@@ -20,12 +20,10 @@ public class MenuClass : MonoBehaviour {
         //Default selected option.
         selectedOption = optionRed;
         previousSelectedOption = optionRed;
+        selectedOption.GetComponent<Text>().color = Color.blue;
         toggleActive(false);
         selector = 0;
-
-
         player = FindObjectOfType<PlayerController>();
-
     }
 	
 	// Update is called once per frame
@@ -41,7 +39,7 @@ public class MenuClass : MonoBehaviour {
                 }
                 selectedOptionSetter(selector);
             }
-            if (Input.GetKeyDown(KeyCode.DownArrow))
+            else if (Input.GetKeyDown(KeyCode.DownArrow))
             {
                 selector++;
                 if (selector > 3)
@@ -81,9 +79,7 @@ public class MenuClass : MonoBehaviour {
                         startPoint = "Elevator_Yellow";
                         break;
                 }
-                player.canMove = true;
-                isActive = false;
-                player.startPoint = startPoint;
+                DataTracking.previousFloor = startPoint;
                 SceneManager.LoadScene(destination);
             }
         }

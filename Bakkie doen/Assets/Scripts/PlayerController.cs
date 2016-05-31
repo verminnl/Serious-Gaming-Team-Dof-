@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour {
             float.TryParse(spawnSplit[1], out posX);
             float.TryParse(spawnSplit[2], out posY);
             transform.position = new Vector3(posX, posY, transform.position.z);
-            DataTracking.playerData.SpawnPoint = null;
+            DataTracking.playerData.SpawnPoint = "";
         }
     }
 	
