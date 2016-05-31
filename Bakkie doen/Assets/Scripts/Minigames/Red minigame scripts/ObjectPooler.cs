@@ -37,7 +37,7 @@ public class ObjectPooler : MonoBehaviour {
         for (int i = 0; i < pooledObjects.Count; i++)
         {
             //If there is an inactive gameobject in the Hierarchy, return it
-            if (!pooledObjects[i].activeInHierarchy)
+            if(pooledObjects[i] != null && !pooledObjects[i].activeInHierarchy)
             {
                 return pooledObjects[i];
             }
