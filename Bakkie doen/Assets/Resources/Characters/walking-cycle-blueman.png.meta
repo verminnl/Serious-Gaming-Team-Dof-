@@ -60,7 +60,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
@@ -81,14 +81,13 @@ TextureImporter:
         - {x: 3, y: -29}
         - {x: -5, y: -29}
         - {x: -6, y: -32}
-      - - {x: -17, y: -23}
-        - {x: -17, y: -24}
-        - {x: 14, y: -24}
-        - {x: 18, y: -23}
-        - {x: 18, y: 32}
-        - {x: -16, y: 32}
-        - {x: -18, y: 30}
-        - {x: -18, y: -20}
+      - - {x: -7, y: 32}
+        - {x: -18, y: 27}
+        - {x: -18, y: -24}
+        - {x: 10, y: -24}
+        - {x: 18, y: -16}
+        - {x: 18, y: 23}
+        - {x: 8, y: 32}
     - name: walking-cycle-blueman_1
       rect:
         serializedVersion: 2
@@ -104,13 +103,14 @@ TextureImporter:
         - {x: 3, y: -29}
         - {x: -5, y: -29}
         - {x: -6, y: -32}
-      - - {x: -20, y: -16}
-        - {x: -17, y: -26}
-        - {x: 16, y: -26}
-        - {x: 18, y: -25}
-        - {x: 18, y: 32}
-        - {x: -13, y: 32}
-        - {x: -20, y: 28}
+      - - {x: -6, y: 32}
+        - {x: -20, y: 19}
+        - {x: -20, y: -12}
+        - {x: -12, y: -26}
+        - {x: 1, y: -26}
+        - {x: 18, y: -16}
+        - {x: 18, y: 22}
+        - {x: 8, y: 32}
     - name: walking-cycle-blueman_2
       rect:
         serializedVersion: 2
@@ -126,14 +126,13 @@ TextureImporter:
         - {x: 3, y: -29}
         - {x: -5, y: -29}
         - {x: -6, y: -32}
-      - - {x: -17, y: -23}
-        - {x: -17, y: -24}
-        - {x: 14, y: -24}
-        - {x: 18, y: -23}
-        - {x: 18, y: 32}
-        - {x: -16, y: 32}
-        - {x: -18, y: 30}
-        - {x: -18, y: -20}
+      - - {x: -7, y: 32}
+        - {x: -18, y: 27}
+        - {x: -18, y: -24}
+        - {x: 10, y: -24}
+        - {x: 18, y: -16}
+        - {x: 18, y: 23}
+        - {x: 8, y: 32}
     - name: walking-cycle-blueman_3
       rect:
         serializedVersion: 2
@@ -150,14 +149,14 @@ TextureImporter:
         - {x: -5, y: -29}
         - {x: -6, y: -32}
       - - {x: -6, y: 32}
-        - {x: -18, y: 22}
+        - {x: -18, y: 21}
         - {x: -18, y: -14}
         - {x: -16, y: -19}
         - {x: 0, y: -26}
-        - {x: 13, y: -26}
-        - {x: 20, y: -21}
-        - {x: 20, y: 22}
-        - {x: 16, y: 32}
+        - {x: 11, y: -26}
+        - {x: 20, y: -11}
+        - {x: 20, y: 20}
+        - {x: 8, y: 32}
     - name: walking-cycle-blueman_4
       rect:
         serializedVersion: 2
@@ -197,14 +196,17 @@ TextureImporter:
         - {x: 5, y: -29}
         - {x: -3, y: -29}
         - {x: -4, y: -32}
-      - - {x: -10, y: 32}
-        - {x: -18, y: 25}
-        - {x: -18, y: -15}
-        - {x: -17, y: -20}
-        - {x: -16, y: -21}
-        - {x: 16, y: -21}
-        - {x: 16, y: 23}
+      - - {x: 16, y: 23}
         - {x: 7, y: 32}
+        - {x: -10, y: 32}
+        - {x: -18, y: 25}
+        - {x: -18, y: -16}
+        - {x: -17, y: -19}
+        - {x: -15, y: -21}
+        - {x: 11, y: -21}
+        - {x: 13, y: -18}
+        - {x: 13, y: -2}
+        - {x: 16, y: 9}
     - name: walking-cycle-blueman_6
       rect:
         serializedVersion: 2
@@ -244,14 +246,15 @@ TextureImporter:
         - {x: 5, y: -29}
         - {x: -3, y: -29}
         - {x: -4, y: -32}
-      - - {x: -9, y: 32}
+      - - {x: 7, y: 32}
+        - {x: -9, y: 32}
         - {x: -18, y: 22}
         - {x: -18, y: -18}
-        - {x: -11, y: -21}
-        - {x: 11, y: -21}
-        - {x: 16, y: 1}
-        - {x: 16, y: 25}
-        - {x: 8, y: 32}
+        - {x: -10, y: -21}
+        - {x: 10, y: -21}
+        - {x: 14, y: -8}
+        - {x: 16, y: 4}
+        - {x: 16, y: 23}
     - name: walking-cycle-blueman_8
       rect:
         serializedVersion: 2
@@ -263,15 +266,14 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 10, y: 32}
-        - {x: -12, y: 32}
-        - {x: -16, y: 29}
-        - {x: -16, y: -3}
-        - {x: -8, y: -21}
-        - {x: 9, y: -21}
-        - {x: 18, y: 6}
-        - {x: 18, y: 25}
-        - {x: 12, y: 31}
+      - - {x: -9, y: 32}
+        - {x: -16, y: 25}
+        - {x: -16, y: 4}
+        - {x: -11, y: -17}
+        - {x: -2, y: -21}
+        - {x: 11, y: -21}
+        - {x: 18, y: -15}
+        - {x: 18, y: 32}
     - name: walking-cycle-blueman_9
       rect:
         serializedVersion: 2
@@ -283,15 +285,14 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 10, y: 32}
-        - {x: -9, y: 32}
-        - {x: -16, y: 25}
-        - {x: -16, y: 6}
-        - {x: -9, y: -21}
+      - - {x: -8, y: 32}
+        - {x: -16, y: 24}
+        - {x: -16, y: 3}
+        - {x: -11, y: -21}
         - {x: 15, y: -21}
         - {x: 18, y: -8}
         - {x: 18, y: 26}
-        - {x: 12, y: 31}
+        - {x: 10, y: 32}
     - name: walking-cycle-blueman_10
       rect:
         serializedVersion: 2
@@ -303,15 +304,14 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 10, y: 32}
-        - {x: -12, y: 32}
-        - {x: -16, y: 29}
-        - {x: -16, y: -3}
-        - {x: -8, y: -21}
-        - {x: 9, y: -21}
-        - {x: 18, y: 6}
-        - {x: 18, y: 25}
-        - {x: 12, y: 31}
+      - - {x: -9, y: 32}
+        - {x: -16, y: 25}
+        - {x: -16, y: 4}
+        - {x: -11, y: -17}
+        - {x: -2, y: -21}
+        - {x: 11, y: -21}
+        - {x: 18, y: -15}
+        - {x: 18, y: 32}
     - name: walking-cycle-blueman_11
       rect:
         serializedVersion: 2
@@ -343,14 +343,13 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -17, y: -23}
-        - {x: -17, y: -24}
-        - {x: 14, y: -24}
-        - {x: 18, y: -23}
-        - {x: 18, y: 32}
-        - {x: -16, y: 32}
-        - {x: -18, y: 30}
-        - {x: -18, y: -20}
+      - - {x: -7, y: 32}
+        - {x: -18, y: 27}
+        - {x: -18, y: -24}
+        - {x: 10, y: -24}
+        - {x: 18, y: -16}
+        - {x: 18, y: 23}
+        - {x: 8, y: 32}
     - name: walking-cycle-blueman_13
       rect:
         serializedVersion: 2
@@ -362,13 +361,14 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -20, y: -16}
-        - {x: -17, y: -26}
-        - {x: 16, y: -26}
-        - {x: 18, y: -25}
-        - {x: 18, y: 32}
-        - {x: -13, y: 32}
-        - {x: -20, y: 28}
+      - - {x: -6, y: 32}
+        - {x: -20, y: 19}
+        - {x: -20, y: -12}
+        - {x: -12, y: -26}
+        - {x: 1, y: -26}
+        - {x: 18, y: -16}
+        - {x: 18, y: 22}
+        - {x: 8, y: 32}
     - name: walking-cycle-blueman_14
       rect:
         serializedVersion: 2
@@ -380,14 +380,13 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -17, y: -23}
-        - {x: -17, y: -24}
-        - {x: 14, y: -24}
-        - {x: 18, y: -23}
-        - {x: 18, y: 32}
-        - {x: -16, y: 32}
-        - {x: -18, y: 30}
-        - {x: -18, y: -20}
+      - - {x: -7, y: 32}
+        - {x: -18, y: 27}
+        - {x: -18, y: -24}
+        - {x: 10, y: -24}
+        - {x: 18, y: -16}
+        - {x: 18, y: 23}
+        - {x: 8, y: 32}
     - name: walking-cycle-blueman_15
       rect:
         serializedVersion: 2
@@ -400,14 +399,14 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -6, y: 32}
-        - {x: -18, y: 22}
+        - {x: -18, y: 21}
         - {x: -18, y: -14}
         - {x: -16, y: -19}
         - {x: 0, y: -26}
-        - {x: 13, y: -26}
-        - {x: 20, y: -21}
-        - {x: 20, y: 22}
-        - {x: 16, y: 32}
+        - {x: 11, y: -26}
+        - {x: 20, y: -11}
+        - {x: 20, y: 20}
+        - {x: 8, y: 32}
     outline: []
   spritePackingTag: 32
   userData: 
