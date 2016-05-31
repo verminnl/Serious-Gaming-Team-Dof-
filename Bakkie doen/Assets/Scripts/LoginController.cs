@@ -4,6 +4,9 @@ using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using System.Net;
 
+/// <summary>
+/// This Class handles the complete login procedure 
+/// </summary>
 public class LoginController : MonoBehaviour {
     public string[] items;
 
