@@ -1306,7 +1306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerName: Nick
-  moveSpeed: 20
+  moveSpeed: 5
   lastMove: {x: 0, y: 0}
   startPoint: 
   canMove: 0
@@ -7557,7 +7557,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   followTarget: {fileID: 347859756}
-  moveSpeed: 25
+  moveSpeed: 5
   isLevelCamera: 1
 --- !u!81 &1759195943
 AudioListener:
@@ -7604,7 +7604,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 20
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
