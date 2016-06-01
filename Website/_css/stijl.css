@@ -1,0 +1,84 @@
+html{
+	font-family: 'Press Start 2P', cursive !important;
+	font-size: 10px;
+}
+
+body{
+	width: 500px;
+	margin: auto;
+}
+#section{
+	margin-top: 10%;
+}
+
+fieldset{
+	margin: auto;
+}
+img{
+	width: 100px;
+}
+
+label{
+	width: 150px;
+	float: left;
+	padding-top: 4px;
+}
+input{
+	margin-bottom: 3px;
+	width: 300px;
+}
+h2{
+	
+}
+
+.radio{
+	width: 20px;
+	float: left;
+	margin-bottom: 0px;
+}
+
+.radioText{
+	width: 40px;
+	float: left;
+	margin-bottom: 0px;
+}
+
+.submitButton{
+	width: 100%;
+}
+
+.logo{
+	width: 32%;
+	float: left;
+	position: relative;
+	bottom: 28px;
+}
+
+.karakter_man{
+	width: 32%;
+	content: url("../_img/r_man.png");
+	position: relative;
+	bottom: 10px;
+	float: left;
+}
+
+.karakter_vrouw{
+	width: 32%;
+	content: url("../_img/b_vrouw.png");
+	float: left;
+	position: relative;
+	bottom: 10px;
+}
+h2{
+	position: relative;
+	top: 150px;
+	left: 30%;
+	margin: 0px;
+}
+.fieldset_top{
+	height: 170px;
+	margin-bottom: 15px;
+}
+.fieldset_middle{
+	margin-bottom: 15px;
+}

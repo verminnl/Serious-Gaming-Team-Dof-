@@ -1,0 +1,14 @@
+form{
+	background-image: url("../_img/voor-ddr.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top;
+}
+
+.karakter{
+	content: url("../_img/b_vrouw.png");
+}
+
+.logo{
+	content: url("../_img/logored.png");
+}
