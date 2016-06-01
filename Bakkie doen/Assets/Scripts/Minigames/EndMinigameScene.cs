@@ -23,13 +23,13 @@ public class EndMinigameScene : MonoBehaviour {
 	void Start () {
         if(DataTracking.currentNPC != null)
         {
-            npcNameBox.text = DataTracking.currentNPC.avatar.FirstName + " " + DataTracking.currentNPC.avatar.LastName;
-            npcSprite.sprite = DataTracking.currentNPC.avatar.CharacterSprite;
+            npcNameBox.text = DataTracking.currentNPC.FirstName + " " + DataTracking.currentNPC.LastName;
+            npcSprite.sprite = DataTracking.currentNPC.CharacterSprite;
         }
         else
         {
-            npcNameBox.text = DataTracking.currentNPC.avatar.FullName;
-            npcSprite.sprite = DataTracking.currentNPC.avatar.CharacterSprite;
+            npcNameBox.text = DataTracking.currentNPC.FullName;
+            npcSprite.sprite = DataTracking.currentNPC.CharacterSprite;
         }
     }
 	

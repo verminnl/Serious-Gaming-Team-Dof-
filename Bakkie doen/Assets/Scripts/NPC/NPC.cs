@@ -3,18 +3,18 @@ using UnityEngine.UI;
 
 public class NPC : MonoBehaviour {
     public AvatarData avatar;
-    public bool dialogueFinished;
     public GameObject textBox;
     public PlayerController player;
     public bool textBoxActive;
     public Text textBoxText;
 
     private int lineCounter;
-
+    public GameController gameController;
     private bool playerInTriggerBox;
    
     // Use this for initialization
     void Start () {
+        gameController = FindObjectOfType<GameController>();
         player = FindObjectOfType<PlayerController>();
     }
 	
@@ -28,16 +28,16 @@ public class NPC : MonoBehaviour {
         {
             if(lineCounter == 0)
             {
-                textBoxText.text = DataTracking.currentNPC.avatar.Dialogue[lineCounter];
+                textBoxText.text = DataTracking.currentNPC.Dialogue[lineCounter];
             }
             if (Input.GetKeyUp(KeyCode.Space) && lineCounter < 3)
             {
-                textBoxText.text = DataTracking.currentNPC.avatar.Dialogue[lineCounter];
+                textBoxText.text = DataTracking.currentNPC.Dialogue[lineCounter];
                 lineCounter++;
             }
             else if(lineCounter == 3 && Input.GetKeyUp(KeyCode.Space))
             {
-                dialogueFinished = true;
+                gameController.dialogueFinished = true;
             }
         }
     }
@@ -77,6 +77,6 @@ public class NPC : MonoBehaviour {
         textBox.SetActive(true);
         textBoxActive = true;
         player.canMove = false;
-        DataTracking.currentNPC = this;
+        DataTracking.currentNPC = avatar;
     }
 }

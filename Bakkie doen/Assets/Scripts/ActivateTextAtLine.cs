@@ -45,10 +45,10 @@ public class ActivateTextAtLine : MonoBehaviour {
             theTextBox.currentLine = startLine;
             theTextBox.endAtLine = endLine;
             theTextBox.stopPlayerMovement = true;
-            if (gameObject.GetComponent<NPCController>() != null)
+            if (gameObject.GetComponent<NPC>() != null)
             {
-                theTextBox.currentNPC = gameObject.GetComponent<NPC>();
-                DataTracking.currentNPC = gameObject.GetComponent<NPC>();
+                theTextBox.currentNPC = gameObject.GetComponent<NPC>().avatar;
+                DataTracking.currentNPC = gameObject.GetComponent<NPC>().avatar;
             }
             theTextBox.EnableTextBox();
             theTextBox.isNPCDialogue = true;

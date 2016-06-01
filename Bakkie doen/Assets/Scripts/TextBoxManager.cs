@@ -31,12 +31,13 @@ public class TextBoxManager : MonoBehaviour {
     //Type speed
     public float typeSpeed;
     //NPC that the player is talking to
-    public NPC currentNPC;
-
+    public AvatarData currentNPC;
+    public GameController gameController;
     // Use this for initialization
     void Start()
     {
         player = FindObjectOfType<PlayerController>();
+        gameController = FindObjectOfType<GameController>();
 
         if (endAtLine == 0)
         {
@@ -76,7 +77,7 @@ public class TextBoxManager : MonoBehaviour {
                     
                     if (isNPCDialogue && currentNPC != null)
                     {
-                        currentNPC.dialogueFinished = true;
+                        gameController.dialogueFinished = true;
                     }
 
                 }

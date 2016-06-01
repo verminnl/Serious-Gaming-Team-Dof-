@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public static class DataTracking  {
     //NPC information for activating a minigame
-    public static NPC currentNPC;
+    public static AvatarData currentNPC;
     //Player Data Model
     public static AvatarData playerData;
     //NPC dictionairy
