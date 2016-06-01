@@ -70,12 +70,12 @@ public class LoginController : MonoBehaviour {
                 DataTracking.playerData.SessionID = BackEndCommunicator.Instance.CreateSession(playerID);
                 //Get the playerdata
                 DataTracking.playerData = BackEndCommunicator.Instance.GetPlayerData(playerID, DataTracking.playerData.SessionID);
-                DataTracking.playerData.CharacterSprite = SetCharacterSprite(DataTracking.playerData.Character);
+                DataTracking.playerData.CharacterSprite = SetCharacterSprite(DataTracking.playerData.Character, DataTracking.playerData.Element);
                 //Get the NPCData
                 DataTracking.npcData = BackEndCommunicator.Instance.GetNPCData(playerID, DataTracking.playerData.SessionID);
                 foreach (AvatarData npc in DataTracking.npcData)
                 {
-                    npc.CharacterSprite = SetCharacterSprite(npc.Character);
+                    npc.CharacterSprite = SetCharacterSprite(npc.Character, npc.Element);
                     npc.Dialogue = NPCSetDialogue(npc);
                 }
                 DataTracking.randomNPC = DataTracking.npcData[Random.Range(0, DataTracking.npcData.Count)];
@@ -119,12 +119,30 @@ public class LoginController : MonoBehaviour {
         return value;
     }
 
-    public Sprite SetCharacterSprite(string character)
+    public Sprite SetCharacterSprite(string character, string element)
     {
         Sprite sprite = new Sprite();
-        if (Resources.Load<Sprite>("Characters/" + character))
+        if (element == "red")
         {
-            sprite = Resources.Load<Sprite>("Characters/" + character);
+            if (character == "man")
+            {
+                sprite = Resources.Load<Sprite>("Characters/walking-cycle-redman");
+            }
+            else
+            {
+                sprite = Resources.Load<Sprite>("Characters/walking-cycle-redgirl");
+            }
+        }
+        else
+        {
+            if (character == "man")
+            {
+                sprite = Resources.Load<Sprite>("Characters/walking-cycle-blueman");
+            }
+            else
+            {
+                sprite = Resources.Load<Sprite>("Characters/walking-cycle-bluegirl");
+            }
         }
         return sprite;
     }
