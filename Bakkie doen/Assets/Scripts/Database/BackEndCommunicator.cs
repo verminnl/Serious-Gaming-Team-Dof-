@@ -6,7 +6,7 @@ using System.Collections.Generic;
 /// </summary>
 public class BackEndCommunicator {
     private string Protocol = "https://";
-    private string URL = "dodo.cah.onl/Database/";
+    private string URL = "dodo.cah.onl/";
 
     private static BackEndCommunicator instance;
     public static BackEndCommunicator Instance {
