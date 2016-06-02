@@ -21,18 +21,18 @@ public class EndMinigame : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (!RedMinigamePlayerController.isAlive)
+        if (!RedMinigamePlayerController.isAlive && thePlayer != null)
         {
             gameOverScreen.GetComponent<GameOver>().ActivateScreen();
-            if (thePlayer != null)
-            {
-                //Destroy(thePlayer.gameObject);
-            }
+            //if ()
+            //{
+                Destroy(thePlayer.gameObject);
+            //}
         }
 	}
 
     /// <summary>
-    /// When the player collides with this gameobject, closes the game, destroys the current player
+    /// When the player collides with this gameobject, activates the end game scene and destroys the current player
     /// </summary>
     /// <param name="other">The gameobject that collides with this one</param>
     void OnTriggerEnter2D(Collider2D other)
