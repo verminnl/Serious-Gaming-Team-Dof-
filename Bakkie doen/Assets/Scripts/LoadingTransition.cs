@@ -7,10 +7,16 @@ public class LoadingTransition : MonoBehaviour {
     public Image theLoadingImage;
     //Speed for the rotation of the image
     public float imageRotateSpeed;
+    //Loading text box
+    public Text loadingBox;
     //How long the loading screen should last
     public float loadingTime;
     //When to start a loading screen based on time in seconds
     public float timeToStartLoadingScreen;
+    //Time that the loading screen has been active
+    private float timeActive = 0f;
+    //Percentage for the loading screen
+    private int percentage;
     //Check if the player has found an NPC
     private bool playerHasFoundNPC;
     //Text for the encounter with NPC
@@ -31,20 +37,28 @@ public class LoadingTransition : MonoBehaviour {
     public Text npcSkillsBox;
     //Array with skills of an NPC
     public List<string> npcSkills;
-    //Checks if the skills of the NPC has been printed on the loading screen
-    //private bool skillsPrinted = false;
     //Checks if the loading screen has been printed
     private bool loadingScreenPrinted = false;
 
 	// Use this for initialization
 	void Start () {
-	    
+        
 	}
 	
 	// Update is called once per frame
 	void Update () {
         //Rotates the image on the loading screen
         theLoadingImage.rectTransform.Rotate(new Vector3(0, imageRotateSpeed * Time.deltaTime, 0));
+        //Prints the loading percentage on the loading screen
+        timeActive += Time.deltaTime;
+        percentage = (int) Mathf.Ceil((100 / loadingTime) * timeActive);
+        //Makes sure that the percentage won't go over 100%
+        if (percentage > 100)
+        {
+            percentage = 100;
+        }
+        loadingBox.text = "Laden...." + percentage + "%";
+
         //Makes sure that the items on the loading screen will only be printed once
         if (loadingScreenPrinted)
         {

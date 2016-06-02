@@ -158,11 +158,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 852c4e0e1656fba449fdc814b5c804aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueFinished: 0
   textBox: {fileID: 1570033360}
   player: {fileID: 0}
   textBoxActive: 0
   textBoxText: {fileID: 1570033359}
+  gameController: {fileID: 0}
 --- !u!4 &13248957
 Transform:
   m_ObjectHideFlags: 0
@@ -248,11 +248,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 852c4e0e1656fba449fdc814b5c804aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueFinished: 0
   textBox: {fileID: 1570033360}
   player: {fileID: 0}
   textBoxActive: 0
   textBoxText: {fileID: 1570033359}
+  gameController: {fileID: 0}
 --- !u!4 &18596019
 Transform:
   m_ObjectHideFlags: 0
@@ -806,11 +806,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 852c4e0e1656fba449fdc814b5c804aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueFinished: 0
   textBox: {fileID: 1570033360}
   player: {fileID: 0}
   textBoxActive: 0
   textBoxText: {fileID: 1570033359}
+  gameController: {fileID: 0}
 --- !u!4 &202692630
 Transform:
   m_ObjectHideFlags: 0
@@ -896,11 +896,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 852c4e0e1656fba449fdc814b5c804aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueFinished: 0
   textBox: {fileID: 1570033360}
   player: {fileID: 0}
   textBoxActive: 0
   textBoxText: {fileID: 1570033359}
+  gameController: {fileID: 0}
 --- !u!4 &207117124
 Transform:
   m_ObjectHideFlags: 0
@@ -986,11 +986,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 852c4e0e1656fba449fdc814b5c804aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueFinished: 0
   textBox: {fileID: 1570033360}
   player: {fileID: 0}
   textBoxActive: 0
   textBoxText: {fileID: 1570033359}
+  gameController: {fileID: 0}
 --- !u!4 &209551317
 Transform:
   m_ObjectHideFlags: 0
@@ -1620,11 +1620,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 852c4e0e1656fba449fdc814b5c804aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueFinished: 0
   textBox: {fileID: 1570033360}
   player: {fileID: 0}
   textBoxActive: 0
   textBoxText: {fileID: 1570033359}
+  gameController: {fileID: 0}
 --- !u!4 &349264527
 Transform:
   m_ObjectHideFlags: 0
@@ -2648,7 +2648,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 436572, guid: 447f96572e091714cb8a2dffc6f11dda, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 11490200, guid: 447f96572e091714cb8a2dffc6f11dda, type: 2}
       propertyPath: textBox
@@ -3583,11 +3583,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 852c4e0e1656fba449fdc814b5c804aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueFinished: 0
   textBox: {fileID: 1570033360}
   player: {fileID: 0}
   textBoxActive: 0
   textBoxText: {fileID: 1570033359}
+  gameController: {fileID: 0}
 --- !u!4 &676477335
 Transform:
   m_ObjectHideFlags: 0
@@ -4068,11 +4068,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 852c4e0e1656fba449fdc814b5c804aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueFinished: 0
   textBox: {fileID: 1570033360}
   player: {fileID: 0}
   textBoxActive: 0
   textBoxText: {fileID: 1570033359}
+  gameController: {fileID: 0}
 --- !u!4 &875631071
 Transform:
   m_ObjectHideFlags: 0
@@ -4723,11 +4723,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 852c4e0e1656fba449fdc814b5c804aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueFinished: 0
   textBox: {fileID: 1570033360}
   player: {fileID: 0}
   textBoxActive: 0
   textBoxText: {fileID: 1570033359}
+  gameController: {fileID: 0}
 --- !u!4 &977642316
 Transform:
   m_ObjectHideFlags: 0
@@ -5000,11 +5000,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 852c4e0e1656fba449fdc814b5c804aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueFinished: 0
   textBox: {fileID: 1570033360}
   player: {fileID: 0}
   textBoxActive: 0
   textBoxText: {fileID: 1570033359}
+  gameController: {fileID: 0}
 --- !u!4 &1006883151
 Transform:
   m_ObjectHideFlags: 0
@@ -6125,11 +6125,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 852c4e0e1656fba449fdc814b5c804aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueFinished: 0
   textBox: {fileID: 1570033360}
   player: {fileID: 0}
   textBoxActive: 0
   textBoxText: {fileID: 1570033359}
+  gameController: {fileID: 0}
 --- !u!4 &1248433450
 Transform:
   m_ObjectHideFlags: 0
@@ -6672,11 +6672,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 852c4e0e1656fba449fdc814b5c804aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueFinished: 0
   textBox: {fileID: 1570033360}
   player: {fileID: 0}
   textBoxActive: 0
   textBoxText: {fileID: 1570033359}
+  gameController: {fileID: 0}
 --- !u!4 &1342393687
 Transform:
   m_ObjectHideFlags: 0
@@ -7077,11 +7077,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 852c4e0e1656fba449fdc814b5c804aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueFinished: 0
   textBox: {fileID: 1570033360}
   player: {fileID: 0}
   textBoxActive: 0
   textBoxText: {fileID: 1570033359}
+  gameController: {fileID: 0}
 --- !u!4 &1406500747
 Transform:
   m_ObjectHideFlags: 0
@@ -7670,7 +7670,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22463252, guid: 11cda25e8f3cee04297d9262191299bd, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 22463252, guid: 11cda25e8f3cee04297d9262191299bd, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -9186,11 +9186,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 852c4e0e1656fba449fdc814b5c804aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueFinished: 0
   textBox: {fileID: 1570033360}
   player: {fileID: 0}
   textBoxActive: 0
   textBoxText: {fileID: 1570033359}
+  gameController: {fileID: 0}
 --- !u!4 &1842719405
 Transform:
   m_ObjectHideFlags: 0
@@ -9643,11 +9643,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 852c4e0e1656fba449fdc814b5c804aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueFinished: 0
   textBox: {fileID: 1570033360}
   player: {fileID: 0}
   textBoxActive: 0
   textBoxText: {fileID: 1570033359}
+  gameController: {fileID: 0}
 --- !u!4 &1942926173
 Transform:
   m_ObjectHideFlags: 0
@@ -10245,11 +10245,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 852c4e0e1656fba449fdc814b5c804aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueFinished: 0
   textBox: {fileID: 1570033360}
   player: {fileID: 0}
   textBoxActive: 0
   textBoxText: {fileID: 1570033359}
+  gameController: {fileID: 0}
 --- !u!4 &2055069258
 Transform:
   m_ObjectHideFlags: 0
