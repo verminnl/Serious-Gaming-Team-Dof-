@@ -91,12 +91,41 @@ public class BackEndCommunicator {
     {
         if(foundPlayerID != 0)
         {
-            GetData("create", "found_player", string.Format("pid={0}&fid={1}&sesid={2}", playerID, foundPlayerID, sessionID));
+            if (!checkFoundPlayer(foundPlayerID))
+            {
+                GetData("create", "found_player", string.Format("pid={0}&fid={1}&sesid={2}", playerID, foundPlayerID, sessionID));
+            }
         }
         GetData("create", "spawn", string.Format("pid={0}&spawn={1}&tut={2}&sesid={3}", playerID, spawn, tutorial, sessionID));
     }
 
     /// <summary>
+    /// Checks if the foundplayer has already been found by the player.
+    /// </summary>
+    /// <param name="playerID"> The id of the found player.</param>
+    /// <returns>(bool) true if the player has been found before. (bool) false if the player has not been found before</returns>
+    public bool checkFoundPlayer(int playerID)
+    {
+        AvatarData avatar = new AvatarData();
+        if(DataTracking.currentNPC != null)
+        {
+            avatar = DataTracking.currentNPC;
+        } else
+        {
+            avatar = DataTracking.randomNPC;
+        }
+
+        foreach (int item in DataTracking.playerData.FoundPlayers.intList)
+        {
+            if(item == avatar.PlayerID) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /// <summary>
+    /// 
     /// The query function.
     /// </summary>
     /// <param name="action"> What kind of action do you want to do?</param>
