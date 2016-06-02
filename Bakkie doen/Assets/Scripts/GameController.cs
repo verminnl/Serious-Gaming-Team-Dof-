@@ -58,7 +58,7 @@ public class GameController : MonoBehaviour
                 {
                     theLoadingTransition.SetActive(true);
                     theLoadingTransition.GetComponent<LoadingTransition>().HasThePlayerFoundNPC(true);
-                    theLoadingTransition.GetComponent<LoadingTransition>().npcSprite = DataTracking.currentNPC.CharacterSprite;
+                    theLoadingTransition.GetComponent<LoadingTransition>().npcSprite = DataTracking.currentNPC.CharacterSprite[0];
                     theLoadingTransition.GetComponent<LoadingTransition>().npcName = DataTracking.currentNPC.FullName;
                     theLoadingTransition.GetComponent<LoadingTransition>().npcRoom = DataTracking.currentNPC.Room;
                     theLoadingTransition.GetComponent<LoadingTransition>().npcSkills.Add(DataTracking.currentNPC.Skill1);

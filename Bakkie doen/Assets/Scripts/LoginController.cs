@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using System.Net;
+using System;
 
 /// <summary>
 /// This Class handles the complete login procedure 
@@ -24,7 +25,7 @@ public class LoginController : MonoBehaviour {
     }
     
     // Update is called once per frame
-    void Update() {
+    void LateUpdate() {
 
         if (Input.GetKeyDown(KeyCode.Return))
         {
@@ -32,6 +33,7 @@ public class LoginController : MonoBehaviour {
             string input = InputField.text;
             string user;
             string password;
+
             //Delete after winnovation
             if(input.Length == 4)
             {
@@ -95,7 +97,7 @@ public class LoginController : MonoBehaviour {
                     npc.CharacterSprite = SetCharacterSprite(npc.Character, npc.Element);
                     npc.Dialogue = NPCSetDialogue(npc);
                 }
-                DataTracking.randomNPC = DataTracking.npcData[Random.Range(0, DataTracking.npcData.Count)];
+                DataTracking.randomNPC = DataTracking.npcData[UnityEngine.Random.Range(0, DataTracking.npcData.Count)];
                 if (!DataTracking.playerData.Tutorial)
                 {
                     if(DataTracking.playerData.SpawnPoint == "")
@@ -136,29 +138,65 @@ public class LoginController : MonoBehaviour {
         return value;
     }
 
-    public Sprite SetCharacterSprite(string character, string element)
+    public Sprite[] SetCharacterSprite(string character, string element)
     {
-        Sprite sprite = new Sprite();
+        Sprite[] sprite;
         if (element == "red")
         {
             if (character == "man")
             {
-                sprite = Resources.Load<Sprite>("Characters/walking-cycle-redman");
+                sprite = Resources.LoadAll<Sprite>("Characters/walking-cycle-redman");
+
+                foreach (var renderer in GetComponentsInChildren<SpriteRenderer>())
+                {
+                    string spriteName = renderer.sprite.name;
+                    var newSprite = Array.Find(sprite, item => item.name == spriteName);
+
+                    if (newSprite)
+                        renderer.sprite = newSprite;
+                }
             }
             else
             {
-                sprite = Resources.Load<Sprite>("Characters/walking-cycle-redgirl");
+                sprite = Resources.LoadAll<Sprite>("Characters/walking-cycle-redgirl");
+
+                foreach (var renderer in GetComponentsInChildren<SpriteRenderer>())
+                {
+                    string spriteName = renderer.sprite.name;
+                    var newSprite = Array.Find(sprite, item => item.name == spriteName);
+
+                    if (newSprite)
+                        renderer.sprite = newSprite;
+                }
             }
         }
         else
         {
             if (character == "man")
             {
-                sprite = Resources.Load<Sprite>("Characters/walking-cycle-blueman");
+                sprite = Resources.LoadAll<Sprite>("Characters/walking-cycle-blueman");
+
+                foreach (var renderer in GetComponentsInChildren<SpriteRenderer>())
+                {
+                    string spriteName = renderer.sprite.name;
+                    var newSprite = Array.Find(sprite, item => item.name == spriteName);
+
+                    if (newSprite)
+                        renderer.sprite = newSprite;
+                }
             }
             else
             {
-                sprite = Resources.Load<Sprite>("Characters/walking-cycle-bluegirl");
+                sprite = Resources.LoadAll<Sprite>("Characters/walking-cycle-bluegirl");
+
+                foreach (var renderer in GetComponentsInChildren<SpriteRenderer>())
+                {
+                    string spriteName = renderer.sprite.name;
+                    var newSprite = Array.Find(sprite, item => item.name == spriteName);
+
+                    if (newSprite)
+                        renderer.sprite = newSprite;
+                }
             }
         }
         return sprite;

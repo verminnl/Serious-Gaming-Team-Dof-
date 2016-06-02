@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         anim = GetComponent<Animator>();
-        GetComponent<SpriteRenderer>().sprite = DataTracking.playerData.CharacterSprite;
+        GetComponent<SpriteRenderer>().sprite = DataTracking.playerData.CharacterSprite[0];
         myRigidBody = GetComponent<Rigidbody2D>();
         if(DataTracking.playerData.SpawnPoint != "")
         {

@@ -11675,6 +11675,7 @@ GameObject:
   - 61: {fileID: 2007852913}
   - 50: {fileID: 2007852912}
   - 114: {fileID: 2007852915}
+  - 114: {fileID: 2007852911}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -11682,6 +11683,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2007852911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2007852910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7670bc80dc6c5424f8028cf9ca760dbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteSheetName: walking-cycle2-bluegirl-alt
 --- !u!50 &2007852912
 Rigidbody2D:
   serializedVersion: 2

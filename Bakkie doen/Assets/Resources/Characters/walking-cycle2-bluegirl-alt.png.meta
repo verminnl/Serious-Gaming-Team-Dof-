@@ -1,9 +1,25 @@
 fileFormatVersion: 2
 guid: 088a92cdb40b049f2aa074321b537af9
-timeCreated: 1464773334
+timeCreated: 1464878067
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Idle_Down
+    21300002: Walk_Down_Right
+    21300004: Walk_Down
+    21300006: Walk_Down_Left
+    21300008: Idle_Left
+    21300010: Walk_Left_Right
+    21300012: Walk_Left
+    21300014: Walk_Left_Left
+    21300016: Idle_Right
+    21300018: Walk_Right_Right
+    21300020: Walk_Right
+    21300022: Walk_Right_Left
+    21300024: Idle_Up
+    21300026: Walk_Up_Right
+    21300028: Walk_Up
+    21300030: Walk_Up_Left
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -49,9 +65,325 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: Idle_Down
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7, y: 28}
+        - {x: -18, y: 23}
+        - {x: -18, y: -22}
+        - {x: -12, y: -26}
+        - {x: 14, y: -26}
+        - {x: 18, y: -21}
+        - {x: 18, y: 21}
+        - {x: 13, y: 28}
+    - name: Walk_Down_Right
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 28}
+        - {x: -15, y: 28}
+        - {x: -19, y: 27}
+        - {x: -20, y: 15}
+        - {x: -20, y: -15}
+        - {x: -6, y: -28}
+        - {x: -2, y: -28}
+        - {x: 2, y: -24}
+        - {x: 18, y: -16}
+        - {x: 18, y: 21}
+    - name: Walk_Down
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7, y: 28}
+        - {x: -18, y: 23}
+        - {x: -18, y: -22}
+        - {x: -12, y: -26}
+        - {x: 14, y: -26}
+        - {x: 18, y: -21}
+        - {x: 18, y: 21}
+        - {x: 13, y: 28}
+    - name: Walk_Down_Left
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6, y: 28}
+        - {x: -6, y: 28}
+        - {x: -18, y: 20}
+        - {x: -18, y: -16}
+        - {x: -4, y: -28}
+        - {x: 10, y: -28}
+        - {x: 13, y: -26}
+        - {x: 20, y: -10}
+        - {x: 20, y: 10}
+        - {x: 18, y: 19}
+    - name: Idle_Left
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6, y: 27}
+        - {x: -12, y: 25}
+        - {x: -16, y: 20}
+        - {x: -16, y: 9}
+        - {x: -11, y: -24}
+        - {x: -8, y: -26}
+        - {x: 9, y: -26}
+        - {x: 14, y: -5}
+        - {x: 14, y: 24}
+        - {x: 10, y: 27}
+    - name: Walk_Left_Right
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 14, y: 19}
+        - {x: 8, y: 27}
+        - {x: -6, y: 27}
+        - {x: -12, y: 25}
+        - {x: -16, y: 19}
+        - {x: -16, y: -13}
+        - {x: -11, y: -26}
+        - {x: 8, y: -26}
+        - {x: 13, y: -23}
+        - {x: 14, y: -7}
+    - name: Walk_Left
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6, y: 27}
+        - {x: -12, y: 25}
+        - {x: -16, y: 20}
+        - {x: -16, y: 9}
+        - {x: -11, y: -24}
+        - {x: -8, y: -26}
+        - {x: 9, y: -26}
+        - {x: 14, y: -5}
+        - {x: 14, y: 24}
+        - {x: 10, y: 27}
+    - name: Walk_Left_Left
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6, y: 27}
+        - {x: -12, y: 25}
+        - {x: -16, y: 19}
+        - {x: -16, y: -20}
+        - {x: -9, y: -26}
+        - {x: 12, y: -26}
+        - {x: 13, y: -25}
+        - {x: 14, y: -17}
+        - {x: 14, y: 21}
+        - {x: 9, y: 27}
+    - name: Idle_Right
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6, y: 27}
+        - {x: -14, y: 20}
+        - {x: -14, y: -6}
+        - {x: -10, y: -22}
+        - {x: -3, y: -26}
+        - {x: 15, y: -26}
+        - {x: 16, y: -25}
+        - {x: 16, y: 27}
+    - name: Walk_Right_Right
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4, y: 27}
+        - {x: -10, y: 25}
+        - {x: -14, y: 23}
+        - {x: -14, y: -16}
+        - {x: -12, y: -26}
+        - {x: 15, y: -26}
+        - {x: 16, y: -19}
+        - {x: 16, y: 25}
+        - {x: 13, y: 27}
+    - name: Walk_Right
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6, y: 27}
+        - {x: -14, y: 20}
+        - {x: -14, y: -6}
+        - {x: -10, y: -22}
+        - {x: -3, y: -26}
+        - {x: 15, y: -26}
+        - {x: 16, y: -25}
+        - {x: 16, y: 27}
+    - name: Walk_Right_Left
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4, y: 27}
+        - {x: -10, y: 25}
+        - {x: -14, y: 23}
+        - {x: -14, y: -26}
+        - {x: 16, y: -26}
+        - {x: 16, y: 22}
+        - {x: 11, y: 27}
+    - name: Idle_Up
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18, y: 28}
+        - {x: -18, y: -22}
+        - {x: -12, y: -26}
+        - {x: 13, y: -26}
+        - {x: 18, y: -19}
+        - {x: 18, y: 21}
+        - {x: 10, y: 28}
+    - name: Walk_Up_Right
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 18, y: 23}
+        - {x: 15, y: 28}
+        - {x: -12, y: 28}
+        - {x: -20, y: 25}
+        - {x: -20, y: -14}
+        - {x: -7, y: -28}
+        - {x: -2, y: -28}
+        - {x: 2, y: -24}
+        - {x: 14, y: -18}
+        - {x: 18, y: -14}
+    - name: Walk_Up
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18, y: 28}
+        - {x: -18, y: -22}
+        - {x: -12, y: -26}
+        - {x: 13, y: -26}
+        - {x: 18, y: -19}
+        - {x: 18, y: 21}
+        - {x: 10, y: 28}
+    - name: Walk_Up_Left
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: 28}
+        - {x: -18, y: 27}
+        - {x: -18, y: -19}
+        - {x: -2, y: -28}
+        - {x: 9, y: -28}
+        - {x: 20, y: -13}
+        - {x: 20, y: 23}
+        - {x: 7, y: 28}
     outline: []
-  spritePackingTag: 
+  spritePackingTag: 32
   userData: 
   assetBundleName: 
   assetBundleVariant: 

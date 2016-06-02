@@ -1,25 +1,25 @@
 fileFormatVersion: 2
 guid: 971c40e20fd434ad1869333237449280
-timeCreated: 1464175740
+timeCreated: 1464876830
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: walking-cycle-bluegirl_0
-    21300002: walking-cycle-bluegirl_1
-    21300004: walking-cycle-bluegirl_2
-    21300006: walking-cycle-bluegirl_3
-    21300008: walking-cycle-bluegirl_4
-    21300010: walking-cycle-bluegirl_5
-    21300012: walking-cycle-bluegirl_6
-    21300014: walking-cycle-bluegirl_7
-    21300016: walking-cycle-bluegirl_8
-    21300018: walking-cycle-bluegirl_9
-    21300020: walking-cycle-bluegirl_10
-    21300022: walking-cycle-bluegirl_11
-    21300024: walking-cycle-bluegirl_12
-    21300026: walking-cycle-bluegirl_13
-    21300028: walking-cycle-bluegirl_14
-    21300030: walking-cycle-bluegirl_15
+    21300000: Idle_Down
+    21300002: Walk_Down_Right
+    21300004: Walk_Down
+    21300006: Walk_Down_Left
+    21300008: Idle_Left
+    21300010: Walk_Left_Right
+    21300012: Walk_Left
+    21300014: Walk_Left_Left
+    21300016: Idle_Right
+    21300018: Walk_Right_Right
+    21300020: Walk_Right
+    21300022: Walk_Right_left
+    21300024: Idle_Up
+    21300026: Walk_Up_Right
+    21300028: Walk_Up
+    21300030: Walk_Up_Left
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -66,7 +66,7 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: walking-cycle-bluegirl_0
+    - name: Idle_Down
       rect:
         serializedVersion: 2
         x: 0
@@ -74,18 +74,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -16, y: 22}
-        - {x: -18, y: 16}
-        - {x: -18, y: -19}
-        - {x: -12, y: -24}
-        - {x: 11, y: -24}
-        - {x: 18, y: -15}
-        - {x: 18, y: 19}
-        - {x: 11, y: 22}
-    - name: walking-cycle-bluegirl_1
+      - - {x: -18, y: 22}
+        - {x: -18, y: -24}
+        - {x: 10, y: -24}
+        - {x: 18, y: -16}
+        - {x: 18, y: 18}
+        - {x: 6, y: 22}
+    - name: Walk_Down_Right
       rect:
         serializedVersion: 2
         x: 64
@@ -93,20 +91,22 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 5, y: 22}
-        - {x: -13, y: 22}
-        - {x: -20, y: 9}
-        - {x: -20, y: -19}
-        - {x: -19, y: -21}
-        - {x: -10, y: -26}
-        - {x: 6, y: -26}
-        - {x: 18, y: -14}
+      - - {x: 10, y: 20}
+        - {x: -6, y: 22}
+        - {x: -9, y: 22}
+        - {x: -18, y: 12}
+        - {x: -20, y: 1}
+        - {x: -20, y: -11}
+        - {x: -9, y: -26}
+        - {x: -2, y: -26}
+        - {x: 3, y: -24}
+        - {x: 14, y: -16}
+        - {x: 18, y: -13}
         - {x: 18, y: 13}
-        - {x: 10, y: 20}
-    - name: walking-cycle-bluegirl_2
+    - name: Walk_Down
       rect:
         serializedVersion: 2
         x: 128
@@ -114,18 +114,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -16, y: 22}
-        - {x: -18, y: 16}
-        - {x: -18, y: -19}
-        - {x: -12, y: -24}
-        - {x: 11, y: -24}
-        - {x: 18, y: -15}
-        - {x: 18, y: 19}
-        - {x: 11, y: 22}
-    - name: walking-cycle-bluegirl_3
+      - - {x: -18, y: 22}
+        - {x: -18, y: -24}
+        - {x: 10, y: -24}
+        - {x: 18, y: -16}
+        - {x: 18, y: 18}
+        - {x: 6, y: 22}
+    - name: Walk_Down_Left
       rect:
         serializedVersion: 2
         x: 192
@@ -133,18 +131,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -14, y: 22}
         - {x: -18, y: 16}
         - {x: -18, y: -15}
         - {x: -7, y: -26}
-        - {x: 9, y: -26}
-        - {x: 20, y: -16}
+        - {x: 7, y: -26}
+        - {x: 20, y: -11}
         - {x: 20, y: 17}
         - {x: 6, y: 22}
-    - name: walking-cycle-bluegirl_4
+    - name: Idle_Left
       rect:
         serializedVersion: 2
         x: 0
@@ -152,7 +150,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -6, y: 22}
@@ -163,7 +161,7 @@ TextureImporter:
         - {x: 14, y: -11}
         - {x: 14, y: 17}
         - {x: 12, y: 22}
-    - name: walking-cycle-bluegirl_5
+    - name: Walk_Left_Right
       rect:
         serializedVersion: 2
         x: 64
@@ -171,17 +169,17 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -6, y: 22}
         - {x: -16, y: 20}
-        - {x: -16, y: -22}
-        - {x: 11, y: -22}
-        - {x: 14, y: -17}
-        - {x: 14, y: 17}
+        - {x: -16, y: -20}
+        - {x: -10, y: -22}
+        - {x: 14, y: -22}
+        - {x: 14, y: 20}
         - {x: 12, y: 22}
-    - name: walking-cycle-bluegirl_6
+    - name: Walk_Left
       rect:
         serializedVersion: 2
         x: 128
@@ -189,7 +187,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -6, y: 22}
@@ -200,7 +198,7 @@ TextureImporter:
         - {x: 14, y: -11}
         - {x: 14, y: 17}
         - {x: 12, y: 22}
-    - name: walking-cycle-bluegirl_7
+    - name: Walk_Left_Left
       rect:
         serializedVersion: 2
         x: 192
@@ -208,16 +206,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -11, y: 22}
-        - {x: -16, y: 21}
-        - {x: -16, y: -17}
-        - {x: -15, y: -22}
+      - - {x: -7, y: 22}
+        - {x: -16, y: 19}
+        - {x: -16, y: -14}
+        - {x: -13, y: -22}
         - {x: 14, y: -22}
         - {x: 14, y: 22}
-    - name: walking-cycle-bluegirl_8
+    - name: Idle_Right
       rect:
         serializedVersion: 2
         x: 0
@@ -225,7 +223,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -14, y: 22}
@@ -235,7 +233,7 @@ TextureImporter:
         - {x: 14, y: -12}
         - {x: 14, y: 19}
         - {x: 7, y: 22}
-    - name: walking-cycle-bluegirl_9
+    - name: Walk_Right_Right
       rect:
         serializedVersion: 2
         x: 64
@@ -243,18 +241,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -8, y: 22}
-        - {x: -14, y: 16}
+      - - {x: -11, y: 22}
+        - {x: -14, y: 21}
         - {x: -14, y: -2}
-        - {x: -7, y: -22}
-        - {x: 15, y: -22}
-        - {x: 16, y: -20}
-        - {x: 16, y: 11}
-        - {x: 9, y: 22}
-    - name: walking-cycle-bluegirl_10
+        - {x: -8, y: -22}
+        - {x: 14, y: -22}
+        - {x: 16, y: -17}
+        - {x: 16, y: 10}
+        - {x: 11, y: 22}
+    - name: Walk_Right
       rect:
         serializedVersion: 2
         x: 128
@@ -262,7 +260,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -14, y: 22}
@@ -272,7 +270,7 @@ TextureImporter:
         - {x: 14, y: -12}
         - {x: 14, y: 19}
         - {x: 7, y: 22}
-    - name: walking-cycle-bluegirl_11
+    - name: Walk_Right_left
       rect:
         serializedVersion: 2
         x: 192
@@ -280,7 +278,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -14, y: 22}
@@ -290,7 +288,7 @@ TextureImporter:
         - {x: 16, y: -19}
         - {x: 16, y: 14}
         - {x: 13, y: 22}
-    - name: walking-cycle-bluegirl_12
+    - name: Idle_Up
       rect:
         serializedVersion: 2
         x: 0
@@ -298,18 +296,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -12, y: 22}
-        - {x: -18, y: 19}
-        - {x: -18, y: -14}
-        - {x: -11, y: -24}
-        - {x: 12, y: -24}
-        - {x: 18, y: -19}
-        - {x: 18, y: 16}
-        - {x: 16, y: 22}
-    - name: walking-cycle-bluegirl_13
+      - - {x: -9, y: 22}
+        - {x: -18, y: 18}
+        - {x: -18, y: -20}
+        - {x: -12, y: -24}
+        - {x: 14, y: -24}
+        - {x: 18, y: -18}
+        - {x: 18, y: 15}
+        - {x: 15, y: 22}
+    - name: Walk_Up_Right
       rect:
         serializedVersion: 2
         x: 64
@@ -317,18 +315,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -14, y: 22}
-        - {x: -20, y: 8}
-        - {x: -20, y: -18}
-        - {x: -14, y: -26}
-        - {x: 3, y: -26}
-        - {x: 18, y: -19}
-        - {x: 18, y: 13}
-        - {x: 10, y: 22}
-    - name: walking-cycle-bluegirl_14
+        - {x: -20, y: 7}
+        - {x: -20, y: -17}
+        - {x: -10, y: -26}
+        - {x: 14, y: -26}
+        - {x: 18, y: -17}
+        - {x: 18, y: 21}
+        - {x: 14, y: 22}
+    - name: Walk_Up
       rect:
         serializedVersion: 2
         x: 128
@@ -336,18 +334,18 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -12, y: 22}
-        - {x: -18, y: 19}
-        - {x: -18, y: -14}
-        - {x: -11, y: -24}
-        - {x: 12, y: -24}
-        - {x: 18, y: -19}
-        - {x: 18, y: 16}
-        - {x: 16, y: 22}
-    - name: walking-cycle-bluegirl_15
+      - - {x: -9, y: 22}
+        - {x: -18, y: 18}
+        - {x: -18, y: -20}
+        - {x: -12, y: -24}
+        - {x: 14, y: -24}
+        - {x: 18, y: -18}
+        - {x: 18, y: 15}
+        - {x: 15, y: 22}
+    - name: Walk_Up_Left
       rect:
         serializedVersion: 2
         x: 192
@@ -355,18 +353,16 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -12, y: 22}
-        - {x: -18, y: 19}
-        - {x: -18, y: -15}
-        - {x: -3, y: -26}
-        - {x: 7, y: -26}
-        - {x: 11, y: -24}
+      - - {x: -18, y: 22}
+        - {x: -18, y: -21}
+        - {x: -11, y: -26}
+        - {x: 9, y: -26}
         - {x: 20, y: -16}
-        - {x: 20, y: 11}
-        - {x: 16, y: 22}
+        - {x: 20, y: 21}
+        - {x: 15, y: 22}
     outline: []
   spritePackingTag: 32
   userData: 

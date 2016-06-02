@@ -12,7 +12,7 @@ public class AvatarData
     public string Job;
     public string SpawnPoint;
     public string Character;
-    public Sprite CharacterSprite;
+    public Sprite[] CharacterSprite;
     public string Element;
     public string Room;
     public IntArray FoundPlayers;
