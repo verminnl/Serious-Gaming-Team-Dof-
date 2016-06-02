@@ -599,10 +599,11 @@ MonoBehaviour:
   - Dit is de Doolhof minigame.
   - Het doel van deze minigame is om de uitgang te zoeken.
   - De uitgang is een blauw ovaal in de doolhof.
-  - Je kan jouw cirkeltje besturen door de joystick.
-  - En dat waren de twee minigames van het spel.
+  - Je kan jouw cirkel besturen door de joystick.
+  - En dat zijn de twee minigames van het spel.
   - Dank je wel voor het spelen van de tutorial van Bakkie doen!
   dialogueStarted: 0
+  dialogueTrimmed: 0
   screen: {fileID: 0}
 --- !u!212 &152192891
 SpriteRenderer:
@@ -2284,10 +2285,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lines:
-  - Er zijn 2 minigames speelbaar op dit moment.
+  - Er zijn 2 minigames in het spel.
   - Doolhof- en Ontwijk minigame.
-  - Zullen we maar even naar de minigames gaan kijken.
+  - Zullen we naar de minigames gaan kijken?
   dialogueStarted: 0
+  dialogueTrimmed: 0
   screen: {fileID: 1029403763}
 --- !u!212 &386397738
 SpriteRenderer:
@@ -2710,6 +2712,7 @@ MonoBehaviour:
   - Gebruik dan de Spatiebalk.
   - Veel plezier!
   dialogueStarted: 0
+  dialogueTrimmed: 0
   screen: {fileID: 0}
 --- !u!1 &516783760
 GameObject:
@@ -5674,9 +5677,10 @@ MonoBehaviour:
   - Welke collega is dat?
   - Praat met deze collega en leer hem of haar kennen.
   - Na het gesprek start er een minigame.
-  - "Na de minigame krijg je een kaart met de gegevens van de betreffende collega\u2019s."
-  - Weet je gelijk welk talent hij of zij heeft!
+  - Na de minigame krijg je een kaart met de gegevens van de betreffende collega.
+  - Weet je gelijk welke talenten hij of zij heeft!
   dialogueStarted: 0
+  dialogueTrimmed: 0
   screen: {fileID: 0}
 --- !u!212 &1385905405
 SpriteRenderer:
@@ -7815,6 +7819,7 @@ MonoBehaviour:
   - De ruimteschip kan je met de joystick besturen.
   - Je kan ook schieten met de "J"-toets.
   dialogueStarted: 0
+  dialogueTrimmed: 0
   screen: {fileID: 343399403}
 --- !u!212 &1874889919
 SpriteRenderer:
