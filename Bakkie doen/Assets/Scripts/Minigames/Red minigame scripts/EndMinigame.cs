@@ -7,7 +7,7 @@ public class EndMinigame : MonoBehaviour {
     //The player of the minigame
     public RedMinigamePlayerController thePlayer;
     //Time that the minigame will take in seconds
-    public int gameTime;
+    public int timeLimit;
     //Screen that appears when the minigame ends
     public GameObject gameEndScreen;
     //Screen that appears when the player is dead
@@ -16,7 +16,7 @@ public class EndMinigame : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         //Sets the position of the gameobject based on the player speed and the time that the minigame should last
-        transform.position = new Vector3(transform.position.x, thePlayer.transform.position.y + thePlayer.moveSpeed * gameTime, transform.position.z);
+        transform.position = new Vector3(transform.position.x, thePlayer.transform.position.y + thePlayer.moveSpeed * timeLimit, transform.position.z);
 	}
 	
 	// Update is called once per frame
@@ -24,10 +24,7 @@ public class EndMinigame : MonoBehaviour {
         if (!RedMinigamePlayerController.isAlive && thePlayer != null)
         {
             gameOverScreen.GetComponent<GameOver>().ActivateScreen();
-            //if ()
-            //{
-                Destroy(thePlayer.gameObject);
-            //}
+            Destroy(thePlayer.gameObject);
         }
 	}
 
