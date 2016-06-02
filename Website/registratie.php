@@ -17,19 +17,39 @@ if(isset($_POST["submit"])){
 	if(strlen($Firstname) < 4 || strlen($Firstname) > 40){
 		$firstnameErr = "Voornaam is te kort of te lang.";
 	}
+	if (strpos($Firstname, '#') !== false){
+		$firstnameErr = "Illegale karakters in voornaam.";
+	}
 	// Check if its between 4 and 40 characters
 	$Lastname = filter_var($_POST["achternaam"],FILTER_SANITIZE_STRING);
 	if(strlen($Lastname) < 4 || strlen($Lastname) > 40){
 		$lastnameErr = "Achternaam is te kort of te lang.";
+	}
+	if (strpos($Lastname, '#') !== false){
+		$lastnameErr = "Illegale karakters in achternaam.";
 	}
 	// Check if its between 4 and 40 characters
 	$Job = filter_var($_POST["functie"],FILTER_SANITIZE_STRING);
 	if(strlen($Job) < 4 || strlen($Job) > 40){
 		$jobErr = "Functie is te kort of te lang.";
 	}
+	if (strpos($Job, '#') !== false){
+		$jobErr = "Illegale karakters in functie.";
+	}
+	if (strpos($Username, '"') !== false ||
+	strpos($Username,"'") !== false ||
+	strpos($Username,"$" !== false)){
+		$usernameErr = "Illegale karakters in gebruikersnaam.";
+	}
+	if (strpos($Password, '"') !== false ||
+	strpos($Password,"'") !== false ||
+	strpos($Password,"$" !== false)){
+		$passwordErr = "Illegale karakters in wachtwoord.";
+	}
 	// Length check 7 or 8 chars
 	$Username = filter_var($_POST["gebruikersnaam"],FILTER_SANITIZE_NUMBER_INT);
-	if(strlen($Username) == 7 || strlen($Password) == 8){
+	if(strlen($Username) != 7 && strlen($Username) != 8)
+	{
 		$usernameErr = "Gebruikersnaam te kort of te lang.";
 	}
 	// Length check 3 chars
@@ -42,51 +62,64 @@ if(isset($_POST["submit"])){
 	if(strlen($Skill1) < 4 || strlen($Skill1) > 40){
 		$skill1Err = "Talent 1 is te kort of te lang.";
 	}
+	if (strpos($Skill1, '#') !== false){
+		$skill1Err = "Illegale karakters in Talent 1.";
+	}
+	
 	// Check if its between 4 and 40 characters
 	$Skill2 = filter_var($_POST["talent2"],FILTER_SANITIZE_STRING);
 	if (strlen($Skill2) < 4 || strlen($Skill2) > 40) {
         $skill2Err = "Talent 2 is te kort of te lang.";
     }
+	if (strpos($Skill2, '#') !== false){
+		$skill2Err = "Illegale karakters in Talent 2.";
+	}
 	// Check if its between 4 and 40 characters
 	$Skill3 = filter_var($_POST["talent3"],FILTER_SANITIZE_STRING);
-	if (strlen($Skill2) < 4 || strlen($Skill2) > 40){
+	if (strlen($Skill3) < 4 || strlen($Skill3) > 40){
         $skill3Err = "Talent 3 is te kort of te lang.";
     }
+	if (strpos($Skill3, '#') !== false){
+		$skill3Err = "Illegale karakters in Talent 3.";
+	}
 	// Check if its between 5 and 7 characters
 	$Room = filter_var($_POST["kamernummer"],FILTER_SANITIZE_STRING);
 	if (strlen($Room) < 5 || strlen($Room) > 7) {
         $roomErr = "Kamernummer is te kort of te lang.";
     }
+	if (strpos($Room, '#') !== false){
+		$roomErr = "Illegale karakters in kamernummer.";
+	}
+	
 	// Check if value is "r_man", "b_man", "r_woman" or "b_woman"
 	$Character = filter_var($_POST["karakter"],FILTER_SANITIZE_STRING);
-	if ($Character != "r_man" || $Character != "b_man" || $Character != "r_vrouw" ||$Character != "b_vrouw") {
+	if ($Character != "r_man" && $Character != "b_man" && $Character != "r_vrouw" && $Character != "b_vrouw") {
         $characterErr = "Het gekozen karakter heeft een foutieve waarde.";
     }
+	if (strpos($Character, '#') !== false){
+		$characterErr = "Illegale karakters in karakter.";
+	}
 			
-	if($firstnameErr != "" ||
-		$lastnameErr != "" ||
-		$jobErr != "" ||
-		$usernameErr != "" ||
-		$passwordErr != "" ||
-		$characterErr != "" ||
-		$skill1Err != "" ||
-		$skill2Err != "" ||
-		$skill3Err != "" ||
-		$roomErr != "")
-	{		
-		$servername = "localhost";
-		$username = "dodo";
-		$password = "bakkiedoen";
-		$dbName = "bakkie_doen";
+	if($firstnameErr == "" &&
+		$lastnameErr == "" &&
+		$jobErr == "" &&
+		$usernameErr == "" &&
+		$passwordErr == "" &&
+		$characterErr == "" &&
+		$skill1Err == "" &&
+		$skill2Err == "" &&
+		$skill3Err == "" &&
+		$roomErr == ""){	
 		
-		//Make Connection
-		$conn = new mysqli($servername, $username, $password, $dbName);
+		include("_php/database_connection.php");
 		
 		$query = "SELECT * FROM `player` WHERE `Username` = $Username";
 		$result = mysqli_query($conn,$query);
 		$rowCount = mysqli_num_rows($result);
 		if($rowCount != null){
-			$usernameErr = "Deze gebruikersnaam is al in gebruik.";
+			if($usernameErr == ""){
+				$usernameErr = "Deze gebruikersnaam is al in gebruik.";				
+			}
 		}
 		else{
 			switch ($Character){
@@ -112,14 +145,14 @@ if(isset($_POST["submit"])){
 			$query = $query . "VALUES (NULL, '$Firstname', '$Lastname', '$Job', '',";
 			$query = $query . "'$Character', $Username, $Password, '$Element', '$Room', '$Skill1', '$Skill2', '$Skill3', 1)";
 			$result = mysqli_query($conn,$query);
-		}
+			header('Location:succes.html');
+		}	
 	}
-echo $usernameErr;
 }
 
 function placeErrorBox($var){
 	if($var != ""){
-		echo "<p>" . $var . "</p>";
+		echo "<p class='error'>" . $var . "</p>";
 	}
 	
 }
@@ -133,6 +166,7 @@ function placeErrorBox($var){
 		<title>Bakkie Doen Serious Gaming</title>
 	</head>
 	<body>
+	<br/>
 		<div id="header">
 		</div>
 
@@ -173,6 +207,7 @@ function placeErrorBox($var){
 			
 			<fieldset>
 			<legend> Karakter </legend>
+			<?php placeErrorBox($characterErr); ?>
 				<div class="container">
 					<label class="radioText"><img src="_img/r_man.png"/></label><input class="radio" type="radio" name="karakter" value="r_man" checked> 
 				</div>

@@ -50,7 +50,7 @@ input{
 	font-family: 'Press Start 2P', cursive !important;
 }
 form{
-	background-image: url("../_img/voor-dd.jpg");
+	background-image: url("../_img/voor-ddr.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: top;
@@ -95,4 +95,11 @@ h2{
 }
 .fieldset_middle{
 	margin-bottom: 15px;
+}
+legend{
+	text-align: center;
+}
+.error{
+	color: red;
+	font-size: 8px;
 }
