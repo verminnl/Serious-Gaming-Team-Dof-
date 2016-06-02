@@ -6,7 +6,6 @@ if(isset($_POST["submit"])){
 	$jobErr = "";
 	$usernameErr = "";
 	$passwordErr = "";
-	$elementErr = "";
 	$characterErr = "";
 	$skill1Err = "";
 	$skill2Err = "";
@@ -38,11 +37,6 @@ if(isset($_POST["submit"])){
 	if(strlen($Password) != 3){
 		$passwordErr = "Wachtwoord is niet lang genoeg.";
 	}
-	// check wether red or blue
-	$Element = filter_var($_POST["kleur"],FILTER_SANITIZE_STRING);
-	if ($Element != "red" || $Element != "blue") {
-        $elementErr = "De gekozen kleur heeft een foutieve waarde.";
-    }
 	// Check if its between 4 and 40 characters
 	$Skill1 = filter_var($_POST["talent1"],FILTER_SANITIZE_STRING);
 	if(strlen($Skill1) < 4 || strlen($Skill1) > 40){
@@ -75,16 +69,12 @@ if(isset($_POST["submit"])){
 		$jobErr != "" ||
 		$usernameErr != "" ||
 		$passwordErr != "" ||
-		$elementErr != "" ||
 		$characterErr != "" ||
 		$skill1Err != "" ||
 		$skill2Err != "" ||
 		$skill3Err != "" ||
 		$roomErr != "")
 	{
-		$continue = false;
-	}
-	if($continue){
 		include 'database_connection.php';
 		$query = "SELECT * FROM `player` WHERE `Username` = $Username";
 		$result = mysqli_query($conn,$query);
@@ -93,9 +83,9 @@ if(isset($_POST["submit"])){
 		}
 		else{
 			$query = "INSERT INTO `player` (`PlayerID`, `FirstName`, `LastName`, `Job`,`SpawnPoint`, ";
-			$query = $query . "`Character`, `Username`, `Password`, `Element`, `Room`, `Skill1`, `Skill2`, `Skill3`, `Tutorial`) ";
+			$query = $query . "`Character`, `Username`, `Password`, `Room`, `Skill1`, `Skill2`, `Skill3`, `Tutorial`) ";
 			$query = $query . "VALUES (NULL, '$Firstname', '$Lastname', '$Job', '',";
-			$query = $query . "'$Character', '$Username', '$Password', '$Element', '$Room', '$Skill1', '$Skill2', '$Skill3', 1)";
+			$query = $query . "'$Character', '$Username', '$Password', '$Room', '$Skill1', '$Skill2', '$Skill3', 1)";
 			$result = mysqli_query($conn,$query);
 			echo $query;
 		}
@@ -113,36 +103,20 @@ function placeErrorBox($var){
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="_css/stijl.css">
-		<link id="style" rel="stylesheet" type="text/css" href="_css/man_blue.css">
 		<link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+		<link rel="shortcut icon" href="_img/flavicon.ico"/>
 		<title>Bakkie Doen Serious Gaming</title>
-		<script>
-		
-			var style = document.getElementById("style");
-			var gender = "man";
-			var color = "rood";
-			
-			function characterGender(myRadio) {
-				gender = myRadio.value;
-				style.href = "_css/" + myRadio.value + "_" + color + ".css";
-			}
-			function characterColor(myRadio) {
-				color = myRadio.value;
-				style.href = "_css/" + gender + "_" + myRadio.value + ".css";
-			}
-			
-		</script>
 	</head>
 	<body>
 		<div id="header">
 		</div>
 
 		<div id="section">
-		<form action="" method="post">
+		<form id="form" action="" method="post">
 			<fieldset class="fieldset_top">
 				<h2>Registratie</h2>
 				<img class="karakter_man"/>
-				<img class="logo"/>
+				<img id="logo" class="logo"/>
 				<img class="karakter_vrouw"/>
 			</fieldset>
 			
@@ -174,15 +148,19 @@ function placeErrorBox($var){
 			
 			<fieldset>
 			<legend> Karakter </legend>
-				<label>Geslacht</label>
-					<input class="radio" type="radio" name="karakter" onclick="characterGender(this);" value="man" checked> <label class="radioText">Man</label>
-					<input class="radio" type="radio" name="karakter" onclick="characterGender(this);" value="vrouw"> <label class="radioText">Vrouw</label> <br/>
-				<label>Kleur</label>
-					<input class="radio" type="radio" name="kleur" onclick="characterColor(this);" value="blue" checked> <label class="radioText">Blauw</label>
-					<input class="radio" type="radio" name="kleur" onclick="characterColor(this);" value="red"> <label class="radioText">Rood</label> <br/>
-				<label> Karakter </label>
-				<img class="karakter"/>
-			<input class="submitButton" type="submit" name="submit" value="Verzenden">		
+				<div class="container">
+					<label class="radioText"><img src="_img/r_man.png"/></label><input class="radio" type="radio" name="karakter" value="r_man" checked> 
+				</div>
+				<div class="container">
+					<label class="radioText"><img src="_img/b_man.png"/></label><input class="radio" type="radio" name="karakter" value="b_man"> 
+				</div>
+				<div class="container">
+					<label class="radioText"><img src="_img/r_vrouw.png"/></label><input class="radio" type="radio" name="karakter" value="r_vrouw"> 
+				</div>
+				<div class="container">
+					<label class="radioText"><img src="_img/b_vrouw.png"/></label><input class="radio" type="radio" name="karakter" value="b_vrouw"> 
+				</div>
+			<input class="submitButton" type="submit" name="submit" value="Registreren">		
 			</fieldset>	
 			</form>
 		</div>

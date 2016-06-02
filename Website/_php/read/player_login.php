@@ -1,8 +1,8 @@
 <?php
 	include '../database_connection.php';
-	include '../check_session_default.php';
+	include '../check_session.php';
 	
-	if(!checkSession()){
+	if(!checkSessionDefault()){
 		die("haha nope");
 	}
 	

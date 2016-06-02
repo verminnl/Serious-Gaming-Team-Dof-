@@ -7,9 +7,6 @@ body{
 	width: 500px;
 	margin: auto;
 }
-#section{
-	margin-top: 10%;
-}
 
 fieldset{
 	margin: auto;
@@ -21,33 +18,50 @@ img{
 label{
 	width: 150px;
 	float: left;
-	padding-top: 4px;
+	padding-top: 6px;
 }
 input{
 	margin-bottom: 3px;
 	width: 300px;
 }
-h2{
-	
-}
 
 .radio{
-	width: 20px;
-	float: left;
+	margin-top: 0px;
 	margin-bottom: 0px;
+	width: 13px;
+	margin-left: 44px;
 }
 
 .radioText{
-	width: 40px;
-	float: left;
 	margin-bottom: 0px;
+	width: 120px;
+	padding-top: 0px;
+}
+
+.container{
+	width: 120px;
+	float: left;
+	margin-top: -5px;
 }
 
 .submitButton{
 	width: 100%;
+	margin-top: 10px;
+	font-family: 'Press Start 2P', cursive !important;
+}
+form{
+	background-image: url("../_img/voor-dd.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top;
+}
+
+.karakter{
+	content: url("../_img/b_man.png");
 }
 
 .logo{
+	content: url("../_img/logoblue.png");
 	width: 32%;
 	float: left;
 	position: relative;
