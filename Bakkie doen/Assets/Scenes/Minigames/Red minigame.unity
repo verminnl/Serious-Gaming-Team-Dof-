@@ -2230,7 +2230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thePlayer: {fileID: 2143395138}
-  gameTime: 10
+  timeLimit: 10
   gameEndScreen: {fileID: 588224678}
   gameOverScreen: {fileID: 1371613963}
 --- !u!1 &2006174702

@@ -36,9 +36,9 @@ public class EndGameScene : MonoBehaviour {
 	void Update () {
         if (isActive)
         {
-            BackEndCommunicator.Instance.EndGameSave(DataTracking.playerData.PlayerID, foundPlayer.PlayerID, DataTracking.playerData.SessionID, DataTracking.playerData.SpawnPoint, DataTracking.playerData.Tutorial);
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyUp(KeyCode.Space))
             {
+                BackEndCommunicator.Instance.EndGameSave(DataTracking.playerData.PlayerID, foundPlayer.PlayerID, DataTracking.playerData.SessionID, DataTracking.playerData.SpawnPoint, DataTracking.playerData.Tutorial);
                 DataTracking.resetGame();
             }
         }
