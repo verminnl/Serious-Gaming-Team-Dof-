@@ -26,8 +26,6 @@ public class TutorialEnd : MonoBehaviour {
 	void Update () {
         timer = timer + Time.deltaTime;
 
-        Debug.Log(timer);
-
         if (timer > activeTime)
         {
             BackEndCommunicator.Instance.EndGameSave(DataTracking.playerData.PlayerID, 0, DataTracking.playerData.SessionID, "", false);

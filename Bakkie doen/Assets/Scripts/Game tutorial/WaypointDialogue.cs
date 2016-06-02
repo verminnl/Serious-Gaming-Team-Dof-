@@ -8,6 +8,8 @@ public class WaypointDialogue : MonoBehaviour {
     public string[] lines;
     //Checks if the dialogue has been started
     public bool dialogueStarted = false;
+    //Check if dialogue playername has been trimmed
+    public bool dialogueTrimmed = false;
     //Screen that will be activated after dialogue
     public GameObject screen;
 
@@ -19,18 +21,21 @@ public class WaypointDialogue : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	    for (int i = 0; i < lines.Length - 1; i++)
+        if (!dialogueTrimmed)
         {
-            if (lines[i].Contains("#playername"))
+            dialogueTrimmed = true;
+            for (int i = 0; i < lines.Length - 1; i++)
             {
-                Debug.Log("There is #playername");
-                if(DataTracking.playerData != null)
+                if (lines[i].Contains("#playername"))
                 {
-                    lines[i] = lines[i].Replace("#playername", DataTracking.playerData.FirstName);
-                }
-                else
-                {
-                    lines[i] = lines[i].Replace("#playername", "Gast");
+                    if (DataTracking.playerData != null)
+                    {
+                        lines[i] = lines[i].Replace("#playername", DataTracking.playerData.FirstName);
+                    }
+                    else
+                    {
+                        lines[i] = lines[i].Replace("#playername", "Gast");
+                    }
                 }
             }
         }

@@ -54,7 +54,6 @@ public class DialogueClass
     /// </returns>
     public int GetNPCDictionaryLength()
     {
-        //Debug.Log(npcDialogues.Count);
         return npcDialogues.Count;
     }
 }

@@ -41,22 +41,9 @@ public class NPC : MonoBehaviour {
             }
         }
     }
-
-    //void OnTriggerStay2D(Collider2D other)
-    //{
-    //    Debug.Log("In trigger!!!");
-    //    if (Input.GetKeyUp(KeyCode.Space) && !textBoxActive)
-    //    {
-    //        textBox.SetActive(true);
-    //        textBoxActive = true;
-    //        player.canMove = false;
-    //        DataTracking.currentNPC = this;
-    //    }
-    //}
-
+    
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("In trigger!!!");
         if (other.name == "Player")
         {
             playerInTriggerBox = true;
@@ -65,7 +52,6 @@ public class NPC : MonoBehaviour {
 
     void OnTriggerExit2D(Collider2D other)
     {
-        Debug.Log("Not in trigger anymore!!!");
         if (other.name == "Player")
         {
             playerInTriggerBox = false;

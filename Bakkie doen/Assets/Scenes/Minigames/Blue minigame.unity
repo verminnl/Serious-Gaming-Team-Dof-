@@ -711,7 +711,7 @@ MonoBehaviour:
 
     het meedoen
 
-    en tot snel
+    en tot snel!
 
 
 '
@@ -1548,7 +1548,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Klik op de Spatiebalk om het scherm af te sluiten
+  m_Text: Druk op de Spatiebalk om het scherm af te sluiten
 --- !u!222 &1106710570
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2118,7 +2118,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Klik op de Spatiebalk om het scherm af te sluiten
+  m_Text: Druk op de Spatiebalk om het scherm af te sluiten
 --- !u!222 &1895363518
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2191,10 +2191,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Je hebt verloren
+  m_Text: 'Je hebt verloren!
 
 
-    Probeer de volgende keer beter'
+    Probeer het de volgende keer beter!'
 --- !u!222 &1965249153
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -20,6 +20,8 @@ public class GameOver : MonoBehaviour {
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                BackEndCommunicator.Instance.EndGameSave(DataTracking.playerData.PlayerID, 0, DataTracking.playerData.SessionID, DataTracking.playerData.SpawnPoint, DataTracking.playerData.Tutorial);
+                
                 DataTracking.resetGame();
             }
         }
