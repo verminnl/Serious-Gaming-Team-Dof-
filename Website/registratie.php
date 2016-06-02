@@ -57,13 +57,12 @@ if(isset($_POST["submit"])){
 	if (strlen($Room) < 5 || strlen($Room) > 7) {
         $roomErr = "Kamernummer is te kort of te lang.";
     }
-	// Check if value is "man" or "woman"
+	// Check if value is "r_man", "b_man", "r_woman" or "b_woman"
 	$Character = filter_var($_POST["karakter"],FILTER_SANITIZE_STRING);
-	if ($Character != "man" || $Character != "vrouw") {
+	if ($Character != "r_man" || $Character != "b_man" || $Character != "r_vrouw" ||$Character != "b_vrouw") {
         $characterErr = "Het gekozen karakter heeft een foutieve waarde.";
     }
 			
-	$continue = true;
 	if($firstnameErr != "" ||
 		$lastnameErr != "" ||
 		$jobErr != "" ||
@@ -74,22 +73,48 @@ if(isset($_POST["submit"])){
 		$skill2Err != "" ||
 		$skill3Err != "" ||
 		$roomErr != "")
-	{
-		include 'database_connection.php';
+	{		
+		$servername = "localhost";
+		$username = "dodo";
+		$password = "bakkiedoen";
+		$dbName = "bakkie_doen";
+		
+		//Make Connection
+		$conn = new mysqli($servername, $username, $password, $dbName);
+		
 		$query = "SELECT * FROM `player` WHERE `Username` = $Username";
 		$result = mysqli_query($conn,$query);
-		if(mysqli_num_rows($result) > 0){
+		$rowCount = mysqli_num_rows($result);
+		if($rowCount != null){
 			$usernameErr = "Deze gebruikersnaam is al in gebruik.";
 		}
 		else{
+			switch ($Character){
+				case "r_man":
+				$Character = "walking-cycle-redman";
+				$Element = "red";
+				break;
+				case "b_man":
+				$Character = "walking-cycle-blueman";
+				$Element = "blue";
+				break;
+				case "r_vrouw":
+				$Character = "walking-cycle-redgirl";
+				$Element = "red";
+				break;
+				case "b_vrouw":
+				$Character = "walking-cycle-bluegirl";
+				$Element = "blue";
+				break;
+			}
 			$query = "INSERT INTO `player` (`PlayerID`, `FirstName`, `LastName`, `Job`,`SpawnPoint`, ";
-			$query = $query . "`Character`, `Username`, `Password`, `Room`, `Skill1`, `Skill2`, `Skill3`, `Tutorial`) ";
+			$query = $query . "`Character`, `Username`, `Password`, `Element`, `Room`, `Skill1`, `Skill2`, `Skill3`, `Tutorial`) ";
 			$query = $query . "VALUES (NULL, '$Firstname', '$Lastname', '$Job', '',";
-			$query = $query . "'$Character', '$Username', '$Password', '$Room', '$Skill1', '$Skill2', '$Skill3', 1)";
+			$query = $query . "'$Character', $Username, $Password, '$Element', '$Room', '$Skill1', '$Skill2', '$Skill3', 1)";
 			$result = mysqli_query($conn,$query);
-			echo $query;
 		}
-	}	
+	}
+echo $usernameErr;
 }
 
 function placeErrorBox($var){
