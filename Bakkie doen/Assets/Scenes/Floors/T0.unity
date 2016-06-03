@@ -5820,6 +5820,7 @@ GameObject:
   - 61: {fileID: 1206012458}
   - 50: {fileID: 1206012457}
   - 114: {fileID: 1206012456}
+  - 114: {fileID: 1206012462}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -5939,6 +5940,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
+--- !u!114 &1206012462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1206012455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7670bc80dc6c5424f8028cf9ca760dbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteSheetName: 
 --- !u!1 &1206046907
 GameObject:
   m_ObjectHideFlags: 0
