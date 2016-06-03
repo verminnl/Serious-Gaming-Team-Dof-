@@ -139,28 +139,8 @@ public class LoginController : MonoBehaviour {
     public Sprite SetCharacterSprite(string character, string element)
     {
         Sprite sprite = new Sprite();
-        if (element == "red")
-        {
-            if (character == "man")
-            {
-                sprite = Resources.Load<Sprite>("Characters/walking-cycle-redman");
-            }
-            else
-            {
-                sprite = Resources.Load<Sprite>("Characters/walking-cycle-redgirl");
-            }
-        }
-        else
-        {
-            if (character == "man")
-            {
-                sprite = Resources.Load<Sprite>("Characters/walking-cycle-blueman");
-            }
-            else
-            {
-                sprite = Resources.Load<Sprite>("Characters/walking-cycle-bluegirl");
-            }
-        }
+        sprite = Resources.Load<Sprite>("Characters/" + character);
+        
         return sprite;
     }
 
