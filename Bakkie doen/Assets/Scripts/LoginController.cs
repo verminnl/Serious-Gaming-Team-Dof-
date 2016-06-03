@@ -89,12 +89,12 @@ public class LoginController : MonoBehaviour {
                 DataTracking.playerData.SessionID = BackEndCommunicator.Instance.CreateSession(playerID);
                 //Get the playerdata
                 DataTracking.playerData = BackEndCommunicator.Instance.GetPlayerData(playerID, DataTracking.playerData.SessionID);
-                DataTracking.playerData.CharacterSprite = SetCharacterSprite(DataTracking.playerData.Character, DataTracking.playerData.Element);
+                DataTracking.playerData.CharacterSprite = SetPlayerSprite(DataTracking.playerData.Character, DataTracking.playerData.Element);
                 //Get the NPCData
                 DataTracking.npcData = BackEndCommunicator.Instance.GetNPCData(playerID, DataTracking.playerData.SessionID);
                 foreach (AvatarData npc in DataTracking.npcData)
                 {
-                    npc.CharacterSprite = SetCharacterSprite(npc.Character, npc.Element);
+                    npc.NPCSprite = SetCharacterSprite(npc.Character, npc.Element);
                     npc.Dialogue = NPCSetDialogue(npc);
                 }
                 DataTracking.randomNPC = DataTracking.npcData[UnityEngine.Random.Range(0, DataTracking.npcData.Count)];
@@ -138,11 +138,16 @@ public class LoginController : MonoBehaviour {
         return value;
     }
 
-    public Sprite[] SetCharacterSprite(string character, string element)
+    public Sprite SetCharacterSprite(string character, string element)
     {
-        Sprite sprite = new Sprite();
-        sprite = Resources.Load<Sprite>("Characters/" + character);
+        Sprite sprite = Resources.Load<Sprite>("Characters/" + character);
         
+        return sprite;
+    }
+    public Sprite[] SetPlayerSprite(string character, string element)
+    {
+        Sprite[] sprite = Resources.LoadAll<Sprite>("Characters/" + character);
+
         return sprite;
     }
 

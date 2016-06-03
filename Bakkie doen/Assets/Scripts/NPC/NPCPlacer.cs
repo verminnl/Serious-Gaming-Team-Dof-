@@ -10,7 +10,7 @@ public class NPCPlacer : MonoBehaviour {
         {
             randomNPC = DataTracking.npcData[Random.Range(0, DataTracking.npcData.Count - 1)];
             location.GetComponent<NPC>().avatar = randomNPC;
-            location.GetComponent<SpriteRenderer>().sprite = randomNPC.CharacterSprite[0];
+            location.GetComponent<SpriteRenderer>().sprite = randomNPC.NPCSprite;
         }
     }
 	

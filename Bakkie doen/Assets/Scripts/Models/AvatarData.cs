@@ -13,6 +13,7 @@ public class AvatarData
     public string SpawnPoint;
     public string Character;
     public Sprite[] CharacterSprite;
+    public Sprite NPCSprite;
     public string Element;
     public string Room;
     public IntArray FoundPlayers;

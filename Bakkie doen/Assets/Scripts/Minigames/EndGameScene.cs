@@ -24,7 +24,7 @@ public class EndGameScene : MonoBehaviour {
 	void Start () {
         foundPlayer = DataTracking.currentNPC == null ? DataTracking.randomNPC : DataTracking.currentNPC;
         npcNameBox.text = foundPlayer.FullName;
-        npcSprite.sprite = foundPlayer.CharacterSprite[0];
+        npcSprite.sprite = foundPlayer.NPCSprite;
         textBox.text = textBox.text + DataTracking.playerData.FirstName;
         if(foundPlayer.Element == "blue")
         {
