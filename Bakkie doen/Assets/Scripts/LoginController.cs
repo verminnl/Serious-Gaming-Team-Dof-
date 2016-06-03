@@ -140,65 +140,9 @@ public class LoginController : MonoBehaviour {
 
     public Sprite[] SetCharacterSprite(string character, string element)
     {
-        Sprite[] sprite;
-        if (element == "red")
-        {
-            if (character == "man")
-            {
-                sprite = Resources.LoadAll<Sprite>("Characters/walking-cycle-redman");
-
-                foreach (var renderer in GetComponentsInChildren<SpriteRenderer>())
-                {
-                    string spriteName = renderer.sprite.name;
-                    var newSprite = Array.Find(sprite, item => item.name == spriteName);
-
-                    if (newSprite)
-                        renderer.sprite = newSprite;
-                }
-            }
-            else
-            {
-                sprite = Resources.LoadAll<Sprite>("Characters/walking-cycle-redgirl");
-
-                foreach (var renderer in GetComponentsInChildren<SpriteRenderer>())
-                {
-                    string spriteName = renderer.sprite.name;
-                    var newSprite = Array.Find(sprite, item => item.name == spriteName);
-
-                    if (newSprite)
-                        renderer.sprite = newSprite;
-                }
-            }
-        }
-        else
-        {
-            if (character == "man")
-            {
-                sprite = Resources.LoadAll<Sprite>("Characters/walking-cycle-blueman");
-
-                foreach (var renderer in GetComponentsInChildren<SpriteRenderer>())
-                {
-                    string spriteName = renderer.sprite.name;
-                    var newSprite = Array.Find(sprite, item => item.name == spriteName);
-
-                    if (newSprite)
-                        renderer.sprite = newSprite;
-                }
-            }
-            else
-            {
-                sprite = Resources.LoadAll<Sprite>("Characters/walking-cycle-bluegirl");
-
-                foreach (var renderer in GetComponentsInChildren<SpriteRenderer>())
-                {
-                    string spriteName = renderer.sprite.name;
-                    var newSprite = Array.Find(sprite, item => item.name == spriteName);
-
-                    if (newSprite)
-                        renderer.sprite = newSprite;
-                }
-            }
-        }
+        Sprite sprite = new Sprite();
+        sprite = Resources.Load<Sprite>("Characters/" + character);
+        
         return sprite;
     }
 

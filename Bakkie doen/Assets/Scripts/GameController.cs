@@ -88,7 +88,7 @@ public class GameController : MonoBehaviour
 
                     //Sends the information of the NPC to the loading screen
                     theLoadingTransition.GetComponent<LoadingTransition>().HasThePlayerFoundNPC(false);
-                    theLoadingTransition.GetComponent<LoadingTransition>().npcSprite = NPCSetSprite(DataTracking.randomNPC.Character, DataTracking.randomNPC.Element);
+                    theLoadingTransition.GetComponent<LoadingTransition>().npcSprite = DataTracking.randomNPC.CharacterSprite;
                     theLoadingTransition.GetComponent<LoadingTransition>().npcName = DataTracking.randomNPC.FullName;
                     theLoadingTransition.GetComponent<LoadingTransition>().npcRoom = DataTracking.randomNPC.Room;
                     theLoadingTransition.GetComponent<LoadingTransition>().npcSkills.Add(DataTracking.randomNPC.Skill1);
@@ -121,33 +121,5 @@ public class GameController : MonoBehaviour
         theCamera.isLevelCamera = false;
         thePlayer.inMinigame = true;
         SceneManager.LoadScene(type);
-    }
-
-    public Sprite NPCSetSprite(string character, string element)
-    {
-        Sprite sprite = new Sprite();
-        if (element == "red")
-        {
-            if(character == "man")
-            {
-                sprite = Resources.Load<Sprite>("Characters/walking-cycle-redman");
-            }
-            else
-            {
-                sprite = Resources.Load<Sprite>("Characters/walking-cycle-redgirl");
-            }
-        }
-        else
-        {
-            if(character == "man")
-            {
-                sprite = Resources.Load<Sprite>("Characters/walking-cycle-blueman");
-            }
-            else
-            {
-                sprite = Resources.Load<Sprite>("Characters/walking-cycle-bluegirl");
-            }
-        }
-        return sprite;
-    }
+    }    
 }
