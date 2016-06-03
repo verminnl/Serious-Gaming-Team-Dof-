@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 971c40e20fd434ad1869333237449280
-timeCreated: 1464876830
+timeCreated: 1464942042
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -15,7 +15,7 @@ TextureImporter:
     21300016: Idle_Right
     21300018: Walk_Right_Right
     21300020: Walk_Right
-    21300022: Walk_Right_left
+    21300022: Walk_Right_Left
     21300024: Idle_Up
     21300026: Walk_Up_Right
     21300028: Walk_Up
@@ -270,7 +270,7 @@ TextureImporter:
         - {x: 14, y: -12}
         - {x: 14, y: 19}
         - {x: 7, y: 22}
-    - name: Walk_Right_left
+    - name: Walk_Right_Left
       rect:
         serializedVersion: 2
         x: 192
