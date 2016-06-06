@@ -48,7 +48,7 @@ if(isset($_POST["submit"])){
 	
 	// Check if its between 4 and 40 characters
 	$Skill1 = filter_var($_POST["talent1"],FILTER_SANITIZE_STRING);
-	if(strlen($Skill1) < 4 || strlen($Skill1) > 40){
+	if(strlen($Skill1) < 4 || strlen($Skill1) > 20){
 		$skill1Err = "Talent 1 is te kort of te lang.";
 	}
 	if (strpos($Skill1, '#') !== false){
@@ -57,7 +57,7 @@ if(isset($_POST["submit"])){
 	
 	// Check if its between 4 and 40 characters
 	$Skill2 = filter_var($_POST["talent2"],FILTER_SANITIZE_STRING);
-	if (strlen($Skill2) < 4 || strlen($Skill2) > 40) {
+	if (strlen($Skill2) < 4 || strlen($Skill2) > 20) {
         $skill2Err = "Talent 2 is te kort of te lang.";
     }
 	if (strpos($Skill2, '#') !== false){
@@ -65,7 +65,7 @@ if(isset($_POST["submit"])){
 	}
 	// Check if its between 4 and 40 characters
 	$Skill3 = filter_var($_POST["talent3"],FILTER_SANITIZE_STRING);
-	if (strlen($Skill3) < 4 || strlen($Skill3) > 40){
+	if (strlen($Skill3) < 4 || strlen($Skill3) > 20){
         $skill3Err = "Talent 3 is te kort of te lang.";
     }
 	if (strpos($Skill3, '#') !== false){
