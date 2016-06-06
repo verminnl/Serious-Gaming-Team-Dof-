@@ -63,13 +63,16 @@ if(isset($_POST["submit"])){
 	if (strpos($Skill2, '#') !== false){
 		$skill2Err = "Illegale karakters in Talent 2.";
 	}
+	$Skill3 = "";
 	// Check if its between 4 and 40 characters
 	$Skill3 = filter_var($_POST["talent3"],FILTER_SANITIZE_STRING);
-	if (strlen($Skill3) < 4 || strlen($Skill3) > 20){
-        $skill3Err = "Talent 3 is te kort of te lang.";
-    }
-	if (strpos($Skill3, '#') !== false){
-		$skill3Err = "Illegale karakters in Talent 3.";
+	if($Skill3 != ""){
+		if (strlen($Skill3) < 4 || strlen($Skill3) > 20){
+				$skill3Err = "Talent 3 is te kort of te lang.";
+		}
+		if (strpos($Skill3, '#') !== false){
+			$skill3Err = "Illegale karakters in Talent 3.";
+		}	
 	}
 	// Check if its between 5 and 7 characters
 	$Room = filter_var($_POST["kamernummer"],FILTER_SANITIZE_STRING);
@@ -178,11 +181,11 @@ function placeErrorBox($var){
 				<?php placeErrorBox($roomErr); ?> 
 				<label>Kamernummer</label><input value=<?php echo '"' . $Room . '"';?> type="text" placeholder="T0.09" name="kamernummer" maxlength="7" required/> <br/>
 				<?php placeErrorBox($skill1Err); ?> 
-				<label>Talent 1</label><input value=<?php echo '"' . $Skill1 . '"';?> type="text" placeholder="Toezicht houden" name="talent1" maxlength="45" required/> <br/> 
+				<label>Talent 1</label><input value=<?php echo '"' . $Skill1 . '"';?> type="text" placeholder="Toezicht houden" name="talent1" maxlength="20" required/> <br/> 
 				<?php placeErrorBox($skill2Err); ?> 
-				<label>Talent 2</label><input value=<?php echo '"' . $Skill2 . '"';?> type="text" placeholder="Evenementen klaarzetten" name="talent2" maxlength="45"/> <br/> 
+				<label>Talent 2</label><input value=<?php echo '"' . $Skill2 . '"';?> type="text" placeholder="Evenementen klaarzetten" name="talent2" maxlength="20" required/> <br/> 
 				<?php placeErrorBox($skill3Err); ?> 
-				<label>Talent 3</label><input value=<?php echo '"' . $Skill3 . '"';?> type="text" placeholder="Koffie drinken" name="talent3" maxlength="45"/> <br/> 
+				<label>Talent 3</label><input value=<?php echo '"' . $Skill3 . '"';?> type="text" placeholder="Koffie drinken" name="talent3" maxlength="20"/> <br/> 
 			</fieldset>
 			
 			<fieldset class="fieldset_middle">
