@@ -5,14 +5,14 @@ using UnityEngine.UI;
 /// Manages the data on the scene that appears at the end of the game
 /// </summary>
 public class EndGameScene : MonoBehaviour {
-    //Card box of the NPC
-    //public Image npcCardBox;
+    //Farewell text box of screen
+    public Text textBox;
     //Name box of the NPC
     public Text npcNameBox;
     //Sprite of the NPC
     public Image npcSprite;
-    //Farewell text box of screen
-    public Text textBox;
+    //Skills box of the NPC
+    public Text npcSkillsBox;
     //Card image
     public GameObject card;
     //Check if the screen is active
@@ -29,6 +29,11 @@ public class EndGameScene : MonoBehaviour {
         if(foundPlayer.Element == "blue")
         {
             card.GetComponent<Image>().sprite = Resources.Load<Sprite>("cardW basis");
+        }
+        npcSkillsBox.text = foundPlayer.Skill1 + "\n" + foundPlayer.Skill2 + "\n";
+        if (foundPlayer.Skill3 != null)
+        {
+            npcSkillsBox.text = npcSkillsBox.text + foundPlayer.Skill3 + "\n";
         }
 	}
 	
