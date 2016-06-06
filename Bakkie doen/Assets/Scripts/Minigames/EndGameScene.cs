@@ -11,8 +11,14 @@ public class EndGameScene : MonoBehaviour {
     public Text npcNameBox;
     //Sprite of the NPC
     public Image npcSprite;
-    //Skills box of the NPC
-    public Text npcSkillsBox;
+    //Job box no.1 of the NPC
+    public Text npcJobBox;
+    //Skills box no.1 of the NPC
+    public Text npcSkillsBox1;
+    //Skills box no.2 of the NPC
+    public Text npcSkillsBox2;
+    //Skills box no.3 of the NPC
+    public Text npcSkillsBox3;
     //Card image
     public GameObject card;
     //Check if the screen is active
@@ -28,12 +34,14 @@ public class EndGameScene : MonoBehaviour {
         textBox.text = textBox.text + DataTracking.playerData.FirstName;
         if(foundPlayer.Element == "blue")
         {
-            card.GetComponent<Image>().sprite = Resources.Load<Sprite>("cardW basis");
+            card.GetComponent<Image>().sprite = Resources.Load<Sprite>("Bluecard");
         }
-        npcSkillsBox.text = foundPlayer.Skill1 + "\n" + foundPlayer.Skill2 + "\n";
+        npcJobBox.text = foundPlayer.Job;
+        npcSkillsBox1.text = foundPlayer.Skill1;
+        npcSkillsBox2.text = foundPlayer.Skill2;
         if (foundPlayer.Skill3 != null)
         {
-            npcSkillsBox.text = npcSkillsBox.text + foundPlayer.Skill3 + "\n";
+            npcSkillsBox3.text = foundPlayer.Skill3;
         }
 	}
 	
