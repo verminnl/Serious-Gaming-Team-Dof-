@@ -23,7 +23,7 @@ public class BlueMinigamePlayerController : MonoBehaviour {
         //Player movement horizontally
         if (Input.GetAxisRaw("Horizontal") > 0.5f || Input.GetAxisRaw("Horizontal") < -0.5f)
         {
-            myRigidBody.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * moveSpeed, myRigidBody.velocity.y);
+            myRigidBody.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * moveSpeed * -1, myRigidBody.velocity.y);
         }
         //Player movement vertically
         if (Input.GetAxisRaw("Vertical") > 0.5f || Input.GetAxisRaw("Vertical") < -0.5f)

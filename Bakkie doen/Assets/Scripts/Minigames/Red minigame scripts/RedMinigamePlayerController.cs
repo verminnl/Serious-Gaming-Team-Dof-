@@ -47,7 +47,7 @@ public class RedMinigamePlayerController : MonoBehaviour {
         //the given movement speed while continuously moving upwards
         if (Input.GetAxisRaw("Horizontal") > 0.5f || Input.GetAxisRaw("Horizontal") < -0.5f)
         {
-            myRigidBody.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * moveSpeed, moveSpeed);
+            myRigidBody.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * moveSpeed * -1, moveSpeed);
         }
         //When there is an input change in bot of the direction of the Horizontal axis, the player will not
         //move in either direction while continuously moving upwards
