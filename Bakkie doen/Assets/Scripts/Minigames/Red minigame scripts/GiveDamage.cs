@@ -4,17 +4,6 @@
 /// Gives damage to an object if this gameobject touches it
 /// </summary>
 public class GiveDamage : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-        
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
     /// <summary>
     /// Activates when this gameobject touches another object with a triggerbox
     /// </summary>
@@ -28,12 +17,12 @@ public class GiveDamage : MonoBehaviour {
         }
     }
 
-    // OnBecameInvisible is called when the renderer is no longer visible by any camera
+    /// <summary>
+    /// OnBecameInvisible is called when the renderer is no longer visible by any camera
+    /// </summary>
     public void OnBecameInvisible()
     {
         //When gameobject is no longer visible by the camera, sets it to the inactive state
         gameObject.SetActive(false);
     }
-
-    
 }

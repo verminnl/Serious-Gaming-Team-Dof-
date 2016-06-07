@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 /// <summary>
-/// Ends the minigame when the player touches the gameobject that has this script attached to it
+/// Ends the minigame when the player touches the gameobject that has this script attached to it in the Red Minigame
 /// </summary>
 public class EndMinigame : MonoBehaviour {
     //The player of the minigame
@@ -21,6 +21,7 @@ public class EndMinigame : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        //Destroys the player when the minigame ends
         if (!RedMinigamePlayerController.isAlive && thePlayer != null)
         {
             gameOverScreen.GetComponent<GameOver>().ActivateScreen();

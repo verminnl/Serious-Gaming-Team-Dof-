@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// Controls the mazes that are being randomly generated
+/// </summary>
 public class mazeController : MonoBehaviour {
     public GameObject start;
     public GameObject finish;
@@ -13,12 +16,6 @@ public class mazeController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         InitialiseMaze();
-
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
 	}
 
     /// <summary>
@@ -169,7 +166,7 @@ public class mazeController : MonoBehaviour {
     /// <summary>
     /// This function activates the random selected maze. It uses a switch case to select 1 out of 5 options.
     /// </summary>
-    /// <param name="maze"></param>
+    /// <param name="maze">Number of the maze that will become active</param>
     void activateMaze(int maze)
     {
         switch (maze)

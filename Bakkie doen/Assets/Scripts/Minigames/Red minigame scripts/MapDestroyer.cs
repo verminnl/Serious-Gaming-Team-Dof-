@@ -4,7 +4,6 @@
 /// Removes a gameobject when it reaches a point
 /// </summary>
 public class MapDestroyer : MonoBehaviour {
-
     //A gameobject that removes another gameobject when it reaches it
     public GameObject mapDestructionPoint;
 

@@ -19,8 +19,8 @@ public class RedMinigameCameraController : MonoBehaviour {
 	void Start () {
 	
 	}
-	
-	// Update is called once per frame
+
+    // FixedUpdate is called every fixed framerate frame
     void FixedUpdate()
     {
         //If there is a gameobject that the camera should follow, camera will move to the position of the gameobject

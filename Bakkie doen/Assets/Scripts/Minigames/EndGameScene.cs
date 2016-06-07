@@ -28,6 +28,7 @@ public class EndGameScene : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        //Sets the details of the encountered NPC on the screen
         foundPlayer = DataTracking.currentNPC == null ? DataTracking.randomNPC : DataTracking.currentNPC;
         npcNameBox.text = foundPlayer.FullName;
         npcSprite.sprite = foundPlayer.NPCSprite;
@@ -47,6 +48,7 @@ public class EndGameScene : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        //When the player presses the {Spacebar} when this gameobject is active, ends the current game session
         if (isActive)
         {
             if (Input.GetKeyUp(KeyCode.Space))

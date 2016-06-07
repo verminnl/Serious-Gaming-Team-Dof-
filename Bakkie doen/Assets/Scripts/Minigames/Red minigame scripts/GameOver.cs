@@ -7,15 +7,10 @@ public class GameOver : MonoBehaviour {
     //Check if the screen is active
     private bool isActive;
 
-    // Use this for initialization
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
+        //When the player presses the {Spacebar} when this gameobject is active, ends the current game session
         if (isActive)
         {
             if (Input.GetKeyDown(KeyCode.Space))

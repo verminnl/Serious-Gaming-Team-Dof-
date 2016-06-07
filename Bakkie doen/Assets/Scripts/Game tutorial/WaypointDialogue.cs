@@ -8,19 +8,14 @@ public class WaypointDialogue : MonoBehaviour {
     public string[] lines;
     //Checks if the dialogue has been started
     public bool dialogueStarted = false;
-    //Check if dialogue playername has been trimmed
+    //Check if dialogue #playername has been trimmed
     public bool dialogueTrimmed = false;
     //Screen that will be activated after dialogue
     public GameObject screen;
-
-	// Use this for initialization
-	void Start()
-    {
-
-    }
 	
 	// Update is called once per frame
 	void Update () {
+        //Replaces {#playername} with the name of the player or "Gast"
         if (!dialogueTrimmed)
         {
             dialogueTrimmed = true;

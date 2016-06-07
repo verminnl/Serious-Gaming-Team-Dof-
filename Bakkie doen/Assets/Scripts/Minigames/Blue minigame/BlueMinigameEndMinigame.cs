@@ -17,16 +17,15 @@ public class BlueMinigameEndMinigame : MonoBehaviour {
     public GameObject gameOverScreen;
     //Timer box
     public Text timerBox;
-
-	// Use this for initialization
-	void Start () {
-
-    }
 	
 	// Update is called once per frame
 	void Update () {
+        //The countdown of the timer
         playedTime += Time.deltaTime;
         timerBox.text = "Tijd: " + Mathf.Ceil((timeLimit - playedTime));
+
+        //Destroys the player and display the game over scene when the timer
+        //is over and the player haven't reached the finish
         if (thePlayer != null && (int)playedTime > timeLimit)
         {
             gameOverScreen.GetComponent<GameOver>().ActivateScreen();
@@ -35,7 +34,7 @@ public class BlueMinigameEndMinigame : MonoBehaviour {
 	}
 
     /// <summary>
-    /// When the player collides with this gameobject, closes the game, destroys the current player
+    /// When the player collides with this gameobject, ends the minigame and destroys the player
     /// </summary>
     /// <param name="other">The gameobject that collides with this one</param>
     void OnTriggerEnter2D(Collider2D other)

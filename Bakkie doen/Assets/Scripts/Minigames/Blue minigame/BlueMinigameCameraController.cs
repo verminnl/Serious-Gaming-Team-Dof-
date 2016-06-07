@@ -16,12 +16,6 @@ public class BlueMinigameCameraController : MonoBehaviour {
     //Offset of the camera in the Y-position
     public float cameraYOffset = 0;
 
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
     // Update is called once per frame
     void FixedUpdate()
     {

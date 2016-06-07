@@ -13,12 +13,6 @@ public class MapGenerator : MonoBehaviour {
     //Keeps the generated maps in an array of ObjectPooler
     public ObjectPooler theObjectPool;
 
-    // Use this for initialization
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
