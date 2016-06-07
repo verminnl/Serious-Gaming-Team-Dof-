@@ -17,6 +17,18 @@ public class LoginController : MonoBehaviour {
 
     void Start()
     {
+        GameObject[] allObjects = UnityEngine.Object.FindObjectsOfType<GameObject>();
+        foreach (GameObject go in allObjects)
+        {
+            if (go.activeInHierarchy)
+            {
+                print(go.name);
+                Vector3 scale = go.transform.localScale;
+                scale.x *= -1;
+                transform.localScale = scale;
+            }
+        }
+
         EventSystem.current.SetSelectedGameObject(InputField.gameObject, null);
         if (!HasConnection())
         {

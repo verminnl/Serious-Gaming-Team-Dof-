@@ -28,6 +28,11 @@ public class GameController : MonoBehaviour
     //at the LoadingTransition script
     void Awake()
     {
+        if(DataTracking.playerData == null)
+        {
+            SceneManager.LoadScene("Login");
+            return;
+        }
         if (theLoadingTransition != null)
         {
             theLoadingTransition.SetActive(true);
@@ -40,6 +45,13 @@ public class GameController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        GameObject[] allObjects = UnityEngine.Object.FindObjectsOfType<GameObject>();
+        foreach (GameObject go in allObjects)
+        {
+            Vector3 scale = go.transform.localScale;
+            scale.x *= -1;
+            transform.localScale = scale;
+        }
         dialogueFinished = false;
         thePlayer = FindObjectOfType<PlayerController>();
         theCamera = FindObjectOfType<CameraController>();

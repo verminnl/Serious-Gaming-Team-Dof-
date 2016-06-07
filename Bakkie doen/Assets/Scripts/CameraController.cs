@@ -20,10 +20,10 @@ public class CameraController : MonoBehaviour {
         {
             Destroy(gameObject);
         }
-	}
-	
-	// Update is called once per frame
-	void FixedUpdate () {
+    }
+
+    // Update is called once per frame
+    void FixedUpdate () {
         if(followTarget != null)
         {
             targetPos = new Vector3(followTarget.transform.position.x, followTarget.transform.position.y, transform.position.z);
