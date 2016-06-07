@@ -12,7 +12,7 @@ if(isset($_POST["submit"])){
 	
 	// Check if its between 4 and 40 characters
 	$Firstname = filter_var($_POST["voornaam"],FILTER_SANITIZE_STRING);
-	if(strlen($Firstname) < 4 || strlen($Firstname) > 40){
+	if(strlen($Firstname) < 2 || strlen($Firstname) > 40){
 		$firstnameErr = "Voornaam is te kort of te lang.";
 	}
 	if (strpos($Firstname, '#') !== false){
@@ -20,7 +20,7 @@ if(isset($_POST["submit"])){
 	}
 	// Check if its between 4 and 40 characters
 	$Lastname = filter_var($_POST["achternaam"],FILTER_SANITIZE_STRING);
-	if(strlen($Lastname) < 4 || strlen($Lastname) > 40){
+	if(strlen($Lastname) < 2 || strlen($Lastname) > 40){
 		$lastnameErr = "Achternaam is te kort of te lang.";
 	}
 	if (strpos($Lastname, '#') !== false){
