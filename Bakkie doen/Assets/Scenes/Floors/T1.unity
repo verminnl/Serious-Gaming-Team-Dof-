@@ -8334,7 +8334,7 @@ GameObject:
   - 222: {fileID: 1476220962}
   - 114: {fileID: 1476220961}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Elevator Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8358,8 +8358,8 @@ RectTransform:
   - {fileID: 172848377}
   m_Father: {fileID: 525635569}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0.25139934, y: 0.2507892}
-  m_AnchorMax: {x: 0.74860066, y: 0.74734235}
+  m_AnchorMin: {x: 0.21974973, y: 0.27400002}
+  m_AnchorMax: {x: 0.7777497, y: 0.7384952}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
