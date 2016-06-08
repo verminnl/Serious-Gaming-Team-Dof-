@@ -596,11 +596,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lines:
-  - 'Dit  is de doolhofgame. '
-  - 'Hier moet je binnen de  tijd de uitgang zien te vinden. '
-  - 'De uitgang is een blauw ovaal en bevindt zich in het doolhof. '
-  - 'Je kan sturen d.m.v. de joystick. '
-  - Dat waren de twee games. Dank voor het spelen van de tutorial van Bakkie doen!
+  - Dit is de doolhofgame.
+  - Hier moet je binnen de  tijd de uitgang zien te vinden.
+  - De uitgang is een blauw ovaal en bevindt zich in het doolhof.
+  - Je kan sturen d.m.v. de joystick.
+  - En dat waren de twee games. Dank voor het spelen van de tutorial van Bakkie doen!
   dialogueStarted: 0
   dialogueTrimmed: 0
   screen: {fileID: 0}
@@ -2297,8 +2297,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lines:
-  - Er zijn twee minigames die je op dit moment kunt
-  - spelen. Laten we kijken!
+  - Er zijn twee minigames die je op dit moment kunt spelen.
+  - Laten we kijken!
   dialogueStarted: 0
   dialogueTrimmed: 0
   screen: {fileID: 1029403763}
@@ -2720,7 +2720,7 @@ MonoBehaviour:
   - Om te ontdekken wie zich allemaal in deze wereld bevinden, dagen we je
   - uit om een spel te spelen. Je kunt de wereld verkennen door
   - gebruik te maken van de joystick. Wil je met een collega praten?
-  - Gebruik dan de Spatiebalk.
+  - Gebruik dan de "Enter"-toets.
   - Veel plezier!
   dialogueStarted: 0
   dialogueTrimmed: 0
@@ -4104,7 +4104,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Druk op de Spatiebalk om het scherm af te sluiten
+  m_Text: Druk op de "Enter"-toets om het scherm af te sluiten
 --- !u!222 &915377784
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7791,13 +7791,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Leuk dat je hebt
+  m_Text: 'Dank voor het spelen van
 
-    meegespeeld
+    de tutorial van
 
-    en
-
-    geniet van je koffie!'
+    Bakkie doen!'
 --- !u!222 &1848524233
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7935,11 +7933,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lines:
-  - Dit is de Ontwijk minigame.
-  - 'Hier moet je vijanden ontwijken om zo te overleven. '
+  - Dit is de ontwijkgame.
+  - Hier moet je vijanden ontwijken om zo te overleven.
   - Linksboven in het scherm staan de levens die je nog hebt.
-  - 'Het ruimteschip kan je met de joystick besturen. '
-  - Daarnaast kan je ook schieten met KNOP.
+  - Het ruimteschip kan je met de joystick besturen.
+  - Daarnaast kan je ook schieten met de "Enter"-toets.
   dialogueStarted: 0
   dialogueTrimmed: 0
   screen: {fileID: 343399403}
