@@ -14,10 +14,13 @@ public class MenuClass : MonoBehaviour {
     public bool isActive;
     public PlayerController player;
     private int selector;
+    public GameController gameController;
+
 
     // Use this for initialization
     void Start () {
         //Default selected option.
+        gameController = FindObjectOfType<GameController>();
         selectedOption = optionRed;
         previousSelectedOption = optionRed;
         selectedOption.GetComponent<Text>().color = Color.blue;
@@ -79,6 +82,7 @@ public class MenuClass : MonoBehaviour {
                         startPoint = "Elevator_Yellow";
                         break;
                 }
+                gameController.inElevator = false;
                 DataTracking.previousFloor = startPoint;
                 SceneManager.LoadScene(destination);
             }

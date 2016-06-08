@@ -23,6 +23,7 @@ public class GameController : MonoBehaviour
     private float startLoading;
     public List<NPCController> npcList;
     public bool dialogueFinished;
+    public bool inElevator;
 
     //Sets the loadingScreenTime and the startLoading variables to the values that has been given in the Inspector
     //at the LoadingTransition script
@@ -73,6 +74,7 @@ public class GameController : MonoBehaviour
                 }
             }
         }
+        else if (inElevator) { }
         else
         {
             playedTime += Time.deltaTime;
