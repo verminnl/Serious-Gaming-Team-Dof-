@@ -18,8 +18,8 @@ public class TutorialEnd : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        //When the player presses the {Spacebar} when this gameobject is active, ends the current game session
-        if (Input.GetKeyUp(KeyCode.Space))
+        //When the player presses the {Return or Keypadenter} when this gameobject is active, ends the current game session
+        if (Input.GetKeyUp(KeyCode.KeypadEnter) || Input.GetKeyUp(KeyCode.Return))
         {
             BackEndCommunicator.Instance.EndGameSave(DataTracking.playerData.PlayerID, 0, DataTracking.playerData.SessionID, "", false);
             DataTracking.resetGame();

@@ -63,7 +63,7 @@ public class TextBoxManager : MonoBehaviour {
         }
 
         //Displayes lines of the dialogue when pressed on the Spacebar
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyUp(KeyCode.KeypadEnter) || Input.GetKeyUp(KeyCode.Return))
         {
             if (!isTyping)
             {

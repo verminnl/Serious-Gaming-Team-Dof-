@@ -56,7 +56,7 @@ public class RedMinigamePlayerController : MonoBehaviour {
             myRigidBody.velocity = new Vector2(0f, moveSpeed);
         }
 
-        if (Input.GetKeyUp(KeyCode.J))
+        if (Input.GetKeyUp(KeyCode.KeypadEnter) || Input.GetKeyUp(KeyCode.Return))
         {
             //Gets the map that will be generated
             GameObject newBullet = bulletType.GetPooledObject();

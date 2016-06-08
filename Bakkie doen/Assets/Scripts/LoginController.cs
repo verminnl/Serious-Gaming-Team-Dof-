@@ -39,7 +39,7 @@ public class LoginController : MonoBehaviour {
     // Update is called once per frame
     void LateUpdate() {
 
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyUp(KeyCode.KeypadEnter) || Input.GetKeyUp(KeyCode.Return))
         {
             //Get the input of the player
             string input = InputField.text;

@@ -39,8 +39,8 @@ public class ActivateTextAtLine : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         //When player is in the trigger and presses on the Spacebar, activate the dialogue and stops player movement
-        if (waitForPress && Input.GetKeyUp(KeyCode.Space))
-        {
+        if (waitForPress && Input.GetKeyUp(KeyCode.KeypadEnter) || Input.GetKeyUp(KeyCode.Return))
+        { 
 			theTextBox.ReloadScript(theScript.ToArray());
             theTextBox.currentLine = startLine;
             theTextBox.endAtLine = endLine;

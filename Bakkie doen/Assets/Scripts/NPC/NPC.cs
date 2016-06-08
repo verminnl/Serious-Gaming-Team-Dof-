@@ -20,7 +20,7 @@ public class NPC : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (playerInTriggerBox && Input.GetKeyUp(KeyCode.Space))
+        if (playerInTriggerBox && Input.GetKeyUp(KeyCode.KeypadEnter) || Input.GetKeyUp(KeyCode.Return))
         {
             ActivateDialogue();
         }
@@ -30,12 +30,12 @@ public class NPC : MonoBehaviour {
             {
                 textBoxText.text = DataTracking.currentNPC.Dialogue[lineCounter];
             }
-            if (Input.GetKeyUp(KeyCode.Space) && lineCounter < 3)
+            if (Input.GetKeyUp(KeyCode.KeypadEnter) || Input.GetKeyUp(KeyCode.Return) && lineCounter < 3)
             {
                 textBoxText.text = DataTracking.currentNPC.Dialogue[lineCounter];
                 lineCounter++;
             }
-            else if(lineCounter == 3 && Input.GetKeyUp(KeyCode.Space))
+            else if(lineCounter == 3 && Input.GetKeyUp(KeyCode.KeypadEnter) || Input.GetKeyUp(KeyCode.Return))
             {
                 gameController.dialogueFinished = true;
             }
