@@ -48,7 +48,7 @@ public class EndGameScene : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        //When the player presses the {Spacebar} when this gameobject is active, ends the current game session
+        //When the player presses the {Enter key or keypadenter} when this gameobject is active, ends the current game session
         if (isActive)
         {
             if (Input.GetKeyUp(KeyCode.KeypadEnter) || Input.GetKeyUp(KeyCode.Return))
