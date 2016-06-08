@@ -7795,7 +7795,10 @@ MonoBehaviour:
 
     de tutorial van
 
-    Bakkie doen!'
+    Bakkie doen!
+
+
+'
 --- !u!222 &1848524233
 CanvasRenderer:
   m_ObjectHideFlags: 0
