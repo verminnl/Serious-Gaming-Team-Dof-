@@ -56,7 +56,7 @@ public class MenuClass : MonoBehaviour {
                 previousSelectedOption = selectedOption;
             }
 
-            if (Input.GetKeyDown(KeyCode.Return))
+            if (Input.GetKeyUp(KeyCode.KeypadEnter) || Input.GetKeyUp(KeyCode.Return))
             {
                 string destination = "";
                 string startPoint = "";
