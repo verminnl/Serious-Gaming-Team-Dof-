@@ -4099,7 +4099,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Druk op de Spatiebalk om het scherm af te sluiten
+  m_Text: Druk op de "Enter"-toets om het scherm af te sluiten
 --- !u!222 &915377784
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7760,7 +7760,10 @@ MonoBehaviour:
 
     de tutorial van
 
-    Bakkie doen!'
+    Bakkie doen!
+
+
+'
 --- !u!222 &1848524233
 CanvasRenderer:
   m_ObjectHideFlags: 0
