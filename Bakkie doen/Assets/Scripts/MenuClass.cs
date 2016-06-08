@@ -11,6 +11,7 @@ public class MenuClass : MonoBehaviour {
     public GameObject optionGreen;
     public GameObject optionYellow;
     public GameObject elevator_Canvas;
+    public GameController gameController;
     public bool isActive;
     public PlayerController player;
     private int selector;
@@ -18,6 +19,7 @@ public class MenuClass : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        gameController = FindObjectOfType<GameController>();
         //Default selected option.
         selectedOption = optionRed;
         previousSelectedOption = optionRed;
@@ -87,6 +89,7 @@ public class MenuClass : MonoBehaviour {
                         startPoint = "Elevator_Yellow";
                         break;
                 }
+                gameController.inElevator = false;
                 DataTracking.previousFloor = startPoint;
                 SceneManager.LoadScene(destination);
             }
