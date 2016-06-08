@@ -97,6 +97,7 @@ GameObject:
   - 222: {fileID: 22274866}
   - 114: {fileID: 11477810}
   - 114: {fileID: 11484180}
+  - 114: {fileID: 11485312}
   m_Layer: 5
   m_Name: TotalFoundNPCsBox
   m_TagString: Untagged
@@ -240,7 +241,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Druk op de Spatiebalk om verder te gaan
+  m_Text: Druk op de "Enter"-toets om verder te gaan
 --- !u!114 &11462892
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -367,6 +368,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textbox: {fileID: 11432770}
+--- !u!114 &11485312
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 171154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1f2937160f9fa447ade4c58c3d897a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textbox: {fileID: 11432770}
 --- !u!114 &11497396
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -468,7 +481,7 @@ RectTransform:
   m_GameObject: {fileID: 171154}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 22449960}
   m_Father: {fileID: 22463252}
@@ -509,8 +522,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -155.9, y: 10}
-  m_SizeDelta: {x: 261.9, y: 20}
+  m_AnchoredPosition: {x: -165, y: 10}
+  m_SizeDelta: {x: 280, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &22449960
 RectTransform:
@@ -537,7 +550,7 @@ RectTransform:
   m_GameObject: {fileID: 165078}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 22471408}
   - {fileID: 22446906}
@@ -576,14 +589,14 @@ RectTransform:
   m_GameObject: {fileID: 193394}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 22439934}
   m_Father: {fileID: 22463252}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0.89817524}
   m_AnchorMax: {x: 0.30100003, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 411, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!224 &22471408

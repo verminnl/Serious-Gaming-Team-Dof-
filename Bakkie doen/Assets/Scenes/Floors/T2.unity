@@ -5993,7 +5993,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Druk op de Enter-toets om verder te gaan
+  m_Text: Druk op de "Enter"-toets om verder te gaan
 --- !u!222 &987477468
 CanvasRenderer:
   m_ObjectHideFlags: 0

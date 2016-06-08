@@ -1734,7 +1734,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Druk op de Spatiebalk om het scherm af te sluiten
+  m_Text: Druk op de "Enter"-toets om het scherm af te sluiten
 --- !u!222 &1106710570
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2449,7 +2449,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Druk op de Spatiebalk om het scherm af te sluiten
+  m_Text: Druk op de "Enter"-toets om het scherm af te sluiten
 --- !u!222 &1895363518
 CanvasRenderer:
   m_ObjectHideFlags: 0
