@@ -541,7 +541,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 430519724}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 82.28, y: -392.22, z: -10}
+  m_LocalPosition: {x: 82.28, y: -378, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 865354161}
@@ -564,7 +564,7 @@ MonoBehaviour:
   followTarget: {fileID: 2143395135}
   moveSpeed: 15
   cameraXOffset: 0
-  cameraYOffset: 20
+  cameraYOffset: 15
 --- !u!1 &430650597
 GameObject:
   m_ObjectHideFlags: 0
@@ -2471,7 +2471,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 1.5}
   serializedVersion: 2
   m_Size: {x: 34.829998, y: 1.81}
 --- !u!212 &1957258780
@@ -2690,7 +2690,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2143395135}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 82.2, y: -399.12, z: 0}
+  m_LocalPosition: {x: 82.2, y: -384.8, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 37604205}
