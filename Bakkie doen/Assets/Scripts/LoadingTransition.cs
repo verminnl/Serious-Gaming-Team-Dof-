@@ -73,7 +73,7 @@ public class LoadingTransition : MonoBehaviour {
             }
             else
             {
-                encounterNPC.text = "De volgende persoon heeft jouw gevonden!";
+                encounterNPC.text = "Iemand heeft jouw!";
             }
             //Shows the interacted NPC/random NPC on the loading screen
             if (npcImageBox != null)
