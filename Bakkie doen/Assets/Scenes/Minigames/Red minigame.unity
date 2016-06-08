@@ -425,7 +425,7 @@ MonoBehaviour:
   m_Text: 'Je hebt verloren
 
 
-    Probeer de volgende keer beter'
+    Volgende keer beter!'
 --- !u!222 &338698989
 CanvasRenderer:
   m_ObjectHideFlags: 0

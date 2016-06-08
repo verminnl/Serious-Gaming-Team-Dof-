@@ -596,12 +596,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lines:
-  - Dit is de Doolhof minigame.
-  - Het doel van deze minigame is om de uitgang te zoeken.
-  - De uitgang is een blauw ovaal in de doolhof.
-  - Je kan jouw cirkel besturen door de joystick.
-  - En dat zijn de twee minigames van het spel.
-  - Dank je wel voor het spelen van de tutorial van Bakkie doen!
+  - Dit is de doolhofgame.
+  - Hier moet je binnen de tijd de uitgang zien te vinden.
+  - De uitgang is een blauw ovaal en bevindt zich in het doolhof.
+  - Je kan sturen d.m.v. de joystick.
   dialogueStarted: 0
   dialogueTrimmed: 0
   screen: {fileID: 0}
@@ -2298,9 +2296,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lines:
-  - Er zijn 2 minigames in het spel.
-  - Doolhof- en Ontwijk minigame.
-  - Zullen we naar de minigames gaan kijken?
+  - Er zijn twee minigames die je op dit moment kunt spelen.
+  - Laten we kijken!
   dialogueStarted: 0
   dialogueTrimmed: 0
   screen: {fileID: 1029403763}
@@ -7757,13 +7754,13 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Leuk dat je hebt
+  m_Text: 'Dat waren de twee games.
 
-    meegespeeld
+    Dank voor het spelen van
 
-    en
+    de tutorial van
 
-    geniet van je koffie!'
+    Bakkie doen!'
 --- !u!222 &1848524233
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7901,12 +7898,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lines:
-  - Dit is de Ontwijk minigame.
-  - Het doel van de minigame is om de vijanden te ontwijken en tot aan het eind
-  - van het spel te overleven.
-  - Linksboven het scherm staan de leven van jouw ruimteschip.
-  - De ruimteschip kan je met de joystick besturen.
-  - Je kan ook schieten met de "J"-toets.
+  - Dit is de ontwijkgame.
+  - Hier moet je vijanden ontwijken om zo te overleven.
+  - Linksboven in het scherm staan de levens die je nog hebt.
+  - Het ruimteschip kan je met de joystick besturen.
+  - Daarnaast kan je ook schieten met de "Enter"-toets.
   dialogueStarted: 0
   dialogueTrimmed: 0
   screen: {fileID: 343399403}

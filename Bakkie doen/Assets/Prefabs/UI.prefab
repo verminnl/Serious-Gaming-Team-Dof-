@@ -97,6 +97,7 @@ GameObject:
   - 222: {fileID: 22274866}
   - 114: {fileID: 11477810}
   - 114: {fileID: 11484180}
+  - 114: {fileID: 11460462}
   m_Layer: 5
   m_Name: TotalFoundNPCsBox
   m_TagString: Untagged
@@ -208,6 +209,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &11460462
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 171154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1f2937160f9fa447ade4c58c3d897a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textbox: {fileID: 11432770}
 --- !u!114 &11461236
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -240,7 +253,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Druk op de Spatiebalk om verder te gaan
+  m_Text: Druk op de "Enter"-toets om verder te gaan
 --- !u!114 &11462892
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -509,8 +522,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -155.9, y: 10}
-  m_SizeDelta: {x: 261.9, y: 20}
+  m_AnchoredPosition: {x: -163.8, y: 10}
+  m_SizeDelta: {x: 277.7, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &22449960
 RectTransform:
