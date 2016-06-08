@@ -14,6 +14,7 @@ public class MenuClass : MonoBehaviour {
     public bool isActive;
     public PlayerController player;
     private int selector;
+    private int frameCount;
 
     // Use this for initialization
     void Start () {
@@ -23,15 +24,21 @@ public class MenuClass : MonoBehaviour {
         selectedOption.GetComponent<Text>().color = Color.blue;
         toggleActive(false);
         selector = 0;
+        frameCount = 0;
         player = FindObjectOfType<PlayerController>();
     }
 	
 	// Update is called once per frame
 	void Update () {
+        if(frameCount != 10)
+        {
+            frameCount++;
+        }
         if (isActive)
         {
-            if (Input.GetKeyDown(KeyCode.UpArrow))
+            if (Input.GetKeyUp(KeyCode.UpArrow) && frameCount == 10)
             {
+                frameCount = 0;
                 selector--;
                 if (selector < 0)
                 {
@@ -39,8 +46,9 @@ public class MenuClass : MonoBehaviour {
                 }
                 selectedOptionSetter(selector);
             }
-            else if (Input.GetKeyDown(KeyCode.DownArrow))
+            else if (Input.GetKeyUp(KeyCode.DownArrow) && frameCount == 10)
             {
+                frameCount = 0;
                 selector++;
                 if (selector > 3)
                 {
