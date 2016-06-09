@@ -4779,6 +4779,7 @@ MonoBehaviour:
   optionGreen: {fileID: 1982055004}
   optionYellow: {fileID: 172848376}
   elevator_Canvas: {fileID: 525635565}
+  gameController: {fileID: 0}
   isActive: 0
   player: {fileID: 0}
 --- !u!4 &835121945
@@ -6117,6 +6118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   elevator: {fileID: 835121944}
+  gameController: {fileID: 0}
 --- !u!61 &1009697994
 BoxCollider2D:
   m_ObjectHideFlags: 0
