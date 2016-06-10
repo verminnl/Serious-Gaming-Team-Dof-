@@ -13,6 +13,13 @@ public class NPCClass {
     //List with all the skills that the NPC has
     public List<string> skills;
 
+    /// <summary>
+    /// Constuctor
+    /// </summary>
+    /// <param name="name">Name of the NPC</param>
+    /// <param name="type">Color type of the NPC</param>
+    /// <param name="dialogue">Array with the dialogue of the NPC</param>
+    /// <param name="skills">List with the skills of the NPC</param>
     public NPCClass(string name, string type, string[] dialogue, List<string> skills)
     {
         //Adds the newly created NPC in the Dictionary in the DialogueClass with its dialogue
