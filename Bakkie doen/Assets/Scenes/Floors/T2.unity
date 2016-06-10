@@ -280,7 +280,6 @@ GameObject:
   - 212: {fileID: 37787399}
   - 61: {fileID: 37787398}
   - 114: {fileID: 37787397}
-  - 114: {fileID: 37787396}
   m_Layer: 0
   m_Name: Nick
   m_TagString: Untagged
@@ -288,30 +287,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &37787396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 37787395}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9f48abf3f484ad4a866b9e2ab7975c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  colorType: green
-  dialogue:
-  - Hi player! I'm Nick!
-  - There is still nothing new yet.
-  - Hey developers!
-  - Start making the level already!
-  dialogueFinished: 0
-  NPCSkills:
-  - Creating blueprints
-  - Soldering
-  nameNPC: 
-  roomNumber: T5.44
-  sprite: {fileID: 0}
 --- !u!114 &37787397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1160,6 +1135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 2007852915}
   elevator: {fileID: 1838711377}
+  gameController: {fileID: 0}
 --- !u!1 &163146430
 GameObject:
   m_ObjectHideFlags: 0
@@ -8821,7 +8797,6 @@ GameObject:
   - 212: {fileID: 1447742290}
   - 61: {fileID: 1447742289}
   - 114: {fileID: 1447742288}
-  - 114: {fileID: 1447742287}
   m_Layer: 0
   m_Name: Jack
   m_TagString: Untagged
@@ -8829,33 +8804,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1447742287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1447742286}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9f48abf3f484ad4a866b9e2ab7975c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  colorType: red
-  dialogue:
-  - Hi player! I'm Jack!
-  - There is still nothing new yet.
-  - Hey developers!
-  - Start making the level already!
-  dialogueFinished: 0
-  NPCSkills:
-  - 485634185643566446sd4gs64g6sfd4gb1f34b64gfbh68s94bfusafhiahgfsdh ahgfadhkavkdvjoiorejgvisdhvja
-  - hfioa lgoegovjsodgf;o;sdvjoa jiogvjal fj;g90 eongb;lsfgj0egj ;o;fjizvnvoisjdf;lmal;
-    ja
-  - ' jl;fasgj;aidghoif ga;do gharo;gjvfiughjruahg vulgjia;jd9f vafl 6'
-  - ' jl;fasgj;aidghoif ga;do gharo;gjvfiughjruahg vulgjia;jd9f vafl 6'
-  nameNPC: 
-  roomNumber: T1.33
-  sprite: {fileID: 0}
 --- !u!114 &1447742288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11060,6 +11008,7 @@ MonoBehaviour:
   optionGreen: {fileID: 1206009694}
   optionYellow: {fileID: 300704934}
   elevator_Canvas: {fileID: 699288866}
+  gameController: {fileID: 0}
   isActive: 0
   player: {fileID: 0}
 --- !u!1 &1863829033
@@ -11992,7 +11941,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7acfb1d4f07e014d91b605d693276b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerName: Nick
   moveSpeed: 5
   lastMove: {x: 0, y: 0}
   startPoint: 

@@ -1098,7 +1098,6 @@ GameObject:
   - 212: {fileID: 209623112}
   - 61: {fileID: 209623111}
   - 114: {fileID: 209623110}
-  - 114: {fileID: 209623109}
   m_Layer: 0
   m_Name: Kai
   m_TagString: Untagged
@@ -1118,31 +1117,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1804503521}
   m_RootOrder: 1
---- !u!114 &209623109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 209623107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9f48abf3f484ad4a866b9e2ab7975c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  colorType: red
-  dialogue:
-  - Hi player! I'm Kai!
-  - There is still nothing new yet.
-  - Hey developers!
-  - Start making the level already!
-  dialogueFinished: 0
-  NPCSkills:
-  - Programming
-  - Counseling
-  - Supportive
-  nameNPC: 
-  roomNumber: C2.41
-  sprite: {fileID: 0}
 --- !u!114 &209623110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1858,7 +1832,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7acfb1d4f07e014d91b605d693276b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerName: Nick
   moveSpeed: 20
   lastMove: {x: 0, y: 0}
   startPoint: 
@@ -5510,7 +5483,6 @@ GameObject:
   - 212: {fileID: 1365480859}
   - 61: {fileID: 1365480858}
   - 114: {fileID: 1365480857}
-  - 114: {fileID: 1365480856}
   m_Layer: 0
   m_Name: Patrick
   m_TagString: Untagged
@@ -5530,31 +5502,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1804503521}
   m_RootOrder: 2
---- !u!114 &1365480856
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1365480854}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9f48abf3f484ad4a866b9e2ab7975c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  colorType: green
-  dialogue:
-  - Hi player! I'm Patrick!
-  - There is still nothing new yet.
-  - Hey developers!
-  - Start making the level already!
-  dialogueFinished: 0
-  NPCSkills:
-  - Creative brainstorming
-  - Video editing
-  - Darting
-  nameNPC: 
-  roomNumber: C3.13
-  sprite: {fileID: 0}
 --- !u!114 &1365480857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6400,7 +6347,6 @@ GameObject:
   - 212: {fileID: 1567968772}
   - 61: {fileID: 1567968771}
   - 114: {fileID: 1567968770}
-  - 114: {fileID: 1567968769}
   m_Layer: 0
   m_Name: Wendy
   m_TagString: Untagged
@@ -6420,32 +6366,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1804503521}
   m_RootOrder: 0
---- !u!114 &1567968769
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1567968767}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9f48abf3f484ad4a866b9e2ab7975c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  colorType: red
-  dialogue:
-  - Hi player! I'm Wendy!
-  - There is still nothing new yet.
-  - Hey developers!
-  - Start making the level already!
-  dialogueFinished: 0
-  NPCSkills:
-  - Designing
-  - Lawyering
-  - Making medicine
-  - Investigating
-  nameNPC: 
-  roomNumber: C0.33
-  sprite: {fileID: 0}
 --- !u!114 &1567968770
 MonoBehaviour:
   m_ObjectHideFlags: 0

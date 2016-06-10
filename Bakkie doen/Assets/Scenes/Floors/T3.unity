@@ -1646,7 +1646,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7acfb1d4f07e014d91b605d693276b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerName: Nick
   moveSpeed: 5
   lastMove: {x: 0, y: 0}
   startPoint: 
@@ -4204,6 +4203,7 @@ MonoBehaviour:
   optionGreen: {fileID: 876687418}
   optionYellow: {fileID: 309040958}
   elevator_Canvas: {fileID: 100741593}
+  gameController: {fileID: 0}
   isActive: 0
   player: {fileID: 0}
 --- !u!4 &1003402784
@@ -6649,7 +6649,6 @@ GameObject:
   - 212: {fileID: 1583010261}
   - 61: {fileID: 1583010260}
   - 114: {fileID: 1583010259}
-  - 114: {fileID: 1583010258}
   m_Layer: 0
   m_Name: Kai
   m_TagString: Untagged
@@ -6669,31 +6668,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 36326455}
   m_RootOrder: 1
---- !u!114 &1583010258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1583010256}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9f48abf3f484ad4a866b9e2ab7975c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  colorType: red
-  dialogue:
-  - Hi player! I'm Kai!
-  - There is still nothing new yet.
-  - Hey developers!
-  - Start making the level already!
-  dialogueFinished: 0
-  NPCSkills:
-  - Programming
-  - Counseling
-  - Supportive
-  nameNPC: 
-  roomNumber: C2.41
-  sprite: {fileID: 0}
 --- !u!114 &1583010259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7907,7 +7881,6 @@ GameObject:
   - 212: {fileID: 1767099669}
   - 61: {fileID: 1767099668}
   - 114: {fileID: 1767099667}
-  - 114: {fileID: 1767099666}
   m_Layer: 0
   m_Name: Wendy
   m_TagString: Untagged
@@ -7927,32 +7900,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 36326455}
   m_RootOrder: 0
---- !u!114 &1767099666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1767099664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9f48abf3f484ad4a866b9e2ab7975c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  colorType: red
-  dialogue:
-  - Hi player! I'm Wendy!
-  - There is still nothing new yet.
-  - Hey developers!
-  - Start making the level already!
-  dialogueFinished: 0
-  NPCSkills:
-  - Designing
-  - Lawyering
-  - Making medicine
-  - Investigating
-  nameNPC: 
-  roomNumber: C0.33
-  sprite: {fileID: 0}
 --- !u!114 &1767099667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8491,6 +8438,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   elevator: {fileID: 1003402783}
+  gameController: {fileID: 0}
 --- !u!61 &1887363261
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8905,7 +8853,6 @@ GameObject:
   - 212: {fileID: 1944874077}
   - 61: {fileID: 1944874076}
   - 114: {fileID: 1944874075}
-  - 114: {fileID: 1944874074}
   m_Layer: 0
   m_Name: Patrick
   m_TagString: Untagged
@@ -8925,31 +8872,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 36326455}
   m_RootOrder: 2
---- !u!114 &1944874074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1944874072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9f48abf3f484ad4a866b9e2ab7975c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  colorType: green
-  dialogue:
-  - Hi player! I'm Patrick!
-  - There is still nothing new yet.
-  - Hey developers!
-  - Start making the level already!
-  dialogueFinished: 0
-  NPCSkills:
-  - Creative brainstorming
-  - Video editing
-  - Darting
-  nameNPC: 
-  roomNumber: C3.13
-  sprite: {fileID: 0}
 --- !u!114 &1944874075
 MonoBehaviour:
   m_ObjectHideFlags: 0
