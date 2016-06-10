@@ -2,19 +2,33 @@
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Controls the elevator options
+/// </summary>
 public class MenuClass : MonoBehaviour {
-
+    //Current selected option
     public GameObject selectedOption;
+    //Previously selected option
     private GameObject previousSelectedOption;
+    //Red area option
     public GameObject optionRed;
+    //Blue area option
     public GameObject optionBlue;
+    //Green area option
     public GameObject optionGreen;
+    //Yellow area option
     public GameObject optionYellow;
+    //Canvas with the elevator menu
     public GameObject elevator_Canvas;
+    //Game controller of the game
     public GameController gameController;
+    //Checks if the elevator menu is active
     public bool isActive;
+    //Player of the game
     public PlayerController player;
+    //Keeps track of the selected option
     private int selector;
+    //Keeps the frames in check
     private int frameCount;
 
     // Use this for initialization
@@ -33,12 +47,15 @@ public class MenuClass : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        //Counts the frames up to 10
         if(frameCount != 10)
         {
             frameCount++;
         }
         if (isActive)
         {
+            //Inputs every 10 frames only
+            //Controls the selection in the elevator menu
             if (Input.GetKeyUp(KeyCode.UpArrow) && frameCount == 10)
             {
                 frameCount = 0;
@@ -60,6 +77,7 @@ public class MenuClass : MonoBehaviour {
                 selectedOptionSetter(selector);
             }
 
+            //Controls the color of the selected option
             if (selectedOption != previousSelectedOption)
             {
                 selectedOption.GetComponent<Text>().color = Color.blue;
@@ -67,6 +85,7 @@ public class MenuClass : MonoBehaviour {
                 previousSelectedOption = selectedOption;
             }
 
+            //Loads a Unity scene based on the selected option after pressing the {Enter key or keypadenter}
             if (Input.GetKeyUp(KeyCode.KeypadEnter) || Input.GetKeyUp(KeyCode.Return))
             {
                 string destination = "";
@@ -97,11 +116,19 @@ public class MenuClass : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Toggles the canvas with the elevator menu on or off
+    /// </summary>
+    /// <param name="active">Decides if the canvas should be active or not</param>
     public void toggleActive(bool active)
     {
         elevator_Canvas.SetActive(active);
     }
 
+    /// <summary>
+    /// Decides which selection is selected at the moment
+    /// </summary>
+    /// <param name="selector">The option that is being selected</param>
     public void selectedOptionSetter(int selector)
     {
         switch (selector)

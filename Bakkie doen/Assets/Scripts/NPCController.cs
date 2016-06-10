@@ -44,14 +44,4 @@ public class NPCController : MonoBehaviour {
             theGame.AddNPCToList(this);
         }
     }
-
-	// Use this for initialization
-	void Start () {
-        //print("NPC name: " + npc.name + ", NPC type: " + npc.type + ", Number of NPCs: " + NPCClass.number);
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        
-	}
 }
