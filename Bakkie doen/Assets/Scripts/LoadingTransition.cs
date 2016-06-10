@@ -2,6 +2,9 @@
 using UnityEngine.UI;
 using System.Collections.Generic;
 
+/// <summary>
+/// Controls the behaviour and the details of the loading screen in the game
+/// </summary>
 public class LoadingTransition : MonoBehaviour {
     //Image for the loading screen
     public Image theLoadingImage;
@@ -39,11 +42,6 @@ public class LoadingTransition : MonoBehaviour {
     public List<string> npcSkills;
     //Checks if the loading screen has been printed
     private bool loadingScreenPrinted = false;
-
-	// Use this for initialization
-	void Start () {
-        
-	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -102,6 +100,10 @@ public class LoadingTransition : MonoBehaviour {
         }
 	}
 
+    /// <summary>
+    /// Sets the {playerHasFoundNPC} variable
+    /// </summary>
+    /// <param name="foundNPC">Checks if the player has found an NPC or not</param>
     public void HasThePlayerFoundNPC(bool foundNPC)
     {
         playerHasFoundNPC = foundNPC;

@@ -12,11 +12,14 @@ public static class DataTracking  {
     public static AvatarData playerData;
     //NPC dictionairy
     public static List<AvatarData> npcData;
-    //random avatardata for when player doesnt find a character
+    //Random avatardata for when player doesnt find a character
     public static AvatarData randomNPC;
     //Floor change
     public static string previousFloor;
 
+    /// <summary>
+    /// Resets the game for the next player
+    /// </summary>
     public static void resetGame()
     {
         //Flush static variables of datatracking to prevent mix-up with previous readings.
@@ -26,6 +29,7 @@ public static class DataTracking  {
         randomNPC = null;
         previousFloor = null;
         GameController.playedTime = 0;
+
         //Back to loginscreen
         SceneManager.LoadScene("Login");
     }

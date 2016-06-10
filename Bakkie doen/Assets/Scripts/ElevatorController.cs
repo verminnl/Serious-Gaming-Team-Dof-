@@ -1,9 +1,14 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// Controls the behaviour of the elevator
+/// </summary>
 public class ElevatorController : MonoBehaviour {
-
+    //Player of the game
     public PlayerController player;
+    //Elevator of the game
     public MenuClass elevator;
+    //Game controller of the game
     public GameController gameController;
 
 	// Use this for initialization
@@ -12,12 +17,11 @@ public class ElevatorController : MonoBehaviour {
         player = FindObjectOfType<PlayerController>();
         gameController = FindObjectOfType<GameController>();
 	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-    }
-    
+
+    /// <summary>
+    /// Activates when this gameobject collides with another gameobject
+    /// </summary>
+    /// <param name="other">The gameobject that this gameobject collides with</param>
     void OnTriggerEnter2D(Collider2D other)
     {
         if(!elevator.isActive)
