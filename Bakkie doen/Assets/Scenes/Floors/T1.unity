@@ -460,7 +460,6 @@ GameObject:
   - 212: {fileID: 36793677}
   - 61: {fileID: 36793676}
   - 114: {fileID: 36793675}
-  - 114: {fileID: 36793674}
   m_Layer: 0
   m_Name: Lora
   m_TagString: Untagged
@@ -480,30 +479,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1603536426}
   m_RootOrder: 0
---- !u!114 &36793674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 36793672}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9f48abf3f484ad4a866b9e2ab7975c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  colorType: red
-  dialogue:
-  - Hi player! I'm Lora!
-  - There is still nothing new yet.
-  - Hey developers!
-  - Start making the level already!
-  dialogueFinished: 0
-  NPCSkills:
-  - Teamwork
-  - Teaching
-  nameNPC: 
-  roomNumber: T0.13
-  sprite: {fileID: 0}
 --- !u!114 &36793675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2123,7 +2098,6 @@ GameObject:
   - 212: {fileID: 284425528}
   - 61: {fileID: 284425527}
   - 114: {fileID: 284425526}
-  - 114: {fileID: 284425525}
   m_Layer: 0
   m_Name: Warc
   m_TagString: Untagged
@@ -2143,30 +2117,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1603536426}
   m_RootOrder: 2
---- !u!114 &284425525
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 284425523}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9f48abf3f484ad4a866b9e2ab7975c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  colorType: red
-  dialogue:
-  - Hi player! I'm Warc!
-  - There is still nothing new yet.
-  - Hey developers!
-  - Start making the level already!
-  dialogueFinished: 0
-  NPCSkills:
-  - Organizing events
-  - Observative
-  nameNPC: 
-  roomNumber: T4.12
-  sprite: {fileID: 0}
 --- !u!114 &284425526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3796,7 +3746,6 @@ GameObject:
   - 212: {fileID: 606425672}
   - 61: {fileID: 606425671}
   - 114: {fileID: 606425670}
-  - 114: {fileID: 606425669}
   m_Layer: 0
   m_Name: Hugh
   m_TagString: Untagged
@@ -3816,32 +3765,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1603536426}
   m_RootOrder: 1
---- !u!114 &606425669
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 606425667}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9f48abf3f484ad4a866b9e2ab7975c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  colorType: red
-  dialogue:
-  - Hi player! I'm Hugh!
-  - There is still nothing new yet.
-  - Hey developers!
-  - Start making the level already!
-  dialogueFinished: 0
-  NPCSkills:
-  - Racing
-  - Forming a speech
-  - Swimming
-  - Cooking
-  nameNPC: 
-  roomNumber: T0.22
-  sprite: {fileID: 0}
 --- !u!114 &606425670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4779,6 +4702,7 @@ MonoBehaviour:
   optionGreen: {fileID: 1982055004}
   optionYellow: {fileID: 172848376}
   elevator_Canvas: {fileID: 525635565}
+  gameController: {fileID: 0}
   isActive: 0
   player: {fileID: 0}
 --- !u!4 &835121945
@@ -5954,7 +5878,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7acfb1d4f07e014d91b605d693276b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerName: 
   moveSpeed: 5
   lastMove: {x: 0, y: 0}
   startPoint: 
@@ -6097,6 +6020,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   elevator: {fileID: 835121944}
+  gameController: {fileID: 0}
 --- !u!61 &1009697994
 BoxCollider2D:
   m_ObjectHideFlags: 0

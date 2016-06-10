@@ -2170,6 +2170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   elevator: {fileID: 528333107}
+  gameController: {fileID: 0}
 --- !u!61 &409937982
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2926,6 +2927,7 @@ MonoBehaviour:
   optionGreen: {fileID: 953074044}
   optionYellow: {fileID: 814071230}
   elevator_Canvas: {fileID: 1369123481}
+  gameController: {fileID: 0}
   isActive: 0
   player: {fileID: 0}
 --- !u!4 &528333108
@@ -3217,7 +3219,6 @@ GameObject:
   - 212: {fileID: 622802168}
   - 61: {fileID: 622802167}
   - 114: {fileID: 622802166}
-  - 114: {fileID: 622802165}
   m_Layer: 0
   m_Name: Kenneth
   m_TagString: Untagged
@@ -3237,32 +3238,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2042919894}
   m_RootOrder: 0
---- !u!114 &622802165
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 622802163}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9f48abf3f484ad4a866b9e2ab7975c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  colorType: red
-  dialogue:
-  - Hi player! I'm Kenneth!
-  - There is still nothing new yet.
-  - Hey developers!
-  - Start making the level already!
-  dialogueFinished: 0
-  NPCSkills:
-  - Hunting
-  - Boxing
-  - Leadership
-  - Speaking
-  nameNPC: 
-  roomNumber: C3.15
-  sprite: {fileID: 0}
 --- !u!114 &622802166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5840,7 +5815,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7acfb1d4f07e014d91b605d693276b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerName: 
   moveSpeed: 5
   lastMove: {x: 0, y: 0}
   startPoint: 
@@ -6036,7 +6010,6 @@ GameObject:
   - 212: {fileID: 1207089243}
   - 61: {fileID: 1207089242}
   - 114: {fileID: 1207089241}
-  - 114: {fileID: 1207089240}
   m_Layer: 0
   m_Name: Joris
   m_TagString: Untagged
@@ -6056,30 +6029,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2042919894}
   m_RootOrder: 2
---- !u!114 &1207089240
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1207089238}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9f48abf3f484ad4a866b9e2ab7975c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  colorType: green
-  dialogue:
-  - Hi player! I'm Joris!
-  - There is still nothing new yet.
-  - Hey developers!
-  - Start making the level already!
-  dialogueFinished: 0
-  NPCSkills:
-  - Creating wireframes
-  - Cooking
-  nameNPC: 
-  roomNumber: X2.12
-  sprite: {fileID: 0}
 --- !u!114 &1207089241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11225,7 +11174,6 @@ GameObject:
   - 212: {fileID: 2138510191}
   - 61: {fileID: 2138510190}
   - 114: {fileID: 2138510189}
-  - 114: {fileID: 2138510188}
   m_Layer: 0
   m_Name: Bart
   m_TagString: Untagged
@@ -11245,31 +11193,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2042919894}
   m_RootOrder: 1
---- !u!114 &2138510188
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2138510186}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9f48abf3f484ad4a866b9e2ab7975c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  colorType: green
-  dialogue:
-  - Hi player! I'm Bart!
-  - There is still nothing new yet.
-  - Hey developers!
-  - Start making the level already!
-  dialogueFinished: 0
-  NPCSkills:
-  - Calligraphy
-  - Sailing
-  - Soldering
-  nameNPC: 
-  roomNumber: X3.23
-  sprite: {fileID: 0}
 --- !u!114 &2138510189
 MonoBehaviour:
   m_ObjectHideFlags: 0

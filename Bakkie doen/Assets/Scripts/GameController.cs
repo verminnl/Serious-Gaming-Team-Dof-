@@ -20,8 +20,9 @@ public class GameController : MonoBehaviour {
     private float loadingScreenTime;
     //Time for the loading screen to appear
     private float startLoading;
-    public List<NPCController> npcList;
+    //Checks if the dialogue is finished or not
     public bool dialogueFinished;
+    //Checks if the player is in the elevator menu or not
     public bool inElevator;
 
     //Sets the loadingScreenTime and the startLoading variables to the values that has been given in the Inspector
@@ -98,16 +99,6 @@ public class GameController : MonoBehaviour {
                 }
             }
         }
-    }
-
-    /// <summary>
-    /// Adds the NPCs in the game to npcList
-    /// </summary>
-    /// <param name="theNPC">NPC that should be added to the list</param>
-    public void AddNPCToList(NPCController theNPC)
-    {
-        // ***************** Still need a check if the npc is already exist in the list or not before adding him
-        npcList.Add(theNPC);
     }
 
     /// <summary>
