@@ -20,6 +20,7 @@ public class MenuClass : MonoBehaviour {
     // Use this for initialization
     void Start () {
         gameController = FindObjectOfType<GameController>();
+
         //Default selected option.
         selectedOption = optionRed;
         previousSelectedOption = optionRed;

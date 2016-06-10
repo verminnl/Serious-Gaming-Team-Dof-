@@ -1,19 +1,25 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Sets the starting position of the player
+/// </summary>
 public class PlayerStartPoint : MonoBehaviour {
-
+    //Player of the game
     private PlayerController thePlayer;
+    //Camera of the game
     private CameraController theCamera;
-
+    //Direction that the player is facing when spawned
     public Vector2 startDirection;
-
+    //Name of the spawnpoint
     public string pointName;
 
 	// Use this for initialization
 	void Start () {
         thePlayer = FindObjectOfType<PlayerController>();
         setPlayerStartPoint();
+
+        //Sets the position of the player to the given spawnpoint
         if (thePlayer.startPoint == pointName)
         {
             thePlayer.transform.position = transform.position;
@@ -23,12 +29,10 @@ public class PlayerStartPoint : MonoBehaviour {
             theCamera.transform.position = new Vector3(transform.position.x, transform.position.y, theCamera.transform.position.z);
         }
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
+    /// <summary>
+    /// Decides the start point for the player depending on the current active scene
+    /// </summary>
     public void setPlayerStartPoint()
     {
         string currentScene = SceneManager.GetActiveScene().name;
