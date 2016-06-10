@@ -5,8 +5,7 @@ using System.Collections.Generic;
 /// <summary>
 /// Keeps the game in check
 /// </summary>
-public class GameController : MonoBehaviour
-{
+public class GameController : MonoBehaviour {
     //Time that has passed since the start of the game
     public static float playedTime;
     //Counts the time after finishing dialogue with an NPC
