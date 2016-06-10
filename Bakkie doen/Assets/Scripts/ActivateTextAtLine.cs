@@ -27,18 +27,11 @@ public class ActivateTextAtLine : MonoBehaviour {
 	void Start () {
         theTextBox = FindObjectOfType<TextBoxManager>();
         gc = FindObjectOfType<GameController>();
-        //Gets the dialogue for the current connected gameobject and adds it to theScript
-        /*var h = DialogueClass.Instance.GetDialogueForNPC(GetComponent<NPC>().avatar.PlayerID.ToString() + "" + SceneManager.GetActiveScene().name);
-        foreach (var item in h)
-        {
-            theScript.Add(item);
-            print(item);
-        }*/
     }
 	
 	// Update is called once per frame
 	void Update () {
-        //When player is in the trigger and presses on the Spacebar, activate the dialogue and stops player movement
+        //When player is in the trigger and presses on the {Enter key or keypadenter}, activate the dialogue and stops player movement
         if (waitForPress)
         {
             if (Input.GetKeyUp(KeyCode.KeypadEnter) || Input.GetKeyUp(KeyCode.Return))
@@ -65,9 +58,9 @@ public class ActivateTextAtLine : MonoBehaviour {
 	}
 
     /// <summary>
-    /// 
+    /// Activates when this gameobject collides with another gameobject
     /// </summary>
-    /// <param name="other"></param>
+    /// <param name="other">The gameobject that this gameobject collides with</param>
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.name == "Player")
@@ -85,9 +78,9 @@ public class ActivateTextAtLine : MonoBehaviour {
     }
 
     /// <summary>
-    /// 
+    /// Activates when this gameobject stops colliding with another gameobject
     /// </summary>
-    /// <param name="other"></param>
+    /// <param name="other">The gameobject that this gameobject was colliding with</param>
     void OnTriggerExit2D(Collider2D other)
     {
         if (other.name == "Player")
