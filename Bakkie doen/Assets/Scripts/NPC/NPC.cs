@@ -15,7 +15,7 @@ public class NPC : MonoBehaviour {
     public bool textBoxActive;
     //Textbox for the dialogue
     public Text textBoxText;
-    //Curretn line of the dialogue
+    //Current line of the dialogue
     private int lineCounter;
     //Game controller of the game
     public GameController gameController;
