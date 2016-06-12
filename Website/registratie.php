@@ -4,6 +4,7 @@ if(isset($_POST["submit"])){
 	$lastnameErr = "";
 	$jobErr = "";
 	$usernameErr = "";
+	$passwordErr = "";
 	$characterErr = "";
 	$skill1Err = "";
 	$skill2Err = "";
@@ -34,16 +35,27 @@ if(isset($_POST["submit"])){
 	if (strpos($Job, '#') !== false){
 		$jobErr = "Illegale karakters in functie.";
 	}
+	$Username = filter_var($_POST["gebruikersnaam"],FILTER_SANITIZE_NUMBER_INT);
 	if (strpos($Username, '"') !== false ||
 	strpos($Username,"'") !== false ||
 	strpos($Username,"$" !== false)){
 		$usernameErr = "Illegale karakters in gebruikersnaam.";
 	}
 	// Length check 4
-	$Username = filter_var($_POST["gebruikersnaam"],FILTER_SANITIZE_NUMBER_INT);
-	if(strlen($Username) != 4)
+	if(strlen($Username) < 7 || strlen($Username) > 8)
 	{
 		$usernameErr = "Gebruikersnaam te kort of te lang.";
+	}
+	$Password = filter_var($_POST["wachtwoord"],FILTER_SANITIZE_NUMBER_INT);
+	if (strpos($Password, '"') !== false ||
+	strpos($Password,"'") !== false ||
+	strpos($Password,"$" !== false)){
+		$passwordErr = "Illegale karakters in wachtwoord.";
+	}
+	// Length check 4
+	if(strlen($Password) != 3)
+	{
+		$passwordErr = "Wachtwoord te kort of te lang.";
 	}
 	
 	// Check if its between 4 and 40 characters
@@ -96,6 +108,7 @@ if(isset($_POST["submit"])){
 		$lastnameErr == "" &&
 		$jobErr == "" &&
 		$usernameErr == "" &&
+		$passwordErr == "" &&
 		$characterErr == "" &&
 		$skill1Err == "" &&
 		$skill2Err == "" &&
@@ -134,7 +147,7 @@ if(isset($_POST["submit"])){
 			$query = "INSERT INTO `player` (`PlayerID`, `FirstName`, `LastName`, `Job`,`SpawnPoint`, ";
 			$query = $query . "`Character`, `Username`, `Password`, `Element`, `Room`, `Skill1`, `Skill2`, `Skill3`, `Tutorial`) ";
 			$query = $query . "VALUES (NULL, '$Firstname', '$Lastname', '$Job', '',";
-			$query = $query . "'$Character', $Username, '', '$Element', '$Room', '$Skill1', '$Skill2', '$Skill3', 1)";
+			$query = $query . "'$Character', $Username, $Password, '$Element', '$Room', '$Skill1', '$Skill2', '$Skill3', 1)";
 			$result = mysqli_query($conn,$query);
 			header('Location:succes.html');
 		}	
@@ -191,7 +204,10 @@ function placeErrorBox($var){
 			<fieldset class="fieldset_middle">
 				<legend>Inloggegevens</legend>
 				<?php placeErrorBox($usernameErr); ?>
-				<label>Inlogcode</label><input value=<?php echo '"' . $Username . '"';?> type="text" placeholder="1234" name="gebruikersnaam" maxlength="8" required/> <br/>
+				<label>Personeelnummer</label><input value=<?php echo '"' . $Username . '"';?> type="text" placeholder="12345678" name="gebruikersnaam" maxlength="8" required/> <br/>
+				<?php placeErrorBox($passwordErr); ?>
+				<label>Wachtwoord</label><input value=<?php echo '"' . $Password . '"';?> type="text" placeholder="123" name="wachtwoord" maxlength="3" required/> <br/>
+			
 			</fieldset>
 			
 			<fieldset>
