@@ -33,22 +33,8 @@ public class LoginController : MonoBehaviour {
             string input = InputField.text;
             string user;
             string password;
-
-            //Delete after winnovation
-            if(input.Length == 4)
-            {
-                user = input;
-            }
-            else
-            {
-                InputField.text = "";
-                loginFailed.SetActive(true);
-                EventSystem.current.SetSelectedGameObject(InputField.gameObject, null);
-                return;
-            }
-
-            // Uncomment after winnovation
-            /*if (input.Length == 10)
+            
+            if (input.Length == 10)
             {
                 user = input.Substring(0, 7);
                 password = input.Substring(7, 3);
@@ -64,16 +50,14 @@ public class LoginController : MonoBehaviour {
                 loginFailed.SetActive(true);   
                 EventSystem.current.SetSelectedGameObject(InputField.gameObject, null);
                 return;
-            }*/
+            }
 
             //Send a request to the back-end (login) and retrieve the playerID. IT RETURNS 0 IF LOGIN FAILED
             //7 cijfers, 3 cijfers
             // of 8 cijfers, 3 cijfers
 
-            //Uncomment after winnovation
-            //int playerID = BackEndCommunicator.Instance.Login(user, password);
-            int playerID = BackEndCommunicator.Instance.Login(user, "");
-
+            int playerID = BackEndCommunicator.Instance.Login(user, password);
+            
             if (playerID == 0)
             {
                 InputField.text = "";
